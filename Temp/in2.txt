@@ -1,0 +1,8 @@
+1	Пусть	пусть	CONJ	Conjunction Subordinating	4	SubordinatingConjunction
+2	последовательность	последовательность	S	Noun Nominative Feminine true false false	4	Subject
+3	formula_281	formula_281	S	Noun Genitive true false false	2	NonAgreedAttribute
+4	сходится	сойтись	V	Verb Feminine Third true true false false Indicative Present	0	Predicate
+5	к	к	PR	Preposition	6	Preposition
+6	числу	число	S	Noun Dative Neuter true false false	4	ObjectIndirect
+7	formula_282	formula_282	S	Noun Genitive true false false	6	NonAgreedAttribute
+8	.	.	SENT	SENT	7	punc

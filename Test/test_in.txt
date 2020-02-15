@@ -1,0 +1,20 @@
+Если функция {\displaystyle f(x)} - непрерывна и интегрируема на сегменте {\displaystyle [a,b]} , а функция {\displaystyle g(x)} 
+- интегрируема и знакопостоянна на этом сегменте, тогда существует такое значение {\displaystyle c \in [a,b]} , что
+{\displaystyle \int \limits _{a}^{b} f(x) \cdot g(x) dx=f(c) \cdot \int \limits _{a}^{b} g(x) dx}.
+
+Если функция {\displaystyle f(x)} интегрируема на отрезке {\displaystyle [a,b]}, а функция {\displaystyle  g(x)} монотонна 
+на этом отрезке, то существует такая точка  {\displaystyle c \in [a,b]}, что
+{\displaystyle \int \limits _{a}^{b} f(x) \cdot g(x) dx=g(a) \cdot \int \limits _{a}^{c} f(x) dx+g(b) \cdot \int \limits _{c}^{b} f(x) dx}.
+
+Пусть функция {\displaystyle y=f(x)} непрерывна на отрезке {\displaystyle [a,b]} и дифференцируема на 
+интервале {\displaystyle (a,b)}, тогда на интервале {\displaystyle (a,b)} найдется по крайней мере одна точка {\displaystyle с}, 
+такая, что {\displaystyle \frac{f(b)-f(a)}{b-a)}=f^{'}(x_{0})}.
+
+Чтобы множество {\displaystyle K \subset \mathbb{R}^n} являлось компактным, необходимо и достаточно, чтобы {\displaystyle K} 
+было ограниченным и замкнутым.
+
+Если {\displaystyle f(x)} — суммируемая на множестве {\displaystyle A} функция, то для каждого вещественного числа 
+{\displaystyle \epsilon >0} существует такое вещественное число {\displaystyle \delta >0}, что для всякого измеримого 
+подмножества {\displaystyle e\subset A} такого, что {\displaystyle \mu (e)<\delta }, имеет место неравенство
+{\displaystyle \left|\int \limits _{e}f(x)d\mu \right|<\epsilon }.
+

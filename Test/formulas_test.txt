@@ -1,0 +1,19 @@
+{\displaystyle c \in [a,b]}
+{\displaystyle [a,b]}
+{\displaystyle f(x)}
+{\displaystyle \int \limits _{a}^{b} f(x) \cdot g(x) dx=f(c) \cdot \int \limits _{a}^{b} g(x) dx}
+{\displaystyle g(x)}
+{\displaystyle  g(x)}
+{\displaystyle \int \limits _{a}^{b} f(x) \cdot g(x) dx=g(a) \cdot \int \limits _{a}^{c} f(x) dx+g(b) \cdot \int \limits _{c}^{b} f(x) dx}
+{\displaystyle \frac{f(b)-f(a)}{b-a)}=f^{'}(x_{0})}
+{\displaystyle y=f(x)}
+{\displaystyle (a,b)}
+{\displaystyle с}
+{\displaystyle K}
+{\displaystyle K \subset \mathbb{R}^n}
+{\displaystyle \mu (e)<\delta }
+{\displaystyle \epsilon >0}
+{\displaystyle e\subset A}
+{\displaystyle \left|\int \limits _{e}f(x)d\mu \right|<\epsilon }
+{\displaystyle A}
+{\displaystyle \delta >0}

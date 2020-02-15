@@ -1,0 +1,2387 @@
+1	Сумма	сумма	S	Noun Nominative Feminine true false false	8	Subject
+2	двух	два	Numeral	Numeral Genitive Cardinal 2	4	AgreedAttribute
+3	сходящихся	сойтись	Participle	Participle Genitive false true false false Indicative Present	4	AgreedAttribute
+4	последовательностей	последовательность	S	Noun Genitive false false false	1	NonAgreedAttribute
+5	formula_277	formula_277	S	Noun Genitive true false false	4	NonAgreedAttribute
+6	и	и	CONJ	Conjunction Coordinating	7	CoordinatingConjunction
+7	formula_278	formula_278	S	Noun Genitive true false false	4	NonAgreedAttribute
+8	является	явиться	V	Verb Feminine Third true true false false Indicative Present	0	Predicate
+9	сходящейся	сойтись	Participle	Participle Instrumental Feminine true true false false Indicative Present	10	AgreedAttribute
+10	последовательностью	последовательность	S	Noun Instrumental Feminine true false false	8	Complement
+11	,	,	SENT	SENT	10	punc
+12	причем	причём	Adverb	Adverb Positive	15	ParentheticalWord
+13	предел	предел	S	Noun Nominative Masculine true false false	15	Subject
+14	суммы	сумма	S	Noun Genitive Feminine true false false	13	NonAgreedAttribute
+15	есть	быть	false	false Indicative Present	8	Predicate
+16	равен	равный	A	Adjective Masculine true Short Positive	15	Complement
+17	сумме	сумма	S	Noun Dative Feminine true false false	16	ObjectIndirect
+18	пределов	предел	S	Noun Genitive false false false	17	NonAgreedAttribute
+19	formula_279	formula_279	S	Noun Genitive true false false	18	NonAgreedAttribute
+20	.	.	SENT	SENT	19	punc
+
+1	Произведение	произведение	S	Noun Nominative Neuter true false false	8	Subject
+2	двух	два	Numeral	Numeral Genitive Cardinal 2	4	AgreedAttribute
+3	сходящихся	сойтись	Participle	Participle Genitive false true false false Indicative Present	4	AgreedAttribute
+4	последовательностей	последовательность	S	Noun Genitive false false false	1	NonAgreedAttribute
+5	formula_277	formula_277	S	Noun Genitive true false false	4	NonAgreedAttribute
+6	и	и	CONJ	Conjunction Coordinating	7	CoordinatingConjunction
+7	formula_279	formula_279	S	Noun Genitive true false false	4	NonAgreedAttribute
+8	является	явиться	V	Verb Neuter Third true true false false Indicative Present	0	Predicate
+9	сходящейся	сойтись	Participle	Participle Instrumental Feminine true true false false Indicative Present	10	AgreedAttribute
+10	последовательностью	последовательность	S	Noun Instrumental Feminine true false false	8	Complement
+11	,	,	SENT	SENT	10	punc
+12	причем	причём	Adverb	Adverb Positive	15	ParentheticalWord
+13	предел	предел	S	Noun Nominative Masculine true false false	15	Subject
+14	суммы	сумма	S	Noun Genitive Feminine true false false	13	NonAgreedAttribute
+15	есть	быть	false	false Indicative Present	8	Predicate
+16	равен	равный	A	Adjective Masculine true Short Positive	15	Complement
+17	сумме	сумма	S	Noun Dative Feminine true false false	16	ObjectIndirect
+18	пределов	предел	S	Noun Genitive false false false	17	NonAgreedAttribute
+19	formula_280	formula_280	S	Noun Genitive true false false	18	NonAgreedAttribute
+20	.	.	SENT	SENT	19	punc
+
+1	Пусть	пусть	CONJ	Conjunction Subordinating	4	SubordinatingConjunction
+2	последовательность	последовательность	S	Noun Nominative Feminine true false false	4	Subject
+3	formula_281	formula_281	S	Noun Genitive true false false	2	NonAgreedAttribute
+4	сходится	сойтись	V	Verb Feminine Third true true false false Indicative Present	0	Predicate
+5	к	к	PR	Preposition	6	Preposition
+6	числу	число	S	Noun Dative Neuter true false false	4	ObjectIndirect
+7	formula_282	formula_282	S	Noun Genitive true false false	6	NonAgreedAttribute
+8	.	.	SENT	SENT	7	punc
+
+1	Тогда	тогда	AdverbialPronoun	AdverbialPronoun	2	AdverbialModifier
+2	найдется	найти	V	Verb Masculine Third true true true true Indicative Future	0	Predicate
+3	номер	номер	S	Noun Nominative Masculine true false false	2	Subject
+4	formula_205	formula_205	S	Noun Genitive true false false	3	NonAgreedAttribute
+5	такой	такой	AdjectivePronoun	AdjectivePronoun Nominative Masculine true	3	AgreedAttribute
+6	,	,	SENT	SENT	5	punc
+7	что	что	CONJ	Conjunction Subordinating	11	SubordinatingConjunction
+8	для	для	PR	Preposition	10	Preposition
+9	всех	весь	AdjectivePronoun	AdjectivePronoun Genitive false	10	AgreedAttribute
+10	formula_283	formula_283	S	Noun Genitive false false false	11	ObjectIndirect
+11	выполняется	выполнить	V	Verb Neuter Third true true false true Indicative Present	5	Predicate
+12	неравенство	неравенство	S	Noun Nominative Neuter true false false	11	Subject
+13	formula_284	formula_284	S	Noun Genitive true false false	12	NonAgreedAttribute
+14	.	.	SENT	SENT	13	punc
+
+1	Пусть	пусть	CONJ	Conjunction Subordinating	4	SubordinatingConjunction
+2	последовательность	последовательность	S	Noun Nominative Feminine true false false	4	Subject
+3	formula_277	formula_277	S	Noun Genitive true false false	2	NonAgreedAttribute
+4	сходится	сойтись	V	Verb Feminine Third true true false false Indicative Present	0	Predicate
+5	к	к	PR	Preposition	6	Preposition
+6	числу	число	S	Noun Dative Neuter true false false	4	ObjectIndirect
+7	formula_247	formula_247	S	Noun Genitive true false false	6	NonAgreedAttribute
+8	,	,	SENT	SENT	7	punc
+9	а	а	CONJ	Conjunction Coordinating	12	CoordinatingConjunction
+10	последовательность	последовательность	S	Noun Nominative Feminine true false false	12	Subject
+11	formula_279	formula_279	S	Noun Genitive true false false	10	NonAgreedAttribute
+12	сходится	сойтись	V	Verb Feminine Third true true false false Indicative Present	4	Predicate
+13	к	к	PR	Preposition	14	Preposition
+14	числу	число	S	Noun Dative Neuter true false false	12	ObjectIndirect
+15	formula_284	formula_284	S	Noun Genitive true false false	14	NonAgreedAttribute
+16	.	.	SENT	SENT	15	punc
+
+1	Тогда	тогда	AdverbialPronoun	AdverbialPronoun	8	AdverbialModifier
+2	,	,	SENT	SENT	1	punc
+3	начиная	начиная	PR	Preposition	6	FirstPartOfPreposition
+4	с	с	PR	Preposition	6	SecondPartOfPreposition
+5	некоторого	некоторый	AdjectivePronoun	AdjectivePronoun Genitive Masculine true Indefinite	6	AgreedAttribute
+6	номера	номер	S	Noun Genitive Masculine true false false	8	SpecificationBeginningWithNoEnding
+7	,	,	SENT	SENT	6	punc
+8	определена	определить	V	Verb Feminine Third true false true true Indicative Present	0	Predicate
+9	последовательность	последовательность	S	Noun Nominative Feminine true false false	8	Subject
+10	formula_285	formula_285	S	Noun Genitive true false false	9	NonAgreedAttribute
+11	,	,	SENT	SENT	10	punc
+12	которая	который	Pronoun	Pronoun Nominative Feminine Third true Relative	13	RelativeGroup
+13	сходится	сойтись	V	Verb Feminine Third true true false false Indicative Present	8	Predicate
+14	к	к	PR	Preposition	15	Preposition
+15	числу	число	S	Noun Dative Neuter true false false	13	ObjectIndirect
+16	formula_286	formula_286	S	Noun Genitive true false false	15	NonAgreedAttribute
+17	.	.	SENT	SENT	16	punc
+
+1	Пусть	пусть	CONJ	Conjunction Subordinating	4	SubordinatingConjunction
+2	последовательность	последовательность	S	Noun Nominative Feminine true false false	4	Subject
+3	formula_277	formula_277	S	Noun Genitive true false false	2	NonAgreedAttribute
+4	сходится	сойтись	V	Verb Feminine Third true true false false Indicative Present	0	Predicate
+5	к	к	PR	Preposition	6	Preposition
+6	formula_247	formula_247	S	Noun Dative true false false	4	ObjectIndirect
+7	.	.	SENT	SENT	6	punc
+
+1	Если	если	CONJ	Conjunction Subordinating	2	SubordinatingConjunction
+2	есть	быть	Indicative	Indicative Present	0	Predicate
+3	formula_287	formula_287	Numeral	Numeral Cardinal	2	Complement	
+4	,	,	SENT	SENT	4	punc
+5	то	тот	AdjectivePronoun	AdjectivePronoun Nominative Neuter true	7	AgreedAttribute
+6	formula_288	formula_288	S	Noun Nominative true false false	2	Subject
+7	.	.	SENT	SENT	7	punc
+
+1	Если	если	CONJ	Conjunction Subordinating	10	SubordinatingConjunction
+2	все	весь	AdjectivePronoun	AdjectivePronoun Nominative false	3	AgreedAttribute
+3	элементы	элемент	S	Noun Nominative false false false	10	Subject
+4	двух	два	Numeral	Numeral Genitive Cardinal 2	6	AgreedAttribute
+5	сходящихся	сойтись	Participle	Participle Genitive false true false false Indicative Present	6	AgreedAttribute
+6	последовательностей	последовательность	S	Noun Genitive false false false	3	NonAgreedAttribute
+7	formula_277	formula_277	S	Noun Genitive false false false	6	NonAgreedAttribute
+8	и	и	CONJ	Conjunction Coordinating	9	CoordinatingConjunction
+9	formula_279	formula_279	S	Noun Genitive true false false	6	NonAgreedAttribute
+10	удовлетворяют	удовлетворить	V	Verb Third false true false false Indicative Present	0	Predicate
+11	неравенству	неравенство	S	Noun Dative Neuter true false false	10	ObjectIndirect
+12	formula_289	formula_289	S	Noun Genitive true false false	11	NonAgreedAttribute
+13	,	,	SENT	SENT	12	punc
+14	то	то	CONJ	Conjunction	18	Correlate_CondTemp
+15	их	их	PossessivePronoun	PossessivePronoun Nominative Third false	16	AgreedAttribute
+16	пределы	предел	S	Noun Nominative false false false	18	Subject
+17	также	также	Adverb	Adverb Positive	18	ТожеТакже
+18	удовлетворяют	удовлетворить	V	Verb Third false true false false Indicative Present	10	Predicate
+19	этому	этот	AdjectivePronoun	AdjectivePronoun Dative Neuter true	20	AgreedAttribute
+20	неравенству	неравенство	S	Noun Dative Neuter true false false	18	ObjectIndirect
+21	formula_290	formula_290	S	Noun Instrumental true false false	20	NonAgreedAttribute
+22	.	.	SENT	SENT	21	punc
+
+1	Пусть	пусть	CONJ	Conjunction Subordinating	6	SubordinatingConjunction
+2	последовательности	последовательность	S	Noun Nominative false false false	6	Subject
+3	formula_277	formula_277	S	Noun Genitive true false false	2	NonAgreedAttribute
+4	и	и	CONJ	Conjunction Coordinating	5	CoordinatingConjunction
+5	formula_279	formula_279	S	Noun Genitive true false false	2	NonAgreedAttribute
+6	сходятся	сойтись	V	Verb Third false true false false Indicative Present	0	Predicate
+7	к	к	PR	Preposition	12	Preposition
+8	одному	один	AdjectivePronoun	AdjectivePronoun Dative Masculine true	10	Idiomatic_AdjPronounPremodifier
+9	и	и	Particle	Particle	10	Particle
+10	тому	тот	AdjectivePronoun	AdjectivePronoun Dative Masculine true	12	AgreedAttribute
+11	же	же	Particle	Particle	10	Particle
+12	пределу	предел	S	Noun Dative Masculine true false false	6	ObjectIndirect
+13	Noun	Instrumental	true	true	6	_	
+14	и	и	CONJ	Conjunction Coordinating	18	CoordinatingConjunction
+15	пусть	пусть	CONJ	Conjunction Subordinating	18	SubordinatingConjunction
+16	последовательность	последовательность	S	Noun Nominative Feminine true false false	18	Subject
+17	formula_291	formula_291	S	Noun Genitive true false false	16	NonAgreedAttribute
+18	удовлетворяет	удовлетворить	V	Verb Feminine Third true true false false Indicative Present	6	Predicate
+19	неравенству	неравенство	S	Noun Dative Neuter true false false	18	ObjectIndirect
+20	formula_292	formula_292	S	Noun Instrumental true false false	19	NonAgreedAttribute
+21	.	.	SENT	SENT	20	punc
+
+1	Всякая	всякий	AdjectivePronoun	AdjectivePronoun Nominative Feminine true	3	AgreedAttribute
+2	возрастающая	возрасти	Participle	Participle Nominative Feminine true true false false Indicative Present	3	AgreedAttribute
+3	последовательность	последовательность	S	Noun Nominative Feminine true false false	8	Subject
+4	,	,	SENT	SENT	3	punc
+5	ограниченная	ограничить	Participle	Participle Nominative Feminine true false true true Indicative Past	3	AgreedAttribute
+6	сверху	сверху	Adverb	Adverb Positive	5	AdverbialModifier
+7	,	,	SENT	SENT	6	punc
+8	сходится	сойтись	V	Verb Feminine Third true true false false Indicative Present	0	Predicate
+9	.	.	SENT	SENT	8	punc
+
+1	Всякая	всякий	AdjectivePronoun	AdjectivePronoun Nominative Feminine true	3	AgreedAttribute
+2	убывающая	убыть	Participle	Participle Nominative Feminine true true false false Indicative Present	3	AgreedAttribute
+3	последовательность	последовательность	S	Noun Nominative Feminine true false false	8	Subject
+4	,	,	SENT	SENT	3	punc
+5	ограниченная	ограничить	Participle	Participle Nominative Feminine true false true true Indicative Past	3	AgreedAttribute
+6	снизу	снизу	Adverb	Adverb Positive	5	AdverbialModifier
+7	,	,	SENT	SENT	6	punc
+8	сходится	сойтись	V	Verb Feminine Third true true false false Indicative Present	0	Predicate
+9	.	.	SENT	SENT	8	punc
+
+1	Для	для	PR	Preposition	3	Preposition
+2	любой	любой	AdjectivePronoun	AdjectivePronoun Genitive Feminine true Indefinite	3	AgreedAttribute
+3	последовательности	последовательность	S	Noun Genitive Feminine true false false	25	ObjectIndirect
+4	отрезков	отрезок	S	Noun Genitive false false false	3	NonAgreedAttribute
+5	formula_293	formula_293	S	Noun Genitive true false false	4	NonAgreedAttribute
+6	,	,	SENT	SENT	5	punc
+7	каждый	каждый	AdjectivePronoun	AdjectivePronoun Nominative Masculine true	8	AgreedAttribute
+8	Noun	Nominative	_	_	11	_
+9	из	из	PR	Preposition	10	Preposition
+10	которых	который	Pronoun	Pronoun Genitive Third false Relative	8	ElectiveBase
+11	вложен	вложить	V	Verb Masculine Third true false true true Indicative Present	21	Predicate
+12	в	в	PR	Preposition	14	Preposition
+13	предыдущий	предыдущий	A	Adjective Accusative Masculine true Full	14	AgreedAttribute
+14	Noun	Accusative	true	true	11	_
+15	:	:	SENT	SENT	14	punc
+16	formula_294	formula_294	S	Noun Nominative true false false	11	NominalPostMod_Colon
+17	,	,	SENT	SENT	16	punc
+18	и	и	CONJ	Conjunction Coordinating	21	CoordinatingConjunction
+19	длины	длина	S	Noun Nominative false false false	21	RelativeGroup
+20	которых	который	Pronoun	Pronoun Genitive Third false Relative	19	NonAgreedAttribute
+21	стремятся	стремить	V	Verb Third false true false false Indicative Present	0	Predicate
+22	к	к	PR	Preposition	23	Preposition
+23	нулю	нуль	Numeral	Numeral Dative true	21	ObjectIndirect
+24	,	,	SENT	SENT	23	punc
+25	существует	существовать	V	Verb Feminine Third true true false false Indicative Present	24	Predicate
+26	и	и	CONJ	Conjunction Coordinating	30	CoordinatingConjunction
+27	при	при	PR	Preposition	29	Preposition
+28	том	тот	AdjectivePronoun	AdjectivePronoun Prepositional Masculine true	29	AgreedAttribute
+29	Noun	Prepositional	_	_	30	_	
+30	есть	быть	false	false Indicative Present	21	Predicate
+31	единственная	единственный	A	Adjective Nominative Feminine true Full Positive	32	AgreedAttribute
+32	точка	точка	S	Noun Nominative Feminine true false false	30	Subject
+33	formula_295	formula_295	S	Noun Genitive true false false	32	NonAgreedAttribute
+34	,	,	SENT	SENT	33	punc
+35	принадлежащая	принадлежать	Participle	Participle Nominative Feminine true true false false Indicative Present	32	AgreedAttribute
+36	всем	весь	AdjectivePronoun	AdjectivePronoun Dative false	38	AgreedAttribute
+37	этим	этот	AdjectivePronoun	AdjectivePronoun Dative false	38	AgreedAttribute
+38	отрезкам	отрезок	S	Noun Dative false false false	35	ObjectIndirect
+39	.	.	SENT	SENT	38	punc
+
+1	У	у	PR	Preposition	4	Preposition
+2	любой	любой	AdjectivePronoun	AdjectivePronoun Genitive Feminine true Indefinite	4	AgreedAttribute
+3	ограниченной	ограничить	Participle	Participle Genitive Feminine true false true true Indicative Past	4	AgreedAttribute
+4	последовательности	последовательность	S	Noun Genitive Feminine true false false	5	ObjectIndirect
+5	есть	быть	V	Verb Third false true false false Indicative Present	0	Predicate
+6	верхний	верхний	A	Adjective Nominative Masculine true Full Positive	7	AgreedAttribute
+7	Noun	Nominative	true	true	5	_	
+8	и	и	CONJ	Conjunction Coordinating	10	CoordinatingConjunction
+9	нижний	нижний	A	Adjective Nominative Masculine true Full Positive	10	AgreedAttribute
+10	пределы	предел	S	Noun Nominative false false false	5	Subject
+11	.	.	SENT	SENT	10	punc
+
+1	Из	из	PR	Preposition	4	Preposition
+2	любой	любой	AdjectivePronoun	AdjectivePronoun Genitive Feminine true Indefinite	4	AgreedAttribute
+3	ограниченной	ограничить	Participle	Participle Genitive Feminine true false true true Indicative Past	4	AgreedAttribute
+4	последовательности	последовательность	S	Noun Genitive Feminine true false false	5	MovedActant
+5	можно	можно	Adverb	Adverb Third true true false Indicative Present	0	Predicate
+6	выделить	выделить	Infinitive	Infinitive true true true	5	Object
+7	сходящуюся	сойтись	Participle	Participle Accusative Feminine true true false false Indicative Present	9	AgreedAttribute
+8	под	под	Other	Other	9	Modifier_Prefixoid
+9	последовательность	последовательность	S	Noun Accusative Feminine true false false	6	Object
+10	.	.	SENT	SENT	9	punc
+
+1	Последовательность	последовательность	S	Noun Nominative Feminine true false false	2	Subject
+2	сходится	сойтись	V	Verb Feminine Third true true false false Indicative Present	0	Predicate
+3	тогда	тогда	AdverbialPronoun	AdverbialPronoun	2	AdverbialModifier
+4	и	и	CONJ	Conjunction Coordinating	6	CoordinatingConjunction
+5	только	только	Adverb	Adverb Positive	6	Surface_Limitation
+6	тогда	тогда	AdverbialPronoun	AdverbialPronoun	2	AdverbialModifier
+7	,	,	SENT	SENT	6	punc
+8	когда	когда	CONJ	Conjunction Subordinating	10	SubordinatingConjunction
+9	она	он	Pronoun	Pronoun Nominative Feminine Third true	10	Subject
+10	ограничена	ограничить	V	Verb Feminine Third true false true true Indicative Present	2	Predicate
+11	и	и	CONJ	Conjunction Coordinating	15	CoordinatingConjunction
+12	ее	её	PossessivePronoun	PossessivePronoun Nominative Masculine Third true	14	AgreedAttribute
+13	верхний	верхний	A	Adjective Nominative Masculine true Full Positive	14	AgreedAttribute
+14	предел	предел	S	Noun Nominative Masculine true false false	15	Subject
+15	есть	быть	false	false Indicative Present	2	Predicate
+16	равен	равный	A	Adjective Masculine true Short Positive	15	Complement
+17	нижнему	нижний	A	Adjective Dative Masculine true Full Positive	18	AgreedAttribute
+18	Noun	Dative	true	true	16	
+19	Conjunction	Subordinating	_	_	15	#dependent_clause_conjunctions
+20	.	.	SENT	SENT	19	punc
+
+1	Для	для	PR	Preposition	3	Preposition
+2	того	то	Pronoun	Pronoun Genitive Neuter Third true	1	ObjectIndirect
+3	,	,	SENT	SENT	2	punc
+4	чтобы	чтобы	CONJ	Conjunction Subordinating	7	SubordinatingConjunction
+5	последовательность	последовательность	S	Noun Nominative Feminine true false false	7	Subject
+6	была	быть	V	Verb Feminine Third true true false false Indicative Past	15	Predicate
+7	сходящейся	сойтись	Participle	Participle Instrumental Feminine true true false false Indicative Present	7	Complement
+8	,	,	SENT	SENT	7	punc
+9	необходимо	необходимо	Adverb	Adverb Positive	7	AdverbialModifier
+10	и	и	CONJ	Conjunction Coordinating	12	CoordinatingConjunction
+11	достаточно	достаточно	Adverb	Adverb	7	AdverbialModifier
+12	,	,	SENT	SENT	11	punc
+13	чтобы	чтобы	CONJ	Conjunction Subordinating	16	SubordinatingConjunction
+14	она	он	Pronoun	Pronoun Nominative Feminine Third true	16	Subject
+15	была	быть	V	Verb Feminine Third true true false false Indicative Past	0	Predicate
+16	фундаментальной	фундаментальный	A	Adjective Instrumental Feminine true Full Positive	15	Complement
+17	.	.	SENT	SENT	16	punc
+
+1	Если	если	CONJ	Conjunction Subordinating	4	SubordinatingConjunction
+2	последовательность	последовательность	S	Noun Nominative Feminine true false false	4	Subject
+3	formula_277	formula_277	S	Noun Genitive true false false	2	NonAgreedAttribute
+4	является	явиться	V	Verb Feminine Third true true false false Indicative Present	0	Predicate
+5	бесконечно	бесконечно	Adverb	Adverb Positive	6	Modifier_Adverbial_ForAdjAdv
+6	большой	большой	A	Adjective Instrumental Feminine true Full Positive	4	Complement
+7	,	,	SENT	SENT	6	punc
+8	то	то	CONJ	Conjunction	13	Correlate_CondTemp
+9	начиная	начиная	PR	Preposition	12	FirstPartOfPreposition
+10	с	с	PR	Preposition	12	SecondPartOfPreposition
+11	некоторого	некоторый	AdjectivePronoun	AdjectivePronoun Genitive Masculine true Indefinite	12	AgreedAttribute
+12	номера	номер	S	Noun Genitive Masculine true false false	13	SpecificationBeginningWithNoEnding
+13	определена	определить	V	Verb Feminine Third true false true true Indicative Present	12	Predicate
+14	последовательность	последовательность	S	Noun Nominative Feminine true false false	13	Subject
+15	formula_296	formula_296	S	Noun Genitive true false false	14	NonAgreedAttribute
+16	,	,	SENT	SENT	15	punc
+17	которая	который	Pronoun	Pronoun Nominative Feminine Third true Relative	18	RelativeGroup
+18	является	явиться	V	Verb Feminine Third true true false false Indicative Present	4	Predicate
+19	бесконечно	бесконечно	Adverb	Adverb Positive	20	Modifier_Adverbial_ForAdjAdv
+20	малой	малый	A	Adjective Instrumental Feminine true Full Positive	18	Complement
+21	.	.	SENT	SENT	20	punc
+
+1	Для	для	PR	Preposition	3	Preposition
+2	того	то	Pronoun	Pronoun Genitive Neuter Third true	1	ObjectIndirect
+3	,	,	SENT	SENT	2	punc
+4	чтобы	чтобы	CONJ	Conjunction Subordinating	8	SubordinatingConjunction
+5	множество	множество	S	Noun Nominative Neuter true false false	8	Subject
+6	formula_297	formula_297	S	Noun Nominative true false false	6	Apposition
+7	было	быть	V	Verb Neuter Third true true false false Indicative Past	0	Predicate
+8	компактным	компактный	A	Adjective Instrumental Neuter true Full Positive	8	Complement
+9	,	,	SENT	SENT	8	punc
+10	необходимо	необходимый	A	Adjective Neuter true Short Positive	8	Complement
+11	и	и	CONJ	Conjunction Coordinating	13	CoordinatingConjunction
+12	достаточно	достаточный	A	Adjective Neuter true Short Positive	8	Complement
+13	,	,	SENT	SENT	12	punc
+14	чтобы	чтобы	CONJ	Conjunction Subordinating	17	SubordinatingConjunction
+15	оно	он	Pronoun	Pronoun Nominative Neuter Third true	17	Subject
+16	было	быть	V	Verb Neuter Third true true false false Indicative Past	7	Predicate
+17	ограниченным	ограниченный	A	Adjective Instrumental Neuter true Full Positive	17	Complement
+18	и	и	CONJ	Conjunction Coordinating	20	CoordinatingConjunction
+19	замкнутым	замкнутый	A	Adjective Instrumental Neuter true Full Positive	17	Complement
+20	.	.	SENT	SENT	19	punc
+
+1	Если	если	CONJ	Conjunction Subordinating	5	SubordinatingConjunction
+2	formula_41	formula_41	S	Noun Nominative true false false	5	Subject
+3	и	и	CONJ	Conjunction Coordinating	4	CoordinatingConjunction
+4	formula_215	formula_215	S	Noun Nominative true false false	5	Subject
+5	есть	быть	Indicative	Indicative Present	0	Predicate
+6	рациональные	рациональный	A	Adjective Nominative false Full Positive	7	AgreedAttribute
+7	функции	функция	S	Noun Nominative false false false	5	Complement
+8	,	,	SENT	SENT	7	punc
+9	то	то	CONJ	Conjunction	17	Correlate_CondTemp
+10	formula_257	formula_257	S	Noun Nominative true false false	17	Subject
+11	,	,	SENT	SENT	10	punc
+12	formula_298	formula_298	S	Noun Nominative true false false	17	Subject
+13	,	,	SENT	SENT	12	punc
+14	formula_299	formula_299	S	Noun Nominative true false false	17	Subject
+15	и	и	CONJ	Conjunction Coordinating	16	CoordinatingConjunction
+16	formula_300	formula_300	S	Noun Nominative true false false	17	Subject
+17	есть	быть	Indicative	Indicative Present	5	Predicate
+18	также	также	Adverb	Adverb Positive	17	ТожеТакже
+19	рациональные	рациональный	A	Adjective Nominative false Full Positive	20	AgreedAttribute
+20	функции	функция	S	Noun Nominative false false false	17	Complement
+21	.	.	SENT	SENT	20	punc
+
+1	Если	если	CONJ	Conjunction Subordinating	2	SubordinatingConjunction
+2	есть	быть	Indicative	Indicative Present	9	Predicate
+3	formula_301	formula_301	Numeral	Numeral Nominative Cardinal	2	Complement
+4	,	,	SENT	SENT	3	punc
+5	formula_302	formula_302	Numeral	Numeral Nominative Cardinal	2	Complement
+6	он		Subject	Subject true	2	
+7	,	,	SENT	SENT	6	punc
+8	то	то	CONJ	Conjunction	9	Correlate_CondTemp
+9	выполняются	выполнить	V	Verb Third false true false true Indicative Present	0	Predicate
+10	равенства	равенство	S	Noun Nominative false false false	9	Subject
+11	formula_303	formula_303	S	Noun Genitive true false false	10	NonAgreedAttribute
+12	,	,	SENT	SENT	11	punc
+13	formula_304	formula_304	S	Noun Genitive true false false	10	NonAgreedAttribute
+14	,	,	SENT	SENT	13	punc
+15	formula_305	formula_305	S	Noun Genitive true false false	13	NominalPostModSpec
+16	,	,	SENT	SENT	15	punc
+17	и	и	CONJ	Conjunction Coordinating	23	CoordinatingConjunction
+18	,	,	SENT	SENT	17	punc
+19	в	в	PR	Preposition	20	Preposition
+20	случае	случай	S	Noun Locative Masculine true false false	23	AdverbialModifier
+21	formula_306	formula_306	S	Noun Genitive true false false	20	NonAgreedAttribute
+22	,	,	SENT	SENT	21	punc
+23	formula_307	formula_307	S	Noun Genitive true false false	20	NonAgreedAttribute
+24	.	.	SENT	SENT	23	punc
+
+1	Пусть	пусть	CONJ	Conjunction Subordinating	4	SubordinatingConjunction
+2	функция	функция	S	Noun Nominative Feminine true false false	4	Subject
+3	formula_41	formula_41	S	Noun Nominative true false false	2	Apposition
+4	определена	определить	V	Verb Feminine Third true false true true Indicative Present	0	Predicate
+5	на	на	PR	Preposition	6	Preposition
+6	множестве	множество	S	Noun Locative Neuter true false false	4	AdverbialModifier
+7	formula_308	formula_308	Numeral	Numeral Nominative Cardinal	6	Apposition
+8	и	и	CONJ	Conjunction Coordinating	11	CoordinatingConjunction
+9	пусть	пусть	CONJ	Conjunction Subordinating	11	SubordinatingConjunction
+10	formula_247	formula_247	S	Noun Nominative true false false	11	Subject
+11	есть	быть	false	false Indicative Present	4	Predicate
+12	--	--	SENT	SENT	11	punc
+13	некоторая	некоторый	AdjectivePronoun	AdjectivePronoun Nominative Feminine true Indefinite	15	AgreedAttribute
+14	предельная	предельный	A	Adjective Nominative Feminine true Full Positive	15	AgreedAttribute
+15	точка	точка	S	Noun Nominative Feminine true false false	11	Complement
+16	formula_48	formula_48	S	Noun Genitive true false false	15	NonAgreedAttribute
+17	.	.	SENT	SENT	16	punc
+
+1	Число	число	S	Noun Nominative Neuter true false false	3	Subject
+2	formula_244	formula_244	S	Noun Genitive true false false	1	NonAgreedAttribute
+3	является	явиться	V	Verb Neuter Third true true false false Indicative Present	0	Predicate
+4	предельным	предельный	A	Adjective Instrumental Neuter true Full Positive	5	AgreedAttribute
+5	значением	значение	S	Noun Instrumental Neuter true false false	3	Complement
+6	функции	функция	S	Noun Genitive Feminine true false false	5	NonAgreedAttribute
+7	formula_41	formula_41	S	Noun Nominative true false false	6	Apposition
+8	в	в	PR	Preposition	9	Preposition
+9	точке	точка	S	Noun Locative Feminine true false false	5	AdverbialModifier
+10	formula_247	formula_247	S	Noun Genitive true false false	9	NonAgreedAttribute
+11	в	в	PR	Preposition	12	Preposition
+12	смысле	смысл	S	Noun Prepositional Masculine true false false	3	Adjunct_Standpoint_Modifier
+13	Коши	Коши	S	Noun Genitive true true true	12	NonAgreedAttribute
+14	тогда	тогда	AdverbialPronoun	AdverbialPronoun	13	AdverbialModifier
+15	и	и	CONJ	Conjunction Coordinating	17	CoordinatingConjunction
+16	только	только	Adverb	Adverb Positive	17	Surface_Limitation
+17	тогда	тогда	AdverbialPronoun	AdverbialPronoun	13	AdverbialModifier
+18	,	,	SENT	SENT	17	punc
+19	когда	когда	CONJ	Conjunction Subordinating	22	SubordinatingConjunction
+20	это	этот	AdjectivePronoun	AdjectivePronoun Nominative Neuter true	21	AgreedAttribute
+21	число	число	S	Noun Nominative Neuter true false false	22	Subject
+22	является	явиться	V	Verb Neuter Third true true false false Indicative Present	3	Predicate
+23	предельным	предельный	A	Adjective Instrumental Neuter true Full Positive	24	AgreedAttribute
+24	значением	значение	S	Noun Instrumental Neuter true false false	22	Complement
+25	функции	функция	S	Noun Genitive Feminine true false false	24	NonAgreedAttribute
+26	formula_41	formula_41	S	Noun Nominative true false false	25	Apposition
+27	в	в	PR	Preposition	28	Preposition
+28	точке	точка	S	Noun Locative Feminine true false false	24	AdverbialModifier
+29	formula_247	formula_247	S	Noun Genitive true false false	28	NonAgreedAttribute
+30	в	в	PR	Preposition	31	Preposition
+31	смысле	смысл	S	Noun Prepositional Masculine true false false	22	Adjunct_Standpoint_Modifier
+32	Гейне	Гейне	S	Noun Genitive true true true	31	NonAgreedAttribute
+33	.	.	SENT	SENT	32	punc
+
+1	Пусть	пусть	CONJ	Conjunction Subordinating	4	SubordinatingConjunction
+2	функция	функция	S	Noun Nominative Feminine true false false	4	Subject
+3	formula_41	formula_41	S	Noun Nominative true false false	2	Apposition
+4	определена	определить	V	Verb Feminine Third true false true true Indicative Present	0	Predicate
+5	в	в	PR	Preposition	9	Preposition
+6	некоторой	некоторый	AdjectivePronoun	AdjectivePronoun Locative Feminine true Indefinite	9	AgreedAttribute
+7	правой	правый	A	Adjective Locative Feminine true Full Positive	9	AgreedAttribute
+8	полу	полу	Other	Other	9	Modifier_Prefixoid
+9	окрестности	окрестность	S	Noun Locative Feminine true false false	4	AdverbialModifier
+10	точки	точка	S	Noun Genitive Feminine true false false	9	NonAgreedAttribute
+11	formula_247	formula_247	S	Noun Genitive true false false	10	NonAgreedAttribute
+12	.	.	SENT	SENT	11	punc
+
+1	Число	число	S	Noun Nominative Neuter true false false	3	Subject
+2	formula_244	formula_244	S	Noun Genitive true false false	1	NonAgreedAttribute
+3	является	явиться	V	Verb Neuter Third true true false false Indicative Present	0	Predicate
+4	правым	правый	A	Adjective Instrumental Masculine true Full Positive	5	AgreedAttribute
+5	пределом	предел	S	Noun Instrumental Masculine true false false	3	Complement
+6	функции	функция	S	Noun Genitive Feminine true false false	5	NonAgreedAttribute
+7	formula_41	formula_41	S	Noun Genitive true false false	6	NonAgreedAttribute
+8	в	в	PR	Preposition	9	Preposition
+9	точке	точка	S	Noun Locative Feminine true false false	6	AdverbialModifier
+10	formula_247	formula_247	S	Noun Genitive true false false	9	NonAgreedAttribute
+11	,	,	SENT	SENT	10	punc
+12	если	если	CONJ	Conjunction Subordinating	16	SubordinatingConjunction
+13	для	для	PR	Preposition	15	Preposition
+14	любого	любой	AdjectivePronoun	AdjectivePronoun Genitive Masculine true Indefinite	15	AgreedAttribute
+15	formula_309	formula_309	S	Noun Genitive true false false	16	ObjectIndirect
+16	найдется	найти	V	Verb Neuter Third true true true true Indicative Future	3	Predicate
+17	formula_310	formula_310	S	Noun Nominative true false false	16	Subject
+18	такое	такой	AdjectivePronoun	AdjectivePronoun Nominative Neuter true	17	AgreedAttribute
+19	,	,	SENT	SENT	18	punc
+20	что	что	CONJ	Conjunction Subordinating	30	SubordinatingConjunction
+21	для	для	PR	Preposition	23	Preposition
+22	всех	весь	AdjectivePronoun	AdjectivePronoun Genitive false	23	AgreedAttribute
+23	значений	значение	S	Noun Genitive false false false	30	ObjectIndirect
+24	formula_70	formula_70	S	Noun Genitive false false false	23	NonAgreedAttribute
+25	,	,	SENT	SENT	24	punc
+26	удовлетворяющих	удовлетворить	Participle	Participle Genitive false true false false Indicative Present	24	AgreedAttribute
+27	условию	условие	S	Noun Dative Neuter true false false	26	ObjectIndirect
+28	formula_311	formula_311	S	Noun Genitive true false false	27	NonAgreedAttribute
+29	,	,	SENT	SENT	28	punc
+30	выполняется	выполнить	V	Verb Neuter Third true true false true Indicative Present	3	Predicate
+31	неравенство	неравенство	S	Noun Nominative Neuter true false false	30	Subject
+32	formula_312	formula_312	S	Noun Genitive true false false	31	NonAgreedAttribute
+33	.	.	SENT	SENT	32	punc
+
+1	Если	если	CONJ	Conjunction Subordinating	12	SubordinatingConjunction
+2	правый	правый	A	Adjective Nominative Masculine true Full Positive	3	AgreedAttribute
+3	Noun	Nominative	_	_	12	_
+4	и	и	CONJ	Conjunction Coordinating	6	CoordinatingConjunction
+5	левый	левый	A	Adjective Nominative Masculine true Full Positive	6	AgreedAttribute
+6	пределы	предел	S	Noun Nominative false false false	12	Subject
+7	функции	функция	S	Noun Genitive Feminine true false false	6	NonAgreedAttribute
+8	formula_41	formula_41	S	Noun Nominative true false false	7	Apposition
+9	в	в	PR	Preposition	10	Preposition
+10	точке	точка	S	Noun Locative Feminine true false false	12	AdverbialModifier
+11	formula_247	formula_247	S	Noun Genitive true false false	10	NonAgreedAttribute
+12	существуют	существовать	V	Verb Third false true false false Indicative Present	0	Predicate
+13	и	и	CONJ	Conjunction Coordinating	14	CoordinatingConjunction
+14	есть	быть	Indicative	Indicative Present	21	Predicate
+15	равны	равный	A	Adjective false Short Positive	14	Complement
+16	Conjunction	Subordinating	_	_	14	#dependent_clause_conjunctions
+17	Noun	Nominative	_	_	14	_
+18	Noun	Nominative	true	true	14	_
+19	,	,	SENT	SENT	18	punc
+20	то	то	CONJ	Conjunction	21	Correlate_CondTemp
+21	существует	существовать	V	Verb Masculine Third true true false false Indicative Present	12	Predicate
+22	предел	предел	S	Noun Nominative Masculine true false false	21	Subject
+23	функции	функция	S	Noun Genitive Feminine true false false	22	NonAgreedAttribute
+24	formula_41	formula_41	S	Noun Nominative true false false	23	Apposition
+25	и	и	CONJ	Conjunction Coordinating	26	CoordinatingConjunction
+26	выполняются	выполнить	V	Verb Third false true false true Indicative Present	12	Predicate
+27	равенства	равенство	S	Noun Nominative false false false	26	Subject
+28	formula_313	formula_313	S	Noun Genitive true false false	27	NonAgreedAttribute
+29	.	.	SENT	SENT	28	punc
+
+1	Для	для	PR	Preposition	2	Preposition
+2	того	то	Pronoun	Pronoun Genitive Neuter Third true	29	ObjectIndirect
+3	,	,	SENT	SENT	2	punc
+4	чтобы	чтобы	CONJ	Conjunction Subordinating	6	SubordinatingConjunction
+5	formula_41	formula_41	S	Noun Nominative true false false	6	Subject
+6	имела	иметь	V	Verb Feminine Third true true false true Indicative Past	0	Predicate
+7	предел	предел	S	Noun Accusative Masculine true false false	6	Object
+8	в	в	PR	Preposition	9	Preposition
+9	точке	точка	S	Noun Locative Feminine true false false	6	AdverbialModifier
+10	formula_247	formula_247	S	Noun Genitive true false false	9	NonAgreedAttribute
+11	,	,	SENT	SENT	10	punc
+12	необходимо	необходимо	Adverb	Adverb Positive	6	AdverbialModifier
+13	и	и	CONJ	Conjunction Coordinating	14	CoordinatingConjunction
+14	достаточно	достаточно	Adverb	Adverb	6	AdverbialModifier
+15	,	,	SENT	SENT	14	punc
+16	чтобы	чтобы	CONJ	Conjunction Subordinating	23	SubordinatingConjunction
+17	в	в	PR	Preposition	18	Preposition
+18	точке	точка	S	Noun Locative Feminine true false false	23	AdverbialModifier
+19	formula_247	formula_247	S	Noun Genitive true false false	18	NonAgreedAttribute
+20	для	для	PR	Preposition	22	Preposition
+21	любого	любой	AdjectivePronoun	AdjectivePronoun Genitive Masculine true Indefinite	22	AgreedAttribute
+22	formula_314	formula_314	S	Noun Genitive true false false	19	ObjectIndirect
+23	нашлось	найти	V	Verb Neuter Third true true true true Indicative Past	6	Predicate
+24	formula_312	formula_312	S	Noun Instrumental true false false	23	ObjectIndirect
+25	такое	такой	AdjectivePronoun	AdjectivePronoun Nominative Neuter true	26	AgreedAttribute
+26	Noun	Nominative	Subject	Subject true	23	_
+27	,	,	SENT	SENT	26	punc
+28	что	что	Pronoun	Pronoun Nominative Neuter Third true Interrogative	29	RelativeGroup
+29	есть	быть	false	false false Indicative Present	6	Predicate
+30	для	для	PR	Preposition	32	Preposition
+31	всех	весь	AdjectivePronoun	AdjectivePronoun Genitive false	32	AgreedAttribute
+32	значений	значение	S	Noun Genitive false false false	29	Complement
+33	аргумента	аргумент	S	Noun Genitive Masculine true false false	32	NonAgreedAttribute
+34	formula_315	formula_315	S	Noun Genitive true false false	33	NonAgreedAttribute
+35	из	из	PR	Preposition	36	Preposition
+36	formula_316	formula_316	S	Noun Genitive true false false	34	AdverbialModifier
+37	таких	такой	AdjectivePronoun	AdjectivePronoun Genitive false	32	AgreedAttribute
+38	,	,	SENT	SENT	37	punc
+39	что	что	CONJ	Conjunction Subordinating	43	SubordinatingConjunction
+40	formula_317	formula_317	S	Noun Instrumental true false false	43	ObjectIndirect
+41	и	и	CONJ	Conjunction Coordinating	42	CoordinatingConjunction
+42	formula_318	formula_318	S	Noun Instrumental true false false	43	ObjectIndirect
+43	выполняется	выполнить	V	Verb Neuter Third true false false true Indicative Present	6	Predicate
+44	неравенство	неравенство	S	Noun Nominative Neuter true false false	43	Subject
+45	formula_319	formula_319	S	Noun Genitive true false false	44	NonAgreedAttribute
+46	.	.	SENT	SENT	45	punc
+
+1	Функция	функция	S	Noun Nominative Feminine true false false	8	Subject
+2	,	,	SENT	SENT	1	punc
+3	монотонная	монотонный	A	Adjective Nominative Feminine true Full Positive	1	AgreedAttribute
+4	на	на	PR	Preposition	6	Preposition
+5	некотором	некоторый	AdjectivePronoun	AdjectivePronoun Locative Masculine true Indefinite	6	AgreedAttribute
+6	интервале	интервал	S	Noun Locative Masculine true false false	3	AdverbialModifier
+7	,	,	SENT	SENT	6	punc
+8	имеет	иметь	V	Verb Feminine Third true true false true Indicative Present	0	Predicate
+9	в	в	PR	Preposition	11	Preposition
+10	каждой	каждый	AdjectivePronoun	AdjectivePronoun Locative Feminine true	11	AgreedAttribute
+11	точке	точка	S	Noun Locative Feminine true false false	8	AdverbialModifier
+12	этого	этот	AdjectivePronoun	AdjectivePronoun Genitive Masculine true	13	AgreedAttribute
+13	интервала	интервал	S	Noun Genitive Masculine true false false	11	NonAgreedAttribute
+14	левый	левый	A	Adjective Accusative Masculine true Full Positive	15	AgreedAttribute
+15	Noun	Accusative	true	true	8	_	
+16	и	и	CONJ	Conjunction Coordinating	18	CoordinatingConjunction
+17	правый	правый	A	Adjective Accusative Masculine true Full Positive	18	AgreedAttribute
+18	пределы	предел	S	Noun Accusative false false false	8	Object
+19	.	.	SENT	SENT	18	punc
+
+1	Если	если	CONJ	Conjunction Subordinating	13	SubordinatingConjunction
+2	функции	функция	S	Noun Nominative false false false	13	Subject
+3	formula_41	formula_41	S	Noun Nominative true false false	2	Apposition
+4	и	и	CONJ	Conjunction Coordinating	5	CoordinatingConjunction
+5	formula_215	formula_215	S	Noun Nominative true false false	2	Apposition
+6	,	,	SENT	SENT	5	punc
+7	определенные	определить	Participle	Participle Nominative false false true true Indicative Past	2	AgreedAttribute
+8	в	в	PR	Preposition	10	Preposition
+9	некоторой	некоторый	AdjectivePronoun	AdjectivePronoun Locative Feminine true Indefinite	10	AgreedAttribute
+10	окрестности	окрестность	S	Noun Locative Feminine true false false	7	AdverbialModifier
+11	точки	точка	S	Noun Genitive Feminine true false false	10	NonAgreedAttribute
+12	formula_247	formula_247	S	Noun Genitive true false false	11	NonAgreedAttribute
+13	есть	быть	Indicative	Indicative Present	0	Predicate
+14	,	,	SENT	SENT	13	punc
+15	непрерывны	непрерывный	A	Adjective false Short Positive	13	Complement
+16	в	в	PR	Preposition	18	Preposition
+17	этой	этот	AdjectivePronoun	AdjectivePronoun Locative Feminine true	18	AgreedAttribute
+18	точке	точка	S	Noun Locative Feminine true false false	15	AdverbialModifier
+19	,	,	SENT	SENT	18	punc
+20	то	то	CONJ	Conjunction	34	Correlate_CondTemp
+21	formula_257	formula_257	S	Noun Nominative true false false	34	Subject
+22	,	,	SENT	SENT	21	punc
+23	formula_299	formula_299	S	Noun Nominative true false false	34	Subject
+24	,	,	SENT	SENT	23	punc
+25	formula_300	formula_300	S	Noun Nominative true false false	34	Subject
+26	и	и	CONJ	Conjunction Coordinating	27	CoordinatingConjunction
+27	formula_298	formula_298	S	Noun Nominative true false false	34	Subject
+28	(	(	SENT	SENT	27	punc
+29	при	переть	V	Verb Masculine Second true Dynamic true false true Imperative	13	Predicate
+30	formula_320	formula_320	S	Noun Accusative true false false	29	Object
+31	в	в	PR	Preposition	33	Preposition
+32	указанной	указать	Participle	Participle Locative Feminine true false true true Indicative Past	33	AgreedAttribute
+33	окрестности	окрестность	S	Noun Locative Feminine true false false	29	AdverbialModifier
+34	есть	быть	Indicative	Indicative Present	13	Predicate
+35	)	)	SENT	SENT	34	punc
+36	непрерывны	непрерывный	A	Adjective false Short Positive	34	Complement
+37	в	в	PR	Preposition	38	Preposition
+38	точке	точка	S	Noun Locative Feminine true false false	36	AdverbialModifier
+39	formula_247	formula_247	S	Noun Genitive true false false	38	NonAgreedAttribute
+40	.	.	SENT	SENT	39	punc
+
+1	Если	если	CONJ	Conjunction Subordinating	3	SubordinatingConjunction
+2	formula_321	formula_321	S	Noun Nominative true false false	3	Subject
+3	есть	быть	false	false Indicative Present	0	Predicate
+4	непрерывна	непрерывный	A	Adjective Feminine true Short Positive	3	Complement
+5	в	в	PR	Preposition	7	Preposition
+6	некоторой	некоторый	AdjectivePronoun	AdjectivePronoun Locative Feminine true Indefinite	7	AgreedAttribute
+7	точке	точка	S	Noun Locative Feminine true false false	4	AdverbialModifier
+8	formula_322	formula_322	S	Noun Genitive true false false	7	NonAgreedAttribute
+9	,	,	SENT	SENT	8	punc
+10	а	а	CONJ	Conjunction Coordinating	13	CoordinatingConjunction
+11	функция	функция	S	Noun Nominative Feminine true false false	13	Subject
+12	formula_323	formula_323	S	Noun Nominative true false false	11	Apposition
+13	есть	быть	false	false Indicative Present	25	Predicate
+14	непрерывна	непрерывный	A	Adjective Feminine true Short Positive	13	Complement
+15	в	в	PR	Preposition	17	Preposition
+16	соответствующей	соответствующий	A	Adjective Locative Feminine true Full Positive	17	AgreedAttribute
+17	точке	точка	S	Noun Locative Feminine true false false	14	AdverbialModifier
+18	formula_324	formula_324	S	Noun Genitive true false false	17	NonAgreedAttribute
+19	Conjunction	Subordinating	_	_	13	#dependent_clause_conjunctions
+20	,	,	SENT	SENT	19	punc
+21	то	то	CONJ	Conjunction	25	Correlate_CondTemp
+22	сложная	сложный	A	Adjective Nominative Feminine true Full Positive	23	AgreedAttribute
+23	функция	функция	S	Noun Nominative Feminine true false false	25	Subject
+24	formula_325	formula_325	S	Noun Genitive true false false	23	NonAgreedAttribute
+25	есть	быть	false	false Indicative Present	3	Predicate
+26	непрерывна	непрерывный	A	Adjective Feminine true Short Positive	25	Complement
+27	в	в	PR	Preposition	28	Preposition
+28	точке	точка	S	Noun Locative Feminine true false false	26	AdverbialModifier
+29	formula_326	formula_326	S	Noun Genitive true false false	28	NonAgreedAttribute
+30	.	.	SENT	SENT	29	punc
+
+1	Пусть	пусть	CONJ	Conjunction Subordinating	5	SubordinatingConjunction
+2	функция	функция	S	Noun Nominative Feminine true false false	5	Subject
+3	formula_215	formula_215	S	Noun Nominative true false false	3	Apposition
+4	есть	быть	false	false Indicative Present	0	Predicate
+5	непрерывна	непрерывный	A	Adjective Feminine true Short Positive	5	Complement
+6	на	на	PR	Preposition	8	Preposition
+7	отрезке	отрезок	S	Noun Locative Masculine true false false	6	AdverbialModifier
+8	formula_62	formula_62	S	Noun Genitive true false false	8	NonAgreedAttribute
+9	.	.	SENT	SENT	8	punc
+
+1	Если	если	CONJ	Conjunction Subordinating	2	SubordinatingConjunction
+2	есть	быть	Indicative	Indicative Present	0	Predicate
+3	formula_327	formula_327	Numeral	Numeral Nominative Cardinal	2	Complement
+4	и	и	CONJ	Conjunction Coordinating	5	CoordinatingConjunction
+5	formula_328	formula_328	Numeral	Numeral Nominative Cardinal	2	Complement
+6	он		Subject	Subject true	2	
+7	,	,	SENT	SENT	6	punc
+8	то	то	CONJ	Conjunction	9	Correlate_CondTemp
+9	существует	существовать	V	Verb Feminine Third true true false false Indicative Present	2	Predicate
+10	точка	точка	S	Noun Nominative Feminine true false false	9	Subject
+11	formula_329	formula_329	S	Noun Genitive true false false	10	NonAgreedAttribute
+12	из	из	PR	Preposition	13	Preposition
+13	интервала	интервал	S	Noun Genitive Masculine true false false	11	AdverbialModifier
+14	formula_71	formula_71	S	Noun Genitive true false false	13	NonAgreedAttribute
+15	такая	такой	AdjectivePronoun	AdjectivePronoun Nominative Feminine true	10	AgreedAttribute
+16	,	,	SENT	SENT	15	punc
+17	что	что	CONJ	Conjunction Subordinating	18	SubordinatingConjunction
+18	выполняется	выполнить	V	Verb Neuter Third true true false true Indicative Present	2	Predicate
+19	равенство	равенство	S	Noun Nominative Neuter true false false	18	Subject
+20	formula_330	formula_330	S	Noun Genitive true false false	19	NonAgreedAttribute
+21	.	.	SENT	SENT	20	punc
+
+1	Пусть	пусть	CONJ	Conjunction Subordinating	5	SubordinatingConjunction
+2	функция	функция	S	Noun Nominative Feminine true false false	5	Subject
+3	formula_41	formula_41	S	Noun Nominative true false false	3	Apposition
+4	есть	быть	false	false Indicative Present	0	Predicate
+5	непрерывна	непрерывный	A	Adjective Feminine true Short Positive	5	Complement
+6	на	на	PR	Preposition	8	Preposition
+7	отрезке	отрезок	S	Noun Locative Masculine true false false	6	AdverbialModifier
+8	formula_62	formula_62	S	Noun Genitive true false false	8	NonAgreedAttribute
+9	.	.	SENT	SENT	8	punc
+
+1	Если	если	CONJ	Conjunction Subordinating	2	SubordinatingConjunction
+2	есть	быть	Indicative	Indicative Present	0	Predicate
+3	formula_331	formula_331	Numeral	Numeral Nominative Cardinal	2	Complement
+4	он		Subject	Subject true	2	_
+5	,	,	SENT	SENT	4	punc
+6	то	то	CONJ	Conjunction	18	Correlate_CondTemp
+7	для	для	PR	Preposition	9	Preposition
+8	любого	любой	AdjectivePronoun	AdjectivePronoun Genitive Neuter true Indefinite	9	AgreedAttribute
+9	числа	число	S	Noun Genitive Neuter true false false	18	ObjectIndirect
+10	formula_25	formula_25	S	Noun Genitive true false false	9	NonAgreedAttribute
+11	такого	такой	AdjectivePronoun	AdjectivePronoun Genitive Masculine true	12	AgreedAttribute
+12	Noun	Genitive	true	true	9	_	
+13	,	,	SENT	SENT	12	punc
+14	что	что	Pronoun	Pronoun Nominative Neuter Third true Relative	15	RelativeGroup
+15	есть	быть	false	false Indicative Present	2	Predicate
+16	formula_332	formula_332	Numeral	Numeral Nominative Cardinal	15	Complement
+17	,	,	SENT	SENT	16	punc
+18	найдется	найти	V	Verb Feminine Third true true true true Indicative Future	2	Predicate
+19	точка	точка	S	Noun Nominative Feminine true false false	18	Subject
+20	formula_330	formula_330	S	Noun Genitive true false false	19	NonAgreedAttribute
+21	из	из	PR	Preposition	22	Preposition
+22	интервала	интервал	S	Noun Genitive Masculine true false false	18	AdverbialModifier
+23	formula_71	formula_71	S	Noun Genitive true false false	22	NonAgreedAttribute
+24	,	,	SENT	SENT	23	punc
+25	в	в	PR	Preposition	26	Preposition
+26	которой	который	Pronoun	Pronoun Locative Feminine Third true Relative	27	RelativeGroup
+27	есть	быть	false	false Indicative Present	23	Predicate
+28	formula_333	formula_333	S	Noun Nominative true false false	27	Subject
+29	.	.	SENT	SENT	28	punc
+
+1	Функция	функция	S	Noun Nominative Feminine true false false	7	Subject
+2	,	,	SENT	SENT	1	punc
+3	непрерывная	непрерывный	A	Adjective Nominative Feminine true Full Positive	1	AgreedAttribute
+4	на	на	PR	Preposition	5	Preposition
+5	отрезке	отрезок	S	Noun Locative Masculine true false false	3	AdverbialModifier
+6	,	,	SENT	SENT	5	punc
+7	ограничена	ограничить	V	Verb Feminine Third true false true true Indicative Present	0	Predicate
+8	на	на	PR	Preposition	10	Preposition
+9	этом	этот	AdjectivePronoun	AdjectivePronoun Locative Masculine true	10	AgreedAttribute
+10	отрезке	отрезок	S	Noun Locative Masculine true false false	7	AdverbialModifier
+11	.	.	SENT	SENT	10	punc
+
+1	Функция	функция	S	Noun Nominative Feminine true false false	7	Subject
+2	,	,	SENT	SENT	1	punc
+3	непрерывная	непрерывный	A	Adjective Nominative Feminine true Full Positive	1	AgreedAttribute
+4	на	на	PR	Preposition	5	Preposition
+5	отрезке	отрезок	S	Noun Locative Masculine true false false	3	AdverbialModifier
+6	,	,	SENT	SENT	5	punc
+7	достигает	достигнуть	V	Verb Feminine Third true Dynamic true false false Indicative Present	0	Predicate
+8	на	на	PR	Preposition	9	Preposition
+9	нем	он	Pronoun	Pronoun Locative Masculine Third true	7	AdverbialModifier
+10	точной	точный	A	Adjective Genitive Feminine true Full Positive	12	AgreedAttribute
+11	верхней	верхний	A	Adjective Genitive Feminine true Full Positive	12	AgreedAttribute
+12	Noun	Genitive	_	_	7	_
+13	и	и	CONJ	Conjunction Coordinating	16	CoordinatingConjunction
+14	точной	точный	A	Adjective Genitive Feminine true Full Positive	16	AgreedAttribute
+15	нижней	нижний	A	Adjective Genitive Feminine true Full Positive	16	AgreedAttribute
+16	граней	грань	S	Noun Genitive false false false	7	ObjectIndirect
+17	.	.	SENT	SENT	16	punc
+
+1	Функция	функция	S	Noun Nominative Feminine true false false	7	Subject
+2	,	,	SENT	SENT	1	punc
+3	непрерывная	непрерывный	A	Adjective Nominative Feminine true Full Positive	1	AgreedAttribute
+4	на	на	PR	Preposition	5	Preposition
+5	отрезке	отрезок	S	Noun Locative Masculine true false false	3	AdverbialModifier
+6	,	,	SENT	SENT	5	punc
+7	имеет	иметь	V	Verb Feminine Third true true false true Indicative Present	0	Predicate
+8	на	на	PR	Preposition	10	Preposition
+9	этом	этот	AdjectivePronoun	AdjectivePronoun Locative Masculine true	10	AgreedAttribute
+10	отрезке	отрезок	S	Noun Locative Masculine true false false	7	AdverbialModifier
+11	максимум	максимум	S	Noun Accusative Masculine true false false	7	Object
+12	и	и	CONJ	Conjunction Coordinating	13	CoordinatingConjunction
+13	минимум	минимум	S	Noun Accusative Masculine true false false	7	Object
+14	.	.	SENT	SENT	13	punc
+
+1	Если	если	CONJ	Conjunction Subordinating	6	SubordinatingConjunction
+2	непрерывная	непрерывный	A	Adjective Nominative Feminine true Full Positive	5	AgreedAttribute
+3	на	на	PR	Preposition	4	Preposition
+4	отрезке	отрезок	S	Noun Locative Masculine true false false	2	AdverbialModifier
+5	функция	функция	S	Noun Nominative Feminine true false false	6	Subject
+6	имеет	иметь	V	Verb Feminine Third true true false true Indicative Present	0	Predicate
+7	обратную	обратный	A	Adjective Accusative Feminine true Full Positive	8	AgreedAttribute
+8	Noun	Accusative	true	true	6	
+9	,	,	SENT	SENT	8	punc
+10	то	то	CONJ	Conjunction	15	Correlate_CondTemp
+11	эта	этот	AdjectivePronoun	AdjectivePronoun Nominative Feminine true	13	AgreedAttribute
+12	обратная	обратный	A	Adjective Nominative Feminine true Full Positive	13	AgreedAttribute
+13	Noun	Nominative	true	true	15	
+14	также	также	Adverb	Adverb Positive	15	ТожеТакже
+15	является	явиться	V	Verb Feminine Third true true false false Indicative Present	6	Predicate
+16	непрерывной	непрерывный	A	Adjective Instrumental Feminine true Full Positive	17	AgreedAttribute
+17	функцией	функция	S	Noun Instrumental Feminine true false false	15	Complement
+18	.	.	SENT	SENT	17	punc
+
+1	Комплексно	комплексный	A	Adjective Masculine true Full Positive	2	Modifier_Composite_Adjective
+2	значная	значный	A	Adjective Nominative Feminine true Full Positive	3	AgreedAttribute
+3	функция	функция	S	Noun Nominative Feminine true false false	5	Subject
+4	formula_334	formula_334	S	Noun Genitive true false false	3	NonAgreedAttribute
+5	есть	быть	false	false Indicative Present	0	Predicate
+6	непрерывна	непрерывный	A	Adjective Feminine true Short Positive	5	Complement
+7	в	в	PR	Preposition	9	Preposition
+8	некоторой	некоторый	AdjectivePronoun	AdjectivePronoun Locative Feminine true Indefinite	9	AgreedAttribute
+9	точке	точка	S	Noun Locative Feminine true false false	6	AdverbialModifier
+10	тогда	тогда	AdverbialPronoun	AdverbialPronoun	5	AdverbialModifier
+11	и	и	CONJ	Conjunction Coordinating	13	CoordinatingConjunction
+12	только	только	Adverb	Adverb Positive	13	Surface_Limitation
+13	тогда	тогда	AdverbialPronoun	AdverbialPronoun	5	AdverbialModifier
+14	,	,	SENT	SENT	13	punc
+15	когда	когда	CONJ	Conjunction Subordinating	19	SubordinatingConjunction
+16	в	в	PR	Preposition	18	Preposition
+17	этой	этот	AdjectivePronoun	AdjectivePronoun Locative Feminine true	18	AgreedAttribute
+18	точке	точка	S	Noun Locative Feminine true false false	19	AdverbialModifier
+19	есть	быть	Indicative	Indicative Present	5	Predicate
+20	непрерывны	непрерывный	A	Adjective false Short Positive	19	Complement
+21	обе	оба	AdjectivePronoun	AdjectivePronoun Nominative false	22	AgreedAttribute
+22	функции	функция	S	Noun Nominative false false false	19	Subject
+23	formula_335	formula_335	S	Noun Genitive true false false	22	NonAgreedAttribute
+24	и	и	CONJ	Conjunction Coordinating	25	CoordinatingConjunction
+25	formula_336	formula_336	S	Noun Genitive true false false	22	NonAgreedAttribute
+26	.	.	SENT	SENT	25	punc
+
+1	Функция	функция	S	Noun Nominative Feminine true false false	10	Subject
+2	formula_41	formula_41	S	Noun Nominative true false false	1	Apposition
+3	,	,	SENT	SENT	2	punc
+4	определенная	определить	Participle	Participle Nominative Feminine true false true true Indicative Past	1	AgreedAttribute
+5	в	в	PR	Preposition	7	Preposition
+6	некоторой	некоторый	AdjectivePronoun	AdjectivePronoun Locative Feminine true Indefinite	7	AgreedAttribute
+7	окрестности	окрестность	S	Noun Locative Feminine true false false	4	AdverbialModifier
+8	точки	точка	S	Noun Genitive Feminine true false false	7	NonAgreedAttribute
+9	formula_247	formula_247	S	Noun Genitive true false false	8	NonAgreedAttribute
+10	есть	быть	false	false Indicative Present	0	Predicate
+11	,	,	SENT	SENT	10	punc
+12	дифференцируема	дифференцировать	Participle	Participle Feminine true false false true Indicative Present	10	Complement
+13	в	в	PR	Preposition	15	Preposition
+14	этой	этот	AdjectivePronoun	AdjectivePronoun Locative Feminine true	15	AgreedAttribute
+15	точке	точка	S	Noun Locative Feminine true false false	12	AdverbialModifier
+16	тогда	тогда	AdverbialPronoun	AdverbialPronoun	10	AdverbialModifier
+17	и	и	CONJ	Conjunction Coordinating	19	CoordinatingConjunction
+18	только	только	Adverb	Adverb Positive	19	Surface_Limitation
+19	тогда	тогда	AdverbialPronoun	AdverbialPronoun	10	AdverbialModifier
+20	,	,	SENT	SENT	19	punc
+21	когда	когда	CONJ	Conjunction Subordinating	22	SubordinatingConjunction
+22	существуют	существовать	V	Verb Third false true false false Indicative Present	10	Predicate
+23	число	число	S	Noun Nominative Neuter true false false	22	Subject
+24	formula_25	formula_25	S	Noun Genitive true false false	23	NonAgreedAttribute
+25	AdjectivePronoun	Nominative	_	_	23	_
+26	и	и	CONJ	Conjunction Coordinating	32	CoordinatingConjunction
+27	бесконечно	бесконечно	Adverb	Adverb Positive	28	Modifier_Adverbial_ForAdjAdv
+28	малая	малый	A	Adjective Nominative Feminine true Full Positive	32	AgreedAttribute
+29	в	в	PR	Preposition	30	Preposition
+30	точке	точка	S	Noun Locative Feminine true false false	28	AdverbialModifier
+31	formula_247	formula_247	S	Noun Genitive true false false	30	NonAgreedAttribute
+32	функция	функция	S	Noun Nominative Feminine true false false	22	Subject
+33	formula_337	formula_337	S	Noun Genitive true false false	32	NonAgreedAttribute
+34	такие	такой	AdjectivePronoun	AdjectivePronoun Nominative false	32	AgreedAttribute
+35	,	,	SENT	SENT	34	punc
+36	что	что	CONJ	Conjunction Subordinating	37	SubordinatingConjunction
+37	выполняется	выполнить	V	Verb Neuter Third true true false true Indicative Present	10	Predicate
+38	равенство	равенство	S	Noun Nominative Neuter true false false	37	Subject
+39	formula_338	formula_338	S	Noun Genitive true false false	38	NonAgreedAttribute
+40	.	.	SENT	SENT	39	punc
+
+1	Если	если	CONJ	Conjunction Subordinating	3	SubordinatingConjunction
+2	функция	функция	S	Noun Nominative Feminine true false false	3	Subject
+3	есть	быть	false	false Indicative Present	11	Predicate
+4	дифференцируема	дифференцировать	Participle	Participle Feminine true false false true Indicative Present	3	Complement
+5	в	в	PR	Preposition	7	Preposition
+6	некоторой	некоторый	AdjectivePronoun	AdjectivePronoun Locative Feminine true Indefinite	7	AgreedAttribute
+7	точке	точка	S	Noun Locative Feminine true false false	4	AdverbialModifier
+8	,	,	SENT	SENT	7	punc
+9	то	то	CONJ	Conjunction	11	Correlate_CondTemp
+10	она	он	Pronoun	Pronoun Nominative Feminine Third true	11	Subject
+11	есть	быть	false	false Indicative Present	0	Predicate
+12	непрерывна	непрерывный	A	Adjective Feminine true Short Positive	11	Complement
+13	в	в	PR	Preposition	15	Preposition
+14	этой	этот	AdjectivePronoun	AdjectivePronoun Locative Feminine true	15	AgreedAttribute
+15	точке	точка	S	Noun Locative Feminine true false false	12	AdverbialModifier
+16	.	.	SENT	SENT	15	punc
+
+1	Пусть	пусть	CONJ	Conjunction Subordinating	6	SubordinatingConjunction
+2	formula_41	formula_41	S	Noun Nominative true false false	6	Subject
+3	и	и	CONJ	Conjunction Coordinating	5	CoordinatingConjunction
+4	formula_215	formula_215	S	Noun Nominative true false false	6	Subject
+5	есть	быть	Indicative	Indicative Present	0	Predicate
+6	дифференцируемы	дифференцировать	Participle	Participle false false false true Indicative Present	6	Complement
+7	в	в	PR	Preposition	9	Preposition
+8	точке	точка	S	Noun Locative Feminine true false false	7	AdverbialModifier
+9	formula_247	formula_247	S	Noun Genitive true false false	8	NonAgreedAttribute
+10	.	.	SENT	SENT	9	punc
+
+1	Тогда	тогда	AdverbialPronoun	AdverbialPronoun	10	AdverbialModifier
+2	для	для	PR	Preposition	4	Preposition
+3	любых	любой	AdjectivePronoun	AdjectivePronoun Genitive false Indefinite	4	AgreedAttribute
+4	постоянных	постоянная	S	Noun Genitive false false false	10	ObjectIndirect
+5	formula_339	formula_339	S	Noun Genitive true false false	4	NonAgreedAttribute
+6	и	и	CONJ	Conjunction Coordinating	7	CoordinatingConjunction
+7	formula_340	formula_340	S	Noun Genitive true false false	4	NonAgreedAttribute
+8	функция	функция	S	Noun Nominative Feminine true false false	10	Subject
+9	formula_341	formula_341	S	Noun Nominative true false false	8	Apposition
+10	есть	быть	false	false Indicative Present	0	Predicate
+11	также	также	Adverb	Adverb Positive	12	ТожеТакже
+12	дифференцируема	дифференцировать	Participle	Participle Feminine true false false true Indicative Present	10	Complement
+13	в	в	PR	Preposition	15	Preposition
+14	этой	этот	AdjectivePronoun	AdjectivePronoun Locative Feminine true	15	AgreedAttribute
+15	точке	точка	S	Noun Locative Feminine true false false	12	AdverbialModifier
+16	и	и	CONJ	Conjunction Coordinating	17	CoordinatingConjunction
+17	выполняется	выполнить	V	Verb Neuter Third true true false true Indicative Present	10	Predicate
+18	равенство	равенство	S	Noun Nominative Neuter true false false	17	Subject
+19	formula_342	formula_342	S	Noun Genitive true false false	18	NonAgreedAttribute
+20	Пусть	пусть	CONJ	Conjunction Subordinating	6	SubordinatingConjunction
+21	formula_41	formula_41	S	Noun Nominative true false false	6	Subject
+22	и	и	CONJ	Conjunction Coordinating	5	CoordinatingConjunction
+23	formula_215	formula_215	S	Noun Nominative true false false	6	Subject
+24	есть	быть	Indicative	Indicative Present	1	Predicate
+25	дифференцируемы	дифференцировать	Participle	Participle false false false true Indicative Present	6	Complement
+26	в	в	PR	Preposition	9	Preposition
+27	точке	точка	S	Noun Locative Feminine true false false	7	AdverbialModifier
+28	formula_247	formula_247	S	Noun Genitive true false false	9	NonAgreedAttribute
+29	.	.	SENT	SENT	28	punc
+
+1	Тогда	тогда	AdverbialPronoun	AdverbialPronoun	6	AdverbialModifier
+2	их	их	PossessivePronoun	PossessivePronoun Nominative Neuter Third true	3	AgreedAttribute
+3	произведение	произведение	S	Noun Nominative Neuter true false false	6	Subject
+4	formula_343	formula_343	Numeral	Numeral Nominative Cardinal	3	Apposition
+5	также	также	Adverb	Adverb Positive	6	ТожеТакже
+6	есть	быть	false	false Indicative Present	0	Predicate
+7	дифференцируемо	дифференцировать	Participle	Participle Neuter true false false true Indicative Present	6	Complement
+8	в	в	PR	Preposition	10	Preposition
+9	этой	этот	AdjectivePronoun	AdjectivePronoun Locative Feminine true	10	AgreedAttribute
+10	точке	точка	S	Noun Locative Feminine true false false	7	AdverbialModifier
+11	и	и	CONJ	Conjunction Coordinating	12	CoordinatingConjunction
+12	выполняется	выполнить	V	Verb Neuter Third true true false true Indicative Present	6	Predicate
+13	равенство	равенство	S	Noun Nominative Neuter true false false	12	Subject
+14	formula_344	formula_344	S	Noun Genitive true false false	13	NonAgreedAttribute
+15	.	.	SENT	SENT	14	punc
+
+1	Пусть	пусть	CONJ	Conjunction Subordinating	6	SubordinatingConjunction
+2	formula_41	formula_41	S	Noun Nominative true false false	6	Subject
+3	и	и	CONJ	Conjunction Coordinating	5	CoordinatingConjunction
+4	formula_215	formula_215	S	Noun Nominative true false false	6	Subject
+5	есть	быть	Indicative	Indicative Present	0	Predicate
+6	дифференцируемы	дифференцировать	Participle	Participle false false false true Indicative Present	5	Complement
+7	в	в	PR	Preposition	9	Preposition
+8	точке	точка	S	Noun Locative Feminine true false false	6	AdverbialModifier
+9	formula_247	formula_247	S	Noun Genitive true false false	9	NonAgreedAttribute
+10	и	и	CONJ	Conjunction Coordinating	13	CoordinatingConjunction
+11	пусть	пусть	CONJ	Conjunction Subordinating	13	SubordinatingConjunction
+12	formula_345	formula_345	S	Noun Nominative true false false	6	But_Addition
+13	.	.	SENT	SENT	12	punc
+
+1	Тогда	тогда	AdverbialPronoun	AdverbialPronoun	4	AdverbialModifier
+2	частное	частное	S	Noun Nominative Neuter true false false	4	Subject
+3	formula_346	formula_346	S	Noun Genitive true false false	2	NonAgreedAttribute
+4	есть	быть	false	false Indicative Present	0	Predicate
+5	также	также	Adverb	Adverb Positive	6	ТожеТакже
+6	дифференцируемо	дифференцировать	Participle	Participle Neuter true false false true Indicative Present	4	Complement
+7	в	в	PR	Preposition	9	Preposition
+8	этой	этот	AdjectivePronoun	AdjectivePronoun Locative Feminine true	9	AgreedAttribute
+9	точке	точка	S	Noun Locative Feminine true false false	6	AdverbialModifier
+10	и	и	CONJ	Conjunction Coordinating	11	CoordinatingConjunction
+11	выполняется	выполнить	V	Verb Neuter Third true true false true Indicative Present	4	Predicate
+12	равенство	равенство	S	Noun Nominative Neuter true false false	11	Subject
+13	formula_347	formula_347	S	Noun Genitive true false false	12	NonAgreedAttribute
+14	.	.	SENT	SENT	13	punc
+
+1	Пусть	пусть	CONJ	Conjunction Subordinating	2	SubordinatingConjunction
+2	formula_348	formula_348	S	Noun true false false	3	MovedActant
+3	есть	быть	false	false Indicative Present	0	Predicate
+4	дифференцируема	дифференцировать	Participle	Participle Feminine true false false true Indicative Present	3	Complement
+5	в	в	PR	Preposition	6	Preposition
+6	точке	точка	S	Noun Locative Feminine true false false	4	AdverbialModifier
+7	formula_323	formula_323	S	Noun Nominative true false false	3	Subject
+8	и	и	CONJ	Conjunction Coordinating	12	CoordinatingConjunction
+9	пусть	пусть	CONJ	Conjunction Subordinating	10	SubordinatingConjunction
+10	функция	функция	S	Noun Nominative Feminine true false false	12	But_Addition
+11	formula_41	formula_41	S	Noun Nominative true false false	12	Subject
+12	есть	быть	false	false Indicative Present	3	Predicate
+13	дифференцируема	дифференцировать	Participle	Participle Feminine true false false true Indicative Present	12	Complement
+14	в	в	PR	Preposition	16	Preposition
+15	соответствующей	соответствующий	A	Adjective Locative Feminine true Full Positive	16	AgreedAttribute
+16	точке	точка	S	Noun Locative Feminine true false false	13	AdverbialModifier
+17	formula_325	formula_325	S	Noun Genitive true false false	16	NonAgreedAttribute
+18	.	.	SENT	SENT	17	punc
+
+1	Тогда	тогда	AdverbialPronoun	AdverbialPronoun	5	AdverbialModifier
+2	сложная	сложный	A	Adjective Nominative Feminine true Full Positive	3	AgreedAttribute
+3	функция	функция	S	Noun Nominative Feminine true false false	5	Subject
+4	formula_326	formula_326	S	Noun Genitive true false false	3	NonAgreedAttribute
+5	есть	быть	false	false Indicative Present	0	Predicate
+6	дифференцируема	дифференцировать	Participle	Participle Feminine true false false true Indicative Present	5	Complement
+7	в	в	PR	Preposition	8	Preposition
+8	точке	точка	S	Noun Locative Feminine true false false	6	AdverbialModifier
+9	formula_247	formula_247	S	Noun Genitive true false false	8	NonAgreedAttribute
+10	и	и	CONJ	Conjunction Coordinating	11	CoordinatingConjunction
+11	выполняется	выполнить	V	Verb Neuter Third true true false true Indicative Present	5	Predicate
+12	равенство	равенство	S	Noun Nominative Neuter true false false	11	Subject
+13	formula_349	formula_349	S	Noun Genitive true false false	12	NonAgreedAttribute
+14	.	.	SENT	SENT	13	punc
+
+1	Пусть	пусть	CONJ	Conjunction Subordinating	5	SubordinatingConjunction
+2	функция	функция	S	Noun Nominative Feminine true false false	5	Subject
+3	formula_41	formula_41	S	Noun Nominative true false false	3	Apposition
+4	есть	быть	false	false Indicative Present	0	Predicate
+5	строго	строго	Adverb	Adverb Positive	7	QuantitativeAdverb
+6	монотонна	монотонный	A	Adjective Feminine true Short Positive	4	Complement
+7	и	и	CONJ	Conjunction Coordinating	9	CoordinatingConjunction
+8	непрерывна	непрерывный	A	Adjective Feminine true Short Positive	4	Complement
+9	в	в	PR	Preposition	12	Preposition
+10	некоторой	некоторый	AdjectivePronoun	AdjectivePronoun Locative Feminine true Indefinite	12	AgreedAttribute
+11	окрестности	окрестность	S	Noun Locative Feminine true false false	9	AdverbialModifier
+12	точки	точка	S	Noun Genitive Feminine true false false	12	NonAgreedAttribute
+13	formula_247	formula_247	S	Noun Genitive true false false	13	NonAgreedAttribute
+14	Adverb	Positive	строгий	строгий STRICT_AS_EXACT CH_EXACTNESS STRICT_AS_EXACT:CH_EXACTNESS:DEGREE_OF_FIT:CH_DEGREE_AND_INTENSITY Точность 2985467	9	
+15	.	.	SENT	SENT	14	punc
+
+1	Если	если	CONJ	Conjunction Subordinating	3	SubordinatingConjunction
+2	formula_41	formula_41	S	Noun Nominative true false false	3	Subject
+3	есть	быть	false	false Indicative Present	0	Predicate
+4	дифференцируема	дифференцировать	Participle	Participle Feminine true false false true Indicative Present	3	Complement
+5	в	в	PR	Preposition	6	Preposition
+6	точке	точка	S	Noun Locative Feminine true false false	4	AdverbialModifier
+7	formula_247	formula_247	S	Noun Genitive true false false	6	NonAgreedAttribute
+8	и	и	CONJ	Conjunction Coordinating	9	CoordinatingConjunction
+9	formula_350	formula_350	S	Noun Genitive true false false	6	NonAgreedAttribute
+10	,	,	SENT	SENT	9	punc
+11	то	то	CONJ	Conjunction	16	Correlate_CondTemp
+12	обратная	обратный	A	Adjective Nominative Feminine true Full Positive	13	AgreedAttribute
+13	функция	функция	S	Noun Nominative Feminine true false false	16	Subject
+14	функция	функция	S	Noun Nominative Feminine true false false	13	Apposition
+15	formula_351	formula_351	S	Noun Nominative true false false	14	Apposition
+16	есть	быть	false	false Indicative Present	3	Predicate
+17	дифференцируема	дифференцировать	Participle	Participle Feminine true false false true Indicative Present	16	Complement
+18	в	в	PR	Preposition	19	Preposition
+19	точке	точка	S	Noun Locative Feminine true false false	17	AdverbialModifier
+20	formula_258	formula_258	S	Noun Genitive true false false	19	NonAgreedAttribute
+21	и	и	CONJ	Conjunction Coordinating	22	CoordinatingConjunction
+22	выполняется	выполнить	V	Verb Neuter Third true true false true Indicative Present	3	Predicate
+23	равенство	равенство	S	Noun Nominative Neuter true false false	22	Subject
+24	formula_352	formula_352	S	Noun Genitive true false false	23	NonAgreedAttribute
+25	.	.	SENT	SENT	24	punc
+
+1	Пусть	пусть	CONJ	Conjunction Subordinating	5	SubordinatingConjunction
+2	функция	функция	S	Noun Nominative Feminine true false false	5	Subject
+3	formula_41	formula_41	S	Noun Nominative true false false	3	Apposition
+4	есть	быть	false	false Indicative Present	0	Predicate
+5	непрерывна	непрерывный	A	Adjective Feminine true Short Positive	5	Complement
+6	на	на	PR	Preposition	8	Preposition
+7	отрезке	отрезок	S	Noun Locative Masculine true false false	6	AdverbialModifier
+8	formula_62	formula_62	Numeral	Numeral Nominative Cardinal	8	NonAgreedAttribute
+9	и	и	CONJ	Conjunction Coordinating	11	CoordinatingConjunction
+10	дифференцируема	дифференцировать	Participle	Participle Feminine true false false true Indicative Present	4	Complement
+11	в	в	PR	Preposition	14	Preposition
+12	каждой	каждый	AdjectivePronoun	AdjectivePronoun Locative Feminine true	14	AgreedAttribute
+13	точке	точка	S	Noun Locative Feminine true false false	11	AdverbialModifier
+14	интервала	интервал	S	Noun Genitive Masculine true false false	14	NonAgreedAttribute
+15	formula_71	formula_71	S	Noun Genitive true false false	15	NonAgreedAttribute
+16	.	.	SENT	SENT	15	punc
+
+1	Если	если	CONJ	Conjunction Subordinating	2	SubordinatingConjunction
+2	есть	быть	Indicative	Indicative Present	0	Predicate
+3	formula_353	formula_353	Numeral	Numeral Nominative Cardinal	2	Complement
+4	он		Subject	Subject true	2	
+5	,	,	SENT	SENT	4	punc
+6	то	то	CONJ	Conjunction	10	Correlate_CondTemp
+7	внутри	внутри	Adverb	Adverb	10	AdverbialModifier
+8	интервала	интервал	S	Noun Genitive Masculine true false false	7	Object_Indirect_Genitive
+9	formula_71	formula_71	S	Noun Genitive true false false	8	NonAgreedAttribute
+10	найдется	найти	V	Verb Feminine Third true true true false Indicative Future	2	Predicate
+11	точка	точка	S	Noun Nominative Feminine true false false	10	Subject
+12	formula_330	formula_330	S	Noun Genitive true false false	11	NonAgreedAttribute
+13	такая	такой	AdjectivePronoun	AdjectivePronoun Nominative Feminine true	11	AgreedAttribute
+14	,	,	SENT	SENT	13	punc
+15	что	что	CONJ	Conjunction Subordinating	16	SubordinatingConjunction
+16	есть	быть	Indicative	Indicative Present	2	Predicate
+17	formula_354	formula_354	Numeral	Numeral Nominative Cardinal	16	Complement
+18	он		Subject	Subject true	16	
+19	.	.	SENT	SENT	18	punc
+
+1	Если	если	CONJ	Conjunction Subordinating	4	SubordinatingConjunction
+2	функция	функция	S	Noun Nominative Feminine true false false	4	Subject
+3	formula_41	formula_41	S	Noun Nominative true false false	2	Apposition
+4	есть	быть	false	false Indicative Present	21	Predicate
+5	непрерывна	непрерывный	A	Adjective Feminine true Short Positive	4	Complement
+6	на	на	PR	Preposition	7	Preposition
+7	отрезке	отрезок	S	Noun Locative Masculine true false false	5	AdverbialModifier
+8	formula_62	formula_62	Numeral	Numeral Nominative Cardinal	7	Apposition
+9	и	и	CONJ	Conjunction Coordinating	10	CoordinatingConjunction
+10	дифференцируема	дифференцировать	Participle	Participle Feminine true false false true Indicative Present	4	Complement
+11	в	в	PR	Preposition	13	Preposition
+12	каждой	каждый	AdjectivePronoun	AdjectivePronoun Locative Feminine true	13	AgreedAttribute
+13	точке	точка	S	Noun Locative Feminine true false false	10	AdverbialModifier
+14	интервала	интервал	S	Noun Genitive Masculine true false false	13	NonAgreedAttribute
+15	formula_71	formula_71	S	Noun Genitive true false false	14	NonAgreedAttribute
+16	,	,	SENT	SENT	15	punc
+17	то	то	CONJ	Conjunction	21	Correlate_CondTemp
+18	внутри	внутри	Adverb	Adverb	21	AdverbialModifier
+19	интервала	интервал	S	Noun Genitive Masculine true false false	18	Object_Indirect_Genitive
+20	formula_71	formula_71	S	Noun Genitive true false false	19	NonAgreedAttribute
+21	найдется	найти	V	Verb Feminine Third true true true true Indicative Future	0	Predicate
+22	точка	точка	S	Noun Nominative Feminine true false false	21	Subject
+23	formula_330	formula_330	S	Noun Genitive true false false	22	NonAgreedAttribute
+24	такая	такой	AdjectivePronoun	AdjectivePronoun Nominative Feminine true	22	AgreedAttribute
+25	,	,	SENT	SENT	24	punc
+26	что	что	CONJ	Conjunction Subordinating	27	SubordinatingConjunction
+27	выполняется	выполнить	V	Verb Neuter Third true true false true Indicative Present	21	Predicate
+28	равенство	равенство	S	Noun Nominative Neuter true false false	27	Subject
+29	formula_355	formula_355	S	Noun Genitive true false false	28	NonAgreedAttribute
+30	.	.	SENT	SENT	29	punc
+
+1	Пусть	пусть	CONJ	Conjunction Subordinating	5	SubordinatingConjunction
+2	функция	функция	S	Noun Nominative Feminine true false false	5	Subject
+3	formula_41	formula_41	S	Noun Nominative true false false	3	Apposition
+4	есть	быть	false	false Indicative Present	0	Predicate
+5	дифференцируема	дифференцировать	Participle	Participle Feminine true false false true Indicative Present	4	Complement
+6	на	на	PR	Preposition	8	Preposition
+7	интервале	интервал	S	Noun Locative Masculine true false false	6	AdverbialModifier
+8	formula_71	formula_71	S	Noun Genitive true false false	7	NonAgreedAttribute
+9	.	.	SENT	SENT	8	punc
+
+1	Если	если	CONJ	Conjunction Subordinating	7	SubordinatingConjunction
+2	в	в	PR	Preposition	4	Preposition
+3	каждой	каждый	AdjectivePronoun	AdjectivePronoun Locative Feminine true	4	AgreedAttribute
+4	точке	точка	S	Noun Locative Feminine true false false	7	AdverbialModifier
+5	этого	этот	AdjectivePronoun	AdjectivePronoun Genitive Masculine true	6	AgreedAttribute
+6	интервала	интервал	S	Noun Genitive Masculine true false false	4	NonAgreedAttribute
+7	выполняется	выполнить	V	Verb Neuter Third true true false true Indicative Present	13	Predicate
+8	равенство	равенство	S	Noun Nominative Neuter true false false	7	Subject
+9	функция	функция	S	Noun Nominative Feminine true false false	8	Apposition
+10	formula_356	formula_356	S	Noun Nominative true false false	9	Apposition
+11	,	,	SENT	SENT	10	punc
+12	то	то	CONJ	Conjunction	13	Correlate_CondTemp
+13	существует	существовать	V	Verb Feminine Third true true false false Indicative Present	0	Predicate
+14	постоянная	постоянная	S	Noun Nominative Feminine true false false	13	Subject
+15	formula_357	formula_357	S	Noun Genitive true false false	14	NonAgreedAttribute
+16	такая	такой	AdjectivePronoun	AdjectivePronoun Nominative Feminine true	14	AgreedAttribute
+17	,	,	SENT	SENT	16	punc
+18	что	что	CONJ	Conjunction Subordinating	19	SubordinatingConjunction
+19	есть	быть	Indicative	Indicative Present	13	Predicate
+20	formula_358	formula_358	Numeral	Numeral Cardinal	19	Complement
+21	он		Subject	Subject true	19	_
+22	.	.	SENT	SENT	21	punc
+
+1	Пусть	пусть	CONJ	Conjunction Subordinating	4	SubordinatingConjunction
+2	функции	функция	S	Noun Nominative false false false	4	Subject
+3	есть	быть	Indicative	Indicative Present	0	Predicate
+4	formula_41	formula_41	S	Noun Nominative true false false	8	Modifier_Nominal_Hyphen
+5	и	и	CONJ	Conjunction Coordinating	7	CoordinatingConjunction
+6	formula_215	formula_215	S	Noun Nominative true false false	8	Modifier_Nominal_Hyphen
+7	непрерывны	непрерывный	A	Adjective false Short Positive	4	Complement
+8	на	на	PR	Preposition	10	Preposition
+9	отрезке	отрезок	S	Noun Locative Masculine true false false	8	AdverbialModifier
+10	formula_62	formula_62	Numeral	Numeral Nominative Cardinal	10	Apposition
+11	и	и	CONJ	Conjunction Coordinating	13	CoordinatingConjunction
+12	дифференцируемы	дифференцировать	Participle	Participle false false false true Indicative Present	4	Complement
+13	в	в	PR	Preposition	16	Preposition
+14	каждой	каждый	AdjectivePronoun	AdjectivePronoun Locative Feminine true	16	AgreedAttribute
+15	точке	точка	S	Noun Locative Feminine true false false	13	AdverbialModifier
+16	интервала	интервал	S	Noun Genitive Masculine true false false	16	NonAgreedAttribute
+17	formula_71	formula_71	S	Noun Genitive true false false	17	NonAgreedAttribute
+18	.	.	SENT	SENT	17	punc
+
+1	Если	если	CONJ	Conjunction Subordinating	5	SubordinatingConjunction
+2	производная	производная	S	Noun Nominative Feminine true false false	5	Subject
+3	функции	функция	S	Noun Genitive Feminine true false false	2	NonAgreedAttribute
+4	formula_215	formula_215	S	Noun Nominative true false false	3	Apposition
+5	есть	быть	false	false Indicative Present	19	Predicate
+6	отлична	отличный	A	Adjective Feminine true Short Positive	5	Complement
+7	от	от	PR	Preposition	8	Preposition
+8	нуля	нуль	Numeral	Numeral Genitive true	6	ObjectIndirect
+9	в	в	PR	Preposition	11	Preposition
+10	каждой	каждый	AdjectivePronoun	AdjectivePronoun Locative Feminine true	11	AgreedAttribute
+11	точке	точка	S	Noun Locative Feminine true false false	6	AdverbialModifier
+12	интервала	интервал	S	Noun Genitive Masculine true false false	11	NonAgreedAttribute
+13	formula_71	formula_71	S	Noun Genitive true false false	12	NonAgreedAttribute
+14	,	,	SENT	SENT	13	punc
+15	то	то	CONJ	Conjunction	19	Correlate_CondTemp
+16	внутри	внутри	Adverb	Adverb	19	AdverbialModifier
+17	этого	этот	AdjectivePronoun	AdjectivePronoun Genitive Masculine true	18	AgreedAttribute
+18	интервала	интервал	S	Noun Genitive Masculine true false false	16	Object_Indirect_Genitive
+19	найдется	найти	V	Verb Feminine Third true true true true Indicative Future	0	Predicate
+20	точка	точка	S	Noun Nominative Feminine true false false	19	Subject
+21	formula_330	formula_330	S	Noun Genitive true false false	20	NonAgreedAttribute
+22	такая	такой	AdjectivePronoun	AdjectivePronoun Nominative Feminine true	20	AgreedAttribute
+23	,	,	SENT	SENT	22	punc
+24	что	что	CONJ	Conjunction Subordinating	25	SubordinatingConjunction
+25	выполняется	выполнить	V	Verb Neuter Third true true false true Indicative Present	19	Predicate
+26	равенство	равенство	S	Noun Nominative Neuter true false false	25	Subject
+27	formula_359	formula_359	S	Noun Genitive true false false	26	NonAgreedAttribute
+28	.	.	SENT	SENT	27	punc
+
+1	Пусть	пусть	CONJ	Conjunction Subordinating	5	SubordinatingConjunction
+2	formula_360	formula_360	S	Noun Nominative false false false	5	Subject
+3	,	,	SENT	SENT	2	punc
+4	formula_361 — formula_362	formula_361 — formula_362	S	Noun Nominative true false false	5	Subject
+5	есть	быть	false	false Indicative Present	17	Predicate
+6	-	-	SENT	SENT	5	punc
+7	алгебра	алгебра	S	Noun Nominative Feminine true false false	5	Complement
+8	измеримых	измеримый	A	Adjective false Full Positive	5	Dislocation_Right
+9	по	по	PR	Preposition	10	Preposition
+10	Лебегу	Лебег	S	Noun Dative Masculine true true true	5	ObjectIndirect
+11	подмножеств	подмножество	S	Noun Nominative false false false	10	Apposition
+12	из	из	PR	Preposition	13	Preposition
+13	formula_76	formula_76	S	Noun Genitive false false false	11	ObjectIndirect
+14	,	,	SENT	SENT	13	punc
+15	и	и	Particle	Particle	16	Particle
+16	formula_363	formula_363	S	Noun Nominative true false false	17	Subject
+17	есть	быть	false	false Indicative Present	0	Predicate
+18	мера	мера	S	Noun Nominative Feminine true false false	17	Complement
+19	Лебега	Лебег	S	Noun Genitive Masculine true true true	18	NonAgreedAttribute
+20	на	на	PR	Preposition	21	Preposition
+21	formula_363	formula_363	S	Noun Locative true false false	19	AdverbialModifier
+22	.	.	SENT	SENT	21	punc
+
+1	Если	если	CONJ	Conjunction Subordinating	2	SubordinatingConjunction
+2	есть	быть	Indicative	Indicative Present	0	Predicate
+3	formula_364	formula_364	Numeral	Numeral Cardinal	2	Complement
+4	он		Subject	Subject true	2	
+5	,	,	SENT	SENT	4	punc
+6	то	тот	AdjectivePronoun	AdjectivePronoun Nominative Neuter true	7	AgreedAttribute
+7	formula_365	formula_365	S	Noun Nominative true false false	6	Subject
+8	и	и	CONJ	Conjunction Coordinating	9	CoordinatingConjunction
+9	formula_366	formula_366	S	Noun Nominative true false false	8	Subject
+10	.	.	SENT	SENT	9	punc
+
+1	Пусть	пусть	CONJ	Conjunction Subordinating	3	SubordinatingConjunction
+2	formula_367	formula_367	S	Noun Genitive true false false	1	But_Addition
+3	,	,	SENT	SENT	2	punc
+4	formula_368	formula_368	S	Noun Genitive true false false	1	But_Addition
+5	Conjunction	Subordinating	_	_	5	#Conjunctions_For_Noun
+6	,	,	SENT	SENT	5	punc
+7	и	и	CONJ	Conjunction Coordinating	9	CoordinatingConjunction
+8	formula_369	formula_369	S	Noun Genitive true false false	1	But_Addition
+9	для	для	PR	Preposition	12	Preposition
+10	всех	весь	AdjectivePronoun	AdjectivePronoun Genitive false	12	AgreedAttribute
+11	formula_370	formula_370	S	Noun Genitive false false false	9	ObjectIndirect
+12	Conjunction	Subordinating	_	_	9	#Conjunctions_For_Noun
+13	.	.	SENT	SENT	12	punc
+
+1	Тогда	тогда	AdverbialPronoun	AdverbialPronoun	2	AdverbialModifier
+2	существует	существовать	V	Verb Feminine Third true true false false Indicative Present	0	Predicate
+3	такая	такой	AdjectivePronoun	AdjectivePronoun Nominative Feminine true	7	AgreedAttribute
+4	интегрируемая	интегрировать	Participle	Participle Nominative Feminine true false false true Indicative Present	7	AgreedAttribute
+5	по	по	PR	Preposition	6	Preposition
+6	Лебегу	Лебег	S	Noun Dative Masculine true true true	4	ObjectIndirect
+7	функция	функция	S	Noun Nominative Feminine true false false	2	Subject
+8	formula_41	formula_41	S	Noun Genitive true false false	7	NonAgreedAttribute
+9	,	,	SENT	SENT	8	punc
+10	что	что	Pronoun	Pronoun Nominative Neuter Third true Relative	11	RelativeGroup
+11	есть	быть	false	false Indicative Present	2	Predicate
+12	formula_371	formula_371	Numeral	Numeral Nominative Cardinal	11	Complement
+13	и	и	CONJ	Conjunction Coordinating	14	CoordinatingConjunction
+14	formula_372	formula_372	Numeral	Numeral Nominative Cardinal	11	Complement
+15	.	.	SENT	SENT	14	punc
+
+1	Если	если	CONJ	Conjunction Subordinating	2	SubordinatingConjunction
+2	есть	быть	Indicative	Indicative Present	10	Predicate
+3	formula_373	formula_373	Numeral	Numeral Nominative Cardinal	2	Complement
+4	он		Subject	Subject true	2	
+5	,	,	SENT	SENT	4	punc
+6	то	то	CONJ	Conjunction	10	Correlate_CondTemp
+7	для	для	PR	Preposition	9	Preposition
+8	любого	любой	AdjectivePronoun	AdjectivePronoun Genitive Masculine true Indefinite	9	AgreedAttribute
+9	formula_310	formula_310	S	Noun Genitive true false false	10	ObjectIndirect
+10	есть	быть	false	false Indicative Present	0	Predicate
+11	верно	верный	A	Adjective Neuter true Short Positive	10	Complement
+12	неравенство	неравенство	S	Noun Nominative Neuter true false false	10	Subject
+13	formula_374	formula_374	S	Noun Genitive true false false	12	NonAgreedAttribute
+14	.	.	SENT	SENT	13	punc
+
+1	Если	если	CONJ	Conjunction Subordinating	2	SubordinatingConjunction
+2	есть	быть	Indicative	Indicative Present	25	Predicate
+3	formula_375	formula_375	Numeral	Numeral Cardinal	2	Complement
+4	он		Subject	Subject true	2	
+5	,	,	SENT	SENT	4	punc
+6	formula_376	formula_376	S	Noun Nominative true false false	5	Subject
+7	,	,	SENT	SENT	6	punc
+8	formula_377	formula_377	S	Noun Nominative true false false	7	Subject
+9	и	и	CONJ	Conjunction Coordinating	10	CoordinatingConjunction
+10	formula_378	formula_378	S	Noun Nominative true false false	9	Subject
+11	,	,	SENT	SENT	10	punc
+12	то	тот	AdjectivePronoun	AdjectivePronoun Nominative Neuter true	13	AgreedAttribute
+13	formula_374	formula_374	S	Noun Nominative true false false	12	Subject
+14	и	и	CONJ	Conjunction Coordinating	15	CoordinatingConjunction
+15	formula_379	formula_379	S	Noun Nominative true false false	14	Subject
+16	если	если	CONJ	Conjunction Subordinating	2	SubordinatingConjunction
+17	есть	быть	Indicative	Indicative Present	10	Predicate
+18	formula_374	formula_374	Numeral	Numeral Nominative Cardinal	2	Complement
+19	он		Subject	Subject true	2	
+20	,	,	SENT	SENT	19	punc
+21	то	то	CONJ	Conjunction	10	Correlate_CondTemp
+22	для	для	PR	Preposition	9	Preposition
+23	любого	любой	AdjectivePronoun	AdjectivePronoun Genitive Masculine true Indefinite	9	AgreedAttribute
+24	formula_310	formula_310	S	Noun Genitive true false false	10	ObjectIndirect
+25	существует	существовать	V	Verb Neuter Third true true false false Indicative Present	0	Predicate
+26	такое	такой	AdjectivePronoun	AdjectivePronoun Nominative Neuter true	12	AgreedAttribute
+27	formula_312	formula_312	S	Noun Nominative true false false	10	Subject
+28	,	,	SENT	SENT	27	punc
+29	что	что	CONJ	Conjunction Subordinating	16	SubordinatingConjunction
+30	formula_380	formula_380	S	Noun Nominative true false false	16	Subject
+31	есть	быть	false	false Indicative Present	25	Predicate
+32	для	для	PR	Preposition	19	Preposition
+33	каждого	каждый	AdjectivePronoun	AdjectivePronoun Genitive Neuter true	19	AgreedAttribute
+34	множества	множество	S	Noun Genitive Neuter true false false	16	Complement
+35	из	из	PR	Preposition	21	Preposition
+36	formula_381	formula_381	S	Noun Genitive false false false	19	ObjectIndirect
+37	с	с	PR	Preposition	23	Preposition
+38	мерой	мера	S	Noun Instrumental Feminine true false false	19	ObjectIndirect
+39	formula_382	formula_382	Numeral	Numeral Nominative Cardinal	23	Apposition
+40	.	.	SENT	SENT	39	punc
+
+1	Если	если	CONJ	Conjunction Subordinating	5	SubordinatingConjunction
+2	formula_383	formula_383	S	Noun Nominative true false false	5	Subject
+3	и	и	CONJ	Conjunction Coordinating	4	CoordinatingConjunction
+4	formula_384	formula_384	S	Noun Nominative true false false	5	Subject
+5	есть	быть	false	false Indicative Present	13	Predicate
+6	при	при	PR	Preposition	7	Preposition
+7	formula_385	formula_385	Numeral	Numeral Prepositional Cardinal	5	Complement
+8	,	,	SENT	SENT	7	punc
+9	formula_386	formula_386	Numeral	Numeral Nominative Cardinal	5	Complement
+10	,	,	SENT	SENT	9	punc
+11	то	то	CONJ	Conjunction	13	Correlate_CondTemp
+12	formula_387	formula_387	S	Noun Nominative true false false	13	Subject
+13	есть	быть	false	false Indicative Present	0	Predicate
+14	для	для	PR	Preposition	16	Preposition
+15	любого	любой	AdjectivePronoun	AdjectivePronoun Genitive Masculine true Indefinite	16	AgreedAttribute
+16	formula_376	formula_376	S	Noun Genitive true false false	13	Complement
+17	и	и	CONJ	Conjunction Coordinating	19	CoordinatingConjunction
+18	верно	верный	A	Adjective Neuter true Short Positive	19	Ellipted_Left
+19	равенство	равенство	S	Noun Nominative Neuter true false false	19	Ellipted_Right
+20	formula_388	formula_388	S	Noun Genitive true false false	20	NonAgreedAttribute
+21	.	.	SENT	SENT	20	punc
+
+1	Если	если	CONJ	Conjunction Subordinating	6	SubordinatingConjunction
+2	formula_389	formula_389	S	Noun Nominative false false false	6	Subject
+3	,	,	SENT	SENT	2	punc
+4	то	тот	AdjectivePronoun	AdjectivePronoun Nominative Neuter true	5	AgreedAttribute
+5	formula_390	formula_390	S	Noun Nominative true false false	6	Subject
+6	есть	быть	false	false Indicative Present	0	Predicate
+7	для	для	PR	Preposition	9	Preposition
+8	любых	любой	AdjectivePronoun	AdjectivePronoun Genitive false Indefinite	9	AgreedAttribute
+9	formula_391	formula_391	S	Noun Genitive false false false	6	Complement
+10	,	,	SENT	SENT	9	punc
+11	при	при	PR	Preposition	12	Preposition
+12	этом	это	Pronoun	Pronoun Prepositional Neuter Third true	6	AdverbialModifier
+13	,	,	SENT	SENT	12	punc
+14	formula_392	formula_392	S	Noun Nominative true false false	13	Subject
+15	.	.	SENT	SENT	14	punc
+
+1	Пусть	пусть	CONJ	Conjunction Subordinating	5	SubordinatingConjunction
+2	formula_366	formula_366	S	Noun Nominative false false false	5	Subject
+3	,	,	SENT	SENT	2	punc
+4	formula_364 — formula_361	formula_364 — formula_361	S	Noun Nominative true false false	5	Subject
+5	есть	быть	false	false Indicative Present	17	Predicate
+6	-	-	SENT	SENT	5	punc
+7	алгебра	алгебра	S	Noun Nominative Feminine true false false	5	Complement
+8	измеримых	измеримый	A	Adjective false Full Positive	5	Dislocation_Right
+9	по	по	PR	Preposition	10	Preposition
+10	Лебегу	Лебег	S	Noun Dative Masculine true true true	5	ObjectIndirect
+11	подмножеств	подмножество	S	Noun Genitive false false false	10	NonAgreedAttribute
+12	из	из	PR	Preposition	13	Preposition
+13	formula_76	formula_76	S	Noun Genitive false false false	11	ObjectIndirect
+14	,	,	SENT	SENT	13	punc
+15	и	и	Particle	Particle	16	Particle
+16	formula_363	formula_363	S	Noun Nominative true false false	17	Subject
+17	есть	быть	false	false Indicative Present	0	Predicate
+18	мера	мера	S	Noun Nominative Feminine true false false	17	Complement
+19	Лебега	Лебег	S	Noun Genitive Masculine true true true	18	NonAgreedAttribute
+20	на	на	PR	Preposition	21	Preposition
+21	formula_364	formula_364	S	Noun Locative true false false	19	AdverbialModifier
+22	.	.	SENT	SENT	21	punc
+
+1	Если	если	CONJ	Conjunction Subordinating	2	SubordinatingConjunction
+2	есть	быть	Indicative	Indicative Present	0	Predicate
+3	formula_360	formula_360	Numeral	Numeral Cardinal	2	Complement
+4	он		Subject	Subject true	2	
+5	,	,	SENT	SENT	4	punc
+6	то	тот	AdjectivePronoun	AdjectivePronoun Nominative Neuter true	7	AgreedAttribute
+7	formula_365	formula_365	S	Noun Nominative true false false	6	Subject
+8	и	и	CONJ	Conjunction Coordinating	9	CoordinatingConjunction
+9	formula_362	formula_362	S	Noun Nominative true false false	8	Subject
+10	.	.	SENT	SENT	9	punc
+
+1	Пусть	пусть	CONJ	Conjunction Subordinating	4	SubordinatingConjunction
+2	formula_41	formula_41	S	Noun Nominative true false false	4	Subject
+3	есть	быть	false	false Indicative Present	0	Predicate
+4	--	--	SENT	SENT	3	punc
+5	кусочно	кусочный	A	Adjective Masculine true Full Positive	8	Modifier_Composite_Hyphen_Adjective
+6	-	-	SENT	SENT	5	punc
+7	гладкая	гладкий	A	Adjective Nominative Feminine true Full Positive	16	AgreedAttribute
+8	и	и	CONJ	Conjunction Coordinating	11	CoordinatingConjunction
+9	абсолютно	абсолютно	Adverb	Adverb Positive	11	GeneralDegree
+10	интегрируемая	интегрировать	Participle	Participle Nominative Feminine true false false true Indicative Present	16	AgreedAttribute
+11	на	на	PR	Preposition	15	Preposition
+12	всей	весь	AdjectivePronoun	AdjectivePronoun Prepositional Feminine true	15	AgreedAttribute
+13	числовой	числовой	A	Adjective Prepositional Feminine true Full Positive	15	AgreedAttribute
+14	прямой	прямая	S	Noun Prepositional Feminine true false false	11	ObjectIndirect
+15	функция	функция	S	Noun Nominative Feminine true false false	4	Complement
+16	.	.	SENT	SENT	15	punc
+
+1	Если	если	CONJ	Conjunction Subordinating	5	SubordinatingConjunction
+2	ее	её	PossessivePronoun	PossessivePronoun Nominative Neuter Third true	3	AgreedAttribute
+3	преобразование	преобразование	S	Noun Nominative Neuter true false false	5	Subject
+4	Фурье	Фурье	S	Noun Genitive true true true	3	NonAgreedAttribute
+5	обращается	обратить	V	Verb Neuter Third true true false true Indicative Present	13	Predicate
+6	в	в	PR	Preposition	7	Preposition
+7	нуль	нуль	Numeral	Numeral Accusative true	5	ObjectIndirect
+8	вне	вне	Adverb	Adverb	5	AdverbialModifier
+9	отрезка	отрезок	S	Noun Genitive Masculine true false false	8	Object_Indirect_Genitive
+10	formula_393	formula_393	S	Noun Genitive true false false	9	NonAgreedAttribute
+11	,	,	SENT	SENT	10	punc
+12	то	то	CONJ	Conjunction	13	Correlate_CondTemp
+13	выполняется	выполнить	V	Verb Neuter Third true true false true Indicative Present	0	Predicate
+14	равенство	равенство	S	Noun Nominative Neuter true false false	13	Subject
+15	:	:	SENT	SENT	14	punc
+16	formula_394	formula_394	Numeral	Numeral Cardinal	14	Specification_NumericCharacteristicColon
+17	.	.	SENT	SENT	16	punc
+
+1	Пусть	пусть	CONJ	Conjunction Subordinating	5	SubordinatingConjunction
+2	функция	функция	S	Noun Nominative Feminine true false false	5	Subject
+3	formula_41	formula_41	S	Noun Nominative true false false	3	Apposition
+4	есть	быть	false	false Indicative Present	0	Predicate
+5	абсолютно	абсолютно	Adverb	Adverb Positive	7	GeneralDegree
+6	интегрируема	интегрировать	Participle	Participle Feminine true false false true Indicative Present	5	Complement
+7	и	и	CONJ	Conjunction Coordinating	9	CoordinatingConjunction
+8	имеет	иметь	V	Verb Feminine Third true true false true Indicative Present	4	Predicate
+9	абсолютно	абсолютно	Adverb	Adverb Positive	14	GeneralDegree
+10	интегрируемую	интегрировать	Participle	Participle Accusative Feminine true false false true Indicative Present	14	AgreedAttribute
+11	на	на	PR	Preposition	13	Preposition
+12	formula_395	formula_395	S	Noun Prepositional true false false	11	ObjectIndirect
+13	производную	производная	S	Noun Accusative Feminine true false false	9	Object
+14	Conjunction	Subordinating	_	_	9	#dependent_clause_conjunctions
+15	Noun	Nominative	Subject	Subject true	9	_
+16	.	.	SENT	SENT	15	punc
+
+1	Тогда	тогда	AdverbialPronoun	AdverbialPronoun	7	AdverbialModifier
+2	ее	её	PossessivePronoun	PossessivePronoun Nominative Neuter Third true	3	AgreedAttribute
+3	разложение	разложение	S	Noun Nominative Neuter true false false	7	Subject
+4	в	в	PR	Preposition	5	Preposition
+5	интеграл	интеграл	S	Noun Accusative Masculine true false false	3	ObjectIndirect
+6	Фурье	Фурье	S	Noun Genitive true true true	5	NonAgreedAttribute
+7	сходится	сойтись	V	Verb Neuter Third true true false false Indicative Present	0	Predicate
+8	равномерно	равномерно	Adverb	Adverb Positive	7	AdverbialModifier
+9	на	на	PR	Preposition	11	Preposition
+10	каждом	каждый	AdjectivePronoun	AdjectivePronoun Locative Masculine true	11	AgreedAttribute
+11	отрезке	отрезок	S	Noun Locative Masculine true false false	7	AdverbialModifier
+12	числовой	числовой	A	Adjective Genitive Feminine true Full Positive	13	AgreedAttribute
+13	прямой	прямая	S	Noun Genitive Feminine true false false	11	NonAgreedAttribute
+14	.	.	SENT	SENT	13	punc
+
+1	Функция	функция	S	Noun Nominative Feminine true false false	2	Subject
+2	есть	быть	false	false Indicative Present	1	Predicate
+3	formula_396	formula_396	S	Noun Nominative true false false	2	Complement
+4	,	,	SENT	SENT	3	punc
+5	является	явиться	V	Verb Feminine Third true true false false Indicative Present	0	Predicate
+6	непрерывной	непрерывный	A	Adjective Instrumental Feminine true Full Positive	5	Complement
+7	на	на	PR	Preposition	8	Preposition
+8	отрезке	отрезок	S	Noun Locative Masculine true false false	6	AdverbialModifier
+9	formula_62	formula_62	S	Noun Genitive true false false	8	NonAgreedAttribute
+10	тогда	тогда	AdverbialPronoun	AdverbialPronoun	5	AdverbialModifier
+11	и	и	CONJ	Conjunction Coordinating	13	CoordinatingConjunction
+12	только	только	Adverb	Adverb Positive	13	Surface_Limitation
+13	тогда	тогда	AdverbialPronoun	AdverbialPronoun	5	AdverbialModifier
+14	,	,	SENT	SENT	13	punc
+15	когда	когда	CONJ	Conjunction Subordinating	17	SubordinatingConjunction
+16	formula_397	formula_397	S	Noun Nominative true false false	17	Subject
+17	есть	быть	false	false Indicative Present	5	Predicate
+18	--	--	SENT	SENT	17	punc
+19	равномерно	равномерно	Adverb	Adverb Positive	20	Modifier_Adverbial_ForAdjAdv
+20	непрерывна	непрерывный	A	Adjective Feminine true Short Positive	17	Complement
+21	на	на	PR	Preposition	22	Preposition
+22	formula_62	formula_62	S	Noun Locative true false false	20	AdverbialModifier
+23	Noun	Nominative	Subject	Subject true	5	_
+24	.	.	SENT	SENT	23	punc
+
+1	Функция	функция	S	Noun Nominative Feminine true false false	3	Subject
+2	formula_398	formula_398	S	Noun Nominative true false false	1	Apposition
+3	есть	быть	false	false Indicative Present	0	Predicate
+4	интегрируема	интегрировать	Participle	Participle Feminine true false false true Indicative Present	3	Complement
+5	по	по	PR	Preposition	6	Preposition
+6	Риману	Риман	S	Noun Dative Masculine true true true	4	ObjectIndirect
+7	на	на	PR	Preposition	8	Preposition
+8	отрезке	отрезок	S	Noun Locative Masculine true false false	4	AdverbialModifier
+9	formula_62	formula_62	S	Noun Genitive true false false	8	NonAgreedAttribute
+10	тогда	тогда	AdverbialPronoun	AdverbialPronoun	8	AdverbialModifier
+11	и	и	CONJ	Conjunction Coordinating	13	CoordinatingConjunction
+12	только	только	Adverb	Adverb Positive	13	Surface_Limitation
+13	тогда	тогда	AdverbialPronoun	AdverbialPronoun	8	AdverbialModifier
+14	,	,	SENT	SENT	13	punc
+15	когда	когда	CONJ	Conjunction Subordinating	21	SubordinatingConjunction
+16	для	для	PR	Preposition	19	Preposition
+17	любого	любой	AdjectivePronoun	AdjectivePronoun Genitive Neuter true Indefinite	19	AgreedAttribute
+18	положительного	положительный	A	Adjective Genitive Neuter true Full Positive	19	AgreedAttribute
+19	числа	число	S	Noun Genitive Neuter true false false	21	ObjectIndirect
+20	formula_399	formula_399	S	Noun Genitive true false false	19	NonAgreedAttribute
+21	существует	существовать	V	Verb Neuter Third true true false false Indicative Present	3	Predicate
+22	такое	такой	AdjectivePronoun	AdjectivePronoun Nominative Neuter true	23	AgreedAttribute
+23	разбиение	разбиение	S	Noun Nominative Neuter true false false	21	Subject
+24	formula_400	formula_400	S	Noun Genitive true false false	23	NonAgreedAttribute
+25	,	,	SENT	SENT	24	punc
+26	что	что	CONJ	Conjunction Subordinating	27	SubordinatingConjunction
+27	выполняется	выполнить	V	Verb Neuter Third true true false true Indicative Present	21	Predicate
+28	неравенство	неравенство	S	Noun Nominative Neuter true false false	27	Subject
+29	formula_401	formula_401	S	Noun Genitive true false false	28	NonAgreedAttribute
+30	.	.	SENT	SENT	29	punc
+
+1	formula_360	formula_360	S	Noun Nominative true false false	0	Subject
+2	в	в	PR	Preposition	4	Preposition
+3	том	тот	AdjectivePronoun	AdjectivePronoun Locative Masculine true	4	AgreedAttribute
+4	Noun	Locative	_	_	1	_
+5	и	и	CONJ	Conjunction Coordinating	9	CoordinatingConjunction
+6	только	только	Adverb	Adverb Positive	9	Surface_Limitation
+7	в	в	PR	Preposition	9	Preposition
+8	том	тот	AdjectivePronoun	AdjectivePronoun Locative Masculine true	9	AgreedAttribute
+9	случае	случай	S	Noun Locative Masculine true false false	1	AdverbialModifier
+10	,	,	SENT	SENT	9	punc
+11	когда	когда	CONJ	Conjunction Subordinating	17	SubordinatingConjunction
+12	formula_402	formula_402	S	Noun Dative true false false	17	MovedActant
+13	,	,	SENT	SENT	12	punc
+14	в	в	PR	Preposition	16	Preposition
+15	этом	этот	AdjectivePronoun	AdjectivePronoun Locative Masculine true	16	AgreedAttribute
+16	случае	случай	S	Noun Locative Masculine true false false	17	AdverbialModifier
+17	есть	быть	false	false Indicative Present	9	Predicate
+18	,	,	SENT	SENT	17	punc
+19	верно	верный	A	Adjective Neuter true Short Positive	17	Complement
+20	равенство	равенство	S	Noun Nominative Neuter true false false	17	Subject
+21	formula_403	formula_403	S	Noun Genitive true false false	20	NonAgreedAttribute
+22	.	.	SENT	SENT	21	punc
+
+1	Если	если	CONJ	Conjunction Subordinating	3	SubordinatingConjunction
+2	formula_41	formula_41	S	Noun Nominative true false false	3	Subject
+3	есть	быть	false	false Indicative Present	0	Predicate
+4	непрерывная	непрерывный	A	Adjective Nominative Feminine true Full Positive	5	AgreedAttribute
+5	функция	функция	S	Noun Nominative Feminine true false false	3	Complement
+6	на	на	PR	Preposition	7	Preposition
+7	отрезке	отрезок	S	Noun Prepositional Masculine true false false	5	ObjectIndirect
+8	formula_62	formula_62	S	Noun Genitive true false false	7	NonAgreedAttribute
+9	,	,	SENT	SENT	8	punc
+10	то	то	CONJ	Conjunction	12	Correlate_CondTemp
+11	formula_41	formula_41	S	Noun Nominative true false false	12	Subject
+12	есть	быть	false	false Indicative Present	3	Predicate
+13	интегрируема	интегрировать	Participle	Participle Feminine true false false true Indicative Present	12	Complement
+14	по	по	PR	Preposition	15	Preposition
+15	Риману	Риман	S	Noun Dative Masculine true true true	13	ObjectIndirect
+16	на	на	PR	Preposition	17	Preposition
+17	отрезке	отрезок	S	Noun Locative Masculine true false false	13	AdverbialModifier
+18	formula_62	formula_62	S	Noun Genitive true false false	17	NonAgreedAttribute
+19	.	.	SENT	SENT	18	punc
+
+1	Если	если	CONJ	Conjunction Subordinating	3	SubordinatingConjunction
+2	formula_404	formula_404	S	Noun Nominative true false false	3	Subject
+3	есть	быть	false	false Indicative Present	9	Predicate
+4	монотонная	монотонный	A	Adjective Nominative Feminine true Full Positive	5	AgreedAttribute
+5	функция	функция	S	Noun Nominative Feminine true false false	3	Complement
+6	,	,	SENT	SENT	5	punc
+7	то	то	CONJ	Conjunction	9	Correlate_CondTemp
+8	formula_41	formula_41	S	Noun Nominative true false false	9	Subject
+9	есть	быть	false	false Indicative Present	3	Predicate
+10	интегрируема	интегрировать	Participle	Participle Feminine true false false true Indicative Present	9	Complement
+11	по	по	PR	Preposition	12	Preposition
+12	Риману	Риман	S	Noun Dative Masculine true true true	10	ObjectIndirect
+13	на	на	PR	Preposition	14	Preposition
+14	отрезке	отрезок	S	Noun Locative Masculine true false false	10	AdverbialModifier
+15	formula_62	formula_62	S	Noun Genitive true false false	14	NonAgreedAttribute
+16	.	.	SENT	SENT	15	punc
+
+1	Если	если	CONJ	Conjunction Subordinating	6	SubordinatingConjunction
+2	функции	функция	S	Noun Nominative false false false	6	Subject
+3	formula_405	formula_405	S	Noun Nominative true false false	2	Apposition
+4	и	и	CONJ	Conjunction Coordinating	5	CoordinatingConjunction
+5	formula_406	formula_406	S	Noun Nominative true false false	2	Apposition
+6	являются	явиться	V	Verb Third false true false false Indicative Present	16	Predicate
+7	первообразными	первообразная	S	Noun Instrumental false false false	6	Complement
+8	для	для	PR	Preposition	9	Preposition
+9	функции	функция	S	Noun Genitive Feminine true false false	7	ObjectIndirect
+10	formula_41	formula_41	S	Noun Genitive true false false	9	NonAgreedAttribute
+11	на	на	PR	Preposition	13	Preposition
+12	некотором	некоторый	AdjectivePronoun	AdjectivePronoun Locative Masculine true Indefinite	13	AgreedAttribute
+13	интервале	интервал	S	Noun Locative Masculine true false false	10	AdverbialModifier
+14	,	,	SENT	SENT	13	punc
+15	то	то	CONJ	Conjunction	16	Correlate_CondTemp
+16	существует	существовать	V	Verb Feminine Third true true false false Indicative Present	0	Predicate
+17	постоянная	постоянная	S	Noun Nominative Feminine true false false	16	Subject
+18	formula_356	formula_356	S	Noun Genitive true false false	17	NonAgreedAttribute
+19	такая	такой	AdjectivePronoun	AdjectivePronoun Nominative Feminine true	17	AgreedAttribute
+20	,	,	SENT	SENT	19	punc
+21	что	что	CONJ	Conjunction Subordinating	25	SubordinatingConjunction
+22	на	на	PR	Preposition	24	Preposition
+23	этом	этот	AdjectivePronoun	AdjectivePronoun Locative Masculine true	24	AgreedAttribute
+24	интервале	интервал	S	Noun Locative Masculine true false false	25	AdverbialModifier
+25	выполняется	выполнить	V	Verb Neuter Third true true false true Indicative Present	16	Predicate
+26	равенство	равенство	S	Noun Nominative Neuter true false false	25	Subject
+27	formula_407	formula_407	S	Noun Genitive true false false	26	NonAgreedAttribute
+28	.	.	SENT	SENT	27	punc
+
+1	Комплексно	комплексный	A	Adjective Masculine true Full Positive	2	Modifier_Composite_Adjective
+2	значная	значный	A	Adjective Nominative Feminine true Full Positive	3	AgreedAttribute
+3	функция	функция	S	Noun Nominative Feminine true false false	8	Subject
+4	formula_408	formula_408	S	Noun Genitive true false false	3	NonAgreedAttribute
+5	действительной	действительный	A	Adjective Genitive Feminine true Full Positive	6	AgreedAttribute
+6	переменной	переменная	S	Noun Genitive Feminine true false false	3	NonAgreedAttribute
+7	formula_70	formula_70	S	Noun Genitive true false false	6	NonAgreedAttribute
+8	является	явиться	V	Verb Feminine Third true true false false Indicative Present	7	Predicate
+9	первообразной	первообразная	S	Noun Instrumental Feminine true false false	8	Complement
+10	для	для	PR	Preposition	13	Preposition
+11	комплексно	комплексный	A	Adjective Masculine true Full Positive	12	Modifier_Composite_Adjective
+12	значной	значный	A	Adjective Genitive Feminine true Full Positive	13	AgreedAttribute
+13	функции	функция	S	Noun Genitive Feminine true false false	9	ObjectIndirect
+14	formula_409	formula_409	S	Noun Genitive true false false	13	NonAgreedAttribute
+15	тогда	тогда	AdverbialPronoun	AdverbialPronoun	8	AdverbialModifier
+16	и	и	CONJ	Conjunction Coordinating	18	CoordinatingConjunction
+17	только	только	Adverb	Adverb Positive	18	Surface_Limitation
+18	тогда	тогда	AdverbialPronoun	AdverbialPronoun	8	AdverbialModifier
+19	,	,	SENT	SENT	18	punc
+20	когда	когда	CONJ	Conjunction Subordinating	22	SubordinatingConjunction
+21	formula_410	formula_410	S	Noun Nominative true false false	22	Subject
+22	является	явиться	V	Verb Masculine Third true true false false Indicative Present	18	Predicate
+23	первообразной	первообразная	S	Noun Instrumental Feminine true false false	22	Complement
+24	для	для	PR	Preposition	25	Preposition
+25	функции	функция	S	Noun Genitive Feminine true false false	23	ObjectIndirect
+26	formula_411	formula_411	S	Noun Genitive true false false	25	NonAgreedAttribute
+27	и	и	CONJ	Conjunction Coordinating	29	CoordinatingConjunction
+28	formula_412	formula_412	S	Noun Nominative true false false	29	Subject
+29	является	явиться	V	Verb Masculine Third true true false false Indicative Present	18	Predicate
+30	первообразной	первообразная	S	Noun Instrumental Feminine true false false	29	Complement
+31	для	для	PR	Preposition	32	Preposition
+32	функции	функция	S	Noun Genitive Feminine true false false	30	ObjectIndirect
+33	formula_413	formula_413	S	Noun Genitive true false false	32	NonAgreedAttribute
+34	Conjunction	Subordinating	_	_	29	#dependent_clause_conjunctions
+35	.	.	SENT	SENT	34	punc
+
+1	Пусть	пусть	CONJ	Conjunction Subordinating	4	SubordinatingConjunction
+2	formula_176	formula_176	S	Noun Nominative true false false	4	Subject
+3	есть	быть	false	false Indicative Present	1	Predicate
+4	--	--	SENT	SENT	3	punc
+5	полином	полином	S	Noun Nominative Masculine true false false	4	Complement
+6	степени	степень	S	Noun Genitive Feminine true false false	6	NonAgreedAttribute
+7	formula_414	formula_414	S	Noun Genitive true false false	7	NonAgreedAttribute
+8	.	.	SENT	SENT	7	punc
+
+1	Для	для	PR	Preposition	4	Preposition
+2	любого	любой	AdjectivePronoun	AdjectivePronoun Genitive Neuter true Indefinite	4	AgreedAttribute
+3	комплексного	комплексный	A	Adjective Genitive Neuter true Full Positive	4	AgreedAttribute
+4	числа	число	S	Noun Genitive Neuter true false false	6	ObjectIndirect
+5	formula_415	formula_415	S	Noun Genitive true false false	4	NonAgreedAttribute
+6	существует	существовать	V	Verb Masculine Third true true false false Indicative Present	5	Predicate
+7	полином	полином	S	Noun Nominative Masculine true false false	6	Subject
+8	formula_416	formula_416	Numeral	Numeral Nominative Cardinal	7	Apposition
+9	степени	степень	S	Noun Genitive Feminine true false false	7	NonAgreedAttribute
+10	formula_417	formula_417	S	Noun Genitive true false false	9	NonAgreedAttribute
+11	такой	такой	AdjectivePronoun	AdjectivePronoun Nominative Masculine true	7	AgreedAttribute
+12	,	,	SENT	SENT	11	punc
+13	что	что	CONJ	Conjunction Subordinating	14	SubordinatingConjunction
+14	есть	быть	false	false Indicative Present	11	Predicate
+15	справедливо	справедливый	A	Adjective Neuter true Short Positive	14	Complement
+16	равенство	равенство	S	Noun Nominative Neuter true false false	14	Subject
+17	formula_418	formula_418	S	Noun Genitive true false false	16	NonAgreedAttribute
+18	.	.	SENT	SENT	17	punc
+
+1	Полином	полином	S	Noun Nominative Masculine true false false	5	Subject
+2	formula_176	formula_176	S	Noun Genitive true false false	1	NonAgreedAttribute
+3	степени	степень	S	Noun Genitive Feminine true false false	1	NonAgreedAttribute
+4	formula_414	formula_414	S	Noun Genitive true false false	3	NonAgreedAttribute
+5	делится	делить	V	Verb Masculine Third true true false true Indicative Present	4	Predicate
+6	на	на	PR	Preposition	7	Preposition
+7	двучлен	двучлен	S	Noun Accusative Masculine true false false	5	ObjectIndirect
+8	formula_419	formula_419	S	Noun Nominative true false false	7	Apposition
+9	тогда	тогда	AdverbialPronoun	AdverbialPronoun	5	AdverbialModifier
+10	и	и	CONJ	Conjunction Coordinating	13	CoordinatingConjunction
+11	только	только	Adverb	Adverb Positive	13	Surface_Limitation
+12	тогда	тогда	AdverbialPronoun	AdverbialPronoun	5	AdverbialModifier
+13	,	,	SENT	SENT	12	punc
+14	когда	когда	CONJ	Conjunction Subordinating	17	SubordinatingConjunction
+15	formula_417	formula_417	S	Noun Nominative true false false	17	Subject
+16	является	явиться	V	Verb Masculine Third true true false false Indicative Present	13	Predicate
+17	корнем	корень	S	Noun Instrumental Masculine true false false	17	Complement
+18	полинома	полином	S	Noun Genitive Masculine true false false	18	NonAgreedAttribute
+19	formula_420	formula_420	S	Noun Nominative true false false	19	Apposition
+20	.	.	SENT	SENT	19	punc
+
+1	Всякий	всякий	AdjectivePronoun	AdjectivePronoun Nominative Masculine true	3	AgreedAttribute
+2	алгебраический	алгебраический	A	Adjective Nominative Masculine true Full Positive	3	AgreedAttribute
+3	полином	полином	S	Noun Nominative Masculine true false false	6	Subject
+4	положительной	положительный	A	Adjective Genitive Feminine true Full Positive	5	AgreedAttribute
+5	степени	степень	S	Noun Genitive Feminine true false false	3	NonAgreedAttribute
+6	имеет	иметь	V	Verb Masculine Third true true false true Indicative Present	5	Predicate
+7	корень	корень	S	Noun Accusative Masculine true false false	6	Object
+8	.	.	SENT	SENT	7	punc
+
+1	Пусть	пусть	CONJ	Conjunction Subordinating	4	SubordinatingConjunction
+2	formula_176	formula_176	S	Noun Nominative true false false	4	Subject
+3	есть	быть	false	false Indicative Present	1	Predicate
+4	--	--	SENT	SENT	3	punc
+5	полином	полином	S	Noun Nominative Masculine true false false	4	Complement
+6	степени	степень	S	Noun Genitive Feminine true false false	6	NonAgreedAttribute
+7	formula_414	formula_414	S	Noun Genitive true false false	7	NonAgreedAttribute
+8	вида	вид	S	Noun Genitive Masculine true false false	7	NonAgreedAttribute
+9	formula_421	formula_421	S	Noun Genitive true false false	9	NonAgreedAttribute
+10	.	.	SENT	SENT	9	punc
+
+1	Существует	существовать	V	Verb Masculine Third true true false false Indicative Present	0	Predicate
+2	formula_139	formula_139	S	Noun Nominative true false false	1	Subject
+3	комплексных	комплексный	A	Adjective Genitive false Full Positive	4	AgreedAttribute
+4	чисел	число	S	Noun Genitive false false false	2	NonAgreedAttribute
+5	formula_422	formula_422	S	Noun Genitive true false false	4	NonAgreedAttribute
+6	таких	такой	AdjectivePronoun	AdjectivePronoun Genitive false	4	AgreedAttribute
+7	,	,	SENT	SENT	6	punc
+8	что	что	CONJ	Conjunction Subordinating	9	SubordinatingConjunction
+9	есть	быть	false	false Indicative Present	6	Predicate
+10	справедливо	справедливый	A	Adjective Neuter true Short Positive	9	Complement
+11	равенство	равенство	S	Noun Nominative Neuter true false false	9	Subject
+12	formula_423	formula_423	S	Noun Genitive true false false	11	NonAgreedAttribute
+13	.	.	SENT	SENT	12	punc
+
+1	Всякая	всякий	AdjectivePronoun	AdjectivePronoun Nominative Feminine true	3	AgreedAttribute
+2	рациональная	рациональный	A	Adjective Nominative Feminine true Full Positive	3	AgreedAttribute
+3	функция	функция	S	Noun Nominative Feminine true false false	2	Subject
+4	с	с	PR	Preposition	6	Preposition
+5	действительными	действительный	A	Adjective Instrumental false Full Positive	6	AgreedAttribute
+6	коэффициентами	коэффициент	S	Noun Instrumental false false false	3	ObjectIndirect
+7	от	от	PR	Preposition	9	Preposition
+8	действительной	действительный	A	Adjective Genitive Feminine true Full Positive	9	AgreedAttribute
+9	переменной	переменная	S	Noun Genitive Feminine true false false	3	ObjectIndirect
+10	интегрируема	интегрировать	Participle	Participle Feminine true false false true Indicative Present	18	Dislocation_Left
+11	в	в	PR	Preposition	13	Preposition
+12	элементарных	элементарный	A	Adjective Locative false Full Positive	13	AgreedAttribute
+13	функциях	функция	S	Noun Locative false false false	18	AdverbialModifier
+14	из	из	PR	Preposition	16	Preposition
+15	ее	её	PossessivePronoun	PossessivePronoun Genitive Third false	16	AgreedAttribute
+16	Noun	Genitive	_	_	13	
+17	первообразная	первообразная	S	Noun Nominative Feminine true false false	18	Subject
+18	выражается	выразить	V	Verb Feminine Third true true false true Indicative Present	3	Predicate
+19	через	через	PR	Preposition	20	Preposition
+20	логарифм	логарифм	S	Noun Accusative Masculine true false false	18	ObjectIndirect
+21	,	,	SENT	SENT	20	punc
+22	арктангенс	арктангенс	S	Noun Accusative Masculine true false false	18	ObjectIndirect
+23	Preposition		#preposition	#preposition PREPOSITION PREPOSITION:GRAMMATICAL_ELEMENTS	22	
+24	и	и	CONJ	Conjunction Coordinating	26	CoordinatingConjunction
+25	рациональные	рациональный	A	Adjective Accusative false Full Positive	26	AgreedAttribute
+26	функции	функция	S	Noun Accusative false false false	18	ObjectIndirect
+27	Preposition		#preposition	#preposition PREPOSITION PREPOSITION:GRAMMATICAL_ELEMENTS	26	
+28	.	.	SENT	SENT	27	punc
+
+1	Пусть	пусть	CONJ	Conjunction Subordinating	3	SubordinatingConjunction
+2	formula_41	formula_41	S	Noun Nominative true false false	3	Subject
+3	есть	быть	false	false Indicative Present	13	Predicate
+4	--	--	SENT	SENT	3	punc
+5	функция	функция	S	Noun Nominative Feminine true false false	3	Complement
+6	,	,	SENT	SENT	5	punc
+7	интегрируема	интегрировать	Participle	Participle Feminine true false false true Indicative Present	13	Complement
+8	по	по	PR	Preposition	9	Preposition
+9	Риману	Риман	S	Noun Dative Masculine true true true	7	ObjectIndirect
+10	на	на	PR	Preposition	11	Preposition
+11	отрезке	отрезок	S	Noun Locative Masculine true false false	7	AdverbialModifier
+12	formula_62	formula_62	S	Noun Nominative true false false	13	Subject
+13	есть	быть	false	false Indicative Present	12	Predicate
+14	.	.	SENT	SENT	13	punc
+
+1	Пусть	пусть	CONJ	Conjunction Subordinating	5	SubordinatingConjunction
+2	функция	функция	S	Noun Nominative Feminine true false false	5	Subject
+3	formula_77	formula_77	S	Noun Nominative true false false	3	Apposition
+4	есть	быть	false	false Indicative Present	1	Predicate
+5	непрерывна	непрерывный	A	Adjective Feminine true Short Positive	5	Complement
+6	на	на	PR	Preposition	8	Preposition
+7	отрезке	отрезок	S	Noun Locative Masculine true false false	6	AdverbialModifier
+8	formula_62	formula_62	S	Noun Genitive true false false	8	NonAgreedAttribute
+9	и	и	CONJ	Conjunction Coordinating	11	CoordinatingConjunction
+10	дифференцируема	дифференцировать	Participle	Participle Feminine true false false true Indicative Present	5	Complement
+11	в	в	PR	Preposition	15	Preposition
+12	каждой	каждый	AdjectivePronoun	AdjectivePronoun Locative Feminine true	15	AgreedAttribute
+13	внутренней	внутренний	A	Adjective Locative Feminine true Full	15	AgreedAttribute
+14	точке	точка	S	Noun Locative Feminine true false false	11	AdverbialModifier
+15	этого	этот	AdjectivePronoun	AdjectivePronoun Genitive Masculine true	17	AgreedAttribute
+16	отрезка	отрезок	S	Noun Genitive Masculine true false false	15	NonAgreedAttribute
+17	,	,	SENT	SENT	16	punc
+18	причем	причём	Adverb	Adverb Positive	20	ParentheticalWord
+19	formula_424	formula_424	S	Noun Nominative true false false	15	Apposition
+20	.	.	SENT	SENT	19	punc
+
+1	Тогда	тогда	AdverbialPronoun	AdverbialPronoun	2	AdverbialModifier
+2	есть	быть	false	false Indicative Present	1	Predicate
+3	справедлива	справедливый	A	Adjective Feminine true Short Positive	2	Complement
+4	формула	формула	S	Noun Nominative Feminine true false false	2	Subject
+5	formula_425	formula_425	S	Noun Genitive true false false	4	NonAgreedAttribute
+6	.	.	SENT	SENT	5	punc
+
+1	Если	если	CONJ	Conjunction Subordinating	4	SubordinatingConjunction
+2	функция	функция	S	Noun Nominative Feminine true false false	4	Subject
+3	formula_41	formula_41	S	Noun Nominative true false false	2	Apposition
+4	есть	быть	false	false Indicative Present	14	Predicate
+5	интегрируема	интегрировать	Participle	Participle Feminine true false false true Indicative Present	4	Complement
+6	по	по	PR	Preposition	7	Preposition
+7	Риману	Риман	S	Noun Dative Masculine true true true	5	ObjectIndirect
+8	на	на	PR	Preposition	9	Preposition
+9	отрезке	отрезок	S	Noun Locative Masculine true false false	5	AdverbialModifier
+10	formula_62	formula_62	S	Noun Genitive true false false	9	NonAgreedAttribute
+11	,	,	SENT	SENT	10	punc
+12	то	то	CONJ	Conjunction	14	Correlate_CondTemp
+13	она	он	Pronoun	Pronoun Nominative Feminine Third true	14	Subject
+14	является	явиться	V	Verb Feminine Third true true false false Indicative Present	13	Predicate
+15	ограниченной	ограничить	Participle	Participle Instrumental Feminine true false true true Indicative Past	14	Complement
+16	на	на	PR	Preposition	18	Preposition
+17	этом	этот	AdjectivePronoun	AdjectivePronoun Locative Masculine true	18	AgreedAttribute
+18	отрезке	отрезок	S	Noun Locative Masculine true false false	15	AdverbialModifier
+19	.	.	SENT	SENT	18	punc
+
+1	Пусть	пусть	CONJ	Conjunction Subordinating	3	SubordinatingConjunction
+2	formula_426	formula_426	S	Noun Genitive true false false	1	But_Addition
+3	.	.	SENT	SENT	2	punc
+
+1	Если	если	CONJ	Conjunction Subordinating	4	SubordinatingConjunction
+2	функция	функция	S	Noun Nominative Feminine true false false	4	Subject
+3	formula_41	formula_41	S	Noun Nominative true false false	2	Apposition
+4	есть	быть	false	false Indicative Present	14	Predicate
+5	интегрируема	интегрировать	Participle	Participle Feminine true false false true Indicative Present	4	Complement
+6	на	на	PR	Preposition	7	Preposition
+7	отрезках	отрезок	S	Noun Locative false false false	5	AdverbialModifier
+8	formula_62	formula_62	Numeral	Numeral Nominative Cardinal	7	Apposition
+9	и	и	CONJ	Conjunction Coordinating	10	CoordinatingConjunction
+10	formula_427	formula_427	Numeral	Numeral Nominative Cardinal	7	Apposition
+11	,	,	SENT	SENT	10	punc
+12	то	то	CONJ	Conjunction	14	Correlate_CondTemp
+13	она	он	Pronoun	Pronoun Nominative Feminine Third true	14	Subject
+14	есть	быть	false	false Indicative Present	13	Predicate
+15	интегрируема	интегрировать	Participle	Participle Feminine true false false true Indicative Present	14	Complement
+16	и	и	CONJ	Conjunction Coordinating	22	CoordinatingConjunction
+17	на	на	PR	Preposition	18	Preposition
+18	отрезке	отрезок	S	Noun Locative Masculine true false false	22	AdverbialModifier
+19	formula_428	formula_428	S	Noun Genitive true false false	18	NonAgreedAttribute
+20	,	,	SENT	SENT	19	punc
+21	причем	причём	Adverb	Adverb Positive	22	ParentheticalWord
+22	выполняется	выполнить	V	Verb Neuter Third true true false true Indicative Present	21	Predicate
+23	равенство	равенство	S	Noun Nominative Neuter true false false	22	Subject
+24	formula_429	formula_429	S	Noun Genitive true false false	23	NonAgreedAttribute
+25	.	.	SENT	SENT	24	punc
+
+1	Пусть	пусть	CONJ	Conjunction Subordinating	5	SubordinatingConjunction
+2	функция	функция	S	Noun Nominative Feminine true false false	5	Subject
+3	formula_41	formula_41	S	Noun Nominative true false false	3	Apposition
+4	есть	быть	false	false Indicative Present	1	Predicate
+5	интегрируема	интегрировать	Participle	Participle Feminine true false false true Indicative Present	5	Complement
+6	по	по	PR	Preposition	8	Preposition
+7	Риману	Риман	S	Noun Dative Masculine true true true	6	ObjectIndirect
+8	на	на	PR	Preposition	10	Preposition
+9	отрезке	отрезок	S	Noun Locative Masculine true false false	6	AdverbialModifier
+10	formula_62	formula_62	S	Noun Genitive true false false	10	NonAgreedAttribute
+11	.	.	SENT	SENT	10	punc
+
+1	Для	для	PR	Preposition	3	Preposition
+2	любой	любой	AdjectivePronoun	AdjectivePronoun Genitive Feminine true Indefinite	3	AgreedAttribute
+3	точки	точка	S	Noun Genitive Feminine true false false	13	ObjectIndirect
+4	formula_430	formula_430	S	Noun Genitive true false false	3	NonAgreedAttribute
+5	и	и	CONJ	Conjunction Coordinating	9	CoordinatingConjunction
+6	для	для	PR	Preposition	9	Preposition
+7	любого	любой	AdjectivePronoun	AdjectivePronoun Genitive Masculine true Indefinite	9	AgreedAttribute
+8	действительного	действительный	A	Adjective Genitive Masculine true Full Positive	9	AgreedAttribute
+9	formula_363	formula_363	S	Noun Genitive true false false	13	ObjectIndirect
+10	функция	функция	S	Noun Nominative Feminine true false false	13	Subject
+11	formula_431	formula_431	S	Noun Nominative true false false	10	Apposition
+12	также	также	Adverb	Adverb Positive	13	ТожеТакже
+13	является	явиться	V	Verb Feminine Third true true false false Indicative Present	12	Predicate
+14	интегрируемой	интегрировать	Participle	Participle Instrumental Feminine true false false true Indicative Present	13	Complement
+15	на	на	PR	Preposition	16	Preposition
+16	отрезке	отрезок	S	Noun Locative Masculine true false false	14	AdverbialModifier
+17	formula_62	formula_62	S	Noun Genitive true false false	16	NonAgreedAttribute
+18	,	,	SENT	SENT	17	punc
+19	причем	причём	Adverb	Adverb Positive	20	ParentheticalWord
+20	formula_432	formula_432	S	Noun Nominative true false false	17	Apposition
+21	.	.	SENT	SENT	20	punc
+
+1	Ограниченная	ограничить	Participle	Participle Nominative Feminine true false true true Indicative Past	2	AgreedAttribute
+2	функция	функция	S	Noun Nominative Feminine true false false	4	Subject
+3	formula_41	formula_41	S	Noun Genitive true false false	2	NonAgreedAttribute
+4	есть	быть	false	false Indicative Present	3	Predicate
+5	интегрируема	интегрировать	Participle	Participle Feminine true false false true Indicative Present	4	Complement
+6	по	по	PR	Preposition	7	Preposition
+7	Риману	Риман	S	Noun Dative Masculine true true true	5	ObjectIndirect
+8	на	на	PR	Preposition	9	Preposition
+9	отрезке	отрезок	S	Noun Locative Masculine true false false	5	AdverbialModifier
+10	formula_62	formula_62	S	Noun Genitive true false false	9	NonAgreedAttribute
+11	тогда	тогда	AdverbialPronoun	AdverbialPronoun	4	AdverbialModifier
+12	и	и	CONJ	Conjunction Coordinating	14	CoordinatingConjunction
+13	только	только	Adverb	Adverb Positive	14	Surface_Limitation
+14	тогда	тогда	AdverbialPronoun	AdverbialPronoun	4	AdverbialModifier
+15	,	,	SENT	SENT	14	punc
+16	когда	когда	CONJ	Conjunction Subordinating	20	SubordinatingConjunction
+17	для	для	PR	Preposition	19	Preposition
+18	любого	любой	AdjectivePronoun	AdjectivePronoun Genitive Masculine true Indefinite	19	AgreedAttribute
+19	formula_314	formula_314	S	Noun Genitive true false false	20	ObjectIndirect
+20	можно	можно	Adverb	Adverb Third true true false Indicative Present	14	Predicate
+21	найти	найти	Infinitive	Infinitive true true true	20	Object
+22	разбиение	разбиение	S	Noun Accusative Neuter true false false	21	Object
+23	formula_419	formula_419	S	Noun Instrumental true false false	21	Complement
+24	указанного	указать	Participle	Participle Genitive Masculine true false true true Indicative Past	25	AgreedAttribute
+25	отрезка	отрезок	S	Noun Genitive Masculine true false false	23	NonAgreedAttribute
+26	,	,	SENT	SENT	25	punc
+27	что	что	CONJ	Conjunction Subordinating	28	SubordinatingConjunction
+28	выполняется	выполнить	V	Verb Neuter Third true true false true Indicative Present	21	Predicate
+29	неравенство	неравенство	S	Noun Nominative Neuter true false false	28	Subject
+30	formula_433	formula_433	S	Noun Genitive true false false	29	NonAgreedAttribute
+31	,	,	SENT	SENT	30	punc
+32	где	где	AdverbialPronoun	AdverbialPronoun	33	RelativeGroup
+33	есть	быть	false	false Indicative Present	30	Predicate
+34	formula_434	formula_434	S	Noun Nominative true false false	33	Subject
+35	из	из	PR	Preposition	36	Preposition
+36	formula_435	formula_435	S	Noun Genitive true false false	34	AdverbialModifier
+37	.	.	SENT	SENT	36	punc
+
+1	Пусть	пусть	CONJ	Conjunction Subordinating	4	SubordinatingConjunction
+2	функция	функция	S	Noun Nominative Feminine true false false	4	Subject
+3	formula_41	formula_41	S	Noun Nominative true false false	2	Apposition
+4	определена	определить	V	Verb Feminine Third true false true true Indicative Present	3	Predicate
+5	и	и	CONJ	Conjunction Coordinating	6	CoordinatingConjunction
+6	ограничена	ограничить	V	Verb Feminine Third true false true true Indicative Present	5	Predicate
+7	на	на	PR	Preposition	8	Preposition
+8	отрезке	отрезок	S	Noun Locative Masculine true false false	6	AdverbialModifier
+9	formula_62	formula_62	S	Noun Genitive true false false	8	NonAgreedAttribute
+10	Conjunction	Subordinating	_	_	6	#dependent_clause_conjunctions
+11	Noun	Nominative	Subject	Subject true	6	
+12	.	.	SENT	SENT	11	punc
+
+1	Тогда	тогда	AdverbialPronoun	AdverbialPronoun	11	AdverbialModifier
+2	предел	предел	S	Noun Nominative Masculine true false false	11	Subject
+3	при	при	PR	Preposition	4	Preposition
+4	Noun	Prepositional	_	_	2	
+5	на	на	PR	Preposition	6	Preposition
+6	отрезке	отрезок	S	Noun Locative Masculine true false false	2	AdverbialModifier
+7	formula_436	formula_436	S	Noun Genitive true false false	6	NonAgreedAttribute
+8	нижних	нижний	A	Adjective Genitive false Full Positive	9	AgreedAttribute
+9	сумм	сумма	S	Noun Genitive false false false	2	NonAgreedAttribute
+10	Дарбу	Дарбу	Genitive	Genitive true true false	9	NonAgreedAttribute
+11	существует	существовать	V	Verb Masculine Third true true false false Indicative Present	10	Predicate
+12	и	и	CONJ	Conjunction Coordinating	19	CoordinatingConjunction
+13	равен	равный	A	Adjective Masculine true Short Positive	19	Ellipted_Left
+14	нижнему	нижний	A	Adjective Dative Masculine true Full Positive	15	AgreedAttribute
+15	интегралу	интеграл	S	Noun Dative Masculine true false false	13	ObjectIndirect
+16	Дарбу	Дарбу	Genitive	Genitive true true false	15	NonAgreedAttribute
+17	от	от	PR	Preposition	18	Preposition
+18	функции	функция	S	Noun Genitive Feminine true false false	15	ObjectIndirect
+19	formula_41	formula_41	S	Noun Nominative true false false	19	Ellipted_Right
+20	:	:	SENT	SENT	19	punc
+21	formula_437	formula_437	Numeral	Numeral Cardinal	20	Specification_NumericCharacteristicColon
+22	AdverbialPronoun		#temporal_reference_adverbs	#temporal_reference_adverbs TEMPORAL_REFERENCE_OF_SITUATIONS TEMPORAL_REFERENCE_OF_SITUATIONS TEMPORAL_REFERENCE_OF_SITUATIONS:SITUATION_REFERENCE_AND_QUANTIFICATION:CH_REFERENCE_AND_QUANTIFICATION:CHARACTERISTIC_AND_VALUE Указание на время ситуации 2602653	19	
+23	,	,	SENT	SENT	22	punc
+24	а	а	CONJ	Conjunction Coordinating	30	CoordinatingConjunction
+25	предел	предел	S	Noun Nominative Masculine true false false	30	Ellipted_Left
+26	верхних	верхний	A	Adjective Genitive false Full Positive	28	AgreedAttribute
+27	сумм	сумма	S	Noun Genitive false false false	26	NonAgreedAttribute
+28	Дарбу	Дарбу	Genitive	Genitive true true false	28	NonAgreedAttribute
+29	-	-	SENT	SENT	28	punc
+30	верхнему	верхний	A	Adjective Dative Masculine true Full Positive	33	AgreedAttribute
+31	интегралу	интеграл	S	Noun Dative Masculine true false false	30	Ellipted_Right
+32	Дарбу	Дарбу	Genitive	Genitive true true false	33	NonAgreedAttribute
+33	:	:	SENT	SENT	32	punc
+34	formula_438	formula_438	S	Noun Genitive true false false	34	NominalPostMod_Colon
+35	.	.	SENT	SENT	34	punc
+
+1	Для	для	PR	Preposition	3	Preposition
+2	того	то	Pronoun	Pronoun Genitive Neuter Third true	1	ObjectIndirect
+3	,	,	SENT	SENT	2	punc
+4	чтобы	чтобы	CONJ	Conjunction Subordinating	9	SubordinatingConjunction
+5	ограниченная	ограничить	Participle	Participle Nominative Feminine true false true true Indicative Past	7	AgreedAttribute
+6	функция	функция	S	Noun Nominative Feminine true false false	9	Subject
+7	formula_41	formula_41	S	Noun Genitive true false false	7	NonAgreedAttribute
+8	была	быть	V	Verb Feminine Third true true false false Indicative Past	3	Predicate
+9	интегрируема	интегрировать	Participle	Participle Feminine true false false true Indicative Present	9	Complement
+10	в	в	PR	Preposition	12	Preposition
+11	смысле	смысл	S	Noun Prepositional Masculine true false false	10	Adjunct_Standpoint_Modifier
+12	Дарбу	Дарбу	Genitive	Genitive true true false	12	NonAgreedAttribute
+13	,	,	SENT	SENT	12	punc
+14	необходимо	необходимо	Adverb	Adverb Positive	9	AdverbialModifier
+15	и	и	CONJ	Conjunction Coordinating	17	CoordinatingConjunction
+16	достаточно	достаточно	Adverb	Adverb	9	AdverbialModifier
+17	,	,	SENT	SENT	16	punc
+18	чтобы	чтобы	CONJ	Conjunction Subordinating	25	SubordinatingConjunction
+19	предел	предел	S	Noun Nominative Masculine true false false	25	Subject
+20	ее	её	PossessivePronoun	PossessivePronoun Genitive Third false	23	AgreedAttribute
+21	нижних	нижний	A	Adjective Genitive false Full Positive	23	AgreedAttribute
+22	сумм	сумма	S	Noun Genitive false false false	20	NonAgreedAttribute
+23	Дарбу	Дарбу	Genitive	Genitive true true false	23	NonAgreedAttribute
+24	был	быть	V	Verb Masculine Third true true false false Indicative Past	1	Predicate
+25	равен	равный	A	Adjective Masculine true Short Positive	25	Complement
+26	пределу	предел	S	Noun Dative Masculine true false false	26	ObjectIndirect
+27	верхних	верхний	A	Adjective Genitive false Full Positive	29	AgreedAttribute
+28	сумм	сумма	S	Noun Genitive false false false	27	NonAgreedAttribute
+29	Дарбу	Дарбу	Genitive	Genitive true true false	29	NonAgreedAttribute
+30	formula_439	formula_439	S	Noun Nominative true false false	30	Apposition
+31	.	.	SENT	SENT	30	punc
+
+1	Функция	функция	S	Noun Nominative Feminine true false false	3	Subject
+2	formula_41	formula_41	S	Noun Nominative true false false	1	Apposition
+3	есть	быть	false	false Indicative Present	2	Predicate
+4	интегрируема	интегрировать	Participle	Participle Feminine true false false true Indicative Present	3	Complement
+5	по	по	PR	Preposition	6	Preposition
+6	Риману	Риман	S	Noun Dative Masculine true true true	4	ObjectIndirect
+7	на	на	PR	Preposition	8	Preposition
+8	отрезке	отрезок	S	Noun Locative Masculine true false false	4	AdverbialModifier
+9	formula_62	formula_62	S	Noun Genitive true false false	8	NonAgreedAttribute
+10	тогда	тогда	AdverbialPronoun	AdverbialPronoun	3	AdverbialModifier
+11	и	и	CONJ	Conjunction Coordinating	13	CoordinatingConjunction
+12	только	только	Adverb	Adverb Positive	13	Surface_Limitation
+13	тогда	тогда	AdverbialPronoun	AdverbialPronoun	3	AdverbialModifier
+14	,	,	SENT	SENT	13	punc
+15	когда	когда	CONJ	Conjunction Subordinating	17	SubordinatingConjunction
+16	она	он	Pronoun	Pronoun Nominative Feminine Third true	17	Subject
+17	есть	быть	false	false Indicative Present	13	Predicate
+18	интегрируема	интегрировать	Participle	Participle Feminine true false false true Indicative Present	17	Complement
+19	в	в	PR	Preposition	20	Preposition
+20	смысле	смысл	S	Noun Prepositional Masculine true false false	18	Adjunct_Standpoint_Modifier
+21	Дарбу	Дарбу	Genitive	Genitive true true false	20	NonAgreedAttribute
+22	Pronoun	Nominative	_	_	18	
+23	,	,	SENT	SENT	22	punc
+24	при	при	PR	Preposition	25	Preposition
+25	этом	это	Pronoun	Pronoun Prepositional Neuter Third true	28	AdverbialModifier
+26	интеграл	интеграл	S	Noun Nominative Masculine true false false	28	Subject
+27	Римана	Риман	S	Noun Genitive Masculine true true true	26	NonAgreedAttribute
+28	есть	быть	false	false Indicative Present	13	Predicate
+29	равен	равный	A	Adjective Masculine true Short Positive	28	Complement
+30	интегралу	интеграл	S	Noun Dative Masculine true false false	29	ObjectIndirect
+31	в	в	PR	Preposition	32	Preposition
+32	смысле	смысл	S	Noun Prepositional Masculine true false false	28	Adjunct_Standpoint_Modifier
+33	Дарбу	Дарбу	Genitive	Genitive true true false	32	NonAgreedAttribute
+34	Conjunction	Subordinating	_	_	28	#dependent_clause_conjunctions
+35	.	.	SENT	SENT	34	punc
+
+1	Если	если	CONJ	Conjunction Subordinating	3	SubordinatingConjunction
+2	функция	функция	S	Noun Nominative Feminine true false false	3	Subject
+3	есть	быть	false	false Indicative Present	16	Predicate
+4	formula_41	formula_41	S	Noun Instrumental true false false	5	ObjectIndirect
+5	интегрируема	интегрировать	Participle	Participle Feminine true false false true Indicative Present	3	Complement
+6	на	на	PR	Preposition	7	Preposition
+7	отрезке	отрезок	S	Noun Locative Masculine true false false	5	AdverbialModifier
+8	formula_62	formula_62	S	Noun Genitive true false false	7	NonAgreedAttribute
+9	,	,	SENT	SENT	8	punc
+10	то	то	CONJ	Conjunction	16	Correlate_CondTemp
+11	для	для	PR	Preposition	13	Preposition
+12	любого	любой	AdjectivePronoun	AdjectivePronoun Genitive Masculine true Indefinite	13	AgreedAttribute
+13	отрезка	отрезок	S	Noun Genitive Masculine true false false	16	ObjectIndirect
+14	formula_440	formula_440	S	Noun Genitive true false false	13	NonAgreedAttribute
+15	функция	функция	S	Noun Nominative Feminine true false false	16	Subject
+16	есть	быть	false	false Indicative Present	15	Predicate
+17	formula_41	formula_41	S	Noun Instrumental true false false	18	ObjectIndirect
+18	интегрируема	интегрировать	Participle	Participle Feminine true false false true Indicative Present	16	Complement
+19	на	на	PR	Preposition	20	Preposition
+20	отрезке	отрезок	S	Noun Locative Masculine true false false	18	AdverbialModifier
+21	formula_441	formula_441	Numeral	Numeral Nominative Cardinal	20	Apposition
+22	.	.	SENT	SENT	21	punc
+
+1	Пусть	пусть	CONJ	Conjunction Subordinating	5	SubordinatingConjunction
+2	функция	функция	S	Noun Nominative Feminine true false false	5	Subject
+3	formula_348	formula_348	S	Noun Nominative true false false	3	Apposition
+4	есть	быть	false	false Indicative Present	1	Predicate
+5	интегрируема	интегрировать	Participle	Participle Feminine true false false true Indicative Present	5	Complement
+6	на	на	PR	Preposition	8	Preposition
+7	отрезке	отрезок	S	Noun Locative Masculine true false false	6	AdverbialModifier
+8	formula_62	formula_62	S	Noun Genitive true false false	8	NonAgreedAttribute
+9	,	,	SENT	SENT	8	punc
+10	и	и	CONJ	Conjunction Coordinating	16	CoordinatingConjunction
+11	пусть	пусть	CONJ	Conjunction Subordinating	16	SubordinatingConjunction
+12	значения	значение	S	Noun Nominative false false false	16	Subject
+13	этой	этот	AdjectivePronoun	AdjectivePronoun Genitive Feminine true	15	AgreedAttribute
+14	функции	функция	S	Noun Genitive Feminine true false false	13	NonAgreedAttribute
+15	принадлежат	принадлежать	V	Verb Third false true false false Indicative Present	1	Predicate
+16	некоторому	некоторый	AdjectivePronoun	AdjectivePronoun Dative Masculine true Indefinite	18	AgreedAttribute
+17	Noun	Dative	true	true	16	
+18	некоторому	некоторый	AdjectivePronoun	AdjectivePronoun Dative Masculine true Indefinite	20	AgreedAttribute
+19	отрезку	отрезок	S	Noun Dative Masculine true false false	16	ObjectIndirect
+20	formula_62	formula_62	S	Noun Genitive true false false	20	NonAgreedAttribute
+21	.	.	SENT	SENT	20	punc
+
+1	Если	если	CONJ	Conjunction Subordinating	4	SubordinatingConjunction
+2	функция	функция	S	Noun Nominative Feminine true false false	4	Subject
+3	formula_215	formula_215	S	Noun Nominative true false false	2	Apposition
+4	удовлетворяет	удовлетворить	V	Verb Feminine Third true true false false Indicative Present	31	Predicate
+5	условию	условие	S	Noun Dative Neuter true false false	4	ObjectIndirect
+6	:	:	SENT	SENT	5	punc
+7	существует	существовать	V	Verb Feminine Third true true false false Indicative Present	4	Predicate
+8	постоянная	постоянная	S	Noun Nominative Feminine true false false	7	Subject
+9	formula_442	formula_442	S	Noun Genitive true false false	8	NonAgreedAttribute
+10	такая	такой	AdjectivePronoun	AdjectivePronoun Nominative Feminine true	8	AgreedAttribute
+11	,	,	SENT	SENT	10	punc
+12	что	что	CONJ	Conjunction Subordinating	20	SubordinatingConjunction
+13	для	для	PR	Preposition	16	Preposition
+14	любых	любой	AdjectivePronoun	AdjectivePronoun Genitive false Indefinite	16	AgreedAttribute
+15	двух	два	Numeral	Numeral Genitive Cardinal 2	16	AgreedAttribute
+16	точек	точка	S	Noun Genitive false false false	20	ObjectIndirect
+17	formula_443	formula_443	S	Noun Genitive true false false	16	NonAgreedAttribute
+18	и	и	CONJ	Conjunction Coordinating	19	CoordinatingConjunction
+19	formula_444	formula_444	S	Noun Genitive true false false	16	NonAgreedAttribute
+20	выполняется	выполнить	V	Verb Neuter Third true true false true Indicative Present	10	Predicate
+21	неравенство	неравенство	S	Noun Nominative Neuter true false false	20	Subject
+22	formula_445	formula_445	S	Noun Genitive true false false	21	NonAgreedAttribute
+23	на	на	PR	Preposition	24	Preposition
+24	отрезке	отрезок	S	Noun Locative Masculine true false false	22	AdverbialModifier
+25	formula_62	formula_62	S	Noun Genitive true false false	24	NonAgreedAttribute
+26	,	,	SENT	SENT	25	punc
+27	то	то	CONJ	Conjunction	31	Correlate_CondTemp
+28	сложная	сложный	A	Adjective Nominative Feminine true Full Positive	29	AgreedAttribute
+29	функция	функция	S	Noun Nominative Feminine true false false	31	Subject
+30	formula_446	formula_446	S	Noun Genitive true false false	29	NonAgreedAttribute
+31	есть	быть	false	false Indicative Present	30	Predicate
+32	,	,	SENT	SENT	31	punc
+33	также	также	Adverb	Adverb Positive	34	ТожеТакже
+34	интегрируема	интегрировать	Participle	Participle Feminine true false false true Indicative Present	31	Complement
+35	на	на	PR	Preposition	36	Preposition
+36	formula_62	formula_62	S	Noun Prepositional true false false	34	ObjectIndirect
+37	.	.	SENT	SENT	36	punc
+
+1	Если	если	CONJ	Conjunction Subordinating	4	SubordinatingConjunction
+2	функция	функция	S	Noun Nominative Feminine true false false	4	Subject
+3	formula_41	formula_41	S	Noun Nominative true false false	2	Apposition
+4	есть	быть	false	false Indicative Present	13	Predicate
+5	интегрируема	интегрировать	Participle	Participle Feminine true false false true Indicative Present	4	Complement
+6	на	на	PR	Preposition	7	Preposition
+7	отрезке	отрезок	S	Noun Locative Masculine true false false	5	AdverbialModifier
+8	formula_62	formula_62	S	Noun Genitive true false false	7	NonAgreedAttribute
+9	,	,	SENT	SENT	8	punc
+10	то	то	CONJ	Conjunction	13	Correlate_CondTemp
+11	функция	функция	S	Noun Nominative Feminine true false false	13	Subject
+12	formula_447	formula_447	S	Noun Nominative true false false	11	Apposition
+13	есть	быть	false	false Indicative Present	12	Predicate
+14	также	также	Adverb	Adverb Positive	15	ТожеТакже
+15	интегрируема	интегрировать	Participle	Participle Feminine true false false true Indicative Present	13	Complement
+16	на	на	PR	Preposition	18	Preposition
+17	этом	этот	AdjectivePronoun	AdjectivePronoun Locative Masculine true	18	AgreedAttribute
+18	отрезке	отрезок	S	Noun Locative Masculine true false false	15	AdverbialModifier
+19	и	и	CONJ	Conjunction Coordinating	20	CoordinatingConjunction
+20	выполняется	выполнить	V	Verb Neuter Third true true false true Indicative Present	19	Predicate
+21	неравенство	неравенство	S	Noun Nominative Neuter true false false	20	Subject
+22	Любая	любой	AdjectivePronoun	AdjectivePronoun Nominative Feminine true Indefinite	7	AgreedAttribute
+23	кусочно	кусочный	A	Adjective Masculine true Full Positive	4	Modifier_Composite_Hyphen_Adjective
+24	-	-	SENT	SENT	23	punc
+25	монотонная	монотонный	A	Adjective Nominative Feminine true Full Positive	7	AgreedAttribute
+26	на	на	PR	Preposition	6	Preposition
+27	отрезке	отрезок	S	Noun Locative Masculine true false false	4	AdverbialModifier
+28	функция	функция	S	Noun Nominative Feminine true false false	9	Subject
+29	функция	функция	S	Noun Nominative Feminine true false false	7	Apposition
+30	есть	быть	false	false Indicative Present	29	Predicate
+31	интегрируема	интегрировать	Participle	Participle Feminine true false false true Indicative Present	9	Complement
+32	на	на	PR	Preposition	13	Preposition
+33	этом	этот	AdjectivePronoun	AdjectivePronoun Locative Masculine true	13	AgreedAttribute
+34	отрезке	отрезок	S	Noun Locative Masculine true false false	10	AdverbialModifier
+35	.	.	SENT	SENT	34	punc
+
+1	Всякая	всякий	AdjectivePronoun	AdjectivePronoun Nominative Feminine true	5	AgreedAttribute
+2	непрерывная	непрерывный	A	Adjective Nominative Feminine true Full Positive	5	AgreedAttribute
+3	на	на	PR	Preposition	4	Preposition
+4	отрезке	отрезок	S	Noun Locative Masculine true false false	2	AdverbialModifier
+5	функция	функция	S	Noun Nominative Feminine true false false	6	Subject
+6	есть	быть	false	false Indicative Present	5	Predicate
+7	равномерно	равномерно	Adverb	Adverb Positive	8	Modifier_Adverbial_ForAdjAdv
+8	непрерывна	непрерывный	A	Adjective Feminine true Short Positive	6	Complement
+9	на	на	PR	Preposition	11	Preposition
+10	этом	этот	AdjectivePronoun	AdjectivePronoun Locative Masculine true	11	AgreedAttribute
+11	отрезке	отрезок	S	Noun Locative Masculine true false false	8	AdverbialModifier
+12	.	.	SENT	SENT	11	punc
+
+1	Всякая	всякий	AdjectivePronoun	AdjectivePronoun Nominative Feminine true	5	AgreedAttribute
+2	монотонная	монотонный	A	Adjective Nominative Feminine true Full Positive	5	AgreedAttribute
+3	на	на	PR	Preposition	4	Preposition
+4	отрезке	отрезок	S	Noun Locative Masculine true false false	2	AdverbialModifier
+5	функция	функция	S	Noun Nominative Feminine true false false	6	Subject
+6	есть	быть	false	false Indicative Present	5	Predicate
+7	интегрируема	интегрировать	Participle	Participle Feminine true false false true Indicative Present	6	Complement
+8	по	по	PR	Preposition	9	Preposition
+9	Риману	Риман	S	Noun Dative Masculine true true true	7	ObjectIndirect
+10	на	на	PR	Preposition	12	Preposition
+11	этом	этот	AdjectivePronoun	AdjectivePronoun Locative Masculine true	12	AgreedAttribute
+12	отрезке	отрезок	S	Noun Locative Masculine true false false	7	AdverbialModifier
+13	.	.	SENT	SENT	12	punc
+
+1	Всякая	всякий	AdjectivePronoun	AdjectivePronoun Nominative Feminine true	5	AgreedAttribute
+2	непрерывная	непрерывный	A	Adjective Nominative Feminine true Full Positive	5	AgreedAttribute
+3	на	на	PR	Preposition	4	Preposition
+4	отрезке	отрезок	S	Noun Locative Masculine true false false	2	AdverbialModifier
+5	функция	функция	S	Noun Nominative Feminine true false false	6	Subject
+6	есть	быть	false	false Indicative Present	5	Predicate
+7	интегрируема	интегрировать	Participle	Participle Feminine true false false true Indicative Present	6	Complement
+8	по	по	PR	Preposition	9	Preposition
+9	Риману	Риман	S	Noun Dative Masculine true true true	7	ObjectIndirect
+10	на	на	PR	Preposition	12	Preposition
+11	этом	этот	AdjectivePronoun	AdjectivePronoun Locative Masculine true	12	AgreedAttribute
+12	отрезке	отрезок	S	Noun Locative Masculine true false false	7	AdverbialModifier
+13	.	.	SENT	SENT	12	punc
+
+1	Любая	любой	AdjectivePronoun	AdjectivePronoun Nominative Feminine true Indefinite	7	AgreedAttribute
+2	кусочно	кусочный	A	Adjective Masculine true Full Positive	4	Modifier_Composite_Hyphen_Adjective
+3	-	-	SENT	SENT	2	punc
+4	непрерывная	непрерывный	A	Adjective Nominative Feminine true Full Positive	7	AgreedAttribute
+5	на	на	PR	Preposition	6	Preposition
+6	отрезке	отрезок	S	Noun Locative Masculine true false false	4	AdverbialModifier
+7	функция	функция	S	Noun Nominative Feminine true false false	9	Subject
+8	функция	функция	S	Noun Nominative Feminine true false false	7	Apposition
+9	есть	быть	false	false Indicative Present	8	Predicate
+10	интегрируема	интегрировать	Participle	Participle Feminine true false false true Indicative Present	9	Complement
+11	на	на	PR	Preposition	13	Preposition
+12	этом	этот	AdjectivePronoun	AdjectivePronoun Locative Masculine true	13	AgreedAttribute
+13	отрезке	отрезок	S	Noun Locative Masculine true false false	10	AdverbialModifier
+14	.	.	SENT	SENT	13	punc
+
+1	Если	если	CONJ	Conjunction Subordinating	4	SubordinatingConjunction
+2	функция	функция	S	Noun Nominative Feminine true false false	4	Subject
+3	formula_41	formula_41	S	Noun Nominative true false false	2	Apposition
+4	есть	быть	false	false Indicative Present	17	Predicate
+5	интегрируема	интегрировать	Participle	Participle Feminine true false false true Indicative Present	4	Complement
+6	на	на	PR	Preposition	7	Preposition
+7	отрезке	отрезок	S	Noun Locative Masculine true false false	5	AdverbialModifier
+8	formula_62	formula_62	S	Noun Genitive true false false	7	NonAgreedAttribute
+9	,	,	SENT	SENT	8	punc
+10	то	то	CONJ	Conjunction	17	Correlate_CondTemp
+11	интеграл	интеграл	S	Noun Nominative Masculine true false false	17	Subject
+12	с	с	PR	Preposition	15	Preposition
+13	переменным	переменный	A	Adjective Instrumental Masculine true Full Positive	15	AgreedAttribute
+14	верхним	верхний	A	Adjective Instrumental Masculine true Full Positive	15	AgreedAttribute
+15	пределом	предел	S	Noun Instrumental Masculine true false false	11	ObjectIndirect
+16	formula_448	formula_448	S	Noun Genitive true false false	15	NonAgreedAttribute
+17	является	явиться	V	Verb Masculine Third true true false false Indicative Present	16	Predicate
+18	функцией	функция	S	Noun Instrumental Feminine true false false	17	Complement
+19	,	,	SENT	SENT	18	punc
+20	удовлетворяющей	удовлетворить	Participle	Participle Feminine true true false false Indicative Present	23	AgreedAttribute
+21	на	на	PR	Preposition	22	Preposition
+22	этом	это	Pronoun	Pronoun Locative Neuter Third true	20	AdverbialModifier
+23	отрезке	отрезка	S	Noun Feminine true false false	25	Dislocation_Left
+24	условию	условие	S	Noun Dative Neuter true false false	25	LexicalDislocation_Right
+25	существует	существовать	V	Verb Feminine Third true true false false Indicative Present	24	Predicate
+26	постоянная	постоянная	S	Noun Nominative Feminine true false false	25	Subject
+27	formula_442	formula_442	S	Noun Genitive true false false	26	NonAgreedAttribute
+28	такая	такой	AdjectivePronoun	AdjectivePronoun Nominative Feminine true	26	AgreedAttribute
+29	,	,	SENT	SENT	28	punc
+30	что	что	CONJ	Conjunction Subordinating	38	SubordinatingConjunction
+31	для	для	PR	Preposition	34	Preposition
+32	любых	любой	AdjectivePronoun	AdjectivePronoun Genitive false Indefinite	34	AgreedAttribute
+33	двух	два	Numeral	Numeral Genitive Cardinal 2	34	AgreedAttribute
+34	точек	точка	S	Noun Genitive false false false	38	ObjectIndirect
+35	formula_444	formula_444	S	Noun Genitive true false false	34	NonAgreedAttribute
+36	и	и	CONJ	Conjunction Coordinating	37	CoordinatingConjunction
+37	formula_446	formula_446	S	Noun Genitive true false false	34	NonAgreedAttribute
+38	выполняется	выполнить	V	Verb Neuter Third true true false true Indicative Present	28	Predicate
+39	неравенство	неравенство	S	Noun Nominative Neuter true false false	38	Subject
+40	formula_443	formula_443	S	Noun Genitive true false false	39	NonAgreedAttribute
+41	на	на	PR	Preposition	42	Preposition
+42	отрезке	отрезок	S	Noun Locative Masculine true false false	38	AdverbialModifier
+43	formula_62	formula_62	S	Noun Genitive true false false	42	NonAgreedAttribute
+44	.	.	SENT	SENT	43	punc
+
+1	Если	если	CONJ	Conjunction Subordinating	4	SubordinatingConjunction
+2	функция	функция	S	Noun Nominative Feminine true false false	4	Subject
+3	formula_41	formula_41	S	Noun Nominative true false false	2	Apposition
+4	есть	быть	false	false Indicative Present	22	Predicate
+5	интегрируема	интегрировать	Participle	Participle Feminine true false false true Indicative Present	4	Complement
+6	на	на	PR	Preposition	7	Preposition
+7	отрезке	отрезок	S	Noun Locative Masculine true false false	5	AdverbialModifier
+8	formula_62	formula_62	S	Noun Genitive true false false	7	NonAgreedAttribute
+9	и	и	CONJ	Conjunction Coordinating	10	CoordinatingConjunction
+10	непрерывна	непрерывный	A	Adjective Feminine true Short Positive	4	Complement
+11	в	в	PR	Preposition	12	Preposition
+12	точке	точка	S	Noun Locative Feminine true false false	10	AdverbialModifier
+13	formula_432	formula_432	S	Noun Genitive true false false	12	NonAgreedAttribute
+14	,	,	SENT	SENT	13	punc
+15	то	то	CONJ	Conjunction	22	Correlate_CondTemp
+16	интеграл	интеграл	S	Noun Nominative Masculine true false false	22	Subject
+17	с	с	PR	Preposition	20	Preposition
+18	переменным	переменный	A	Adjective Instrumental Masculine true Full Positive	20	AgreedAttribute
+19	верхним	верхний	A	Adjective Instrumental Masculine true Full Positive	20	AgreedAttribute
+20	пределом	предел	S	Noun Instrumental Masculine true false false	16	ObjectIndirect
+21	formula_448	formula_448	S	Noun Genitive true false false	20	NonAgreedAttribute
+22	имеет	иметь	V	Verb Masculine Third true true false true Indicative Present	21	Predicate
+23	производную	производная	S	Noun Accusative Feminine true false false	22	Object
+24	в	в	PR	Preposition	25	Preposition
+25	точке	точка	S	Noun Locative Feminine true false false	22	AdverbialModifier
+26	formula_330	formula_330	S	Noun Genitive true false false	25	NonAgreedAttribute
+27	и	и	CONJ	Conjunction Coordinating	28	CoordinatingConjunction
+28	выполняется	выполнить	V	Verb Neuter Third true true false true Indicative Present	27	Predicate
+29	равенство	равенство	S	Noun Nominative Neuter true false false	28	Subject
+30	formula_449	formula_449	S	Noun Genitive true false false	29	NonAgreedAttribute
+31	Conjunction		THEN	THEN THEN:CORRELATIVES:GRAMMATICAL_ELEMENTS	28	
+32	.	.	SENT	SENT	31	punc
+
+1	Пусть	пусть	CONJ	Conjunction Subordinating	4	SubordinatingConjunction
+2	функция	функция	S	Noun Nominative Feminine true false false	4	Subject
+3	formula_41	formula_41	S	Noun Nominative true false false	2	Apposition
+4	является	явиться	V	Verb Feminine Third true true false false Indicative Present	3	Predicate
+5	непрерывной	непрерывный	A	Adjective Instrumental Feminine true Full Positive	4	Complement
+6	на	на	PR	Preposition	7	Preposition
+7	отрезке	отрезок	S	Noun Locative Masculine true false false	5	AdverbialModifier
+8	formula_62	formula_62	S	Noun Genitive true false false	7	NonAgreedAttribute
+9	,	,	SENT	SENT	8	punc
+10	а	а	CONJ	Conjunction Coordinating	13	CoordinatingConjunction
+11	функция	функция	S	Noun Nominative Feminine true false false	13	Ellipted_Left
+12	formula_215	formula_215	S	Noun Nominative true false false	11	Apposition
+13	--	--	SENT	SENT	12	punc
+14	дифференцируемой	дифференцируемый	A	Adjective Feminine true Full Positive	13	Ellipted_Right
+15	,	,	SENT	SENT	14	punc
+16	причем	причём	Adverb	Adverb Positive	20	ParentheticalWord
+17	ее	её	PossessivePronoun	PossessivePronoun Nominative Feminine Third true	19	AgreedAttribute
+18	производная	производная	S	Noun Nominative Feminine true false false	20	Subject
+19	есть	быть	false	false Indicative Present	18	Predicate
+20	интегрируема	интегрировать	Participle	Participle Feminine true false false true Indicative Present	20	Complement
+21	на	на	PR	Preposition	23	Preposition
+22	formula_62	formula_62	S	Noun Prepositional true false false	21	ObjectIndirect
+23	и	и	CONJ	Conjunction Coordinating	25	CoordinatingConjunction
+24	formula_450	formula_450	S	Noun Prepositional true false false	21	ObjectIndirect
+25	Preposition		#preposition	#preposition PREPOSITION PREPOSITION:GRAMMATICAL_ELEMENTS	25	
+26	при	при	PR	Preposition	28	Preposition
+27	formula_451	formula_451	S	Noun Prepositional true false false	20	LexicalDislocation_Right
+28	.	.	SENT	SENT	27	punc
+
+1	Тогда	тогда	AdverbialPronoun	AdverbialPronoun	5	AdverbialModifier
+2	на	на	PR	Preposition	4	Preposition
+3	этом	этот	AdjectivePronoun	AdjectivePronoun Locative Masculine true	4	AgreedAttribute
+4	отрезке	отрезок	S	Noun Locative Masculine true false false	5	AdverbialModifier
+5	найдется	найти	V	Verb Feminine Third true true true true Indicative Future	4	Predicate
+6	точка	точка	S	Noun Nominative Feminine true false false	5	Subject
+7	formula_452	formula_452	S	Noun Genitive true false false	6	NonAgreedAttribute
+8	такая	такой	AdjectivePronoun	AdjectivePronoun Nominative Feminine true	6	AgreedAttribute
+9	,	,	SENT	SENT	8	punc
+10	что	что	CONJ	Conjunction Subordinating	11	SubordinatingConjunction
+11	есть	быть	false	false Indicative Present	8	Predicate
+12	справедлива	справедливый	A	Adjective Feminine true Short Positive	11	Complement
+13	формула	формула	S	Noun Nominative Feminine true false false	11	Subject
+14	formula_453	formula_453	S	Noun Genitive true false false	13	NonAgreedAttribute
+15	Не	не	Other	Other	2	Particle
+16	собственный	собственный	A	Adjective Nominative Masculine true VerbPolarity_Negative Full Positive	3	AgreedAttribute
+17	интеграл	интеграл	S	Noun Nominative Masculine true false false	5	Subject
+18	formula_454	formula_454	S	Noun Genitive true false false	3	NonAgreedAttribute
+19	сходится	сойтись	V	Verb Masculine Third true true false false Indicative Present	18	Predicate
+20	тогда	тогда	AdverbialPronoun	AdverbialPronoun	5	AdverbialModifier
+21	и	и	CONJ	Conjunction Coordinating	9	CoordinatingConjunction
+22	только	только	Adverb	Adverb Positive	9	Surface_Limitation
+23	тогда	тогда	AdverbialPronoun	AdverbialPronoun	5	AdverbialModifier
+24	,	,	SENT	SENT	23	punc
+25	когда	когда	CONJ	Conjunction Subordinating	15	SubordinatingConjunction
+26	для	для	PR	Preposition	14	Preposition
+27	любого	любой	AdjectivePronoun	AdjectivePronoun Genitive Masculine true Indefinite	14	AgreedAttribute
+28	formula_8	formula_8	S	Noun Genitive true false false	15	ObjectIndirect
+29	найдется	найти	V	Verb Neuter Third true true true true Indicative Future	9	Predicate
+30	число	число	S	Noun Nominative Neuter true false false	15	Subject
+31	formula_455	formula_455	S	Noun Genitive true false false	16	NonAgreedAttribute
+32	такое	такой	AdjectivePronoun	AdjectivePronoun Nominative Neuter true	16	AgreedAttribute
+33	,	,	SENT	SENT	32	punc
+34	что	что	CONJ	Conjunction Subordinating	21	SubordinatingConjunction
+35	есть	быть	false	false Indicative Present	18	Predicate
+36	справедлива	справедливый	A	Adjective Feminine true Short Positive	21	Complement
+37	импликация	импликация	S	Noun Nominative Feminine true false false	21	Subject
+38	formula_456	formula_456	S	Noun Genitive true false false	23	NonAgreedAttribute
+39	.	.	SENT	SENT	38	punc
+
+1	Если	если	CONJ	Conjunction Subordinating	2	SubordinatingConjunction
+2	существует	существовать	V	Verb Masculine Third true true false false Indicative Present	10	Predicate
+3	конечный	конечный	A	Adjective Nominative Masculine true Full Positive	4	AgreedAttribute
+4	предел	предел	S	Noun Nominative Masculine true false false	2	Subject
+5	formula_457	formula_457	S	Noun Genitive true false false	4	NonAgreedAttribute
+6	,	,	SENT	SENT	5	punc
+7	то	то	CONJ	Conjunction	10	Correlate_CondTemp
+8	функция	функция	S	Noun Nominative Feminine true false false	10	Subject
+9	formula_41	formula_41	S	Noun Nominative true false false	8	Apposition
+10	ограничена	ограничить	V	Verb Feminine Third true false true true Indicative Present	9	Predicate
+11	.	.	SENT	SENT	10	punc
+
+1	Функция	функция	S	Noun Nominative Feminine true false false	8	Subject
+2	formula_41	formula_41	S	Noun Nominative true false false	1	Apposition
+3	,	,	SENT	SENT	2	punc
+4	определенная	определить	Participle	Participle Nominative Feminine true false true true Indicative Past	1	AgreedAttribute
+5	на	на	PR	Preposition	6	Preposition
+6	отрезке	отрезок	S	Noun Locative Masculine true false false	4	AdverbialModifier
+7	formula_62	formula_62	S	Noun Genitive true false false	6	NonAgreedAttribute
+8	есть	быть	false	false Indicative Present	7	Predicate
+9	,	,	SENT	SENT	8	punc
+10	интегрируема	интегрировать	Participle	Participle Feminine true false false true Indicative Present	8	Complement
+11	по	по	PR	Preposition	12	Preposition
+12	Риману	Риман	S	Noun Dative Masculine true true true	10	ObjectIndirect
+13	тогда	тогда	AdverbialPronoun	AdverbialPronoun	8	AdverbialModifier
+14	и	и	CONJ	Conjunction Coordinating	16	CoordinatingConjunction
+15	только	только	Adverb	Adverb Positive	16	Surface_Limitation
+16	тогда	тогда	AdverbialPronoun	AdverbialPronoun	8	AdverbialModifier
+17	,	,	SENT	SENT	16	punc
+18	когда	когда	CONJ	Conjunction Subordinating	19	SubordinatingConjunction
+19	существует	существовать	V	Verb Masculine Third true true false false Indicative Present	16	Predicate
+20	конечный	конечный	A	Adjective Nominative Masculine true Full Positive	21	AgreedAttribute
+21	предел	предел	S	Noun Nominative Masculine true false false	19	Subject
+22	formula_457	formula_457	S	Noun Genitive true false false	21	NonAgreedAttribute
+23	.	.	SENT	SENT	22	punc
+
+1	В	в	PR	Preposition	3	Preposition
+2	этом	этот	AdjectivePronoun	AdjectivePronoun Locative Masculine true	3	AgreedAttribute
+3	случае	случай	S	Noun Locative Masculine true false false	5	AdverbialModifier
+4	,	,	SENT	SENT	3	punc
+5	formula_458	formula_458	S	Noun Nominative true false false	4	Subject
+6	.	.	SENT	SENT	5	punc
+
+1	Если	если	CONJ	Conjunction Subordinating	3	SubordinatingConjunction
+2	formula_41	formula_41	S	Noun Nominative true false false	3	Subject
+3	есть	быть	false	false Indicative Present	12	Predicate
+4	непрерывно	непрерывно	Adverb	Adverb Positive	5	AdverbialModifier
+5	дифференцируемая	дифференцируемый	A	Adjective Nominative Feminine true Full Positive	6	AgreedAttribute
+6	функция	функция	S	Noun Nominative Feminine true false false	3	Complement
+7	на	на	PR	Preposition	8	Preposition
+8	отрезке	отрезок	S	Noun Prepositional Masculine true false false	6	ObjectIndirect
+9	formula_62	formula_62	S	Noun Genitive true false false	8	NonAgreedAttribute
+10	,	,	SENT	SENT	9	punc
+11	то	тот	AdjectivePronoun	AdjectivePronoun Nominative Neuter true	12	AgreedAttribute
+12	formula_459	formula_459	S	Noun Nominative true false false	11	Subject
+13	.	.	SENT	SENT	12	punc
+

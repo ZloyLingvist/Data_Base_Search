@@ -1,0 +1,34 @@
+1	функция	функция	S	Noun Nominative Feminine true false false	2	Subject
+2	есть	быть	false	false Indicative Present	0	Predicate
+3	formula_1	formula_1	S	Noun Nominative true false false	2	Complement
+4	есть	быть	false	false Indicative Present	3	Predicate
+5	-	-	SENT	SENT	4	punc
+6	непрерывна	непрерывный	A	Adjective Feminine true Short Positive	4	Complement
+7	и	и	CONJ	Conjunction Coordinating	8	CoordinatingConjunction
+8	интегрируема	интегрировать	Participle	Participle Feminine true false false true Indicative Present	4	Complement
+9	на	на	PR	Preposition	10	Preposition
+10	сегменте	сегмент	S	Noun Prepositional Masculine true false false	8	ObjectIndirect
+11	formula_2	formula_2	S	Noun Nominative true false false	4	Subject
+12	,	,	SENT	SENT	11	punc
+13	а	а	CONJ	Conjunction Coordinating	16	CoordinatingConjunction
+14	функция	функция	S	Noun Nominative Feminine true false false	16	Subject
+15	formula_3	formula_3	S	Noun Nominative true false false	14	Apposition
+16	есть	быть	false	false Indicative Present	15	Predicate
+17	-	-	SENT	SENT	16	punc
+18	интегрируема	интегрировать	Participle	Participle Feminine true false false true Indicative Present	16	Complement
+19	и	и	CONJ	Conjunction Coordinating	20	CoordinatingConjunction
+20	знакопостоянна	знакопостоянный	A	Adjective Feminine true Short Positive	16	Complement
+21	на	на	PR	Preposition	23	Preposition
+22	этом	этот	AdjectivePronoun	AdjectivePronoun Locative Masculine true	23	AgreedAttribute
+23	сегменте	сегмент	S	Noun Locative Masculine true false false	16	AdverbialModifier
+24	,	,	SENT	SENT	23	punc
+25	тогда	тогда	AdverbialPronoun	AdverbialPronoun	26	AdverbialModifier
+26	существует	существовать	V	Verb Neuter Third true true false false Indicative Present	25	Predicate
+27	такое	такой	AdjectivePronoun	AdjectivePronoun Nominative Neuter true	28	AgreedAttribute
+28	значение	значение	S	Noun Nominative Neuter true false false	26	Subject
+29	formula_4	formula_4	S	Noun Genitive true false false	28	NonAgreedAttribute
+30	,	,	SENT	SENT	29	punc
+31	что	что	Pronoun	Pronoun Nominative Neuter Third true Relative	32	RelativeGroup
+32	есть	быть	false	false Indicative Present	26	Predicate
+33	formula_5	formula_5	Numeral	Numeral Nominative Cardinal	32	Complement
+34	.	.	SENT	SENT	33	punc

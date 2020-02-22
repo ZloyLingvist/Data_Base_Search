@@ -99,7 +99,7 @@ def transform():
         
         for k in range(len(arr)):
             if len(arr[k])>0:
-                A=combine_formula_and_text(arr[k],"dicts/formulas_","")
+                A=combine_formula_and_text(arr[k],"dicts/formulas_","","")
                 r=A.main()
     
                 T.insert(tkinter.END,str(r))
@@ -302,7 +302,7 @@ def range_function():
 def range_function_r():
     abb_text=e5.get()
     
-    if obj.get()=="Теорема в формате Abbyy":
+    if obj.get()=="Теорема в формате Abbyy" or obj.get()=="Разобранное дерево":
         top=[]
         ### считывание базы
         database=[]
@@ -314,14 +314,32 @@ def range_function_r():
                     break
 
         ###### считываем файл
-        arr=read_from_file("Test/"+abb_text)
-        str1=""
-        for x in arr[0][0]:
-           str1=str1+' '+x[1]
-       
-        A=combine_formula_and_text(arr[0],"dicts/formulas_","","")
-        a=A.main()
 
+        if obj.get()=="Теорема в формате Abbyy":
+            arr=read_from_file("Test/"+abb_text)
+            str1=""
+            for x in arr[0][0]:
+               str1=str1+' '+x[1]
+       
+            A=combine_formula_and_text(arr[0],"dicts/formulas_","","")
+            a=A.main()
+
+        if obj.get()=="Разобранное дерево":
+            text=T.get(1.0,END)
+            a=text.split('\n')
+            str1=""
+
+            for i in range(len(a)):
+                if a[i].strip()!="":
+                    a[i]=eval(a[i])
+
+            for i in range(len(a)-1,-1,-1):
+                if len(a[i])==0:
+                    del a[i]
+
+            arr=a
+
+       
         B=Ranger()
         ####### ранжировка #######
     
@@ -345,20 +363,7 @@ def range_function_r():
         T.insert(tkinter.END,'\n\n')
         
 
-      
-    if obj.get()=="Разобранное дерево":
-        text=T.get(1.0,END)
-        arr=text.split('\n')
-
-        for i in range(len(arr)):
-            if arr[i].strip()!="":
-                arr[i]=eval(arr[i])
-
-        for i in range(len(arr)-1,-1,-1):
-            if len(arr[i])==0:
-                del arr[i]
-
-        
+    
     ############################
 
     T.insert(tkinter.END,'\n')
@@ -505,6 +510,7 @@ obj=ttk.Combobox(pane4,
                             values=[ 
                                     "Теорема в формате Abbyy",
                                     "Формула",
+                                    "Разобранное дерево"
                                     ], 
                             )
 

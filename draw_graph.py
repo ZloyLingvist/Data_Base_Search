@@ -25,14 +25,17 @@ class plot_tree:
         tmp=[]
         str1=""
         self.make_pass(self.a,tmp,str1)
-       
         for i in range(len(tmp)):
             temp=tmp[i].split()
             temp.reverse()
             if i==0:
                 self.str=[str(i+1),temp[0],temp[0],"0"]
+                root=temp[0]
             else:
-                self.str=[str(i+1),temp[0],temp[1],"_"]
+                if len(temp)>1:
+                    self.str=[str(i+1),temp[0],temp[1],"_"]
+                else:
+                    self.str=[str(i+1),temp[0],root,"_"]
 
             self.table.append(self.str)
 
@@ -87,17 +90,5 @@ class plot_tree:
 
         graph.write_png(path+"\\Trees\\"+self.name+".png")
 
-a=[['сойтись', [['последовательность', ['всякий', 'убыть', ',', ['ограничить', [['снизу', [',']]]]]], '.']]]
-A=plot_tree(a,"","")
-A.main("formula")
-'''
-a=[]
-f=open("Temp/1.db","r",encoding="utf-8")
-for line in f:
-    tmp=line.split("\t")
-    if len(tmp)>1:
-        a.append([tmp[0],tmp[1],tmp[2],tmp[5]])
- 
-A=plot_tree(a,"","")
-A.main("syntax_tree")
-'''
+
+

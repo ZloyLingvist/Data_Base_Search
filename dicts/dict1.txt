@@ -1,67 +1,59 @@
-иметь	in	r
-компактный	compact	r
-неподвижный	fixed	r
-сжать	contraction	r
-отображение	mapping	r
-пространство	space	r
-полный	complete	r
-метрический	metric	r
-замкнутый	closure	r
-замыкание	closure_of_set	r
-фундаментальный	cauchy_sequence	r
-единственный	unique	r
-суммировать	summar	r
-выполнить	=>	r
-последовательность	sequence	r
-функция	function	r
-монотонный	M	r
-точка	point	r
-существовать	exists	r
-весь	forall	r
-из	in	r
-отрезок	closed_interval	r
-многочлен	polynom	r
-любой	forall	r
-определить	dom	r
-непрерывный	C	r
-измеримый	L0	r
-найти	exists	r
-интервал	open_interval	r
-дифференцировать	d	r
-равный	equal	r
-предел	limit	r
-стремить	lim	r
-пусть	if	r
-если	if	r
-разбиение	spl	r
-сумма	summ	r
-разность	diff	r
-произведение	mult	r
-множество	set	r
-сойтись	lim	r
-подмножество	subset	r
-ограничить	B	r
-мера	measure	r
-подпоследовательность	subsequence	r
-производная	der	r
-дифференцируемый	d	r
-бесконечность	inf	r
-всякий	forall	r
-каждый	forall	r
-малый	less	r
-задать	dom	r
-минимальный	min	r
-максимальный	max	r
-положительный	positive	r
-совпасть	equal	r
-замкнуть	closure	r
-условие	_	rd
-неравенство	_	rd
-число	_	rd
-одновременно	_	d
-для	_	d
-на	_	d
-к	_	d
-с	_	d
-некоторый	_	d
-можно	_	d
+иметь	in
+компактный	compact
+неподвижный	fixed
+сжать	contraction
+отображение	mapping
+пространство	space
+полный	complete
+метрический	metric
+подмножество	subset
+замкнутый	closure
+замыкание	closure_of_set
+фундаментальный	cauchy_sequence
+единственный	unique
+суммировать	summar
+выполнить	=>
+подпоследовательность	subsequence
+последовательность	sequence
+функция	function
+монотонный	M
+точка	point
+существовать	exists
+весь	forall
+отрезок	closed_interval
+многочлен	polynom
+любой	forall
+определить	dom
+непрерывный	C
+измеримый	L0
+найти	exists
+интервал	open_interval
+дифференцировать	d
+равный	equal
+предел	limit
+стремить	lim
+пусть	if
+если	if
+разбиение	spl
+сумма	summ
+разность	diff
+произведение	mult
+множество	set
+сойтись	lim
+ограничить	B
+мера	measure
+производная	der
+дифференцируемый	d
+бесконечность	inf
+всякий	forall
+каждый	forall
+малый	less
+задать	dom
+минимальный	min
+максимальный	max
+положительный	positive
+совпасть	equal
+замкнуть	closure
+тогда		then
+выделить exists
+действительный real

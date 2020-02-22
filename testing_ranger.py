@@ -6,7 +6,7 @@ def ranger_test(filename,amount):
     top=[]
     ### считывание базы
     database=[]
-    with open("Temp/out.db","rb") as fileOpener:
+    with open("Temp/new_test.db","rb") as fileOpener:
         while True:
             try:
                 database.append(pickle.load(fileOpener))
@@ -15,26 +15,29 @@ def ranger_test(filename,amount):
 
     ###### считываем файл
     arr=read_from_file("Test/"+filename)
-    A=combine_formula_and_text(arr[0],"dicts/formulas_","")
+    str1=""
+    for x in arr[0][0]:
+       str1=str1+' '+x[1]
+       
+    A=combine_formula_and_text(arr[0],"dicts/formulas_","","")
     a=A.main()
 
-    print(len(database))
-    print()
-    print(a)
-    print()
-    
     B=Ranger()
     ####### ранжировка #######
+    
     for i in range(len(database)):
-        result=B.main(a,database[i])
-        top.append([i,result])
-       
+        if len(database[i])>1:
+            result=B.main(a,database[i][2])
+            top.append([i,result,database[i][0]])
 
-    top.sort(key = lambda x: x[1],reverse=True)      
+    top.sort(key = lambda x: x[1],reverse=True)
+
+    print('Query',str1)
     for i in range(amount):
-        print(str(i+1),top[i][0],top[i][1],database[top[i][0]])
+        print(str(i+1),top[i][0],top[i][1],'\n',database[top[i][0]][0],database[top[i][0]][2])
         print()
-
+    
+    
 
 def compare(filename1,filename2):
     arr=read_from_file("Temp/"+filename1)
@@ -49,7 +52,7 @@ def compare(filename1,filename2):
     print(b)
     
 #compare("in","in2")
-ranger_test("in",125)
+ranger_test("in",5)
     
 
 

@@ -4,21 +4,16 @@ from utilities import *
 import pickle
 
 class combine_formula_and_text:
-    def __init__(self,arr,formulaname,fileout):
+    def __init__(self,arr,formulaname,fileout,text):
         self.formulaname=formulaname
-        #self.filename=filename
         self.fileout=fileout
         self.big_tmp=arr[0]
         self.root=arr[1]
         self.formula_list={}
         self.create_filelist()
+        self.text=text
         self.F=Formula_Tree("","","grammar")
 
-    def find_root(self):
-        for x in self.big_tmp:
-            if x[3]=="0":
-                return x[0]
-            
     def search_and_replace(self,text_list):
         for i,elem in enumerate(text_list):
             if not isinstance(elem,str):         
@@ -46,23 +41,6 @@ class combine_formula_and_text:
             i=i+1
         f.close()
 
-        '''
-        f=open(self.filename+".txt","r",encoding="utf8")
-        for line in f:
-            str1=line.split('\t')
-            if str1!=['\n']:
-                tmp.append([str1[0],str1[1],str1[2],str1[5],str1[6].strip()])
-            
-            if line=="\n":
-                if tmp!=[]:
-                    self.big_tmp.append(tmp)
-                    tmp=[]
-
-        if tmp!=[]:
-            self.big_tmp.append(tmp)
-
-        f.close()
-        '''
 
     def main(self):
         result=[]
@@ -73,9 +51,8 @@ class combine_formula_and_text:
 
         if self.fileout!="":
             with open(self.fileout+".db", 'ab') as filehandle:
-                pickle.dump(formula, filehandle)
+                pickle.dump([self.text,'\n',formula], filehandle)
                 pickle.dump('\n',filehandle)
 
         return result
-            
 

@@ -106,9 +106,8 @@ class formula_simplifier:
         self.str=re.sub(r'> ', '>',self.str).strip()
         self.str=re.sub(r'= ', '=',self.str).strip()
 
-        self.phantom_node()
-
-        
+        #self.phantom_node()
+     
         for x in self.arr4:
             if x in self.str:
                 self.str=self.str.replace(x,self.arr4[x])
@@ -128,8 +127,29 @@ class formula_simplifier:
             temp[0],temp[1]=temp[1],temp[0]
             r=delim.join(temp)
             self.str=self.str.replace(c[0],r)
+
+        for i in range(len(self.str)):
+            if self.str[i]=="_" or self.str[i]=="^":
+                if len(self.str[i+1].strip())==0:
+                       self.str=self.str[:i+1]+self.str[i+2:]
+                  
+                if self.str[i+1]!="\\" and self.str[i+1]!="{" and len(self.str[i+1].strip())>0:
+                    self.str=self.str[:i+1]+"{"+self.str[i+1]+"}"+self.str[i+2:]
+                    
+                if self.str[i+1]=="\\" and self.str[i+1]!="{":
+                    cr=re.compile(r'[^za-zA-Z]')
+                    k=i+2
+                    str2=""
+
+                    while (k<len(self.str)):
+                        a=cr.search(self.str[k])
+                        if a!=None:
+                            break
+
+                        str2=str2+self.str[k]
+                        k=k+1
+
+                    self.str=self.str.replace("\\"+str2,"{\\"+str2+"}")
        
         return self.str
-
-
 

@@ -4,7 +4,7 @@ from utilities import *
 import pickle
 
 class combine_formula_and_text:
-    def __init__(self,arr,formulaname,fileout,text):
+    def __init__(self,arr,formulaname,fileout,text,gr_path):
         self.formulaname=formulaname
         self.fileout=fileout
         self.big_tmp=arr[0]
@@ -12,7 +12,7 @@ class combine_formula_and_text:
         self.formula_list={}
         self.create_filelist()
         self.text=text
-        self.F=Formula_Tree("","","grammar")
+        self.F=Formula_Tree("","",gr_path)
 
     def search_and_replace(self,text_list):
         for i,elem in enumerate(text_list):
@@ -33,7 +33,7 @@ class combine_formula_and_text:
       
     def create_filelist(self):
         tmp=[]
-        f=open(self.formulaname+".txt","r",encoding="utf8")
+        f=open(self.formulaname,"r",encoding="utf8")
 
         i=0
         for line in f:
@@ -42,17 +42,30 @@ class combine_formula_and_text:
         f.close()
 
 
-    def main(self):
+    def main(self,param):
         result=[]
         A=Text_analyzer(self.big_tmp,self.root)
-        text=A.make_tree()
+        text=A.make_tree(param)
         formula=self.search_and_replace(text)
         result.append(formula)
 
         if self.fileout!="":
-            with open(self.fileout+".db", 'ab') as filehandle:
+            with open(self.fileout, 'ab') as filehandle:
                 pickle.dump([self.text,'\n',formula], filehandle)
                 pickle.dump('\n',filehandle)
 
         return result
+
+    def main_stamford(self,text):
+        result=[]
+        formula=self.search_and_replace(text)
+        result.append(formula)
+
+        if self.fileout!="":
+            with open(self.fileout, 'ab') as filehandle:
+                pickle.dump([self.text,'\n',formula], filehandle)
+                pickle.dump('\n',filehandle)
+
+        return result
+  
 

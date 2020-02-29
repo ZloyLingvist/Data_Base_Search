@@ -1,0 +1,186 @@
+@@grammar::CALC
+
+start
+    =
+    expression $
+    ;
+
+
+expression
+    =
+	| operation_three
+	| operation_one
+	| operation_two
+	| punc
+    | addition
+    | subtraction
+    | term
+    ;
+	
+operation_one
+	=
+	expression /(^|\s)\\\w+/ term
+	;
+
+operation_two
+	=
+	expression /<|=|>/ expression
+	;
+
+operation_three
+	=
+	| expression '\\leq' expression
+	| expression '\\geq' expression
+	| '\\geq' expression
+	| expression '\\neq' expression
+	| expression ':' expression
+	;
+		
+sign_number
+	=
+	| [ '+'] '\infty'
+	| [ '-' ] /\d+/ 
+	| [ '-' ] /\w+/
+	| ['-']	/(^|\s)\\\w+/
+	| '-' expression
+	;
+	
+punc
+	=
+	| expression ',' expression
+	| expression ';' expression
+	;
+	
+frac
+	=
+	'\\frac' brackets brackets
+	;
+
+function
+	=
+	| text '_' brackets brackets
+	| '{' '\\pmod' brackets '}'
+	| '\\binom' brackets brackets
+	| frac brackets
+	| text '^' "{'}" brackets 
+	| text '^' "{''}" brackets 
+	| text '_' brackets
+	| text brackets
+	| brackets brackets
+	;
+	
+addition
+    =
+    expression '+' term
+    ;
+	
+phantom_operation
+    =
+    term '@' factor
+    ;
+	
+
+subtraction
+   =
+   expression '-' term
+   ;
+   
+
+term
+    =
+    | multiplication
+    | division
+	| power
+	| factor
+    ;
+	
+multiplication
+    =
+	term '*' factor
+    ;
+
+division
+    =
+    term '/' factor
+    ;
+
+power
+	=
+	| term '^' factor
+	| term '^' '{+}'
+	| term '^' '{-}'
+	| term '_' factor
+	;
+
+brackets
+	=
+	| '{' expression '}' 
+	| '(' expression ')'
+	| '[' expression ']'
+	| '{' '|' '}'
+	| '[' expression ')'
+	| '(' expression ']'
+	;
+
+	
+integral
+	=
+	| '\\int' '_' brackets '^' brackets
+	| '\\int' '_' brackets
+	| '\\oint' '_' brackets
+	;
+	
+sum
+	=
+	| '\\sum' '_' brackets '^' brackets
+	| '\\sum' '_' brackets
+	| '\\sum'
+	| '\\bigcup' '_' brackets '^' brackets
+	| '\\bigcap' '_' brackets '^' brackets
+	;
+	
+limit
+	=
+	'\lim' '_' brackets
+	;
+	
+const
+	=
+	| '\mathcal' brackets brackets
+	| '\mathcal{L}_1' brackets
+	| 'L^{p}' brackets
+	| '\partial' expression
+	| 'C^{0}' brackets
+	| 'L^{p}'
+	| '\infty'
+	| '\\forall' text
+	| '\\exists' text 
+	| '\\det' text
+	| 'd' expression
+	| '\Delta' expression
+	;
+
+another_equation
+	=
+	'\mathop { res }' '_' brackets expression
+	;
+	
+factor
+	=
+	| const
+	| integral expression expression
+	| sum expression
+	| limit expression
+	| another_equation
+	| frac
+	| expression '_' brackets expression
+	| function
+	| limit
+	| sign_number
+	| brackets
+    | number
+	| text
+    ;
+	
+text = /[a-zA-Z\\'\/]+/ ;
+number=/\d+/;

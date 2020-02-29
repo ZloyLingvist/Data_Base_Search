@@ -34,7 +34,7 @@ class Text_analyzer:
                 
         return l
 
-    def make_tree(self):
+    def make_tree(self,param):
         visited=[]
         self.dfs(self.dict,self.root,visited)
        
@@ -54,18 +54,12 @@ class Text_analyzer:
         
         visited=visited[0]
         visited=self.recreate(visited)
-        dict1=[]
-        for x in self.a:
-            if x[4].strip()=="NonAgreedAttribute":
-                dict1.append(x[1])
+        if param==0:
+            return [visited,self.root]
+        else:
+            A=Text_predicator(visited,self.a)
+            visited=A.main()
+            return [visited,self.root]
+       
 
-        #A=Text_predicator(visited,self.a)
-        #visited=A.main()       
-        return visited
 
-'''
-a=read_from_file("in")
-A=Text_analyzer(a[0][0],a[0][1])
-e=A.make_tree()
-print(e)
-'''

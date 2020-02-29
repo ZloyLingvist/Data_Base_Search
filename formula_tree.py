@@ -4,6 +4,13 @@ import tatsu
 import re
 
 class CalcSemantics(object):
+    def punc(self,ast):
+        for i in range(len(ast)-1,-1,-1):
+            if ast[i]==",":
+                del ast[i]
+                
+        return ast
+    
     def function(self,ast):
         for i in range(len(ast)):
             if ast[i]=="^":
@@ -148,7 +155,7 @@ class Formula_Tree:
         ls={'...':'\ldot','\colon:':':','\cdot':'*','\to':'\\to','\v':"\\v",'\a':'\\a','\f':'\\f','\n':'\\n','\b':'\\b','\\tfrac':'\\frac','\ \\':"\\",
             '\geqslant':'\geq','\leqslant':'\leq','arrow':'\\rightarrow'}
 
-        grammar = open(self.grammar_path+'.ebnf').read()
+        grammar = open(self.grammar_path).read()
         parser = tatsu.compile(grammar,asmodel=True)
       
         for x in ls:
@@ -165,7 +172,7 @@ class Formula_Tree:
     def run(self,str1):
         A=formula_simplifier(str1)
         str1=A.main()
-        grammar = open(self.grammar_path+'.ebnf').read()
+        grammar = open(self.grammar_path).read()
         parser = tatsu.compile(grammar,asmodel=True)
         a=parser.parse(str1,semantics=CalcSemantics())
         return a

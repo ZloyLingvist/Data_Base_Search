@@ -50,7 +50,7 @@ def read_from_file(infile):
     arr=[]
     reserve=[]
     root=""
-    f=open(infile+".txt","r",encoding="utf-8")
+    f=open(infile,"r",encoding="utf-8")
     for line in f:
         if line=='\n':
             arr.append([a,root])

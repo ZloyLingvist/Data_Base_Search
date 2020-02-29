@@ -7,3 +7,7 @@ closure
 R
 equal
 summar
+absolutely_continuity
+finited
+linear
+every

@@ -24,8 +24,10 @@
 многочлен	polynom
 любой	forall
 определить	dom
+непрерывно	С
 непрерывный	C
 измеримый	L0
+найтись	exists
 найти	exists
 интервал	open_interval
 дифференцировать	d
@@ -46,7 +48,7 @@
 дифференцируемый	d
 бесконечность	inf
 всякий	forall
-каждый	forall
+каждый	every
 малый	less
 задать	dom
 минимальный	min
@@ -57,3 +59,15 @@
 тогда		then
 выделить exists
 действительный real
+суперпозиция	superposition
+конечный		finited
+сходиться	limit
+компактно	compact
+произведение	multiplication
+линейный	linear
+ограниченный	B
+функционал	functional
+фиксированный	fixed
+представить	represent
+не	negation
+зависеть	dependency

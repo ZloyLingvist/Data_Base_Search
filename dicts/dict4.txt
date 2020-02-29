@@ -9,3 +9,10 @@ open_interval
 set
 subset
 sequence
+superposition
+hilbert_space
+functional
+natural_number
+prime_number
+Lebesgue_integral
+Euclidian_space

@@ -1,0 +1,13 @@
+функцией с ограниченной вариацией	fov
+необходимо и достаточно	<=>
+простое число	simple_number
+почти всюду	a_e
+Ряд Фурье	fourier_series
+последовательность функций	function_sequence
+гильбертово пространство	Hilbert_space
+натуральное число	natural_number
+простые числа	prime_number
+причём такое представление единственно	uniquely
+Интеграл Лебега	Lebesgue_integral
+евклидов пространство	Euclidian_space
+отображение замкнутого шара в себя	id_closed_ball

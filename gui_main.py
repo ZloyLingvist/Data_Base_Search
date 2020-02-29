@@ -62,7 +62,7 @@ def main_transform():
     
 def transform():
     T1.delete(1.0,END)
-    text=e.get()
+    text=in_entry.get()
    
     f=open("Files/config.ini","r",encoding="utf-8")
     for line in f:
@@ -198,10 +198,10 @@ def range_function_r():
         ### считывание базы
         database=[]
         db=""
-        if obj.get=="Теорема в формате Abbyy":
+        if obj.get()=="Теорема в формате Abbyy":
             db=Database_abbyy_path
             
-        if obj.get=="Теорема в формате Стэмфорд":
+        if obj.get()=="Теорема в формате Стэмфорд":
             db=Database_stamford_path
         
             
@@ -225,6 +225,7 @@ def range_function_r():
 
         if obj.get()=="Теорема в формате Стэмфорд":
             text=in_entry.get()
+            str1=text
             A=Stamford()
             r=A.run(text,var2.get())
             

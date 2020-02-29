@@ -84,7 +84,13 @@ def create_razbor():
         for line in f:
             if line!='\n':
                 line=line.strip()
-                r=A.run(line)
+                if not "#" in line:
+                    try:
+                        r=A.run(line)
+                    except:
+                        r=line
+                else:
+                    r=line.replace("#","")
                 res.append([line,'\n',r])
 
         f.close()
@@ -119,9 +125,12 @@ def create_razbor():
             if line!='\n':
                 line=line.strip()
                 if len(line)>0:
-                    r=A.run(line,v1)
-                    B=combine_formula_and_text(r,lst,out,line,grammar)
-                    B.main_stamford(r)
+                    try:
+                        r=A.run(line,v1)
+                        B=combine_formula_and_text(r,lst,out,line,grammar)
+                        B.main_stamford(r)
+                    except:
+                        0
                 
         f.close()
         T1.insert(tkinter.END,"База разборов "+out+" создана",out)

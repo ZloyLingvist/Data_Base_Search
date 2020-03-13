@@ -1,25 +1,163 @@
 from text_tree import *
 
 class Text_predicator:
-        def __init__(self,tmp,full_table):
+        def __init__(self,tmp,label_list):
                 self.temp=tmp
                 self.tmp=[]
                 self.str=""
                 self.subj_list=[]
-                self.label_list=[]
-               
-                for i in range(len(full_table)):
-                        if "NonAgreedAttribute" in full_table[i][4] or "flat:foreign" in full_table[i][4] or "formula_" in full_table[i][2]:
-                                num=int(full_table[i][3])-1
-                                self.label_list.append([full_table[num][2],full_table[i][2]])
-                                
-                        if full_table[i][5]=="0" or full_table[i][3]=="0":
-                                self.root=full_table[i]
-                                for j in range(len(full_table)):
-                                        if (full_table[j][5]==self.root[0] and "Subject" in full_table[j][6]) or (full_table[j][3]==self.root[0] and "nsubj" in full_table[j][4]):
-                                                self.subj_list.append(full_table[j][2])
-                                                
+                self.label_list=label_list
+                self.root=""
 
+        def clean(self):
+                for i in range(len(self.tmp)-1,-1,-1):
+                        if self.tmp[i]==[]:
+                                del self.tmp[i]
+                                continue
+                        for k in range(len(self.tmp[i])-1,-1,-1):
+                                if self.tmp[i][k]==[]:
+                                        del self.tmp[i][k]
+
+        def make_predicate_stage_one(self,arr,d5):
+                lst=['в','на','из']
+                for i in range(len(arr)):
+                        for k in range(i+1,len(arr)):
+                                if len(arr[i])>0 and len(arr[k])>0 and arr[i][0]==arr[k][0]:
+                                        for m in range(1,len(arr[k])):
+                                                arr[i].append(arr[k][m])
+                                        arr[k]=[]
+                                else:
+                                        break
+
+                for i in range(len(arr)):
+                        if type(arr[i])==list:
+                                for j in range(len(arr[i])):
+                                        if len(arr[i])>0 and arr[i][j] in lst:
+                                                if not arr[i][0] in d5:
+                                                        arr[i]=["in",arr[i][:j]]
+                                                else:
+                                                        arr[i][j]=[]
+
+                for i in range(len(arr)-1,-1,-1):
+                        if arr[i]==[]:
+                                del arr[i]
+                                continue
+                        
+                        for j in range(len(arr[i])-1,-1,-1):
+                                if arr[i][j]==[]:
+                                        del arr[i][j]
+
+                for i in range(len(arr)):
+                        if len(arr[i])>0:
+                                if arr[i][0]=="exists":
+                                        for k in range(len(arr)):
+                                                if type(arr[k])==list and i!=k:
+                                                        arr[k],arr[i]=arr[i],arr[k]
+                                                        break
+
+                                if arr[i][0]=="=>":
+                                        arr[i]=["=>",arr[i][1:]]
+                
+                                if arr[i]=="then":
+                                        for k in range(len(arr)):
+                                                if type(arr[k])==list and i!=k:
+                                                        arr[k],arr[i]=arr[i],arr[k]
+                                                        break
+
+                for i in range(len(arr)-1,-1,-1):
+                        if len(arr)>0 and (arr[i]=="if" or arr[i]=="then"):
+                                temp=["&"]+arr[i+1:]
+                                for k in range(len(arr)-1,1,-1):
+                                        del arr[k]   
+
+                                if i<len(arr)-1:
+                                        arr[i+1]=temp
+
+                        if len(arr[i])>0 and arr[i][0]=="exists":
+                                temp=[]
+                                c=arr[i][1:]
+
+                                for k in range(len(arr[i])-1,1,-1):
+                                    del arr[i][k]
+            
+                                for m in range(len(c)):
+                                    temp.append(c[m])
+
+                                if i<len(arr)-1 and not "then" in arr[i+1:]:
+                                    c=["&"]+arr[i+1:]
+                                    temp.append(c)
+                                    del arr[i+1:]
+           
+                                arr[i][1]=temp
+           
+    
+                for k in range(len(arr)-1,-1,-1):
+                        if arr[k]==[]:
+                                del arr[k]
+                                continue
+        
+                        for j in range(len(arr[k])-1,-1,-1):
+                                if arr[k][j]==[]:
+                                        del arr[k][j]
+        
+                return arr
+
+        def make_predicate_sub_stage(self,arr):
+                for j in range(len(arr)-1,-1,-1):
+                        if type(arr[j])==list:
+                                if len(arr[j])==1:
+                                        arr[j]=arr[j][0]
+                                        if "что" in arr[j]:
+                                                for i in range(len(arr[j])-1,-1,-1):
+                                                        if len(arr[j])>0 and (arr[j][i]=="что"):
+                                                                del arr[j][i]
+                                                                c=arr[j]
+                                                                arr[j-1].append(c)
+
+                                                del arr[j]
+          
+                for i in range(len(arr)-1,-1,-1):
+                        if arr[i][0]!="if" and arr[i][0]!="then":
+                            arr[i].insert(0,"&")
+
+                for j in range(len(arr[i])-1,-1,-1):
+                        if len(arr[i][j])>0 and (arr[i][j][0]=="forall" or arr[i][j][0]=="exists"):
+                                arr[i][j].append(["&"]+arr[i][j+1:])
+                                arr[i][j+1:]=[]
+
+                return arr
+
+        def make_predicate(self,arr):
+                d5=self.read_from_file("dicts/dict5","list")
+                for i in range(len(arr)):
+                        arr[i]=self.make_predicate_stage_one(arr[i],d5)
+
+                arr=self.make_predicate_sub_stage(arr)
+        
+                if len(arr)==1:
+                        arr=arr[0]
+        
+                for i in range(len(arr)):
+                        if type(arr[i])==list and len(arr[i])==1:
+                                arr[i]=arr[i][0]
+                return arr
+
+               
+                                        
+        def canonizer_one(self,arr,d5):
+                for i in range(len(arr)-1,-1,-1):
+                        for j in range(len(arr[i])-1,-1,-1):
+                                if j<len(arr[i])-1:
+                                        if (arr[i][j] in d5 or arr[i][j]=="forall") and j!=0 and arr[i][0]!="=>":
+                                                arr[i][0],arr[i][j]=arr[i][j],arr[i][0]
+                                        
+                                        if (arr[i][j] in d5 or arr[i][j]=="forall") and arr[i][0]=="=>":
+                                                arr[i][1],arr[i][j]=arr[i][j],arr[i][1]
+                                
+                        
+                return arr
+
+                
 
         def read_from_file(self,infile,mode):
                 lst=[]
@@ -46,28 +184,45 @@ class Text_predicator:
                         f.close()
                         return lst
 
+        
+
+        def del_dupls(self,arr):
+                seen=set()
+                seen_add=seen.add
+                return [x for x in arr if not (x in seen or seen_add(x))]
+
         def transform(self,d1,d2,d3,d4,d5,d6):
                 ##сделали обход
-                pr_list=['в','на','к','.','по','всюду','притом','свой','и','из','одновременно','—']
                 self.make_pass(self.temp,self.str)
-
-                for i in range(len(self.label_list)):
-                        for x in d1:
-                                if self.label_list[i][0]==x:
-                                        self.label_list[i][0]=d1[x]
-
+               
+                '''если строка полностью входит в соседнюю, то ее можно удалить'''
                 for i in range(len(self.tmp)-1,-1,-1):
+                        self.tmp[i]=self.tmp[i].replace("root","").strip()
                         if i<len(self.tmp)-1:
-                            check=all(item in self.tmp[i+1] for item in self.tmp[i])
-                            if check==True:
-                                del self.tmp[i]
-                                continue
+                            check=False
+                            a=self.tmp[i+1].split()
+                            b=self.tmp[i].split()
+        
+                            if len(a)>len(b):
+                                    check=all(item in a for item in b)
+                                    if check==True:
+                                            del  self.tmp[i]
+                                            continue
 
+                            if len(a)<len(b):
+                                    check=all(item in b for item in a)
+                                    if check==True:
+                                            del self.tmp[i+1]
+                                            continue
+
+                
+                '''устойчивые конструкции заменяем на эквиваленты'''
                 for i in range(len(self.tmp)):
                         for x in d6:
                                 if x in self.tmp[i]:
                                         self.tmp[i]=self.tmp[i].replace(x,d6[x])
 
+               
                 for i in range(len(self.tmp)):
                         ## удаляем ненужные слова (находятся в словаре dict2)
                         for x in d2:
@@ -78,78 +233,89 @@ class Text_predicator:
                         for x in d1:
                                 if x in self.tmp[i]:
                                         self.tmp[i]=self.tmp[i].replace(x,d1[x])
-
+                                
                         self.tmp[i]=self.tmp[i].split()
 
                 
-
-                ### убираем присутствие корня, если нет подлежащего
-                        
-                for i in range(len(self.tmp)-1,-1,-1):
-                        if self.root[2] in d1:
-                                self.root[2]=d1[self.root[2]]
-
-                        if self.tmp[i][0]==self.root[2]:
-                                for x in self.subj_list:
-                                        if x in d1:
-                                                x=d1[x]
-
-                                          
-                                        if not x in self.tmp[i] and not self.tmp[i][0] in d4:
-                                                del self.tmp[i][0]
+                for i in range(len(self.tmp)):
+                        if type(self.tmp[i])==list:
+                                for j in range(len(self.tmp[i])):
+                                        if self.tmp[i][j]=="del":
+                                                self.tmp[i]=[]
                                         
-               
-                for i in range(len(self.tmp)-1,-1,-1):
-                       if len(self.tmp[i])==1:
-                               if not self.tmp[i][0] in d4 and self.tmp[i][0]!="if" and self.tmp[i][0]!="then" and self.tmp[i][0]!="<=>" and self.tmp[i][0]!="а":
-                                       del self.tmp[i]
-                                       continue
-                                       
-                       if "if" in self.tmp[i]:
-                                self.tmp[i]=["if"]
-                        
-                       if len(self.tmp[i])==2 and self.tmp[i][1] in d4:
-                               self.tmp[i]=[self.tmp[i][1]]
 
-                       if "then" in self.tmp[i]:
-                                self.tmp[i]=["then"]
-                         
-               
                 for i in range(len(self.tmp)-1,-1,-1):
                         for j in range(len(self.tmp[i])-1,-1,-1):
-                                if self.tmp[i][j] in pr_list:
-                                        del self.tmp[i][j]
+                                if "forall" in self.tmp[i][j]:
+                                        self.tmp.insert(i,self.tmp[i][:j])
+                                        del self.tmp[i+1][0]
+                                        break
+
+                        if "if" in self.tmp[i]:
+                                self.tmp[i]="if"
+
+                        if "then" in self.tmp[i]:
+                                self.tmp[i]="then"
+
+                '''перемещаем конструкции с forall и exists в начало'''
+                for i in range(len(self.tmp)):
+                        if ("forall" in self.tmp[i] and i>0) or ("exists" in self.tmp[i] and i>0):
+                                for k in range(len(self.tmp)):
+                                        if type(self.tmp[k])==list:
+                                                self.tmp[i],self.tmp[k]=self.tmp[k],self.tmp[i]
+                                                break
+
+                for i in range(len(self.tmp)-1,-1,-1):
+                        if i<len(self.tmp)-1 and self.tmp[i][0]=="=>" and self.tmp[i+1][0]=="=>":
+                                for x in range(len(self.tmp[i+1])-1,-1,-1):
+                                        if not self.tmp[i+1][x] in self.tmp[i]:
+                                                self.tmp[i].append(self.tmp[i+1][x])
+
+                                        del self.tmp[i+1][x]
+
+                for i in range(len(self.tmp)-1):
+                        if len(self.tmp[i+1])<len(self.tmp[i]):
+                                self.tmp[i+1],self.tmp[i]=self.tmp[i],self.tmp[i+1]
+                
+               
+                '''конструкции с двумя одинаковывыми первыми словами объединяем'''
+                temp=[]
+                for i in range(len(self.tmp)):
+                        for k in range(i+1,len(self.tmp)):
+                                if len(self.tmp[i])>1 and len(self.tmp[k])>1 and self.tmp[i][0]==self.tmp[k][0] and self.tmp[i][1]==self.tmp[k][1]:
+                                        for m in range(1,len(self.tmp[k])):
+                                                self.tmp[i].append(self.tmp[k][m])
+
+                                        self.tmp[k]=[]
+                                else:
+                                        break
+                
 
                 
-                ## добавление недостающих обозначений
-                '''
-                for x in self.tmp:
-                        for y in d3:
-                                if x==[y]:
-                                        x.append(d3[y])
-                '''
-
-                for i in range(len(self.tmp)):
-                        for j in range(len(self.tmp[i])):
-                                if self.tmp[i][j] in d5 or self.tmp[i][j]=="forall":
-                                        self.tmp[i][0],self.tmp[i][j]=self.tmp[i][j],self.tmp[i][0]
-
-                                  
-                for i in range(len(self.tmp)):
-                        for j in range(len(self.tmp[i])):
-                                if  j<len(self.tmp[i])-1 and self.tmp[i][j] in d4:
-                                                temp=[self.tmp[i][j],self.tmp[i][j+1]]
-                                                if not temp in self.tmp and temp in self.label_list:
-                                                        self.tmp[i].append(temp)
-                                                        
-
                 for i in range(len(self.tmp)-1,-1,-1):
                         for j in range(len(self.tmp[i])-1,-1,-1):
-                                if type(self.tmp[i][j])==list:
-                                        self.tmp.insert(i+1,self.tmp[i][j])
-                                        del self.tmp[i][j]
-                                        
+                                if self.tmp[i][j] in d5 and j!=0:
+                                        if self.tmp[i][0] in d5:
+                                                del self.tmp[i][0]
 
+                
+                self.tmp=self.canonizer_one(self.tmp,d5)
+               
+                '''удаляем пустые и дубли в конструкциях'''
+                self.clean()
+              
+                for i in range(len(self.tmp)):
+                        if type(self.tmp[i])==list:
+                                self.tmp[i]=self.del_dupls(self.tmp[i])
+
+                
+                for i in range(len(self.tmp)-1,-1,-1):
+                        for j in range(len(self.tmp[i])-1,-1,-1):
+                                if "exists" in self.tmp[i][j] and len(self.tmp[i])>2:
+                                        self.tmp.append([self.tmp[i][j],self.tmp[i][j+1]])
+                                        del self.tmp[i][j]
+
+              
                 for i in range(len(self.tmp)-1,-1,-1):
                         for j in range(len(self.tmp[i])-1,-1,-1):
                                 for x in self.label_list:
@@ -160,104 +326,49 @@ class Text_predicator:
 
                                                 if not x[1] in self.tmp[i]:
                                                         self.tmp[i][j]=x[1]
-                                                
-                                       
+
+                
                 for i in range(len(self.tmp)):
-                        if len(self.tmp)==1:
-                                continue
-                        for j in range(i+1,len(self.tmp)):
-                                if len(self.tmp[i])>0 and len(self.tmp[j])>0 and self.tmp[i][0]==self.tmp[j][0]:
-                                        for k in range(len(self.tmp[j])):
-                                                if not self.tmp[j][k] in self.tmp[i]:
-                                                        self.tmp[i].append(self.tmp[j][k])
+                        if i<len(self.tmp)-1 and len(self.tmp[i])>len(self.tmp[i+1]) and type(self.tmp[i])==list and type(self.tmp[i+1])==list:
+                                self.tmp[i],self.tmp[i+1]=self.tmp[i+1],self.tmp[i]
 
-                                        self.tmp[j]=[]
                 
+                for i in range(len(self.tmp)-1,-1,-1):
+                        for j in range(len(self.tmp[i])-1,-1,-1):
+                                if j<len(self.tmp[i])-1:
+                                        if self.tmp[i][j]=='не':
+                                                del self.tmp[i][j]
+                                                self.tmp[i]=["negation",self.tmp[i]]
+
                 
-                lst=['if','then','<=>']
+                for x in range(len(self.tmp)):
+                        for y in range(len(self.tmp)):
+                                if x!=y and type(self.tmp[x])==list and type(self.tmp[y])==list:
+                                        if len(self.tmp[x])>0 and len(self.tmp[y])>0 and self.tmp[x][0]==self.tmp[y][0]:
+                                                for m in range(len(self.tmp[y])):
+                                                        if not self.tmp[y][m] in self.tmp[x]:
+                                                                self.tmp[x].append(self.tmp[y][m])
+                                                self.tmp[y]=[]
+
                 for i in range(len(self.tmp)):
-                        if len(self.tmp[i])==1 and not self.tmp[i][0] in lst:
-                                '''
-                                for k in range(i-1,0,-1):
-                                        if self.tmp[k]!=[]:
-                                                self.tmp[k].append(self.tmp[i][0])
-                                                self.tmp[i]=[]
-                                                break
-                                '''
-                                self.tmp[i].insert(0,self.root[2])
-
+                        for j in range(len(self.tmp[i])):
+                                if self.tmp[i][j]=="forall" and j!=0:
+                                        self.tmp[i][0],self.tmp[i][j]=self.tmp[i][j],self.tmp[i][0]
+                self.clean()
+                for x in self.label_list:
+                        self.tmp.append(x)
                 
-                temp=[]
-                for i in range(len(self.tmp)-1,-1,-1):
-                        if len(self.tmp[i])>0 and (self.tmp[i][0]=="forall" or self.tmp[i][0]=="every"):
-                                t=i+1
-                                while(t<len(self.tmp)):
-                                        temp.append(self.tmp[t])
-                                        self.tmp[t]=[]
-                                        t=t+1        
-
-                                for k in range(len(self.tmp)-1,-1,-1):
-                                        if self.tmp[i]==[]:
-                                                del self.tmp[i]
-                                                
-                                self.tmp[i].append(temp)
-                                temp=["&"]
+               
                 
-                self.construction()
-                temp=["&"]
-                lst=[['if','then'],['if','а'],['а'],['then','.'],['then','что'],['что','.']]
-                
-                for p in range(len(lst)):
-                        for i in range(len(self.tmp)):
-                                if len(self.tmp[i])>0 and self.tmp[i][0]==lst[p][0]:
-                                    t=i+1
-                                    while(t<len(self.tmp)):
-                                            if len(self.tmp[t])>0 and self.tmp[t][0]!=lst[p][1]:
-                                                    temp.append(self.tmp[t])
-                                                    self.tmp[t]=[]
-                                            else:
-                                                    break
-                                            t=t+1
-
-                                    if temp!=["&"]:    
-                                            self.tmp[i].append(temp)
-                                    temp=["&"]
-
-                
-                ## перестраиваем формулу
-                for i in range(len(self.tmp)-1,-1,-1):
-                    if self.tmp[i]==[]:
-                            del self.tmp[i]
-
-                print(self.tmp)
-                
-        def construction(self):
-               lst=['dependency','negation']
-               for i in range(len(self.tmp)-1,-1,-1):
-                       for j in range(len(self.tmp[i])-1,-1,-1):
-                               for x in lst:
-                                       if self.tmp[i][j]==x:
-                                               temp=[]
-                                               for k in range(j+1,len(self.tmp[i])):
-                                                       temp.append(self.tmp[i][k])
-                                                       self.tmp[i][k]=""
-                                               for k in range(len(self.tmp[i])-1,j,-1):
-                                                        if self.tmp[i][k]=="":
-                                                                del self.tmp[i][k]
-
-                                               self.tmp[i].append(temp)
-                                               temp=[]
-
-                               
-                
+       
         def make_pass(self,l,str1):
                 for i,elem in enumerate(l):
                     if not isinstance(elem,str):
                         l[i]=self.make_pass(elem,str1)
                     else:
-                            if elem!=",":
-                                    str1=str1+" "+elem
-                                    self.tmp.append(str1)
+                            str1=str1+" "+elem
+                            self.tmp.append(str1)
+                
 
         def main(self):   
                 d1=self.read_from_file("dicts/dict1","dict")
@@ -268,6 +379,7 @@ class Text_predicator:
                 d6=self.read_from_file("dicts/dict6","dict_")
                 self.transform(d1,d2,d3,d4,d5,d6)
                 return self.tmp
+
 
 
 

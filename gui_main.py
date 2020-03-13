@@ -15,6 +15,18 @@ from combine_formula_text import *
 from utilities import *
 from stamford import *
 
+def _onKeyRelease(event):
+    ctrl  = (event.state & 0x4) != 0
+    if event.keycode==88 and  ctrl and event.keysym.lower() != "x": 
+        event.widget.event_generate("<<Cut>>")
+
+    if event.keycode==86 and  ctrl and event.keysym.lower() != "v": 
+        event.widget.event_generate("<<Paste>>")
+
+    if event.keycode==67 and  ctrl and event.keysym.lower() != "c":
+        event.widget.event_generate("<<Copy>>")
+
+
 
 ##################
 
@@ -224,7 +236,6 @@ def range_function_r():
             a=A.main(var2.get())
 
         if obj.get()=="Теорема в формате Стэмфорд":
-            text=in_entry.get()
             str1=text
             A=Stamford()
             r=A.run(text,var2.get())
@@ -310,6 +321,7 @@ def changemode(event):
 
 m = tkinter.Tk()
 m.title("Pr version 1")
+m.bind_all("<Key>", _onKeyRelease, "+")
 pane1 = tkinter.Frame(m)
 pane1.pack(side=LEFT)
 

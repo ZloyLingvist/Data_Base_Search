@@ -1,18 +1,19 @@
-function
-point
-function_sequence
-closed_interval
-space
-polynom
-subset
-open_interval
-set
-subset
-sequence
-superposition
-hilbert_space
-functional
-natural_number
-prime_number
-Lebesgue_integral
-Euclidian_space
+функция	function
+точка	point
+последовательность функция	function_sequence
+отрезок	closed_interval	
+пространство	space
+многочлен	polynom
+подмножество	subset
+интервал	open_interval
+множество	set
+последовательность	sequence
+суперпозиция	superposition
+функционал	functional
+интеграл лебег	Lebesgue_integral
+пространство евклид	Euclidian_space
+точка множество	point_of_set
+гильбертово пространство	hilbert_space
+простой число	prime_number
+натуральный число	natural_number
+элемент	element

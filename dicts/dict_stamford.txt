@@ -11,3 +11,4 @@
 Интеграл Лебега	Lebesgue_integral
 евклидов пространство	Euclidian_space
 отображение замкнутого шара в себя	id_closed_ball
+точка множество	point_of_set

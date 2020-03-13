@@ -10,4 +10,10 @@ summar
 absolutely_continuity
 finited
 linear
-every
+Real
+Complex
+dif
+Convex
+fixed
+unique
+real_valued

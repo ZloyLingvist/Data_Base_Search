@@ -9,3 +9,5 @@
 абсолютно непрерывно  | absolutely_continuity
 точка множество  | point_of_set
 везде почти	|	a_e
+липшицев функция |	Lipschitz_function
+евклидовать пространство | euclidian_space

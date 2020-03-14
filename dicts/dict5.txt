@@ -17,3 +17,5 @@ Convex
 fixed
 unique
 real_valued
+open
+compact

@@ -23,6 +23,7 @@
 отрезок	closed_interval
 многочлен	polynom
 любой	forall
+определенный	dom
 определить	dom
 непрерывно	C
 непрерывный	C
@@ -79,3 +80,5 @@
 элемент	element
 дать	exists
 вещественнозначный	real_valued
+открытый	open
+оператор	operator

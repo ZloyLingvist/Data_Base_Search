@@ -17,3 +17,6 @@
 простой число	prime_number
 натуральный число	natural_number
 элемент	element
+липшицев функция	Lipschitz_function
+евклидовать пространство	euclidean_space
+оператор	operator

@@ -78,7 +78,6 @@
 дважды	2
 выполнять	=>
 элемент	element
-дать	exists
 вещественнозначный	real_valued
 открытый	open
 оператор	operator

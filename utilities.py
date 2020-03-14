@@ -5,6 +5,16 @@ def swap_to_first(arr,sign):
 
     return arr
 
+def recursion_clean(l):
+    for i,elem in enumerate(l):
+            if not isinstance(elem,str):
+                for k in range(len(elem)-1,-1,-1):
+                    if elem[k]==[]:
+                        del elem[k]
+                        
+                l[i]=recursion_clean(elem)
+    return l
+
 def swap_(arr,ast):
     for i in range(len(ast)):
         if type(ast[i]) is str:
@@ -106,6 +116,8 @@ def read_from_file(infile):
     if len(a)>0:
         arr.append([a,root])
     return arr
+
+
 
 
 

@@ -25,6 +25,14 @@ class Text_analyzer:
             for n in graph[node]:
                 self.dfs(graph,n,visited)
 
+    def flatten(self,L):
+        for l in L:
+            if isinstance(l,list):
+                yield from self.flatten(l)
+            else:
+                yield l
+
+
     def recreate(self,l):
         for i,elem in enumerate(l):
             if not isinstance(elem,str):
@@ -32,6 +40,28 @@ class Text_analyzer:
             else:
                 l[i]=self.a[int(l[i])-1][2]
                 
+        return l
+
+    def recreate_2(self,l):
+        for i,elem in enumerate(l):
+            for x in elem:
+                if x==['del'] or x==[]:
+                    for y in range(len(elem)-1,-1,-1):
+                        if elem[y]==['del'] or x==[]:
+                            del elem[y]
+
+                if x=="del":
+                   for y in range(len(elem)-1,-1,-1):
+                        if elem[y]=='del':
+                            del elem[y]
+
+                   #elem=list(self.flatten(elem))
+                            
+                        
+                    
+            if not isinstance(elem,str):
+                l[i]=self.recreate_2(elem)
+        
         return l
 
     def make_tree(self,param):
@@ -54,6 +84,9 @@ class Text_analyzer:
         
         visited=visited[0]
         visited=self.recreate(visited)
+        visited=self.recreate_2(visited)
+        visited=recursion_clean(visited)
+        
         if param==0:
             return [visited,self.root]
         else:

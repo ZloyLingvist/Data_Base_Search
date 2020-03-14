@@ -77,7 +77,6 @@ class stamford_preprocessing:
             if "числа" in str2 and not "натуральное число" in str2:
                 str2=str2.replace("числа","")
 
-        print(str2)
         self.text=str2
     
     def punc_modify(self):
@@ -148,8 +147,9 @@ class Stamford:
 
         f.close()
         
-    def syntax_procedure(self,text):
+    def syntax_procedure(self,text,param):
         doc = self.nlp(text)
+        
         arr2=[]
         arr3=[]
         for sent in doc.sentences:
@@ -164,8 +164,24 @@ class Stamford:
                 self.arr.append(arr2)
                 arr2=[]
 
-        lst=['гильбертово','простой','натуральный']
-       
+        if param==0:
+            for i in range(len(self.arr)):
+                for j in range(len(self.arr[i])):
+                    if self.arr[i][j]==None:
+                        self.arr[i][j]="None"
+
+                if self.arr[i][3]==0:
+                    self.root=str(self.arr[i][0])
+                    
+                self.arr[i][1]=self.arr[i][2]
+                self.arr[i][3]=str(self.arr[i][3])
+
+            self.arr=[self.arr,self.root]
+            
+            return 0
+
+        lst=['гильбертово','простой','натуральный','евклидовать','липшицев']
+
         for i in range(len(self.arr)):
             for j in range(len(self.arr[i])):
                 if self.arr[i][j]==None:
@@ -201,6 +217,18 @@ class Stamford:
                 self.arr[i+1][2]=self.arr[i][2]+" "+self.arr[i+1][2]
                 self.arr[i][2]="del"
 
+          
+            for x in self.dict5:
+                if self.arr[i][2] in self.dict1:
+                    y=self.dict1[self.arr[i][2]]
+                    if x==y:
+                        ids=int(self.arr[i][3])-1
+                        if self.arr[ids][2]=="." and self.arr[i][5]=="ADJ":
+                            for k in range(i-1,0,-1):
+                                if self.arr[k][5]=="NOUN":
+                                    self.arr[i][3]=str(k+1)
+                                    break
+            
             if self.arr[i][4]=="conj":
                 for k in range(i-1,0,-1):
                     if self.arr[i][5]==self.arr[k][5]:
@@ -222,8 +250,10 @@ class Stamford:
             if self.arr[i][2]=="." or self.arr[i][2]=="," or self.arr[i][2]=="и":
                 self.arr[i][2]="del"
 
-            if self.arr[i][3]==0:
+            if self.arr[i][4]=="root":
                 self.root=str(self.arr[i][0])
+                if self.arr[i][3]!=0:
+                    self.arr[i][3]=0
                
             self.arr[i][1]=self.arr[i][2]
             self.arr[i][3]=str(self.arr[i][3])
@@ -250,15 +280,15 @@ class Stamford:
                             a[k][1]="del"
                             flag=1
 
-                    '''
+                    
                     if flag==0:
+                        '''
                         b={'функция':'f','множество':'a'}
                         lst.append([self.dict4[a[i][2]].strip(),b[a[i][2]]])
-                        a[i][2]=b[a[i][2]]
-                        a[i][1]=b[a[i][2]]
-                    '''
-                        
-                       
+                        a[i][2]=b[a[i][1]]
+                        a[i][1]=b[a[i][1]]
+                        '''
+                    
 
         for x in self.dict5:
             for i in range(len(a)):
@@ -266,11 +296,11 @@ class Stamford:
                     if x==self.dict1[a[i][1]]:
                         if a[i][4]!="root" and a[i][4]!="conj":
                             id_=int(a[i][0])
+                        
                             if a[id_][1]!="del":
                                 lst.append([self.dict1[a[i][1]],a[id_][1]])
-                           
-                            a[i][2]="del"
-                            a[i][1]="del"
+                                a[i][2]="del"
+                                a[i][1]="del"
 
         
         return lst
@@ -297,28 +327,33 @@ class Stamford:
             if not "." in x:
                 x=x+"."
 
-            self.syntax_procedure(x)
-            
-            a=self.extract_label_list(self.arr[0])
+            if param==1:
+                if 'необходимо и достаточно' in x:
+                    res.append(["<=>"])
+                    continue
 
-            #print(self.arr)
+            self.syntax_procedure(x,param)
+
+            if param==1:
+                a=self.extract_label_list(self.arr[0])
+
             A=Text_analyzer(self.arr[0],self.arr[1])
             r=A.make_tree(0)
             
-            b=['root']
-            
-            b.append(r[0])
-           
-            B=Text_predicator(b,a)
-            r=B.main()
+            if param==1:
+                b=['root']
+                b.append(r[0])
+                B=Text_predicator(b,a)
+                r=B.main()
+                res.append(r)
+            else:
+                res.append(r[0])
 
-            res.append(r)
             self.arr=[]
-
-        A=Text_predicator([],[])
-        res=A.make_predicate(res)
+                
+        if param==1:
+            A=Text_predicator([],[])
+            res=A.make_predicate(res)
         
         return res
-
-
 

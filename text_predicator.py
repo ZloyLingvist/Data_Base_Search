@@ -65,6 +65,14 @@ class Text_predicator:
                                                         break
 
                 for i in range(len(arr)-1,-1,-1):
+                        if type(arr[i])==list:
+                                for j in range(len(arr[i])-1,-1,-1):
+                                        if len(arr[i][j])>0 and (arr[i][0]=="forall" or arr[i][0]=="exists"):
+                                                arr[i].append(["&"]+arr[i+1:])
+                                                arr[i+1:]=[]
+                                        
+        
+                for i in range(len(arr)-1,-1,-1):
                         if len(arr)>0 and (arr[i]=="if" or arr[i]=="then"):
                                 temp=["&"]+arr[i+1:]
                                 for k in range(len(arr)-1,1,-1):
@@ -116,14 +124,9 @@ class Text_predicator:
 
                                                 del arr[j]
           
-                for i in range(len(arr)-1,-1,-1):
-                        if arr[i][0]!="if" and arr[i][0]!="then":
-                            arr[i].insert(0,"&")
-
-                for j in range(len(arr[i])-1,-1,-1):
-                        if len(arr[i][j])>0 and (arr[i][j][0]=="forall" or arr[i][j][0]=="exists"):
-                                arr[i][j].append(["&"]+arr[i][j+1:])
-                                arr[i][j+1:]=[]
+                for i in range(len(arr)):
+                        if arr[i]=="<=>":
+                                arr[0],arr[i]=arr[i],arr[0]
 
                 return arr
 
@@ -133,7 +136,7 @@ class Text_predicator:
                         arr[i]=self.make_predicate_stage_one(arr[i],d5)
 
                 arr=self.make_predicate_sub_stage(arr)
-        
+                
                 if len(arr)==1:
                         arr=arr[0]
         
@@ -198,6 +201,8 @@ class Text_predicator:
                 '''если строка полностью входит в соседнюю, то ее можно удалить'''
                 for i in range(len(self.tmp)-1,-1,-1):
                         self.tmp[i]=self.tmp[i].replace("root","").strip()
+                        self.tmp[i]=self.tmp[i].replace("являться","").strip()
+                        
                         if i<len(self.tmp)-1:
                             check=False
                             a=self.tmp[i+1].split()
@@ -240,10 +245,11 @@ class Text_predicator:
                 for i in range(len(self.tmp)):
                         if type(self.tmp[i])==list:
                                 for j in range(len(self.tmp[i])):
-                                        if self.tmp[i][j]=="del":
-                                                self.tmp[i]=[]
+                                        if j<len(self.tmp[i])-1:
+                                                if self.tmp[i][j]=="del":
+                                                        self.tmp[i]=[]
                                         
-
+                self.clean()
                 for i in range(len(self.tmp)-1,-1,-1):
                         for j in range(len(self.tmp[i])-1,-1,-1):
                                 if "forall" in self.tmp[i][j]:
@@ -354,6 +360,11 @@ class Text_predicator:
                         for j in range(len(self.tmp[i])):
                                 if self.tmp[i][j]=="forall" and j!=0:
                                         self.tmp[i][0],self.tmp[i][j]=self.tmp[i][j],self.tmp[i][0]
+
+                for i in range(len(self.tmp)-1,-1,-1):
+                        if type(self.tmp[i])==list and len(self.tmp[i])==1:
+                                del self.tmp[i]
+                                
                 self.clean()
                 for x in self.label_list:
                         self.tmp.append(x)

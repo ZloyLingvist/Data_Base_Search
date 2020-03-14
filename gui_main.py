@@ -201,15 +201,17 @@ def range_function_r():
             Database_abbyy_path=line[1].strip()
         if line[0]=="Database_stamford_path":
             Database_stamford_path=line[1].strip()
+        if line[0]=="Amount_ranger_answer":
+            amount=int(line[1])
 
     f.close()
-    
-    
+
     if obj.get()!="":
         top=[]
         ### считывание базы
         database=[]
         db=""
+            
         if obj.get()=="Теорема в формате Abbyy":
             db=Database_abbyy_path
             
@@ -226,6 +228,7 @@ def range_function_r():
 
         ###### считываем файл
 
+        text=in_entry.get()
         if obj.get()=="Теорема в формате Abbyy":
             arr=read_from_file(abbyy_infile)
             str1=""
@@ -236,7 +239,6 @@ def range_function_r():
             a=A.main(var2.get())
 
         if obj.get()=="Теорема в формате Стэмфорд":
-            str1=text
             A=Stamford()
             r=A.run(text,var2.get())
             
@@ -258,21 +260,32 @@ def range_function_r():
 
             arr=a
 
-       
+        mode=0
+        if obj2.get()=="":
+            T1.insert(tkinter.END,'Использован режим по умолчанию (Свой алгоритм)')
+            
+        if obj2.get()=="Свой алгоритм":
+            mode=0
+        if obj2.get()=="Minhash":
+            mode=1
+            
         B=Ranger()
         ####### ранжировка #######
-    
+        
         for i in range(len(database)):
             if len(database[i])>1:
-                result=B.main(a,database[i][2])
+                result=B.main(a,database[i][2],mode)
                 top.append([i,result,database[i][0]])
 
-        top.sort(key = lambda x: x[1],reverse=True)
+        if mode==0:
+            top.sort(key = lambda x: x[1],reverse=True)
+        if mode==1:
+            top.sort(key = lambda x: x[1],reverse=False)
 
-        T.insert(tkinter.END,'Query:'+str1+'\n\n')
+        T.insert(tkinter.END,'Query:'+text+'\n\n')
         T.insert(tkinter.END,str(a)+'\n\n')
         
-        for i in range(10):
+        for i in range(amount):
             T.insert(tkinter.END,str(i+1)+" "+str(top[i][0])+" "+str(top[i][1])+'\n\n')
             T.insert(tkinter.END,database[top[i][0]][0])
             T.insert(tkinter.END,'\n\n')
@@ -396,7 +409,15 @@ obj=ttk.Combobox(pane4,
 obj.bind("<<ComboboxSelected>>", changemode)
 
 
+obj2=ttk.Combobox(pane7, 
+                            values=[ 
+                                    "Свой алгоритм",
+                                    "Minhash",
+                                    ], 
+                            )
+
 obj.pack(padx=10,pady=20)
+obj2.pack(padx=10,pady=20)
 
 button2.pack(padx=10,pady=10)  
 button3.pack(padx=10,pady=10)

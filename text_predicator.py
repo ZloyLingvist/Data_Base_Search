@@ -22,7 +22,7 @@ class Text_predicator:
                 lst=['в','на','из']
                 for i in range(len(arr)):
                         for k in range(i+1,len(arr)):
-                                if len(arr[i])>0 and len(arr[k])>0 and arr[i][0]==arr[k][0]:
+                                if len(arr[i])>0 and type(arr[i])==list and len(arr[k])>0 and arr[i][0]==arr[k][0]:
                                         for m in range(1,len(arr[k])):
                                                 arr[i].append(arr[k][m])
                                         arr[k]=[]
@@ -32,7 +32,7 @@ class Text_predicator:
                 for i in range(len(arr)):
                         if type(arr[i])==list:
                                 for j in range(len(arr[i])):
-                                        if len(arr[i])>0 and arr[i][j] in lst:
+                                        if len(arr[i])>0 and j<len(arr[i])-1 and arr[i][j] in lst:
                                                 if not arr[i][0] in d5:
                                                         arr[i]=["in",arr[i][:j]]
                                                 else:
@@ -288,7 +288,7 @@ class Text_predicator:
                 temp=[]
                 for i in range(len(self.tmp)):
                         for k in range(i+1,len(self.tmp)):
-                                if len(self.tmp[i])>1 and len(self.tmp[k])>1 and self.tmp[i][0]==self.tmp[k][0] and self.tmp[i][1]==self.tmp[k][1]:
+                                if len(self.tmp[i])>1 and type(self.tmp[i])==list and len(self.tmp[k])>1 and self.tmp[i][0]==self.tmp[k][0] and self.tmp[i][1]==self.tmp[k][1]:
                                         for m in range(1,len(self.tmp[k])):
                                                 self.tmp[i].append(self.tmp[k][m])
 
@@ -318,8 +318,9 @@ class Text_predicator:
                 for i in range(len(self.tmp)-1,-1,-1):
                         for j in range(len(self.tmp[i])-1,-1,-1):
                                 if "exists" in self.tmp[i][j] and len(self.tmp[i])>2:
-                                        self.tmp.append([self.tmp[i][j],self.tmp[i][j+1]])
-                                        del self.tmp[i][j]
+                                        if j<len(self.tmp[i])-1:
+                                                self.tmp.append([self.tmp[i][j],self.tmp[i][j+1]])
+                                                del self.tmp[i][j]
 
               
                 for i in range(len(self.tmp)-1,-1,-1):

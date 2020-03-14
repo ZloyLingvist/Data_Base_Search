@@ -1,5 +1,7 @@
 import re
 import copy
+from ranger_algo import *
+import numpy as np
 
 class Ranger:
     def __init__(self):
@@ -32,31 +34,11 @@ class Ranger:
         for x in tmp:
             temp.append(x.split(' '))
 
-        ###удаление ветвей, где двуместная операция одноместная
-        '''
-        for i in range(len(temp)-1,-1,-1):
-            print(temp[i])
-            for j in range(len(temp[i])-1,-1,-1):
-                if temp[i][j]=="-" or temp[i][j]=="+" or temp[i][j]=="/" or temp[i][j]=="*":
-                    if abs(len(temp[i])-j-1)==1:
-                        del temp[i]
-        '''
-                    
         for i in range(len(temp)):
             for j in range(len(temp[i])):
                 if len(temp[i][j])==1:
                     if temp[i][j] in dict1.keys():
                         temp[i][j]=dict1[temp[i][j]]
-                               
-                if  not temp[i][j] in dict1.keys():
-                    if len(re.sub("[A-Za-z]", '', temp[i][j]))==0 or temp[i][j] in self.greek_alphabet:
-                        #dict1[temp[i][j]]="V_"+str(len(dict1))
-                        #temp[i][j]="V_"+str(len(dict1)-1)
-                        dict1[temp[i][j]]="V"
-                        temp[i][j]="V"
-                    if self.is_number_regex(temp[i][j]):
-                        dict1[temp[i][j]]="N"
-                        temp[i][j]="N"
 
         return temp
 
@@ -71,14 +53,10 @@ class Ranger:
             res=0
         return res
 
-    def main(self,a,b):
+    def algorithm_one(self,a,b):
         tmp1=self.simplifier(a)
         tmp2=self.simplifier(b)
 
-        #print(tmp1)
-        #print()
-        #print(tmp2)
-    
         tmp1copy=copy.deepcopy(tmp1)
         tmp2copy=copy.deepcopy(tmp2)
 
@@ -99,35 +77,42 @@ class Ranger:
         r3=self.jaccard_coeff(tmp1,tmp2copy)
         r4=self.jaccard_coeff(tmp1copy,tmp2copy)
         best_score=max(r1,r2,r3,r4)
-       
-        while True:
-            if len(tmp1copy)<1 or len(tmp2copy)<1 or best_score==1:
-                break
-
-            t1=copy.deepcopy(tmp1copy)
-            t2=copy.deepcopy(tmp2copy)
-            
-            for i in range(len(tmp1copy)-1,-1,-1):
-                    if len(tmp1copy[i])>0:
-                        del tmp1copy[i][0]
-                    if tmp1copy[i]==[]:
-                        del tmp1copy[i]
-
-
-            for i in range(len(tmp2copy)-1,-1,-1):
-                    if len(tmp2copy[i])>0:
-                        del tmp2copy[i][0]
-                    if tmp2copy[i]==[]:
-                        del tmp2copy[i]
-
-            r1=self.jaccard_coeff(t1,t2)
-            r2=self.jaccard_coeff(t1,tmp2copy)
-            r3=self.jaccard_coeff(tmp1copy,t2)
-            r4=self.jaccard_coeff(tmp1copy,tmp2copy)
-           
-            if max(r1,r2,r3,r4)>best_score:
-                best_score=max(r1,r2,r3,r4)
-                
         return best_score
+
+    def algorithm_two(self,a,b):
+        ##взято на данном этапе отсюда. https://stackoverflow.com/questions/14533420/can-you-suggest-a-good-minhash-implementation
+        tmp1=self.simplifier(a)
+        tmp2=self.simplifier(b)
+        coeff_1=0
+        coeff_2=0
+        for i in range(len(tmp1)):
+            vec1 = minhash(set(tmp1[i]))
+            coeff_1=coeff_1+np.array(vec1) / max(vec1)
+
+        for i in range(len(tmp2)):
+            vec2 = minhash(set(tmp2[i]))
+            coeff_2=coeff_2+np.array(vec2) / max(vec2)
+
+        a=coeff_1
+        b=coeff_2
         
-   
+        best_score = 1 - (a @ b.T) / (np.linalg.norm(a)*np.linalg.norm(b)) 
+        return best_score
+
+    def main(self,a,b,mode):
+        if mode==0:
+            best_score=self.algorithm_one(a,b)
+
+        if mode==1:
+            best_score=self.algorithm_two(a,b)
+            
+        return best_score
+    
+'''     
+a=['<=>', ['&', ['compact','a'], ['set', 'a']], ['&', 'B', 'a']]
+b=['forall', 'f', ['&', ['B', 'f', 'a'], ['function', 'f'], ['space', 'a'], ['C', 'f'], ['compact', 'a']], '&']
+
+A=Ranger()
+r=A.main(a,a,1)
+print(r)
+'''

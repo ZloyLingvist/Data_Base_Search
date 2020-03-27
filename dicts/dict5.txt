@@ -19,3 +19,5 @@ unique
 real_valued
 open
 compact
+simple
+opposite_sign

@@ -1,6 +1,8 @@
 функция	function
 точка	point
+последовательность случайный величина	random_variable_sequence
 последовательность функция	function_sequence
+случайный величина	random_variable
 отрезок	closed_interval	
 пространство	space
 многочлен	polynom
@@ -20,3 +22,4 @@
 липшицев функция	Lipschitz_function
 евклидовать пространство	euclidean_space
 оператор	operator
+сегмент	segment

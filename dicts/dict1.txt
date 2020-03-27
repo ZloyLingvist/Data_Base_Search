@@ -62,7 +62,6 @@
 действительный	real
 суперпозиция	superposition
 конечный		finited
-сходиться	limit
 компактно	compact
 произведение	multiplication
 линейный	linear
@@ -81,3 +80,6 @@
 вещественнозначный	real_valued
 открытый	open
 оператор	operator
+противоположнозначный	opposite_sign
+равномерно непрерывно	uniform_continuity
+сегмент	segment

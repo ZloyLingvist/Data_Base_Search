@@ -1,4 +1,4 @@
-from text_tree import *
+#from text_tree import *
 
 class Text_predicator:
         def __init__(self,tmp,label_list):
@@ -20,6 +20,11 @@ class Text_predicator:
 
         def make_predicate_stage_one(self,arr,d5):
                 lst=['в','на','из']
+        
+                for i in range(len(arr)-1,-1,-1):
+                        if arr[i][0]=="del":
+                                del arr[i]
+                                
                 for i in range(len(arr)):
                         for k in range(i+1,len(arr)):
                                 if len(arr[i])>0 and type(arr[i])==list and len(arr[k])>0 and arr[i][0]==arr[k][0]:
@@ -29,14 +34,14 @@ class Text_predicator:
                                 else:
                                         break
 
+                '''
                 for i in range(len(arr)):
                         if type(arr[i])==list:
                                 for j in range(len(arr[i])):
-                                        if len(arr[i])>0 and j<len(arr[i])-1 and arr[i][j] in lst:
-                                                if not arr[i][0] in d5:
-                                                        arr[i]=["in",arr[i][:j]]
-                                                else:
-                                                        arr[i][j]=[]
+                                        if arr[i][j]=="в":
+                                                arr[i][0],arr[i][j]=arr[i][j],arr[i][0]
+                                                arr[i]=["in",arr[i][1:]]
+                '''                      
 
                 for i in range(len(arr)-1,-1,-1):
                         if arr[i]==[]:
@@ -55,8 +60,8 @@ class Text_predicator:
                                                         arr[k],arr[i]=arr[i],arr[k]
                                                         break
 
-                                if arr[i][0]=="=>":
-                                        arr[i]=["=>",arr[i][1:]]
+                                #if arr[i][0]=="=>":
+                                        #arr[i]=["=>",arr[i][1:]]
                 
                                 if arr[i]=="then":
                                         for k in range(len(arr)):
@@ -68,18 +73,25 @@ class Text_predicator:
                         if type(arr[i])==list:
                                 for j in range(len(arr[i])-1,-1,-1):
                                         if len(arr[i][j])>0 and (arr[i][0]=="forall" or arr[i][0]=="exists"):
-                                                arr[i].append(["&"]+arr[i+1:])
-                                                arr[i+1:]=[]
+                                                if arr[i+1:]!=[]:
+                                                        arr[i].append(["&"]+arr[i+1:])
+                                                        arr[i+1:]=[]
                                         
         
                 for i in range(len(arr)-1,-1,-1):
                         if len(arr)>0 and (arr[i]=="if" or arr[i]=="then"):
-                                temp=["&"]+arr[i+1:]
+                                temp=arr[i+1:]
                                 for k in range(len(arr)-1,1,-1):
                                         del arr[k]   
 
                                 if i<len(arr)-1:
-                                        arr[i+1]=temp
+                                        if temp[0][0]!="exists":
+                                                arr[i+1]=['&']
+                                                for x in temp:
+                                                        arr[i+1].append(x)
+                                        else:
+                                                if len(temp)==1:
+                                                        arr[i+1]=temp[0]
 
                         if len(arr[i])>0 and arr[i][0]=="exists":
                                 temp=[]
@@ -97,8 +109,8 @@ class Text_predicator:
                                     del arr[i+1:]
            
                                 arr[i][1]=temp
-           
-    
+
+               
                 for k in range(len(arr)-1,-1,-1):
                         if arr[k]==[]:
                                 del arr[k]
@@ -111,7 +123,32 @@ class Text_predicator:
                 return arr
 
         def make_predicate_sub_stage(self,arr):
+                for j in range(len(arr)):
+                        if type(arr[j])==list:
+                                if len(arr[j])==1:
+                                        arr[j]=arr[j][0]
+
                 for j in range(len(arr)-1,-1,-1):
+                        if arr[j][0]=="type":
+                                for k in range(len(arr[j-1])):
+                                        if arr[j-1][k][0]=="&":
+                                                for m in range(1,len(arr[j-1][k])):
+                                                        if type(arr[j-1][k][m])==list and arr[j-1][k][m][0]=="=>":
+                                                                arr[j-1][k][m][1]=arr[j-1][k][m][1:len(arr[j-1][k][m])-1]
+                                                                if len(arr[j-1][k][m][1])==1:
+                                                                        arr[j-1][k][m][1]=arr[j-1][k][m][1][0]
+                                                                        arr[j-1][k][m].insert(len(arr[j-1][k][m])-1,arr[j])
+                                                                else:
+                                                                        arr[j-1][k][0]="=>"
+                                                                        arr[j-1][k][m][0]="&"
+                                                                        arr[j-1][k][m].insert(len(arr[j-1][k][m])-1,arr[j])
+                                                                        del arr[j-1][k][m][2]
+
+                                                                del arr[j]
+                                                                break
+                                
+                        
+                for j in range(len(arr)-1,-1,-1):   
                         if type(arr[j])==list:
                                 if len(arr[j])==1:
                                         arr[j]=arr[j][0]
@@ -132,6 +169,17 @@ class Text_predicator:
 
         def make_predicate(self,arr):
                 d5=self.read_from_file("dicts/dict5","list")
+
+                for j in range(len(arr)-1,-1,-1):
+                        if type(arr[j])==list:
+                               if ("then" in arr[j-1] or "if" in arr[j-1]) and type(arr[j-1])==list:
+                                        arr[j-1].append(arr[j][0])
+                                        arr[j]=[]
+
+                for i in range(len(arr)-1,-1,-1):
+                        if arr[i]==[]:
+                                del arr[i]
+                                
                 for i in range(len(arr)):
                         arr[i]=self.make_predicate_stage_one(arr[i],d5)
 
@@ -154,8 +202,8 @@ class Text_predicator:
                                         if (arr[i][j] in d5 or arr[i][j]=="forall") and j!=0 and arr[i][0]!="=>":
                                                 arr[i][0],arr[i][j]=arr[i][j],arr[i][0]
                                         
-                                        if (arr[i][j] in d5 or arr[i][j]=="forall") and arr[i][0]=="=>":
-                                                arr[i][1],arr[i][j]=arr[i][j],arr[i][1]
+                                        #if (arr[i][j] in d5 or arr[i][j]=="forall") and arr[i][0]=="=>":
+                                                #arr[i][1],arr[i][j]=arr[i][j],arr[i][1]
                                 
                         
                 return arr
@@ -170,12 +218,14 @@ class Text_predicator:
                         if mode=="dict_":
                                 for line in f:
                                         line=line.strip().split('|')
-                                        dict_tmp[line[0].strip()]=line[1].strip()
+                                        if len(line)==2:
+                                                dict_tmp[line[0].strip()]=line[1].strip()
                                 f.close()
                         else:
                                 for line in f:
                                         line=line.strip().split()
-                                        dict_tmp[line[0]]=line[1]
+                                        if len(line)==2:
+                                                dict_tmp[line[0]]=line[1]
                                 f.close()
                         
                         return dict_tmp
@@ -270,7 +320,7 @@ class Text_predicator:
                                         if type(self.tmp[k])==list:
                                                 self.tmp[i],self.tmp[k]=self.tmp[k],self.tmp[i]
                                                 break
-
+                '''
                 for i in range(len(self.tmp)-1,-1,-1):
                         if i<len(self.tmp)-1 and self.tmp[i][0]=="=>" and self.tmp[i+1][0]=="=>":
                                 for x in range(len(self.tmp[i+1])-1,-1,-1):
@@ -278,7 +328,7 @@ class Text_predicator:
                                                 self.tmp[i].append(self.tmp[i+1][x])
 
                                         del self.tmp[i+1][x]
-
+                '''
                 for i in range(len(self.tmp)-1):
                         if len(self.tmp[i+1])<len(self.tmp[i]):
                                 self.tmp[i+1],self.tmp[i]=self.tmp[i],self.tmp[i+1]
@@ -306,7 +356,7 @@ class Text_predicator:
 
                 
                 self.tmp=self.canonizer_one(self.tmp,d5)
-               
+
                 '''удаляем пустые и дубли в конструкциях'''
                 self.clean()
               
@@ -369,8 +419,18 @@ class Text_predicator:
                 self.clean()
                 for x in self.label_list:
                         self.tmp.append(x)
+
+                self.tmp=self.canonizer_one(self.tmp,d5)
+                        
+                for i in range(len(self.tmp)):
+                        if len(self.tmp[i])==0:
+                                continue
+                        if type(self.tmp[i])==list and self.tmp[i][0]=="=>":
+                                if self.tmp[i][-1]=="C" or self.tmp[i][-1]=="простой":
+                                        self.tmp[i][-1],self.tmp[i][-2]=self.tmp[i][-2],self.tmp[i][-1]
+                                
                 
-               
+                               
                 
        
         def make_pass(self,l,str1):
@@ -391,7 +451,6 @@ class Text_predicator:
                 d6=self.read_from_file("dicts/dict6","dict_")
                 self.transform(d1,d2,d3,d4,d5,d6)
                 return self.tmp
-
 
 
 

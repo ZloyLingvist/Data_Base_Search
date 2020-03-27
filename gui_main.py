@@ -99,6 +99,9 @@ def transform():
         T.insert(tkinter.END,text+'\n')
         T.insert(tkinter.END,str(r))
         T.insert(tkinter.END,'\n\n')
+        r=make_predicate_form_main(r)
+        T.insert(tkinter.END,r)
+        T.insert(tkinter.END,'\n\n')
 
     if v0=="Теорема в формате Abbyy":
         f=open(abbyy_infile,"r",encoding="utf-8")
@@ -123,6 +126,7 @@ def transform():
     
                 T.insert(tkinter.END,str(r))
                 T.insert(tkinter.END,'\n\n')
+    
 
         T.insert(tkinter.END,'\n\n')
         

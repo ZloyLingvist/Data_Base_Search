@@ -2,6 +2,7 @@ import re
 import copy
 from ranger_algo import *
 import numpy as np
+from collections import Counter
 
 class Ranger:
     def __init__(self):
@@ -51,6 +52,7 @@ class Ranger:
             res=float(intersection) / union
         else:
             res=0
+        
         return res
 
     def algorithm_one(self,a,b):
@@ -104,15 +106,12 @@ class Ranger:
             best_score=self.algorithm_one(a,b)
 
         if mode==1:
-            best_score=self.algorithm_two(a,b)
+            best_score=1-self.algorithm_two(a,b)
             
         return best_score
     
-'''     
-a=['<=>', ['&', ['compact','a'], ['set', 'a']], ['&', 'B', 'a']]
-b=['forall', 'f', ['&', ['B', 'f', 'a'], ['function', 'f'], ['space', 'a'], ['C', 'f'], ['compact', 'a']], '&']
+a=['if', ['&',['dif', 'f','b'], ['open_interval','b'], ['function', 'f'],['C','a'],['C','b']], ['then', ['exists',['с', ['&',['point', 'с']],'d']]]]
+b=['if', ['&',['C', 'g', 'a'], ['function', 'g'], ['closed_interval', 'a'], ['dif','g','b'], ['open_interval', 'b']], ['then', ['exists',['c',['&',['in','c','b'],['open_interval','b'], ['point', 'с']],'d']]]]
 
 A=Ranger()
-r=A.main(a,a,1)
-print(r)
-'''
+print(A.main(a,b,1))

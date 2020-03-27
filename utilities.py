@@ -117,7 +117,49 @@ def read_from_file(infile):
         arr.append([a,root])
     return arr
 
+def make_predicate_form(l,tmp,str1,flag,word):
+    for i,elem in enumerate(l):
+            if i==0:
+                tmp.append("(")
+                
+            if not isinstance(elem,str):
+                if str1=="":
+                    c=1
+                    for x in elem:
+                        if type(x)!=str:
+                            c=0
+                            break
 
+                    if c==1:
+                        flag=1
+                        word=elem[-1]
+                    
+                str1=""
+                l[i]=make_predicate_form(elem,tmp,str1,flag,word)
+            else:
+                str1=str1+" "+elem
+                if str1.count(" ")>1 and flag==0:
+                    tmp.append(",")
+                if str1.count(" ")>1 and flag!=0:
+                    tmp.append("(")
+                    flag=0
 
+                tmp.append(elem)
+
+                if elem==word:
+                    tmp.append(")")
+                    word=""
+                    
+    tmp.append(")")
+    return tmp
+
+def make_predicate_form_main(a):
+    str1=""
+    tmp=[]
+    a=make_predicate_form(a,tmp,"",0,"")
+    str2=""
+    a=" ".join(a)
+    a=a.replace(") (","),(")
+    return a
 
 

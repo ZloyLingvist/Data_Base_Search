@@ -21,10 +21,30 @@ class plot_tree:
                 str1=str1+" "+elem
                 tmp.append(str1)
 
+    def modify_pass(self,l):
+        for i,elem in enumerate(l):
+            if not isinstance(elem,str):
+                flag=1
+                for k in range(len(elem)):
+                    if type(elem[k])!=str:
+                        flag=0
+                        break
+                    
+                if flag==1:
+                    for k in range(1,len(elem)):
+                        elem[k]=[elem[k]]
+                        
+                l[i]=self.modify_pass(elem)
+
+        return l
+            
+
     def make_table(self):
         tmp=[]
         str1=""
+        self.a=self.modify_pass(self.a)
         self.make_pass(self.a,tmp,str1)
+        
         for i in range(len(tmp)):
             temp=tmp[i].split()
             temp.reverse()
@@ -89,6 +109,5 @@ class plot_tree:
                 graph.add_edge(edge)
 
         graph.write_png(path+"\\Trees\\"+self.name+".png")
-
 
 

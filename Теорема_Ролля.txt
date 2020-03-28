@@ -19,12 +19,12 @@
 
 [['if', ['&', ['function', ['f','x']], ['C', 'f', ['closed_interval',['a', 'b']]],
 ['dif', 'f', ['open_interval',['a', 'b']]],['=',['f','a'],['f','b']]]],
-['then',['exists',['c',['&',['point','c'],['in','c',['a','b']],['equal',['der',['f','c']],'0']]]]]]
+['then',['exists',['c',['&',['point','c'],['in','c',['closed_interval',['a','b']]],['equal',['der',['f','c']],'0']]]]]]
 
 Если функция f непрерывна на {\displaystyle [a,b]}, функция f дифференцируема во всех внутренних точках {\displaystyle [a,b]} и
 {\displaystyle f(a)=f(b)}, тогда существует точка {\displaystyle c\in (a,b)}, в которой {\displaystyle f^{\prime}(c)=0} .
 
 [['if', ['&', ['function', 'f']], ['C', 'f', ['closed_interval',['a', 'b']]],
 ['forall','c',['&',['point','c'],['in','c',['a',b']],['dif', 'f', 'c']],['внутренний','c']],['=',['f','a'],['f','b']]],
-['then',['exists',['c',['&',['point','c'],['\in','c',['open_interval',['a','b']]],['equal,['der',['f','c']],'0']]]]]]
+['then',['exists',['c',['&',['point','c'],['\in','c',['open_interval',['a','b']]],['equal',['der',['f','c']],'0']]]]]]
 

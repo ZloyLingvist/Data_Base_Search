@@ -85,23 +85,52 @@ def transform():
             abbyy_infile=line[1].strip()
         if line[0]=="List_of_formulas":
             list_of_formulas=line[1].strip()
+        if line[0]=="Infile":
+            infile=line[1].strip()
 
     f.close()
     v0=obj.get()
 
-    if len(text)>0 and (v0=="Теорема в формате Стэмфорд"):
-        A=Stamford()
-        r=A.run(text,var2.get())
+    if (v0=="Теорема в формате Стэмфорд"):
+        v=var9.get()
+       
+        if len(text)>0 and v==0:
+            A=Stamford()
+            r=A.run(text,var2.get())
 
-        B=combine_formula_and_text(r,list_of_formulas,"","",grammar)
-        r=B.main_stamford(r)
+            B=combine_formula_and_text(r,list_of_formulas,"","",grammar)
+            r=B.main_stamford(r)
+            r=make_simple(r)
 
-        T.insert(tkinter.END,text+'\n')
-        T.insert(tkinter.END,str(r))
-        T.insert(tkinter.END,'\n\n')
-        r=make_predicate_form_main(r)
-        T.insert(tkinter.END,r)
-        T.insert(tkinter.END,'\n\n')
+            T.insert(tkinter.END,text+'\n')
+            T.insert(tkinter.END,str(r))
+            T.insert(tkinter.END,'\n\n')
+            r=make_predicate_form_main(r)
+            T.insert(tkinter.END,r)
+            T.insert(tkinter.END,'\n\n')
+            
+        if v==1:
+            lst=[]
+            f=open(infile,"r",encoding="utf-8")
+            for line in f:
+                lst.append(line.strip())
+
+            f.close()
+
+            A=Stamford()
+            for i in range(len(lst)):
+                r=A.run(lst[i],var2.get())
+                B=combine_formula_and_text(r,list_of_formulas,"","",grammar)
+                r=B.main_stamford(r)
+                r=make_simple(r)
+
+                T.insert(tkinter.END,lst[i]+'\n')
+                T.insert(tkinter.END,str(r))
+                T.insert(tkinter.END,'\n\n')
+                r=make_predicate_form_main(r)
+                T.insert(tkinter.END,r)
+                T.insert(tkinter.END,'\n\n')
+            
 
     if v0=="Теорема в формате Abbyy":
         f=open(abbyy_infile,"r",encoding="utf-8")
@@ -355,12 +384,15 @@ mymenu3 = tkinter.Menu(m,tearoff=0)
 var3 = tkinter.IntVar()
 var5 = tkinter.IntVar()
 var2 = tkinter.IntVar()
+var9 = tkinter.IntVar()
 
 var5.set(1)
 var2.set(1)
+var9.set(1)
 
 mymenu2.add_checkbutton(label='Показать дерево при помощи ОС',variable=var5)
 mymenu2.add_checkbutton(label='Синтакс.дерево/Формула логики предикатов(0/1)',variable=var2)
+mymenu2.add_checkbutton(label='Загрузить из файла',variable=var9)
 mymenu.add_cascade(label='Параметры разбора',menu=mymenu2)
 mymenu3.add_command(label='Работа с формулами',command=formulas_mode)
 mymenu3.add_command(label='Режим разработчика',command=admin_mode)
@@ -397,6 +429,7 @@ T=Text(pane2,width=70,height=30)
 
 w.pack(padx=5,pady=5)
 in_entry.pack(ipadx=10,ipady=10,padx=10,pady=10)
+
 T.pack(fill = "both", expand = "yes",ipadx=10,ipady=10,padx=10,pady=10)
 
 w8 = Label(pane4, text="Режим ввода:")
@@ -420,8 +453,11 @@ obj2=ttk.Combobox(pane7,
                                     ], 
                             )
 
+
+
 obj.pack(padx=10,pady=20)
 obj2.pack(padx=10,pady=20)
+
 
 button2.pack(padx=10,pady=10)  
 button3.pack(padx=10,pady=10)

@@ -715,4 +715,113 @@
 #{\displaystyle U(\mathcal{P},f,\alpha) − L(\mathcal{P},f,\alpha)<\varepsilon}
 {\displaystyle f \in C[a,b]}
 {\displaystyle \alpha(a)<\alpha(b)}
-{\displaystyle \alpha : [a,b] \rightarrow \mathbb{R}}
+{\displaystyle \alpha : [a,b] \rightarrow \mathbb{R}}{\displaystyle e^{ix}}=\cos x+i\sin x}
+{\displaystyle e^{ix}}=\cos x+i\sin x}
+{\dispalystyle f}
+{\displaystyle e^{ix}}=\cos x+i*\sin x}
+{\displaystyle [a ,b]}
+{\displaystyle f(b)-f(a)=f'(\xi)(b-a)}
+{\displaystyle (a ,b)}
+{\displaystyle x=\xi}
+{\displaystyle {\binom {2p}}{p}}}}\equiv 2{\pmod {p^{3}}}}}}}
+{\displaystyle {\binom {2p}}{p}}}}}
+{\displaystyle \textstyle {\binom {2p}}{p}}}}}
+{\displaystyle {\frac {f(b)-f(a)}}{b-a}}}}=f'(c)}
+{\displaystyle e^{i*x}=\cos(x)+i*\sin(x)}
+{\displaystyle x}
+{\displaystyle x}
+{\displaystyle e^{i*x}=\cos(x)+i*\sin(x)}
+{\displaystyle p>3}
+{\displaystyle {\binom {2p}{p}}\equiv 2{\pmod {p^{3}}}
+{\displaystyle \textstyle {\binom {2p}{p}}
+{\displaystyle [a,b]}
+{\displaystyle [a,b]}
+{\displaystyle [a,b]}
+{\displaystyle {\frac {f(b)-f(a)}{b-a}}=f'(c)}
+{\displaystyle (a,b)}
+{\displaystyle x}
+{\displaystyle e^{i*x}=\cos(x)+i*\sin(x)}
+{\displaystyle p>3}
+{\displaystyle [a,b]}
+{\displaystyle [a,b]}
+{\displaystyle [a,b]}
+{\displaystyle {\frac {f(b)-f(a)}{b-a}}=f'(c)}
+{\displaystyle (a,b)}
+{\displaystyle x}
+{\displaystyle e^{i*x}=\cos(x)+i*\sin(x)}
+{\displaystyle p>3}
+{\displaystyle [a,b]}
+{\displaystyle [a,b]}
+{\displaystyle [a,b]}
+{\displaystyle {\frac {f(b)-f(a)}{b-a}}=f'(c)}
+{\displaystyle (a,b)}
+{\displaystyle e^{i*x}=\cos(x)+i*\sin(x)}
+{\displaystyle x}
+{\displaystyle p>3}
+{\displaystyle [a,b]}
+{\displaystyle [a,b]}
+{\displaystyle {\frac {f(b)-f(a)}{b-a}}=f'(c)}
+{\displaystyle [a,b]}
+{\displaystyle (a,b)}
+{\displaystyle x}
+{\displaystyle e^{i*x}=\cos(x)+i*\sin(x)}
+{\displaystyle p>3}
+{\displaystyle [a,b]}
+{\displaystyle x}
+{\displaystyle e^{i*x}=\cos(x)+i*\sin(x)}
+{\displaystyle p>3}
+{\displaystyle [a,b]}
+{\displaystyle [a,b]}
+{\displaystyle [a,b]}
+{\displaystyle {\frac {f(b)-f(a)}{b-a}}=f'(c)}
+{\displaystyle (a,b)}
+{\displaystyle x}
+{\displaystyle e^{i*x}=\cos(x)+i*\sin(x)}
+{\displaystyle p>3}
+{\displaystyle [a,b]}
+{\displaystyle [a,b]}
+{\displaystyle [a,b]}
+{\displaystyle {\frac {f(b)-f(a)}{b-a}}=f'(c)}
+{\displaystyle (a,b)}
+{\displaystyle x}
+{\displaystyle e^{i*x}=\cos(x)+i*\sin(x)}
+{\displaystyle [a,b]}
+{\displaystyle [a,b]}
+{\displaystyle [a,b]}
+{\displaystyle {\frac {f(b)-f(a)}{b-a}}=f'(c)}
+{\displaystyle (a,b)}
+{\displaystyle e^{i*x}=\cos(x)+i*\sin(x)}
+{\displaystyle x}
+{\displaystyle [a,b]}
+{\displaystyle [a,b]}
+{\displaystyle {\frac {f(b)-f(a)}{b-a}}=f'(c)}
+{\displaystyle (a,b)}
+{\displaystyle [a,b]}
+{\displaystyle e^{i*x}=\cos(x)+i*\sin(x)}
+{\displaystyle x}
+{\displaystyle [a,b]}
+{\displaystyle [a,b]}
+{\displaystyle {\frac {f(b)-f(a)}{b-a}}=f'(c)}
+{\displaystyle (a,b)}
+{\displaystyle [a,b]}
+{\displaystyle e^{i*x}=\cos(x)+i*\sin(x)}
+{\displaystyle x}
+{\displaystyle [a,b]}
+{\displaystyle [a,b]}
+{\displaystyle [a,b]}
+{\displaystyle {\frac {f(b)-f(a)}{b-a}}=f'(c)}
+{\displaystyle (a,b)}
+{\displaystyle e^{i*x}=\cos(x)+i*\sin(x)}
+{\displaystyle x}
+{\displaystyle [a,b]}
+{\displaystyle [a,b]}
+{\displaystyle [a,b]}
+{\displaystyle {\frac {f(b)-f(a)}{b-a}}=f'(c)}
+{\displaystyle (a,b)}
+{\displaystyle e^{i*x}=\cos(x)+i*\sin(x)}
+{\displaystyle x}
+{\displaystyle [a,b]}
+{\displaystyle [a,b]}
+{\displaystyle [a,b]}
+{\displaystyle {\frac {f(b)-f(a)}{b-a}}=f'(c)}
+{\displaystyle (a,b)}

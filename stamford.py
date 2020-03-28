@@ -10,57 +10,7 @@ class stamford_preprocessing:
         self.text=""
       
     def modify_text_for_stamford(self):
-        f=open("Files/config.ini","r",encoding="utf-8")
-        for line in f:
-            line=line.split(':')
-            if line[0]=="List_of_formulas":
-                lst_=line[1].strip()
-                break
-        f.close()
-    
-        ######## считываем из базы формул #####
-        lst_gl=[]
-        f=open(lst_,"r",encoding="utf-8")
-        for line_ in f:
-            lst_gl.append(line_.strip())
-        f.close()
-   
-        lst=[]
-        str1=""
-        str2=""
-        match=0
-
-        for i in range(len(self.text)):
-            if self.text[i]=="{":
-                match=match+1
-
-            if self.text[i]=="}":
-                match=match-1
-                str1=str1+self.text[i]
-             
-            if match>0:
-                str1=str1+self.text[i]
-           
-            if match==0:
-                if self.text[i]!="}":
-                    str2=str2+self.text[i]
-
-                if str1!="":
-                    if not str1 in lst_gl:
-                        lst.append(str1)
-                        lst=list(set(lst))
-                        str2=str2+"formula_"+str(len(lst)+len(lst_gl))
-                    else:
-                        for k in range(len(lst_gl)):
-                            if lst_gl[k]==str1:
-                                str2=str2+"formula_"+str(k+1)
-                str1=""
-
-        f=open(lst_,"a",encoding="utf-8")
-        for i in range(len(lst)):
-            f.write(lst[i]+'\n')
-        f.close()
-
+        str2=self.text
         lst=[',',':']
         for i in range(len(lst)):
             str2=str2.replace(lst[i]," "+lst[i])
@@ -86,6 +36,7 @@ class stamford_preprocessing:
 
         str2=" ".join(str2)
         self.text=str2
+        return str2
     
     def punc_modify(self):
         for i in range(len(self.text)):
@@ -99,16 +50,33 @@ class stamford_preprocessing:
     def etap_one(self,text,arr):
         text=text.replace(","," ,")
         tmp=text.split()
-        
+
         for i in range(len(arr)):
                 if arr[i][0]=="и":
                     for p in range(i,len(arr)):
-                        if arr[p][2]=="VERB" and arr[p][4]=="conj":
+                        if (arr[p][2]=="VERB" or arr[p][2]=="ADJ") and arr[p][4]=="conj":
                             tmp[i]=","
+
+                if arr[i][4]=="root" or (arr[i][4]=="conj" and (arr[i][2]=="VERB" or arr[i][2]=="ADJ")):
+                    flag=0
+                    for p in range(len(arr)):
+                        if arr[p][4]=="nsubj" and arr[p][3]==i+1:
+                            flag=1
+                            break
+
+                    if flag==0:
+                        for k in range(i,0,-1):
+                            if "nsubj" in arr[k][4]:
+                                tmp[i]=arr[k][0]+" "+arr[i][0]
+                                for p in range(len(arr)):
+                                    if arr[p][3]==k+1 and (arr[p][4]=="flat:foreign" or "formula" in arr[p][0]):
+                                        tmp[i]=arr[p][0]+" "+arr[i][0]
+                                        break
+                                break
 
                 if arr[i][0]==",":
                     if arr[i+1][0]=="где":
-                        tmp[i]=""
+                        tmp[i+1]=""
                         
                 if arr[i][0]=="функция" or arr[i][0]=="точка":
                     flag=0
@@ -271,6 +239,12 @@ class Stamford:
             if len(self.arr[i])<1:
                 continue
 
+            if self.arr[i][1]=="отрезка":
+                self.arr[i][2]="отрезок"
+
+            if self.arr[i][2]=="из" or self.arr[i][2]=="на" or self.arr[i][2]=="в":
+                self.arr[i][2]="del"
+                
             if self.arr[i][5]=="ADJ":
                 ids=int(self.arr[i][3])-1
                 if self.arr[ids][4]=="root":
@@ -385,9 +359,6 @@ class Stamford:
             if a[i][2]=="сходиться по мере":
                 a[i][2]="convergence_in_measure"
 
-            if a[i][2]=="на" or a[i][2]=="в":
-                a[i][2]="del"
-           
                 
         for x in self.dict4:
             for i in range(len(a)):
@@ -439,6 +410,8 @@ class Stamford:
      
     def run(self,text,param):
         arr=[]
+        text=replace_formulas(text)
+       
         doc = self.nlp(text)
         for sent in doc.sentences:
             for wrd in sent.dependencies:
@@ -520,6 +493,13 @@ class Stamford:
             self.arr=[]
                 
         if param==1:
+            for i in range(len(res)-1,-1,-1):
+                if not "if" in res[i] and not "then" in res[i] and not "type" in res[i] and not "<=>" in res[i]:
+                    if i>0 and type(res[i-1])==list:
+                        for x in res[i]:
+                            res[i-1].append(x)
+                        del res[i]
+
             A=Text_predicator([],[])
             res=A.make_predicate(res)
         

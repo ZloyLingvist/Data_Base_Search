@@ -20,7 +20,20 @@ class Text_predicator:
 
         def make_predicate_stage_one(self,arr,d5):
                 lst=['в','на','из']
-        
+
+                for i in range(len(arr)-1,-1,-1):
+                        if arr[i][-1]=="C":
+                                arr[i][0],arr[i][-1]=arr[i][-1],arr[i][0]
+                                
+                        if i<len(arr)-1:
+                                if arr[i][0]=="=>":
+                                        for y in range(len(arr[i])):
+                                                if arr[i][y] in arr[i+1] and len(arr[i+1])==2:
+                                                        arr[i][y]=arr[i+1]
+                                                        del arr[i+1]
+                                                        break
+
+               
                 for i in range(len(arr)-1,-1,-1):
                         if arr[i][0]=="del":
                                 del arr[i]
@@ -34,15 +47,7 @@ class Text_predicator:
                                 else:
                                         break
 
-                '''
-                for i in range(len(arr)):
-                        if type(arr[i])==list:
-                                for j in range(len(arr[i])):
-                                        if arr[i][j]=="в":
-                                                arr[i][0],arr[i][j]=arr[i][j],arr[i][0]
-                                                arr[i]=["in",arr[i][1:]]
-                '''                      
-
+               
                 for i in range(len(arr)-1,-1,-1):
                         if arr[i]==[]:
                                 del arr[i]
@@ -93,6 +98,7 @@ class Text_predicator:
                                                 if len(temp)==1:
                                                         arr[i+1]=temp[0]
 
+                       
                         if len(arr[i])>0 and arr[i][0]=="exists":
                                 temp=[]
                                 c=arr[i][1:]
@@ -109,7 +115,7 @@ class Text_predicator:
                                     del arr[i+1:]
            
                                 arr[i][1]=temp
-
+                        
                
                 for k in range(len(arr)-1,-1,-1):
                         if arr[k]==[]:
@@ -127,6 +133,7 @@ class Text_predicator:
                         if type(arr[j])==list:
                                 if len(arr[j])==1:
                                         arr[j]=arr[j][0]
+
 
                 for j in range(len(arr)-1,-1,-1):
                         if arr[j][0]=="type":
@@ -169,12 +176,6 @@ class Text_predicator:
 
         def make_predicate(self,arr):
                 d5=self.read_from_file("dicts/dict5","list")
-
-                for j in range(len(arr)-1,-1,-1):
-                        if type(arr[j])==list:
-                               if ("then" in arr[j-1] or "if" in arr[j-1]) and type(arr[j-1])==list:
-                                        arr[j-1].append(arr[j][0])
-                                        arr[j]=[]
 
                 for i in range(len(arr)-1,-1,-1):
                         if arr[i]==[]:
@@ -425,6 +426,13 @@ class Text_predicator:
                 for i in range(len(self.tmp)):
                         if len(self.tmp[i])==0:
                                 continue
+
+                        if len(self.tmp[i])==2 and type(self.tmp[i])==list:
+                                if len(self.tmp[i][0])==1 or "formula" in self.tmp[i][0]:
+                                        if len(self.tmp[i][1])==1 or "formula" in self.tmp[i][1]:
+                                                self.tmp[i].reverse()
+                                                self.tmp[i].insert(0,"in")
+                                        
                         if type(self.tmp[i])==list and self.tmp[i][0]=="=>":
                                 if self.tmp[i][-1]=="C" or self.tmp[i][-1]=="простой":
                                         self.tmp[i][-1],self.tmp[i][-2]=self.tmp[i][-2],self.tmp[i][-1]
@@ -451,6 +459,5 @@ class Text_predicator:
                 d6=self.read_from_file("dicts/dict6","dict_")
                 self.transform(d1,d2,d3,d4,d5,d6)
                 return self.tmp
-
 
 

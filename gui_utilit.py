@@ -125,10 +125,12 @@ def create_razbor():
             if line!='\n':
                 line=line.strip()
                 if len(line)>0:
-                    print(line)
-                    r=A.run(line,v1)
-                    B=combine_formula_and_text(r,lst,out,line,grammar)
-                    B.main_stamford(r)
+                    try:
+                        r=A.run(line,v1)
+                        B=combine_formula_and_text(r,lst,out,line,grammar)
+                        B.main_stamford(r)
+                    except:
+                        0
                     
                         
                 

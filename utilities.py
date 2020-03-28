@@ -138,8 +138,12 @@ def make_predicate_form(l,tmp,str1,flag,word):
                 l[i]=make_predicate_form(elem,tmp,str1,flag,word)
             else:
                 str1=str1+" "+elem
-                if str1.count(" ")>1 and flag==0:
-                    tmp.append(",")
+                str1=str1.strip()
+               
+                if str1.count(" ")>0 and flag==0:
+                    if tmp[-1]!="forall" and tmp[-1]!="exists":
+                        tmp.append(",")
+                        
                 if str1.count(" ")>1 and flag!=0:
                     tmp.append("(")
                     flag=0
@@ -151,7 +155,20 @@ def make_predicate_form(l,tmp,str1,flag,word):
                     word=""
                     
     tmp.append(")")
+    if str1.count(" ")>0:
+         tmp.append(",")
+         
     return tmp
+
+def make_simple(l):
+     for i,elem in enumerate(l):
+            if not isinstance(elem,str):
+                 if len(elem)==1:
+                     elem=elem[0]
+                     
+                 l[i]=make_simple(elem)
+
+     return l
 
 def make_predicate_form_main(a):
     str1=""
@@ -161,5 +178,61 @@ def make_predicate_form_main(a):
     a=" ".join(a)
     a=a.replace(") (","),(")
     return a
+
+def replace_formulas(text):
+        f=open("Files/config.ini","r",encoding="utf-8")
+        for line in f:
+            line=line.split(':')
+            if line[0]=="List_of_formulas":
+                lst_=line[1].strip()
+                break
+        f.close()
+    
+        ######## считываем из базы формул #####
+        lst_gl=[]
+        f=open(lst_,"r",encoding="utf-8")
+        for line_ in f:
+            lst_gl.append(line_.strip())
+        f.close()
+   
+        lst=[]
+        str1=""
+        str2=""
+        match=0
+
+        for i in range(len(text)):
+            if text[i]=="{":
+                match=match+1
+
+            if text[i]=="}":
+                match=match-1
+                
+            if match>0:
+                str1=str1+text[i]
+           
+            if match==0:
+                if text[i]!="}":
+                    str2=str2+text[i]
+
+                if str1!="":
+                    if not str1 in lst_gl:
+                        if str1[-1]!="}":
+                            str1=str1+"}"
+                        lst.append(str1)
+                        lst=list(set(lst))
+                        str2=str2+"formula_"+str(len(lst)+len(lst_gl))
+                    else:
+                        for k in range(len(lst_gl)):
+                            if lst_gl[k]==str1:
+                                str2=str2+"formula_"+str(k+1)
+                str1=""
+
+        f=open(lst_,"a",encoding="utf-8")
+        
+        for i in range(len(lst)):
+            f.write(lst[i]+'\n')
+        f.close()
+       
+        return str2
 
 

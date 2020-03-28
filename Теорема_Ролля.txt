@@ -1,10 +1,10 @@
 Если вещественная функция, непрерывная на отрезке {\displaystyle [a,b]} и дифференцируемая на интервале {\displaystyle (a,b)} , принимает на концах отрезка {\displaystyle [a,b]} одинаковые значения, 
 то на интервале {\displaystyle (a,b)} найдётся хотя бы одна точка, в которой производная функции равна нулю. 
 
-[['if', ['&', ['function', 'f'], ['Real', 'f'], ['C', 'f',['\\closedinterval', ['a', 'b']]], ['\\closedinterval', ['a', 'b']], 
-['dif', 'function', ['a', 'b']], ['open_interval', ['a', 'b']], 
-['принимать', 'конец', ['a', 'b']], ['closed_interval', ['a', 'b']], ['одинаковый', 'значение']]], 
-['then', ['exists', ['a', ['&', ['point', 'a'], ['open_interval', ['a', 'b']], ['equal', ['der','f'], '0', 'a'], 
+[['if', ['&', ['function', 'f'], ['Real', 'f'], ['C', 'f',['\\closedinterval', ['a', 'b']]], 
+['dif', 'function', ['open_interval',['a', 'b']]], 
+['принимать', 'конец', ['\\closedinterval', ['a', 'b']], ['одинаковый', 'значение']]]], 
+['then', ['exists', ['a', ['&', ['point', 'a'], ['in','a',['open_interval', ['a', 'b']]], ['equal', ['der','f'], '0', 'a'], 
 ['function', 'f']]]]]]
 
 Пусть функция  дифференцируема в открытом промежутке  , на концах этого промежутка сохраняет непрерывность и принимает одинаковые значения: {\displaystyle f(a)=f(b)} , тогда существует точка  , 
@@ -25,6 +25,6 @@
 {\displaystyle f(a)=f(b)}, тогда существует точка {\displaystyle c\in (a,b)}, в которой {\displaystyle f^{\prime}(c)=0} .
 
 [['if', ['&', ['function', 'f']], ['C', 'f', ['closed_interval',['a', 'b']]],
-['forall','c',['&',['point','c'],['in','c',['a',b']],['dif', 'f', 'c']],['внутренний','c']],['=',['f','a'],['f','b']]],
-['then',['exists',['c',['&',['point','c'],['\in','c',['open_interval',['a','b']]],['equal',['der',['f','c']],'0']]]]]]
-
+['forall','c',['&',['point','c'],['in','c',['open_interval',['a',b']],['dif', 'f', 'c']],['внутренний','c']],
+['=',['f','a'],['f','b']]],['then',['exists',['c',['&',['point','c'],['\in','c',['open_interval',['a','b']]],
+['equal,['der',['f','c']],'0']]]]]]

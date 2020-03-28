@@ -110,4 +110,3 @@ class plot_tree:
 
         graph.write_png(path+"\\Trees\\"+self.name+".png")
 
-

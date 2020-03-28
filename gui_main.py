@@ -295,12 +295,14 @@ def range_function_r():
 
         mode=0
         if obj2.get()=="":
-            T1.insert(tkinter.END,'Использован режим по умолчанию (Свой алгоритм)')
+            T1.insert(tkinter.END,'Использован режим по умолчанию (Свой алгоритм (v1))')
             
-        if obj2.get()=="Свой алгоритм":
+        if obj2.get()=="Свой алгоритм (v1)":
             mode=0
         if obj2.get()=="Minhash":
             mode=1
+        if obj2.get()=="Свой алгоритм (v2)":
+            mode=2
             
         B=Ranger()
         ####### ранжировка #######
@@ -448,8 +450,9 @@ obj.bind("<<ComboboxSelected>>", changemode)
 
 obj2=ttk.Combobox(pane7, 
                             values=[ 
-                                    "Свой алгоритм",
+                                    "Свой алгоритм (v1)",
                                     "Minhash",
+                                    "Свой алгоритм (v2)"
                                     ], 
                             )
 

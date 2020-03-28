@@ -101,17 +101,58 @@ class Ranger:
         best_score = 1 - (a @ b.T) / (np.linalg.norm(a)*np.linalg.norm(b)) 
         return best_score
 
+
     def main(self,a,b,mode):
         if mode==0:
             best_score=self.algorithm_one(a,b)
 
         if mode==1:
-            best_score=1-self.algorithm_two(a,b)
+            best_score=self.algorithm_two(a,b)
+
+        if mode==2:
+            a1=algorithm_three_func(a,a)
+            b1=algorithm_three_func(b,b)
+            a2=algorithm_three_func(a,b)
+            b2=algorithm_three_func(b,a)
+            if a2==0 or b2==0:
+                best_score=0
+                return 0
             
+            best_score=min(a1/a2,b1/b2)
+            
+
         return best_score
-    
-a=['if', ['&',['dif', 'f','b'], ['open_interval','b'], ['function', 'f'],['C','a'],['C','b']], ['then', ['exists',['с', ['&',['point', 'с']],'d']]]]
-b=['if', ['&',['C', 'g', 'a'], ['function', 'g'], ['closed_interval', 'a'], ['dif','g','b'], ['open_interval', 'b']], ['then', ['exists',['c',['&',['in','c','b'],['open_interval','b'], ['point', 'с']],'d']]]]
+
+'''
+a=[['if', ['&', ['function', ['f','x']], ['C', ['f'], ['closed_interval',['a', 'b']]],
+['dif', ['f'], ['open_interval',['a', 'b']]],['=',['f','a'],['f','b']]]],
+['then',['exists',['c',['&',['point','c'],['in',['c'],['closed_interval',['a','b']]],['in',['equal', [['der','f'], '0']], 'c']]]]]]
+
+b=[['if', ['&', ['function', 'f'], ['Real', 'f'], ['C', ['f'],['\\closedinterval', ['a', 'b']]], 
+['dif', ['f'], ['open_interval',['a', 'b']]], 
+['принимать', ['конец', ['\\closedinterval', ['a', 'b']]], ['одинаковый', 'значение']]]], 
+['then', ['exists', ['c', ['&', ['point', 'c'], ['in',['c'],['open_interval', ['a', 'b']]], ['in',['equal', [['der','f'], '0']], 'c']], 
+['function', 'f']]]]]
+
+
+c=[['if', ['&', ['function', 'f'], ['dif', 'f', ['open_interval',['a', 'b']]],['C',['конец', ['open_interval',['a', 'b']]]],['equal',['f','a'],['f','b']]]],
+['then', ['exists', ['c', ['&', ['point','c'],['in',['equal', [['der','f'], '0']], 'c']]]]]]
+
+
+d=[['if', ['&', ['function', 'f'], ['C', ['f'], ['closed_interval',['a', 'b']]],
+['forall','c',['&',['point','c'],['in',['c'],['open_interval',['a','b']]],['dif', 'f', 'c'],['внутренний','c']]],
+['equal',['f','a'],['f','b']]]],['then',['exists',['c',['&',['point','c'],['\in',['c'],['open_interval',['a','b']]],
+['in',['equal', [['der','f'], '0']], 'c']]]]]]
+
+               
+x=[a,b,c,d]
+y=["Пусть функция {\displaystyle f(x)} непрерывна на отрезке {\displaystyle [a,b]} и дифференцируема на интервале {\displaystyle (a,b)}, причем {\displaystyle f(a)=f(b)} , тогда существует точка {\displaystyle c \in [a, b]} такая, что {\displaystyle f'(c)=0} . " ,
+   "Если вещественная функция, непрерывная на отрезке {\displaystyle [a,b]} и дифференцируемая на интервале {\displaystyle (a,b)} ,принимает на концах отрезка {\displaystyle [a,b]} одинаковые значения, то на интервале {\displaystyle (a,b)} найдётся хотя бы одна точка,в которой производная функции равна нулю. ",
+   "Пусть функция  дифференцируема в открытом промежутке  , на концах этого промежутка сохраняет непрерывность и принимает одинаковые значения: {\displaystyle f(a)=f(b)} , тогда существует точка  , в которой производная функции  равна нулю : {\displaystyle f'(c)=0}  . ",
+    "Если функция f непрерывна на {\displaystyle [a,b]}, функция f дифференцируема во всех внутренних точках {\displaystyle [a,b]} и {\displaystyle f(a)=f(b)}, тогда существует точка {\displaystyle c\in (a,b)}, в которой {\displaystyle f^{\prime}(c)=0} ."
+    ]
+
 
 A=Ranger()
-print(A.main(a,b,1))
+print(A.main(a,c,2))
+'''

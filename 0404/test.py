@@ -39,7 +39,9 @@ res=make_ranger(query_num,lst,txt)
 print('Query:',txt[query_num],'\n')
 for i in range(len(res)):
     print(res[i][0],res[i][3])
+    print(res[i][2])
     print(res[i][1])
+    print()
 
 
 #draw_tree(lst,txt)

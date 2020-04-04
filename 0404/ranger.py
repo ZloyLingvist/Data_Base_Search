@@ -1,6 +1,6 @@
 import re
 import copy
-#from ranger_algo import *
+from ranger_algo import *
 import numpy as np
 from collections import Counter
 from draw_graph import *
@@ -58,13 +58,15 @@ def algorithm_three_func(a,b):
     for x in a:
         i=i+1
         coeff=1
+        '''
         for m in range(len(b)):
             if x==b[m]:
                 coeff=coeff+1
+        '''
         for y in b:
             j=j+1
             c=jaccard_coeff_algo_three(x,y)
-            value=value+coeff*(c*i/len(a))
+            value=value+(c*i/len(a))
 
     return value  
 
@@ -182,10 +184,9 @@ class Ranger:
             if a2==0 or b2==0:
                 best_score=0
                 return 0
-            
+
             best_score=min(a2/a1,b2/b1)
             
-
         return best_score
 
 

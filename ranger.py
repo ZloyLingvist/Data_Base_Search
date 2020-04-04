@@ -118,7 +118,7 @@ class Ranger:
                 best_score=0
                 return 0
             
-            best_score=min(a1/a2,b1/b2)
+            best_score=min(a2/a1,b2/b1)
             
 
         return best_score

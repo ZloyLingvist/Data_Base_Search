@@ -83,15 +83,21 @@ def algorithm_three_func(a,b):
     value=0
     ind=[]
     i,j=0,0
+    coeff=1
     a=simplifier_algo_three(a)
     b=simplifier_algo_three(b)
     
     for x in a:
         i=i+1
+        coeff=1
+        for m in range(len(b)):
+            if x==b[m]:
+                coeff=coeff+1
+        
         for y in b:
             j=j+1
             c=jaccard_coeff_algo_three(x,y)
-            value=value+c*i/len(a)
+            value=value+coeff*(c*i/len(a))
 
     return value         
             

@@ -1,6 +1,12 @@
-from utilities import *
-from draw_graph import *
-from text_predicator import *
+def recursion_clean(l):
+    for i,elem in enumerate(l):
+            if not isinstance(elem,str):
+                for k in range(len(elem)-1,-1,-1):
+                    if elem[k]==[]:
+                        del elem[k]
+                        
+                l[i]=recursion_clean(elem)
+    return l
 
 class Text_analyzer:
     def __init__(self,a,root):
@@ -18,27 +24,24 @@ class Text_analyzer:
 
             self.dict[x[0]]=tmp
             tmp=[]
-     
+
+        
     def dfs(self,graph,node,visited):
         if node not in visited:
             visited.append([node,graph[node]])
             for n in graph[node]:
                 self.dfs(graph,n,visited)
 
-    def flatten(self,L):
-        for l in L:
-            if isinstance(l,list):
-                yield from self.flatten(l)
-            else:
-                yield l
-
-
+   
     def recreate(self,l):
         for i,elem in enumerate(l):
             if not isinstance(elem,str):
                 l[i]=self.recreate(elem)
             else:
-                l[i]=self.a[int(l[i])-1][2]
+                try:
+                    l[i]=self.a[int(l[i])-1][2]+"::"+self.a[int(l[i])-1][4]
+                except:
+                    0
                 
         return l
 
@@ -55,19 +58,15 @@ class Text_analyzer:
                         if elem[y]=='del':
                             del elem[y]
 
-                   #elem=list(self.flatten(elem))
-                            
-                        
-                    
             if not isinstance(elem,str):
                 l[i]=self.recreate_2(elem)
         
         return l
 
-    def make_tree(self,param):
+    def make_tree(self):
         visited=[]
         self.dfs(self.dict,self.root,visited)
-       
+        
         for i in reversed(range(len(visited))):
             for j in reversed(range(len(visited))):
                 if visited[i][0] in visited[j][1]:
@@ -77,22 +76,13 @@ class Text_analyzer:
                                 visited[j][1][k]=[visited[i][0]]
                             else:
                                 visited[j][1][k]=visited[i]
-
-                            break
-
-                    continue
-        
+                    
+       
         visited=visited[0]
         visited=self.recreate(visited)
+
         visited=self.recreate_2(visited)
         visited=recursion_clean(visited)
         
-        if param==0:
-            return [visited,self.root]
-        else:
-            A=Text_predicator(visited,self.a)
-            visited=A.main()
-            return [visited,self.root]
-       
-
+        return [visited,self.root]
 

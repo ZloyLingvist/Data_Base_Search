@@ -1,0 +1,23 @@
+#OBJ
+функция	function
+отрезок	closed_interval
+интервал	open_interval
+промежуток	open_interval
+точка	point
+#ATR
+вещественный	Real
+дифференцировать	d
+непрерывный	C
+равный	equal
+#VERB
+найтись	exists
+существовать	exists
+#Constuction
+сохранять непрерывность	C
+производная функция	der
+#Спец. слова
+если	if
+то	then
+тогда	then
+#Num
+нуль	0

@@ -11,7 +11,6 @@ from formula_tree import *
 from ranger import *
 from text_tree import *
 from draw_graph import *
-from combine_formula_text import *
 from utilities import *
 from stamford import *
 
@@ -32,6 +31,42 @@ def _onKeyRelease(event):
 
 path = os.path.dirname(os.path.abspath(__file__))
 
+def fill_razbor():
+     lst=[]
+     f=open("Files/config.ini","r",encoding="utf-8")
+     for line in f:
+            line=line.split(":")
+            if line[0]=="Infile":
+                infile=line[1].strip()
+
+     f.close()
+     v0=obj.get()
+
+     f=open(infile,"r",encoding="utf-8")
+     for line in f:
+            lst.append(line.strip())
+     f.close()
+
+     nlp = stanfordnlp.Pipeline(processors='tokenize,mwt,lemma,pos,depparse', models_dir=path, lang="ru",treebank='ru_syntagrus', use_gpu=True, pos_batch_size=3000)
+     f=open(infile.split(".")[0]+"_arr.txt","w",encoding="utf-8")
+     a=[]
+     i=0
+     for line in lst:
+            doc = nlp(line)
+            i=0
+            a=[]
+            for sent in doc.sentences:
+                for wrd in sent.dependencies:
+                    a.append([str(i+1),wrd[2].text,wrd[2].lemma,str(wrd[2].governor),wrd[2].dependency_relation,wrd[2].upos])
+                    i=i+1
+
+            f.write(str(a))
+            f.write('\n')
+     f.close()
+     T1.insert(tkinter.END,'Закончили')
+
+     
+
 def formulas_mode():
     os.system("gui_formula.py")
 
@@ -41,7 +76,7 @@ def admin_mode():
 def edit_config():
     f=open("Files/config.ini","r",encoding="utf-8")
     for line in f:
-        T.insert(tkinter.END,line)
+        T2.insert(tkinter.END,line)
     f.close()
     
     button10.pack(padx=10,pady=10)
@@ -49,7 +84,7 @@ def edit_config():
    
 
 def save_config():
-    t=T.get(1.0,END)
+    t=T2.get(1.0,END)
     f=open("Files/config.ini","w",encoding="utf-8")
     if len(t)>0:
         f.write(t)
@@ -91,16 +126,17 @@ def transform():
     f.close()
     v0=obj.get()
 
-    if (v0=="Теорема в формате Стэмфорд"):
+    if (v0=="Стэмфорд (текст)" or v0=="Стэмфорд (массив)"):
+        '''считываем откуда считывать'''
         v=var9.get()
        
         if len(text)>0 and v==0:
             A=Stamford()
-            r=A.run(text,var2.get())
+            r=A.main(text,var2.get())
 
-            B=combine_formula_and_text(r,list_of_formulas,"","",grammar)
-            r=B.main_stamford(r)
-            r=make_simple(r)
+            #B=combine_formula_and_text(r,list_of_formulas,"","",grammar)
+            #r=B.main_stamford(r)
+            #r=make_simple(r)
 
             T.insert(tkinter.END,text+'\n')
             T.insert(tkinter.END,str(r))
@@ -111,19 +147,25 @@ def transform():
             
         if v==1:
             lst=[]
-            f=open(infile,"r",encoding="utf-8")
-            for line in f:
-                lst.append(line.strip())
+            if (v0=="Стэмфорд (текст)"):
+                f=open(infile,"r",encoding="utf-8")
+                for line in f:
+                    lst.append(line.strip())
 
-            f.close()
+                f.close()
+
+            if (v0=="Стэмфорд (массив)"):
+                f=open(infile.split(".")[0]+"_arr.txt","r",encoding="utf-8")
+                for line in f:
+                    lst.append(line.strip())
+
+                f.close()
 
             A=Stamford()
             for i in range(len(lst)):
-                r=A.run(lst[i],var2.get())
-                B=combine_formula_and_text(r,list_of_formulas,"","",grammar)
-                r=B.main_stamford(r)
-                r=make_simple(r)
-
+                r=A.main(eval(lst[i]),var2.get())
+                #B=combine_formula_and_text(r,list_of_formulas,"","",grammar)
+            
                 T.insert(tkinter.END,lst[i]+'\n')
                 T.insert(tkinter.END,str(r))
                 T.insert(tkinter.END,'\n\n')
@@ -248,7 +290,7 @@ def range_function_r():
         if obj.get()=="Теорема в формате Abbyy":
             db=Database_abbyy_path
             
-        if obj.get()=="Теорема в формате Стэмфорд":
+        if obj.get()=="Стэмфорд (текст)" or obj.get()=="Стэмфорд (массив)" :
             db=Database_stamford_path
         
             
@@ -271,12 +313,16 @@ def range_function_r():
             A=combine_formula_and_text(arr[0],list_of_formulas,"","",grammar)
             a=A.main(var2.get())
 
-        if obj.get()=="Теорема в формате Стэмфорд":
+        if obj.get()=="Стэмфорд (текст)":
             A=Stamford()
-            r=A.run(text,var2.get())
-            
-            A=combine_formula_and_text(r,list_of_formulas,"","",grammar)
-            a=A.main_stamford(r)
+            a=A.main(text,var2.get())
+
+        if obj.get()=="Стэмфорд (массив)":
+            text=T.get(1.0,END).strip()
+            A=Stamford()
+            a=A.main(eval(text),var2.get())
+
+       
 
         if obj.get()=="Разобранное дерево":
             text=T.get(1.0,END)
@@ -301,9 +347,11 @@ def range_function_r():
             mode=0
         if obj2.get()=="Minhash":
             mode=1
+
         if obj2.get()=="Свой алгоритм (v2)":
             mode=2
-            
+
+        print('!!!',mode)            
         B=Ranger()
         ####### ранжировка #######
         
@@ -312,7 +360,7 @@ def range_function_r():
                 result=B.main(a,database[i][2],mode)
                 top.append([i,result,database[i][0]])
 
-        if mode==0:
+        if mode==0 or mode==1:
             top.sort(key = lambda x: x[1],reverse=True)
         if mode==1:
             top.sort(key = lambda x: x[1],reverse=False)
@@ -346,13 +394,14 @@ def install():
 
 
 def changemode(event):
-    if obj.get()=="Теорема в формате Стэмфорд":
+    if obj.get()=="Стэмфорд (текст)" or obj.get()=="Стэмфорд (массив)":
         w["text"]="Теорема"
         T.pack_forget()
         w.pack(padx=5,pady=5)
         in_entry.pack(ipadx=10,ipady=10,padx=10,pady=10)
         T["width"]=70
         T.pack(fill = "both", expand = "yes",ipadx=10,ipady=10,padx=10,pady=10)
+        
       
         
     if obj.get()=="Теорема в формате Abbyy":
@@ -423,15 +472,19 @@ button2 = tkinter.Button(pane1, text='Очистка', width=25, command=clear)
 button3 = tkinter.Button(pane1, text='Показать дерево', width=25, command=create_window)
 button6 = tkinter.Button(pane1, text='Установка библиотек', width=25, command=install)
 button4 = tkinter.Button(pane7, text='СДЕЛАТЬ РАЗБОР', width=25, command=main_transform)
+
 T1=Text(pane4,width=20,height=20)
 
 w = Label(pane2, text="Теорема")
 in_entry=Entry(pane2,width=170)
-T=Text(pane2,width=70,height=30)   
 
 w.pack(padx=5,pady=5)
 in_entry.pack(ipadx=10,ipady=10,padx=10,pady=10)
 
+'''
+'''
+
+T=Text(pane2,width=70,height=30)  
 T.pack(fill = "both", expand = "yes",ipadx=10,ipady=10,padx=10,pady=10)
 
 w8 = Label(pane4, text="Режим ввода:")
@@ -440,7 +493,8 @@ w8.pack(padx=5,pady=4)
 obj=ttk.Combobox(pane4, 
                             values=[ 
                                     "Теорема в формате Abbyy",
-                                    "Теорема в формате Стэмфорд",
+                                    "Стэмфорд (текст)",
+                                    "Стэмфорд (массив)",
                                     "Разобранное дерево"
                                     ], 
                             )
@@ -467,10 +521,15 @@ button3.pack(padx=10,pady=10)
 button4.pack(padx=10,pady=10)
 button6.pack(padx=10,pady=10)
 T1.pack(fill = "both", expand = "yes",ipadx=10,ipady=10,padx=10,pady=10)
+
 button9 = tkinter.Button(pane1, text='Редактировать config-файл', width=25, command=edit_config)
 button9.pack(padx=10,pady=10)
 button10 = tkinter.Button(pane1, text='Сохранить config-файл', width=25, command=save_config)
 button10.pack(padx=10,pady=10)
+
+button11 = tkinter.Button(pane1, text='Заполнить файл с разборами', width=25, command=fill_razbor)
+button11.pack(padx=10,pady=10)
+
 button10.pack_forget()
 m.mainloop()
 

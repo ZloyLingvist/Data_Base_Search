@@ -1,0 +1,1 @@
+open_interval	function	closed_interval	point	subset	set	segment	polynom	compact

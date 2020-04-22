@@ -1,0 +1,42 @@
+#OBJ
+функция	function
+отрезок	closed_interval
+интервал	open_interval
+множество	set
+подмножество	subset
+точка	point
+многочлен	polynom
+компакт	compact
+сегмент	segment
+компакт	compact
+#ATR
+вещественный	Real
+дифференцировать	d
+непрерывный	C
+любой	forall
+измеримый	L0
+определенный	dom
+равный	equal
+#VERB
+найтись	exists
+существовать	exists
+ограничить	B
+#Constuction
+сохранять непрерывность	C
+производная функция	der
+интегрировать по риман	R
+интегрировать по риман	L
+равномерно непрерывно	uniform_continuity
+первообразный функция	antiderivative
+открытый промежуток	open_interval
+интегрировать	R
+#Спец. слова
+если	if
+то	then
+тогда	then
+выполнить	=>
+#Num
+нуль	0
+#ADV
+непрерывно	C
+пусть	if

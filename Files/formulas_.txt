@@ -26,3 +26,5 @@
 {\displaystyle \textstyle \Phi (x)}
 {\displaystyle F(x)}
 {\displaystyle \int \limits _{a}}^{b}} f(t) dt=F(b)-F(a)}
+{\displaystyle K \subset \mathbb{R}}^n}
+{\displaystyle K}

@@ -156,12 +156,15 @@ class Text_predicator:
                 for i in range(len(self.tmp)-1,-1,-1):
                         for j in range(len(self.tmp[i])-1,-1,-1):
                                 if "forall" in self.tmp[i][j]:
+                                        temp=[]
                                         for k in range(j+1,len(self.tmp[i])):
                                                 if "flat:foreign" in self.tmp[i][k]:
                                                         temp=[self.tmp[i][j],self.tmp[i][k]]
                                                         break
                                         
                                         del self.tmp[i][j]
+                                        if temp==[]:
+                                                continue
                                         if len(self.tmp[0])==1:
                                                 self.tmp.insert(1,temp)
                                         else:
@@ -191,12 +194,25 @@ class Text_predicator:
                                                 temp.append(self.tmp[j])
                                                 del self.tmp[j]
                                         else:
-                                                if "obl" in self.tmp[j][0]:
+                                                if "obl" in self.tmp[j][0] or "amod" in self.tmp[j][0]:
                                                          temp.append(self.tmp[j])
                                                          del self.tmp[j]
-
+                                                         
                                 if len(temp)>1:
                                         temp=self.del_duplicates(temp,1)
+                                        ##объединение по первому слову
+                                        for j in range(len(temp)-1,-1,-1):
+                                                '''если слово'''
+                                                for k in range(len(temp[j])-1,-1,-1):
+                                                       if k>1 and "obl" in temp[j][k] and "flat:foreign" in temp[j][k+1]:
+                                                               del temp[j][k]
+                                                        
+                                                if j<len(temp)-1 and temp[j][0]==temp[j+1][0]:
+                                                        for x in temp[j+1]:
+                                                                temp[j].append(x)
+
+                                                        del temp[j+1]
+                                                
                                         temp=["&"]+temp
 
                                 if temp!=[]:
@@ -220,7 +236,14 @@ class Text_predicator:
                                 if len(temp)==1:
                                         temp=temp[0]
                                 else:
-                                        temp=["&"]+temp
+                                        for j in range(len(temp)-1,-1,-1):
+                                                if temp[j] in self.tmp:
+                                                       del temp[j]
+
+                                        if len(temp)==1:
+                                                temp=temp[0]
+                                        else:
+                                                temp=["&"]+temp
 
                                 if temp!=[]:
                                         self.tmp[i].append(temp)
@@ -232,6 +255,11 @@ class Text_predicator:
 
                                 temp=self.tmp[i+1:j]
                                 del self.tmp[i+1:j]
+                                        
+                                if i<len(self.tmp)-1 and not "then" in self.tmp[i+1][0]:
+                                        temp.append(self.tmp[i+1])
+                                        del self.tmp[i+1]
+                                        
                                 if len(temp)==1:
                                         temp=temp[0]
                                 else:
@@ -242,6 +270,10 @@ class Text_predicator:
                 '''исправляем ошибки, которые не могли быть исправлены ранее'''
                 for i in range(len(self.tmp)-1,-1,-1):
                         for j in range(len(self.tmp[i])-1,-1,-1):
+                                if 'is' in self.tmp[i][j]:
+                                        del self.tmp[i][j]
+                                        continue
+                                
                                 if '@' in self.tmp[i][j]:
                                         self.tmp[i][j]=self.tmp[i][j].split('@')
                                 if 'это::nmod' in self.tmp[i][j]:
@@ -253,7 +285,6 @@ class Text_predicator:
                                                                         del self.tmp[i][j+1]
                                                                         break
 
-                        '''основные предикаты'''
                         if "equal" in self.tmp[i][0]:
                                 if len(self.tmp[i])==4:
                                         self.tmp[i][3],self.tmp[i][2]=self.tmp[i][2],self.tmp[i][3]
@@ -304,6 +335,19 @@ class Text_predicator:
                                         temp.append(x)
 
                         elem=temp
+                        
+                        '''костыль'''
+                        flag=1
+                        for x in elem:
+                                if type(x)!=str:
+                                        flag=0
+                                        break
+                                
+                        if len(elem)>2 and flag==1:
+                                for k in range(1,len(elem)):
+                                        elem[k]=[elem[k]]
+                                flag=0
+                                
                         l[i]=self.clean_recursive(elem)
                     
                     

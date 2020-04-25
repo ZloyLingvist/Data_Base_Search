@@ -31,6 +31,8 @@ class plot_tree:
             else:
                 str1=str1+" "+elem
                 tmp.append(str1)
+                
+        return l
 
     def modify_pass(self,l):
         for i,elem in enumerate(l):

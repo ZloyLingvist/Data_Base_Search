@@ -233,5 +233,3 @@ class Stamford:
         A=Text_predicator()
         p2=A.main(res)
         return p2
-
-

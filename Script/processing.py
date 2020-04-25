@@ -39,7 +39,6 @@ def preprocessing(text,path):
 
     f=open(path+"\\Files\\formulas_.txt","a",encoding="utf-8")
     for i in range(len(lst)):
-            print(lst[i])
             f.write(lst[i]+'\n')
     f.close()
   

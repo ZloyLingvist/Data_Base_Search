@@ -37,15 +37,8 @@ class Ranger:
         tmp=[]
         self.path_to_leaves(a,tmp,str1)
         temp=[]
-        dict1={}
         for x in tmp:
             temp.append(x.split(' '))
-
-        for i in range(len(temp)):
-            for j in range(len(temp[i])):
-                if len(temp[i][j])==1:
-                    if temp[i][j] in dict1.keys():
-                        temp[i][j]=dict1[temp[i][j]]
 
         return temp
 
@@ -64,27 +57,7 @@ class Ranger:
     def algorithm_one(self,a,b):
         tmp1=self.simplifier(a)
         tmp2=self.simplifier(b)
-
-        tmp1copy=copy.deepcopy(tmp1)
-        tmp2copy=copy.deepcopy(tmp2)
-
-        for i in range(len(tmp1copy)-1,-1,-1):
-                if i==0:
-                    del tmp1copy[i]
-                else:
-                    del tmp1copy[i][0]
-
-        for i in range(len(tmp2copy)-1,-1,-1):
-                if i==0:
-                    del tmp2copy[i]
-                else:
-                    del tmp2copy[i][0]
-
-        r1=self.jaccard_coeff(tmp1,tmp2)
-        r2=self.jaccard_coeff(tmp1copy,tmp2)
-        r3=self.jaccard_coeff(tmp1,tmp2copy)
-        r4=self.jaccard_coeff(tmp1copy,tmp2copy)
-        best_score=max(r1,r2,r3,r4)
+        best_score=self.jaccard_coeff(tmp1,tmp2)
         return best_score
 
     def algorithm_two(self,a,b):

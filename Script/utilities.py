@@ -1,3 +1,58 @@
+import os
+path = os.path.dirname(os.path.dirname(__file__))
+
+def arr_etap_one(a):
+    f=open(path+"\\Files\\dicts\words_trash.txt","r",encoding="utf-8")
+    words_trash=[]
+    for line in f:
+        line=line.strip().split()
+        for x in line:
+            words_trash.append(x)
+
+    for i in range(len(a)):
+        if a[i][2] in words_trash:
+            a[i][2]="del"
+            a[i][1]="del"
+
+        if a[i][2]=="-":
+            a[i][2]="-"
+            a[i][5]="-"
+          
+        if a[i][2]=="и":
+            if a[i][4]=="advmod":
+                a[i][2]="del"
+                a[i][1]="del"
+
+            '''
+            if a[i][4]=="cc":
+                a[i][2]=","
+                a[i][1]=","
+            '''
+
+        if a[i][4]=="flat:foreign":
+            a[i][2]=a[i][1]
+            
+        if a[i][2]=="она":
+            for k in range(i,0,-1):
+                if a[k][5]=="NOUN":
+                    if a[k][4]==a[i][4]:
+                        a[i][2]=a[k][2]
+                        a[i][1]=a[k][2]
+
+        if a[i][2]=="это":
+            if i<len(a)-1 and a[i+1][5]=="NOUN":
+                for k in range(i,0,-1):
+                    if a[k][2]==a[i+1][2]:
+                        for p in range(k,len(a)):
+                            if a[p][4]=="flat:foreign":
+                                if a[p][3]==a[k][0]:
+                                    a[i][2]=a[p][2]
+                                    a[i][1]=a[p][1]
+                                    a[i][3]=a[i+1][0]
+                                    a[i][4]=a[p][4]
+
+    return a
+
 def swap_to_first(arr,sign):
     for i in range(len(arr)):
         if arr[i]==sign:

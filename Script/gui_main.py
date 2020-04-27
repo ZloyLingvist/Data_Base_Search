@@ -33,40 +33,7 @@ def _onKeyRelease(event):
 
 '''Имя в файле конфигурации (параметр Infile)'''
 
-def fill_razbor():
-     lst=[]
-     f=open(config_file_path,"r",encoding="utf-8")
-     for line in f:
-            line=line.split(":")
-            if line[0]=="Infile":
-                infile=line[1].strip()
 
-     f.close()
-     v0=obj.get()
-
-     f=open(path+"\\Infile.txt","r",encoding="utf-8")
-     for line in f:
-            lst.append(preprocessing(line.strip(),path))
-     f.close()
-
-     nlp = stanfordnlp.Pipeline(processors='tokenize,mwt,lemma,pos,depparse', models_dir=path, lang="ru",treebank='ru_syntagrus', use_gpu=True, pos_batch_size=3000)
-     f=open(path+"\\Infile_arr.txt","w",encoding="utf-8")
-     a=[]
-     i=0
-     for line in lst:
-            doc = nlp(line)
-            i=0
-            a=[]
-            for sent in doc.sentences:
-                for wrd in sent.dependencies:
-                    a.append([str(i+1),wrd[2].text,wrd[2].lemma,str(wrd[2].governor),wrd[2].dependency_relation,wrd[2].upos])
-                    i=i+1
-
-            f.write(str(a))
-            f.write('\n')
-                
-     f.close()
-     T1.insert(tkinter.END,'Закончил!')
 
      
 
@@ -531,7 +498,7 @@ button9.pack(padx=10,pady=10)
 button10 = tkinter.Button(pane1, text='Сохранить config-файл', width=25, command=save_config)
 button10.pack(padx=10,pady=10)
 
-button11 = tkinter.Button(pane1, text='Заполнить файл с разборами', width=25, command=fill_razbor)
+button11 = tkinter.Button(pane1, text='Заполнить файл с разборами', width=25, command=save_config)
 button11.pack(padx=10,pady=10)
 
 button10.pack_forget()

@@ -1,0 +1,2 @@
+Пусть функция {\displaystyle f(x)} интегрируема на отрезке {\displaystyle [a;b]} , и ограничена на нём числами {\displaystyle m} и {\displaystyle M} так, что {\displaystyle m\leq f(x)\leq M} , тогда существует такое число {\displaystyle \mu } , {\displaystyle m\leq \mu \leq M}, что {\displaystyle \int \limits _{a}^{b}f(x)dx=\mu (b-a)} .
+

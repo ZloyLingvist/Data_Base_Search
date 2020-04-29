@@ -1,4 +1,14 @@
+from formula_tree import *
+
 def preprocessing(text,path):
+    f=open(path+"\\Files\\config.ini","r",encoding="utf-8")
+    for line in f:
+        line=line.split(':')
+        if line[0]=="Formulas_razbor":
+                lst_=line[1].strip()
+                break
+    f.close()
+
     ######## считываем из базы формул #####
     lst_gl=[]
     f=open(path+"\\Files\\formulas_.txt","r",encoding="utf-8")
@@ -41,7 +51,17 @@ def preprocessing(text,path):
     for i in range(len(lst)):
             f.write(lst[i]+'\n')
     f.close()
-  
+
+    A=Formula_Tree()
+    f=open(path+"\\Files\\"+lst_,"a",encoding="utf-8")
+    for i in range(len(lst)):
+        try:
+            f.write(str(A.main(lst[i]))+'\n')
+        except:
+            f.write(str([lst[i]])+'\n')
+
+    f.close()
+        
     return str2
 
 def combine_formula_and_text_f(l,fl):
@@ -81,7 +101,11 @@ def combine_formula_and_text(formula,path):
     lst_gl=[]
     f=open(path+"\\Files\\"+lst_,"r",encoding="utf-8")
     for line_ in f:
-        lst_gl.append(eval(line_.strip()))
+        if len(line_.strip())>0:
+            try:
+                lst_gl.append(eval(line_.strip()))
+            except:
+                lst_gl.append([line_.strip()])
     f.close()
 
     r=combine_formula_and_text_f(formula,lst_gl)

@@ -194,10 +194,20 @@ class Text_predicator:
                                                 temp.append(self.tmp[j])
                                                 del self.tmp[j]
                                         else:
-                                                if "obl" in self.tmp[j][0] or "amod" in self.tmp[j][0]:
+                                                if "obl" in self.tmp[j][0] or "amod" in self.tmp[j][0] or "@" in self.tmp[j][0]:
+                                                         if "@" in self.tmp[j][0]:
+                                                                 self.tmp[j][0]=self.tmp[j][0].replace("@","")
                                                          temp.append(self.tmp[j])
                                                          del self.tmp[j]
-                                                         
+
+                             
+                                if i<len(self.tmp)-1:
+                                        if "exists::conj" in self.tmp[i+1][0] or "<-" in self.tmp[i+1][0]:
+                                                if "<-" in self.tmp[i+1][0]:
+                                                        self.tmp[i+1][0]=self.tmp[i+1][0].replace("<-","")
+                                                temp.append(self.tmp[i+1])
+                                                del self.tmp[i+1]
+                               
                                 if len(temp)>1:
                                         temp=self.del_duplicates(temp,1)
                                         ##объединение по первому слову
@@ -215,9 +225,11 @@ class Text_predicator:
                                                 
                                         temp=["&"]+temp
 
+                        
                                 if temp!=[]:
                                         if len(temp)==1:
                                                 temp=temp[0]
+
                                         self.tmp[i].append(temp)
 
                                 '''если конструкция н-р состоит только из forall и имени параметр'''
@@ -226,8 +238,8 @@ class Text_predicator:
                                                 temp=self.tmp[i][1]
                                                 self.tmp[i]=self.tmp[i][0]
                                                 self.tmp.insert(i+1,temp)
-                                              
-                                                        
+
+                              
                                 
 
                         if "then" in self.tmp[i][0]:
@@ -246,6 +258,10 @@ class Text_predicator:
                                                 temp=["&"]+temp
 
                                 if temp!=[]:
+                                        for k in range(len(temp)-1,-1,-1):
+                                                if temp[k]==[]:
+                                                        del temp[k]
+                                                        
                                         self.tmp[i].append(temp)
 
                         if "if" in self.tmp[i][0]:
@@ -266,16 +282,67 @@ class Text_predicator:
                                         temp=["&"]+temp
                                 self.tmp[i].append(temp)
 
+                       
+
         def correction(self):
                 '''исправляем ошибки, которые не могли быть исправлены ранее'''
                 for i in range(len(self.tmp)-1,-1,-1):
+                        if len(self.tmp[i])==1:
+                                if self.tmp[i][0].count(" ")>0:
+                                        str1=""
+                                        for m in range(len(self.tmp[i][0])):
+                                                if self.tmp[i][0][m]==" ":
+                                                        continue
+                                                str1=str1+self.tmp[i][0][m]
+                                                
+                                        self.tmp[i][0]=str1
+                                                
                         for j in range(len(self.tmp[i])-1,-1,-1):
-                                if 'is' in self.tmp[i][j]:
-                                        del self.tmp[i][j]
-                                        continue
+                                if 'равенство' in self.tmp[i][j]:
+                                       del self.tmp[i][j]
+                                if 'принимать' in self.tmp[i][j]:
+                                        for p in range(len(self.tmp[i])-1,-1,-1):
+                                                if 'значение' in self.tmp[i][p]:
+                                                        del self.tmp[i][p]
+                                                        self.tmp[i][j]="values"
+                                                        break
+                                
+                                if 'values' in self.tmp[i][j]:
+                                        for k in range(len(self.tmp[i])-1,-1,-1):
+                                                if 'nsubj' in self.tmp[i][k]:
+                                                        del self.tmp[i][k]
+
+                                        self.tmp[i].insert(1,'f')
+                                               
+                                        if len(self.tmp[i])>2 and not 'nummod:gov' in self.tmp[i][2]:
+                                                self.tmp[i].insert(2,'1')
+
+                                if 'between' in self.tmp[i][j] and not 'принимать' in self.tmp[i][0]:
+                                        self.tmp[i][j],self.tmp[i][0]=self.tmp[i][0],self.tmp[i][j]
+
+                                        for k in range(len(self.tmp[i])):
+                                                if 'и::cc' in self.tmp[i][k]:
+                                                        self.tmp[i]=[self.tmp[i][0],self.tmp[i][1],[self.tmp[i][k-1],self.tmp[i][k+1]]]
+                                                        break
+
+                                                                    
+                                if 'is' in self.tmp[i][j] and not "exists" in self.tmp[i][j]:
+                                      del self.tmp[i][j]
+                                      continue
                                 
                                 if '@' in self.tmp[i][j]:
                                         self.tmp[i][j]=self.tmp[i][j].split('@')
+                                        if 'antiderivative' in self.tmp[i][j][0]:
+                                                tmp=['@function',self.tmp[i][j][1]]
+                                                for k in range(len(self.tmp)):
+                                                        for m in range(len(self.tmp[k])):
+                                                                if self.tmp[k][m]==self.tmp[i][j][1]:
+                                                                        self.tmp[k][m]="phi::flat:foreign"
+
+                                                self.tmp[i][j][1]="phi::flat:foreign"
+                                                self.tmp.insert(i,tmp)
+                                                
+                                                
                                 if 'это::nmod' in self.tmp[i][j]:
                                         if j<len(self.tmp[i])-1:
                                                 for k in range(i):
@@ -288,13 +355,15 @@ class Text_predicator:
                         if "equal" in self.tmp[i][0]:
                                 if len(self.tmp[i])==4:
                                         self.tmp[i][3],self.tmp[i][2]=self.tmp[i][2],self.tmp[i][3]
-                        
-                        if "-::punct" in self.tmp[i]:
-                                for j in range(len(self.tmp[i])-1,-1,-1):
-                                        if "где" in self.tmp[i][j] or "-::punct" in self.tmp[i][j]:
-                                                del self.tmp[i][j]
 
-                                        self.tmp[i].insert(0,"type")
+                        if "–::punct" in self.tmp[i]:
+                                self.tmp[i].insert(0,"type")
+                                for k in range(len(self.tmp[i])-1,-1,-1):
+                                        if self.tmp[i][k]=="type":
+                                                continue
+                                        if not "formula" in self.tmp[i][k] and not "flat:foreign" in self.tmp[i][k]:
+                                                del self.tmp[i][k]
+                        
 
                         if "=>" in self.tmp[i][0]:
                                 k=round(0.5*len(self.tmp[i]))+1
@@ -305,6 +374,8 @@ class Text_predicator:
                                 if len(b)==1:
                                         b=b[0]
                                 self.tmp[i]=["=>",a,b]
+
+                        
                                         
 
                                

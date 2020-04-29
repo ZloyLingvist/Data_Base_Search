@@ -1,10 +1,10 @@
-[['if', ['&', ['C', [['f', ['x']]], [['closed_interval', ['a'], ['b']]]], ['closed_interval', ['a'], ['b']], ['function', ['f', ['x']]], ['d', ['a', 'b']], ['open_interval', ['a', 'b']]]], ['then', ['&', [['\\in', ['c'], ['\\closedinterval', ['a', 'b']]], ['point'], ['такой']], ['point', ['\\in', ['c'], ['\\closedinterval', ['a', 'b']]]], [['=', ["f'", ['c']], ['0']], 'что']]]]
+[['if', ['&', ['C', [['f', ['x']]], [['closed_interval', ['a'], ['b']]]], ['closed_interval', ['a'], ['b']], ['function', ['f', ['x']]], ['d', ['a', 'b']], ['open_interval', ['a', 'b']], [['=', ['f', ['a']], ['f', ['b']]]]]], ['then', ['exists', ['\\in', ['c'], ['\\closedinterval', ['a', 'b']]], 'point', 'такой', ['&', ['point', ['\\in', ['c'], ['\\closedinterval', ['a', 'b']]]], [['=', ["f'", ['c']], ['0']]]]]]]
 
-[['if', ['&', ['function', 'f'], ['Real', 'f'], ['C', [['closed_interval', ['a'], ['b']]], ['f']], ['closed_interval', ['a'], ['b']], ['d', [['a', 'b']], ['принимать'], ['конец'], ['отрезка'], [['closed_interval', ['a'], ['b']]], ['одинаковый значение']], ['open_interval', ['a', 'b']]]], ['then', [['a', 'b'], ['equal'], ['точказв'], ['der'], ['0'], ['значение']]]]
+[['if', ['&', ['function', 'f'], ['Real', 'f'], ['C', ['closed_interval', ['a'], ['b']]], ['closed_interval', ['a'], ['b']], ['d', ['f'], ['1'], [['a', 'b']], ['values'], ['конец'], ['отрезка'], [['closed_interval', ['a'], ['b']]]], ['open_interval', ['a', 'b']]]], ['then', ['exists', ['a', 'b'], 'equal', 'точказв', 'der', '0', ['open_interval', ['a', 'b']]]]]
 
-[['if', ['&', ['d', ['f'], ['open_interval']], ['function', 'f'], ['C', ['конец'], ['это'], ['промежутка']], ['принимать', ['одинаковый значение'], [['=', ['f', ['a']], ['f', ['b']]]]]]], ['then', ['&', ['point', ['equal'], ['a'], ['der'], ['0'], [['=', ["f'", ['c']], ['0']]]], ['point', 'a']]]]
+[['if', ['&', ['d', ['f'], ['open_interval']], ['function', 'f'], ['C', ['конец'], ['это'], ['промежутка']], ['values', ['f'], ['1'], [['=', ['f', ['a']], ['f', ['b']]]]]]], ['then', ['exists', 'point', 'equal', 'a', 'der', '0', ['=', ["f'", ['c']], ['0']], ['point', 'a']]]]
 
-[['if', ['&', ['C', ['f'], [['closed_interval', ['a'], ['b']]]], ['function', 'f'], ['d', ['f'], ['point'], ['весь'], [['closed_interval', ['a'], ['b']]], ['и'], [['=', ['f', ['a']], ['f', ['b']]]]], ['point', ['=', ['f', ['a']], ['f', ['b']]]], ['point', ['closed_interval', ['a'], ['b']]], ['внутренний', ['=', ['f', ['a']], ['f', ['b']]]]]], ['then', ['&', [['\\in', ['c'], ['a', 'b']]], ['point', ['\\in', ['c'], ['a', 'b']]], ['point', ['{\\displaystyle f^{\\prime}}(c)=0}']]]]]
+[['if', ['&', ['C', ['f'], [['closed_interval', ['a'], ['b']]]], ['function', 'f'], ['d', ['f'], ['point'], ['весь'], [['closed_interval', ['a'], ['b']]], ['и'], [['=', ['f', ['a']], ['f', ['b']]]]], ['point', ['=', ['f', ['a']], ['f', ['b']]]], ['point', ['closed_interval', ['a'], ['b']]], ['внутренний', ['=', ['f', ['a']], ['f', ['b']]]]]], ['then', ['&', ['exists', ['\\in', ['c'], ['a', 'b']], ['point', ['\\in', ['c'], ['a', 'b']]]], ['point', ['{\\displaystyle f^{\\prime}}(c)=0}']]]]]
 
 [['if', ['&', ['R', ['f'], ['A']], ['set', 'A'], ['function', 'f']]], ['then', ['forall', 'A′', ['&', ['L0', 'A′'], ['subset', 'A′'], ['R', ['f'], ['A′']]]]]]
 
@@ -14,17 +14,17 @@
 
 ['forall', ['x'], ['=>', ['Real', ['x']], ['equal', ['e', '^', ['*', 'i', 'x']], ['+', ['\\cos', 'x'], ['*', ['i'], ['\\sin', 'x']]]]]]
 
-[['if', ['&', ['function'], ['function', ['f']], ['C', 'function'], ['dom', ['closed_interval', ['a'], ['b']]], ['closed_interval', ['a'], ['b']]]], ['then', ['&', ['forall', ['p'], ['&', ['polynom', ['p']], [['{\\displaystyle \\varepsilon >0}'], ['polynom'], ['такой'], [['p']], ['коэффициент'], ['с'], ['Real']]]], ['=>', ['что', [['x']], ['весь'], ['из']], [['closed_interval', ['a'], ['b']], ['<', ['\\abs', ['-', ['f', ['x']], ['p', ['x']]]], ['\\varepsilon']]]]]]]
+[['if', ['&', ['function'], ['function', ['f']], ['C', 'function'], ['dom', ['closed_interval', ['a'], ['b']]], ['closed_interval', ['a'], ['b']]]], ['then', ['&', ['forall', ['p'], ['&', ['polynom', ['p']], ['exists', [['{\\displaystyle \\varepsilon >0}']], ['polynom'], ['такой'], [['p']], ['коэффициент'], ['с'], ['Real']]]], ['=>', ['что', [['x']], ['весь'], ['из']], [['closed_interval', ['a'], ['b']], ['<', ['\\abs', ['-', ['f', ['x']], ['p', ['x']]]], ['\\varepsilon']]]]]]]
 
-[['if', ['&', ['C', [['f', ['x']]], [['closed_interval', ['a'], ['b']]]], ['segment', ['closed_interval', ['a'], ['b']]], ['function', ['f', ['x']]]]], ['then', ['&', ['forall', ['P', '_', ['n'], ['x']], ['&', ['polynom', ['P', '_', ['n'], ['x']]], [['{\\displaystyle \\varepsilon >0}'], [['P', '_', ['n'], ['x']]], ['polynom'], ['номер'], ['с'], [['n']]]]], ['зависеть', ['от'], [['\\varepsilon']]], [['<', ['\\abs', ['-', ['P', '_', ['n'], ['x']], ['f', ['x']]]], ['\\varepsilon']], 'что']]]]
+[['if', ['&', ['C', [['f', ['x']]], [['closed_interval', ['a'], ['b']]]], ['segment', ['closed_interval', ['a'], ['b']]], ['function', ['f', ['x']]]]], ['then', ['&', ['forall', ['P', '_', ['n'], ['x']], ['&', ['polynom', ['P', '_', ['n'], ['x']]], ['exists', [['{\\displaystyle \\varepsilon >0}']], [['P', '_', ['n'], ['x']]], ['polynom'], ['номер'], ['с'], [['n']]]]], ['зависеть', ['от'], [['\\varepsilon']]], [['<', ['\\abs', ['-', ['P', '_', ['n'], ['x']], ['f', ['x']]]], ['\\varepsilon']], 'что']]]]
 
 [['uniform_continuity', ['&', ['function', ['compact'], ['f']], ['function', 'f'], ['dom', 'f'], ['C', 'f']]]]
 
-[['if', ['&', ['compact'], ['type', ['compact'], [['\\in', ['E'], ['\\mathbb', ['^', 'R', 'n']]]]], ['C', ['и'], [['f']], [['E']], ['компакт']], ['function', ['f']]]], ['then', ['uniform_continuity', ['f'], ['E'], 'компакт', ['&']]]]
+[['if', ['&', ['compact'], ['compact', [['\\in', ['E'], ['\\mathbb', ['^', 'R', 'n']]]], ['-']], ['C', ['и'], [['f']], [['E']]], ['function', ['f']]]], ['then', ['uniform_continuity', ['f'], ['E'], ['&']]]]
 
-[['if', ['&', ['d', ['f'], ['A']], ['point', 'A'], ['function', 'f']]], ['then', ['C', ['она'], ['point'], ['этот'], ['точка']]]]
+[['if', ['&', ['d', ['f'], ['A']], ['point', 'A'], ['function', 'f']]], ['then', ['C', ['она'], ['point'], ['этот']]]]
 
-[['if', ['&', ['C', [['f', ['x']]], [['closed_interval', ['a'], ['b']]], ['closed_interval'], ['и'], [['\\Phi', ['x']]], ['она']], [['\\Phi', ['x']]], ['closed_interval', ['\\Phi', ['x']]], ['antiderivative', ['\\Phi', ['x']]], ['closed_interval', ['a'], ['b']]]], ['then', [['equal', ['\\int', ['_', 'a'], ['^', 'b'], ['f', 'x'], ['dx']], ['=', ['-', ['\\Phi', 'b'], ['\\Phi', 'a']], ['\\Phi', ['x', ['a'], ['b']]]]]]]]
+[['if', ['&', ['C', [['f', ['x']]], [['closed_interval', ['a'], ['b']]], ['closed_interval'], ['и'], ['phi'], ['она']], ['phi'], ['closed_interval', 'phi'], ['@function', ['\\Phi', ['x']]], ['antiderivative', 'phi'], ['closed_interval', ['a'], ['b']]]], ['then', [['equal', ['\\int', ['_', 'a'], ['^', 'b'], ['f', 'x'], ['dx']], ['=', ['-', ['\\Phi', 'b'], ['\\Phi', 'a']], ['\\Phi', ['x', ['a'], ['b']]]]]]]]
 
-[['if', ['&', ['C', [['f', ['x']]], ['промежуток'], [['closed_interval', ['a'], ['b']]]], ['function', ['f', ['x']]]]], ['then', ['&', [['equal', ['\\int', ['_', 'a'], ['^', 'b'], ['f', 't'], ['dt']], ['-', ['F', 'b'], ['F', 'a']]]], ['antiderivative', 'где'], ['type', ['antiderivative'], [['F', ['x']]]], [['f', ['x']]], ['antiderivative', ['f', ['x']]]]]]
+[['if', ['&', ['C', [['f', ['x']]], [['interval', ['a'], ['b']]]], ['interval', ['a'], ['b']], ['function', ['f', ['x']]]]], ['then', ['&', [['equal', ['\\int', ['_', 'a'], ['^', 'b'], ['f', 't'], ['dt']], ['-', ['F', 'b'], ['F', 'a']]]], ['antiderivative', 'где'], ['antiderivative', [['F', ['x']]], ['-']], ['phi'], ['@function', ['f', ['x']]], ['antiderivative', 'phi']]]]
 

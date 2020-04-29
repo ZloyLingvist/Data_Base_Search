@@ -1,5 +1,6 @@
 from text_predicator import *
 from text_tree import *
+from utilities import *
 
 import os
 path = os.path.dirname(os.path.abspath(__file__))
@@ -20,7 +21,8 @@ param2 - параметр, отвечающий на каком этапе ну�
 class Stamford:
     def __init__(self):
         self.a=[]
-
+        self.obj=[]
+        
         f=open(dict_path+"dicts/words_obj.txt","r",encoding="utf-8")
         self.words_obj=[]
         self.words_replace=[]
@@ -32,6 +34,11 @@ class Stamford:
             self.words_obj.append(line)
         f.close()
 
+        f=open(dict_path+"dicts/obj.txt","r",encoding="utf-8")
+        for line in f:
+            self.obj=line.split()
+
+        f.close()
         
         f=open(dict_path+"dicts/words_replace.txt","r",encoding="utf-8")
         for line in f:
@@ -48,6 +55,7 @@ class Stamford:
             line[4]=line[4].strip()
             self.words_construction.append(line)
         f.close()
+
         
     def split(self,a):
         tst=[]
@@ -64,7 +72,12 @@ class Stamford:
             if a[i][1]=="и":
                 if a[i+1][5]=="VERB":
                         a[i]=[a[i][0],',', ',', '1', 'punct', 'PUNCT']
-                               
+
+            if a[i][2]==",":
+                if a[i+1][2]=="заключенный":
+                    a[i][2]='!'
+                    a[i][1]="!"
+                  
         for x in a:
             tst_.append(x)
             if x[1]==',':        
@@ -130,19 +143,6 @@ class Stamford:
 
     def correction(self):
         for i in range(len(self.a)):
-            for j in range(len(self.a[i])):
-                if self.a[i][j][5]=="PUNCT":
-                    self.a[i][j][2],self.a[i][j][1]="del","del"
-                    
-                if self.a[i][j][5]=="ADJ":
-                    if self.a[i][j][3]=="0" or (self.a[i][j][3]!="0" and self.a[i][int(self.a[i][j][3])-1][5]!="NOUN"):
-                        if i>0:
-                            for k in range(len(self.a[i-1])-1,0,-1):
-                                if self.a[i-1][k][5]=="NOUN":
-                                    self.a[i].append([str(len(self.a)),self.a[i-1][k][1],self.a[i-1][k][2],self.a[i][j][0],self.a[i-1][k][4],self.a[i-1][k][5]])
-                                    break
-       
-        for i in range(len(self.a)):
              for j in range(len(self.a[i])):
                 for k in range(len(self.words_construction)):
                      if self.words_construction[k][0]==self.a[i][j][2]:
@@ -167,7 +167,7 @@ class Stamford:
                                  ids=int(self.words_construction[k][4])-1
                                  self.a[i][j+ids][2],self.a[i][j+ids][1]=str1,str1
                              
-                                          
+                     
                 for k in range(len(self.words_obj)):
                     if self.words_obj[k][0]==self.a[i][j][1]:
                         flag=1
@@ -180,7 +180,6 @@ class Stamford:
                         if flag==1:
                             self.a[i].append([str(len(self.a[i])+1),self.words_obj[k][1],self.words_obj[k][1],self.a[i][j][0],'flat:foreign','PROPN'])
                             self.a[i][-1],self.a[i][-2]=self.a[i][-2],self.a[i][-1]
-
         
         for i in range(len(self.a)):
              for j in range(len(self.a[i])):
@@ -191,6 +190,36 @@ class Stamford:
                 if j<len(self.a[i])-1:
                     if int(self.a[i][j][0])>int(self.a[i][j+1][0]):
                         self.a[i][j],self.a[i][j+1]=self.a[i][j+1],self.a[i][j]
+
+        for i in range(len(self.a)):
+             for j in range(len(self.a[i])):
+                 if "formula" in self.a[i][j][2]:
+                     if j>0 and self.a[i][j-1][2] in self.obj:
+                         if self.a[i][j-1][3]==self.a[i][j][0]:
+                             self.a[i][j-1][3]=self.a[i][j][3]
+                             self.a[i][j][3]=self.a[i][j-1][0]
+
+        for i in range(len(self.a)):
+            for j in range(len(self.a[i])):
+                if self.a[i][j][5]=="PUNCT" and self.a[i][j][2]!='–':
+                    self.a[i][j][2],self.a[i][j][1]="del","del"
+
+                if self.a[i][j][2]=="равенство":
+                    if j<len(self.a[i])-1:
+                        if self.a[i][j+1][4]=="flat:foreign":
+                            self.a[i][j][2]=self.a[i][j+1][2]
+                            self.a[i][j][1]=self.a[i][j+1][1]
+                            self.a[i][j+1][2]="del"
+                            self.a[i][j+1][1]="del"
+
+                if self.a[i][j][2]=="справедливо":
+                     self.a[i][j][2]="del"
+                     self.a[i][j][1]="del"
+              
+        for i in range(len(self.a)):
+             for j in range(len(self.a[i])):
+                 if self.a[i][j][0]==self.a[i][j][3]:
+                     self.a[i][j][0]=str(int(self.a[i][j][3])-1)
 
         
                          
@@ -206,6 +235,7 @@ class Stamford:
                     a.append([str(i+1),wrd[2].text,wrd[2].lemma,str(wrd[2].governor),wrd[2].dependency_relation,wrd[2].upos])
                     i=i+1
 
+        a=arr_etap_one(a)
         if mode==0:
             roots=0
             for i in range(len(a)):
@@ -220,16 +250,43 @@ class Stamford:
         self.correction()
         roots=[]
         res=[]
-        for i in range(len(self.a)):
-            for j in range(len(self.a[i])):
-                if self.a[i][j][3]=="0" and self.a[i][j][1]!="del":
-                    roots.append(self.a[i][j][0])
 
         for i in range(len(self.a)):
+            flag=0
+            for j in range(len(self.a[i])):
+                if self.a[i][j][3]=="0" and self.a[i][j][1]!="del":
+                    flag=1
+                    roots.append(self.a[i][j][0])
+            if flag==0:
+                    roots.append(self.a[i][0][0])
+
+        
+        for i in range(len(self.a)):
+            if self.a[i][0][1]=="причем" or self.a[i][0][1]=="что":
+                if len(self.a[i])==3:
+                    if self.a[i][0][1]=="что":
+                        res.append(['<-'+self.a[i][1][1]])
+                    else:
+                        res.append([self.a[i][1][1]])
+                    continue
+                
             A=Text_analyzer(self.a[i],roots[i])
             r=A.make_tree()
             res.append(r)
 
+
         A=Text_predicator()
         p2=A.main(res)
         return p2
+
+#text='Пусть функция {\displaystyle f} непрерывна на отрезке {\displaystyle [a,b]} , причем {\displaystyle f(a) \neq f(b)} , тогда для любого числа {\displaystyle С}, заключенного между {\displaystyle f(a)} и {\displaystyle f(b)} , найдется точка {\displaystyle \gamma \in (a,b)}, что {\displaystyle f(\gamma)=C} .'
+
+'''
+#text="Если  formula_31 – любая первообразная функции formula_9,  то справедливо равенство formula_33 ."
+text="Если непрерывная функция, определённая на вещественном интервале, принимает два значения, то она принимает любое значение между ними ."
+'''
+#text="Пусть функция formula_1 непрерывна на отрезке formula_2 , причем formula_3 , тогда для любого числа formula_4, заключенного между formula_5 и formula_6 , найдется точка formula_7, что formula_8 ."
+#text="Пусть функция  дифференцируема в открытом промежутке , на концах этого промежутка сохраняет непрерывность и принимает одинаковые значения: formula_1 , тогда существует точка  , в которой производная функции  равна нулю : formula_3  ."
+
+#A=Stamford()
+#A.main(text,1)

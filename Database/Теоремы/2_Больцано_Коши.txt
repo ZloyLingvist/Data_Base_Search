@@ -1,0 +1,3 @@
+Если непрерывная функция, определённая на вещественном интервале, принимает два значения, то она принимает и любое значение между ними.
+ 
+Пусть функция {\displaystyle f} непрерывна на отрезке {\displaystyle [a,b]} , причем {\displaystyle f(a) \\neq f(b)} , тогда для любого числа {\displaystyle С}, заключенного между {\displaystyle f(a)} и {\displaystyle f(b)} , найдется точка {\displaystyle \gamma \in (a,b)}, что {\displaystyle f(\gamma)=C} .

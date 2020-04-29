@@ -1,0 +1,4 @@
+Если {\displaystyle \textstyle f(x)} непрерывна на отрезке {\displaystyle \left[a,b\right]}  и {\displaystyle \textstyle \Phi (x)} — любая её первообразная на этом отрезке, то имеет место равенство {\displaystyle \int \limits _a^b f(x)\,dx=\Phi (b)-\Phi (a)={\Bigg .}\Phi (x){\Bigg |}_{a}^{b}} .
+
+Если  {\displaystyle F (x)} – любая первообразная функции {\displaystyle f (x)},  то справедливо равенство {\displaystyle \int \limits _a^x f(t)\,dt=F(x)-F(a)} .
+

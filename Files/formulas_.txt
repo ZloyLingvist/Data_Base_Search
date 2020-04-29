@@ -25,6 +25,15 @@
 {\displaystyle \textstyle f(x)}
 {\displaystyle \textstyle \Phi (x)}
 {\displaystyle F(x)}
-{\displaystyle \int \limits _{a}}^{b}} f(t) dt=F(b)-F(a)}
-{\displaystyle K \subset \mathbb{R}}^n}
-{\displaystyle K}
+{\displaystyle \int \limits _{a}^{b} f(t) dt=F(b)-F(a)}
+
+{\displaystyle f(a) \\neq f(b)}
+{\displaystyle f(b)}
+{\displaystyle f(a)}
+{\displaystyle С}
+{\displaystyle f(\gamma)=C}
+{\displaystyle \gamma \in (a,b)}
+{\displaystyle \int \limits _a^b f(x)\,dx=\Phi (b)-\Phi (a)={\Bigg .}}\Phi (x){\Bigg |}}_{a}}^{b}}}
+{\displaystyle F (x)}
+{\displaystyle \int \limits _a^x f(t)\,dt=F(x)-F(a)}
+{\displaystyle f (x)}

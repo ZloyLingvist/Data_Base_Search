@@ -1,5 +1,6 @@
 from tkinter import *
 from gui_function import *
+from draw_graph import *
 import os
 
 path = os.path.dirname(os.path.dirname(__file__))
@@ -38,17 +39,19 @@ def test():
     in_entry_mid_left.insert(END,'General_Test')
     in_entry_mid_left.insert(END,'\n\n')
         
-    r,d=test_general_main()
-    
+    r,d,c=test_general_main() #r качество ранжирования в цифрах ,d - таблицы ранжирования
+
     for line in r:
         in_entry_mid_right.insert(END,line)
         in_entry_mid_right.insert(END,'\n\n')
 
-    for line in d:
-        in_entry_mid_left.insert(END,"Result of parse:"+str(line[0][0])+'\n\n')
-        in_entry_mid_left.insert(END,"Index of testing:"+str(line[0][2]+1)+'\n\n')
-        in_entry_mid_left.insert(END,"Where index can be:"+str(line[0][3])+'\n\n')
-        in_entry_mid_left.insert(END,"Ranking function result:"+str(line[1])+'\n\n')
+    for i in range(len(c)):
+        in_entry_mid_left.insert(END,"Result of parse:"+str(c[i][0])+'\n\n')
+        in_entry_mid_left.insert(END,"Index of testing:"+str(c[i][2]+1)+'\n\n')
+        in_entry_mid_left.insert(END,"Where index can be:"+str(c[i][3])+'\n\n')
+        in_entry_mid_left.insert(END,"Ranking function result (Algo #1):"+str(d[i][0])+'\n\n')
+        in_entry_mid_left.insert(END,"Ranking function result (Algo #2):"+str(d[i][1])+'\n\n')
+        in_entry_mid_left.insert(END,"Ranking function result (Algo #3):"+str(d[i][2])+'\n\n')
         in_entry_mid_left.insert(END,'\n\n')
 
     in_entry_mid_right.insert(END,'Test_of_predicate_module_and_ranking')
@@ -68,11 +71,13 @@ def test():
     f.close()
 
     in_entry_mid_left.insert(END,"Test_of_predicate_module_and_ranking\n\n")
+    
     for line in lst_:
-         in_entry_mid_left.insert(END,str(line))
+         in_entry_mid_left.insert(END,str(line)+'\n\n')
 
     for line in lst:
-         in_entry_mid_right.insert(END,str(line)+'\n\n')
+         line=line.split('\t')
+         in_entry_mid_right.insert(END,str(line[0])+'\t'+str(line[1])+'\n\n')
     
 
 def load_and_run():
@@ -196,12 +201,8 @@ def picture():
     else:
         try:
             text=eval(text)
-            v=make_tree(text,"pic_1","")
-            
-            if v==-1:
-                in_entry_down.insert(END,'Не удалось визуализировать дерево'+"\n\n")
-                return 0
-        
+            A=plot_tree(text,"pic_1","")
+            A.main("formula")
             t = Toplevel()
             img_ = PhotoImage(file=path+'\\Tree\\pic_1.png')
             label=Label(t,image=img_)

@@ -35,16 +35,17 @@ def testing_general_rank(filein,fileout,d,ra):
            db.append(eval(line.strip()))
     f.close()
 
+    A=Ranger()
     a=d[0]
     index_list=d[1]
+    ranking_ans=[]
    
-    A=Ranger()
     for i in range(len(db)):
         c=A.main(a,db[i],ra)
         ranking.append([str(i+1),c])
 
     ranking.sort(key = lambda x: x[1],reverse=True)
-    ranking_ans=[]
+        
     for x in ranking:
         ranking_ans.append(x[0])
         
@@ -63,7 +64,8 @@ def testing_general_rank(filein,fileout,d,ra):
 
         if flag==0:
             mark=mark-1
-               
+
+    mark=1+mark/len(ranking)
     mark=float("{:.2f}".format(mark))
     return str(mark),ranking_ans
 
@@ -166,35 +168,55 @@ def razbor_theorem(theorem):
     return c
 
     
-def test_general_main():
+def test_general_sub_main(mode):
     generate_label_list()
     make_razbor(path_db+"theorem_list.txt",path_db+"theorem_list_arr.txt")
     make_database(path_db+"theorem_list_arr.txt",path_db+"theorem_list_arr_razbor.txt")
 
     tmp=[]
     temp=[]
-    temp_ra=[2]
+    temp_ra=[0,2]
     res=[]
-    for i in range(8):
-        for j in range(len(temp_ra)):
-            temp.append(0)
+    res_=[]
+    tmp_res=[]
+    
+    temp=[]
+    temp_=[]
 
-        res.append(temp)
-        temp=[]
+    read_data_list=[]
+    for k in range(8):
+        d=reading_data(str(k+1),"arr")
+        read_data_list.append(d)
 
-    for i in range(len(temp_ra)):
-        for k in range(8):
-                d=reading_data(str(k+1),"arr")
-                if d[0]=='-1':
-                    res[k][i]=-1
-                    continue
+    d=read_data_list.copy()
+    for k in range(8):
+        if d[k][0]=='-1':
+            res[k][i]=-1
+            res_[k][i]=-1
+            continue
 
-                a,b=testing_general_rank(path_db+"theorem_list_arr_razbor.txt",path+"theorem_list_arr_rank.txt",d,temp_ra[i])
-                tmp.append([d,b])
-                res[k][i]=a
+        a,b=testing_general_rank(path_db+"theorem_list_arr_razbor.txt",path+"theorem_list_arr_rank.txt",d[k],mode)
+        res.append(a)
+        res_.append(b)
+
           
-    return res,tmp
+    return res,res_,read_data_list
 
+
+def test_general_main():
+    a1,b1,c1=test_general_sub_main(0)
+    a2,b2,c2=test_general_sub_main(1)
+    a3,b3,c3=test_general_sub_main(2)
+    index_table=[]
+    ranking_table=[]
+    
+    for i in range(len(a1)):
+        index_table.append([a1[i],a2[i],a3[i]])
+
+    for i in range(len(b1)):
+        ranking_table.append([b1[i],b2[i],b3[i]])
+
+    return index_table,ranking_table,c1
     
 def make_razbor(filein,fileout):
      lst=[]
@@ -487,3 +509,4 @@ def testing_block_two(in_text,out_text):
 
 #testing_block_two("","")
 #test_general_main()
+

@@ -1,0 +1,3 @@
+Пусть {\displaystyle f} — непрерывная функция, определённая на отрезке {\displaystyle [a,b]} , тогда для любого {\displaystyle \varepsilon >0} существует такой многочлен {\displaystyle p}  с вещественными коэффициентами, что для всех {\displaystyle x}  из {\displaystyle [a,\;b]} одновременно выполнено условие {\displaystyle |f(x)-p(x)|<\varepsilon } .
+
+Если функция {\displaystyle f(x)} непрерывна на сегменте {\displaystyle [a,b]}, то для {\displaystyle \varepsilon>0} найдется многочлен {\displaystyle P_n(x)} с номером {\displaystyle n}, зависящим от {\displaystyle \varepsilon}, такой, что {\displaystyle |P_n(x)-f(x)|<\varepsilon} сразу для всех {\displaystyle x} из сегмента {\displaystyle [a,b]} .

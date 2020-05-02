@@ -44,17 +44,30 @@ def test():
     B=result[1]
     C=result[2]
     D=result[3]
+    K=result[4]
+    M=result[5]
 
     for i in range(len(A)):
-        in_entry_mid_left.insert(END,'Index:'+str(A[i][0])+'\n\n'+'Where index must be\t'+str(A[i][1])+'\n\n')
-        in_entry_mid_right.insert(END,str(A[i][0])+'\t'+str(A[i][2])+'\t'+str(B[i][2])+'\t'+str(C[i][2])+'\t'+str(D[i][2]))
+        check_best_in_line=max(A[i][2],B[i][2],C[i][2],D[i][2],K[i][2],M[i][2])
+        tmp=[A[i][2],B[i][2],C[i][2],D[i][2],K[i][2],M[i][2]]
+        index_of_best_inline=0
+
+        for k in range(len(tmp)):
+            if tmp[k]==check_best_in_line:
+                index_of_best_inline=str(k+1)
+                break
+        
+        in_entry_mid_right.insert(END,str(i+1)+'. '+str(A[i][2])+'\t'+str(B[i][2])+'\t'+str(C[i][2])+'\t'+str(D[i][2])+'\t'+str(K[i][2])+'\t'+str(M[i][2])+'\t\t'+index_of_best_inline+" | "+str(check_best_in_line))
         in_entry_mid_right.insert(END,'\n\n')
 
-        in_entry_mid_left.insert(END,"Parse result (For Algo #1 and #2 and #3):"+str(A[i][3])+'\n\n')
-        in_entry_mid_left.insert(END,"Ranking function result (Algo #1):"+str(A[i][4])+'\n\n')
-        in_entry_mid_left.insert(END,"Ranking function result (Algo #2):"+str(B[i][4])+'\n\n')
-        in_entry_mid_left.insert(END,"Ranking function result (Algo #3):"+str(C[i][4])+'\n\n')
-        in_entry_mid_left.insert(END,"Ranking function result (Algo #4):"+str(D[i][4])+'\n\n')
+        in_entry_mid_left.insert(END,'Index:'+str(A[i][0])+'\n\n'+'Where index must be\t'+str(A[i][1])+'\n\n')
+        in_entry_mid_left.insert(END,"Parse result (For Algo #1 and #2)\n\n:"+str(A[i][3])+'\n\n')
+        in_entry_mid_left.insert(END,"Ranking function result (Algo #1):\n\n"+str(A[i][4])+'\n\n')
+        in_entry_mid_left.insert(END,"Ranking function result (Algo #2):\n\n"+str(B[i][4])+'\n\n')
+        in_entry_mid_left.insert(END,"Ranking function result (Algo #3):\n\n"+str(C[i][4])+'\n\n')
+        in_entry_mid_left.insert(END,"Ranking function result (Algo #4):\n\n"+str(D[i][4])+'\n\n')
+        in_entry_mid_left.insert(END,"Ranking function result (Algo #5):\n\n"+str(K[i][4])+'\n\n')
+        in_entry_mid_left.insert(END,"Ranking function result (Algo #6):\n\n"+str(M[i][4])+'\n\n')
                                   
         in_entry_mid_left.insert(END,'\n\n')
 
@@ -62,7 +75,9 @@ def test():
     in_entry_mid_right.insert(END,'Algo #1: Treepath+Jaccard  (tree,standart)\n\n')
     in_entry_mid_right.insert(END,'Algo #2: Treepath+Jaccard  (tree,modify)\n\n')
     in_entry_mid_right.insert(END,'Algo #3: Keyword Search  (text)\n\n')
-    in_entry_mid_right.insert(END,'Algo #4: Edit Distance  (text)\n\n')    
+    in_entry_mid_right.insert(END,'Algo #4: Edit Distance  (text)\n\n')
+    in_entry_mid_right.insert(END,'Algo #5: Cos similarity  (text)\n\n')
+    in_entry_mid_right.insert(END,'Algo #6: Jaccard similarity  (text)\n\n')
     
     in_entry_mid_right.insert(END,'--- Test_of_predicate_module_and_ranking ---')
     in_entry_mid_right.insert(END,'\n\n')

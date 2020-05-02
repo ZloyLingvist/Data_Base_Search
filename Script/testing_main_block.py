@@ -7,6 +7,7 @@ from draw_graph import *
 from utilities import *
 from keyword_search import *
 from edit_distance import *
+from cos_similarity import *
 
 from testing_sub_block import *
 
@@ -38,7 +39,7 @@ def test_general_sub_main(filein,mode,nlp):
     ranking=[]
     index_list=[]
     tmp=[]
-    result_table=[['0','0','0','0','0'] for i in range(8)] ##искомой номер, множество номеров, оценка, разбор, таблица ранжирования
+    result_table=[['0','0','0','0','0'] for i in range(12)] ##искомой номер, множество номеров, оценка, разбор, таблица ранжирования
     
     f=open(path_db+"label_list.txt","r",encoding="utf-8")
     for line in f:
@@ -84,7 +85,7 @@ def test_general_sub_main(filein,mode,nlp):
             result_table[i][3]=['-']
             result_table[i][4]=ranking[i]
 
-    if mode==3:
+    if mode==3 or mode==4 or mode==5:
         text_list=[]
         ranking=[]
         tmp=[]
@@ -97,9 +98,18 @@ def test_general_sub_main(filein,mode,nlp):
         for i in range(len(text_list)):
             tmp=return_index_in_indexlist(i,index_list)
 
-            for j in range(len(text_list)):
-                ranking.append([str(j+1),levenshtein_ratio_and_distance(text_list[i],text_list[j],ratio_calc = True)])
-                
+            if mode==3:
+                for j in range(len(text_list)):
+                    ranking.append([str(j+1),levenshtein_ratio_and_distance(text_list[i],text_list[j],ratio_calc = True)])
+
+            if mode==4:
+                for j in range(len(text_list)):
+                    ranking.append([str(j+1),get_result(text_list[i],text_list[j],1)])
+
+            if mode==5:
+                for j in range(len(text_list)):
+                    ranking.append([str(j+1),get_result(text_list[i],text_list[j],2)])
+                    
             ranking.sort(key = lambda x: x[1],reverse=True)
             result_table[i][0]=str(i+1)
             result_table[i][1]=tmp
@@ -107,7 +117,7 @@ def test_general_sub_main(filein,mode,nlp):
             result_table[i][3]=['-']
             result_table[i][4]=ranking
             ranking=[]
-            
+
     '''
     for i in range(len(result_table)):
         print(result_table[i])
@@ -119,15 +129,17 @@ def test_general_sub_main(filein,mode,nlp):
 def test_general_main():
     nlp = stanfordnlp.Pipeline(processors='tokenize,mwt,lemma,pos,depparse', models_dir=path, lang="ru",treebank='ru_syntagrus', use_gpu=True, pos_batch_size=3000)
 
-    generate_label_list()
-    make_database(path_db+"theorem_list.txt",nlp)
+    #generate_label_list()
+    #make_database(path_db+"theorem_list.txt",nlp)
 
     rt_0=test_general_sub_main(path_db+"theorem_list.txt",0,nlp)
     rt_1=test_general_sub_main(path_db+"theorem_list.txt",1,nlp)
     rt_2=test_general_sub_main(path_db+"theorem_list.txt",2,nlp)
     rt_3=test_general_sub_main(path_db+"theorem_list.txt",3,nlp)
+    rt_4=test_general_sub_main(path_db+"theorem_list.txt",4,nlp)
+    rt_5=test_general_sub_main(path_db+"theorem_list.txt",5,nlp)
 
-    return [rt_0,rt_1,rt_2,rt_3]
+    return [rt_0,rt_1,rt_2,rt_3,rt_4,rt_5]
     
 
 '''Блок тестирования модуля преобразования на язык логики предикатов'''

@@ -5,7 +5,7 @@ from text_tree import *
 from draw_graph import *
 from utilities import *
 from stamford import *
-from testing_block import *
+from testing_main_block import *
 
 import sys
 
@@ -76,7 +76,7 @@ def make_ranking(a):
     ans=a
     
     for i in range(len(db)):
-        c=A.main(a,db[i],2)
+        c=A.main(a,db[i],1)
         ranking.append([str(i+1),c,db[i]])
 
     ranking.sort(key = lambda x: x[1],reverse=True)

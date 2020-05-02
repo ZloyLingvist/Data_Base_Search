@@ -33,30 +33,40 @@ def help_():
 
 def test():
     clean()
-    in_entry_mid_right.insert(END,'General_Test')
+    in_entry_mid_right.insert(END,'--- Test for ranking function ---')
     in_entry_mid_right.insert(END,'\n\n')
 
-    in_entry_mid_left.insert(END,'General_Test')
+    in_entry_mid_left.insert(END,'--- Test for ranking function ---')
     in_entry_mid_left.insert(END,'\n\n')
         
-    r,d,c=test_general_main() #r качество ранжирования в цифрах ,d - таблицы ранжирования
+    result=test_general_main()
+    A=result[0]
+    B=result[1]
+    C=result[2]
+    D=result[3]
 
-    for line in r:
-        in_entry_mid_right.insert(END,line)
+    for i in range(len(A)):
+        in_entry_mid_left.insert(END,'Index:'+str(A[i][0])+'\n\n'+'Where index must be\t'+str(A[i][1])+'\n\n')
+        in_entry_mid_right.insert(END,str(A[i][0])+'\t'+str(A[i][2])+'\t'+str(B[i][2])+'\t'+str(C[i][2])+'\t'+str(D[i][2]))
         in_entry_mid_right.insert(END,'\n\n')
 
-    for i in range(len(c)):
-        in_entry_mid_left.insert(END,"Result of parse:"+str(c[i][0])+'\n\n')
-        in_entry_mid_left.insert(END,"Index of testing:"+str(c[i][2]+1)+'\n\n')
-        in_entry_mid_left.insert(END,"Where index can be:"+str(c[i][3])+'\n\n')
-        in_entry_mid_left.insert(END,"Ranking function result (Algo #1):"+str(d[i][0])+'\n\n')
-        in_entry_mid_left.insert(END,"Ranking function result (Algo #2):"+str(d[i][1])+'\n\n')
-        in_entry_mid_left.insert(END,"Ranking function result (Algo #3):"+str(d[i][2])+'\n\n')
+        in_entry_mid_left.insert(END,"Parse result (For Algo #1 and #2 and #3):"+str(A[i][3])+'\n\n')
+        in_entry_mid_left.insert(END,"Ranking function result (Algo #1):"+str(A[i][4])+'\n\n')
+        in_entry_mid_left.insert(END,"Ranking function result (Algo #2):"+str(B[i][4])+'\n\n')
+        in_entry_mid_left.insert(END,"Ranking function result (Algo #3):"+str(C[i][4])+'\n\n')
+        in_entry_mid_left.insert(END,"Ranking function result (Algo #4):"+str(D[i][4])+'\n\n')
+                                  
         in_entry_mid_left.insert(END,'\n\n')
 
-    in_entry_mid_right.insert(END,'Test_of_predicate_module_and_ranking')
+
+    in_entry_mid_right.insert(END,'Algo #1: Treepath+Jaccard  (tree,standart)\n\n')
+    in_entry_mid_right.insert(END,'Algo #2: Treepath+Jaccard  (tree,modify)\n\n')
+    in_entry_mid_right.insert(END,'Algo #3: Keyword Search  (text)\n\n')
+    in_entry_mid_right.insert(END,'Algo #4: Edit Distance  (text)\n\n')    
+    
+    in_entry_mid_right.insert(END,'--- Test_of_predicate_module_and_ranking ---')
     in_entry_mid_right.insert(END,'\n\n')
-    testing_block_one("test_lst.txt","test_in.txt","outname.txt","outname2.txt",-1,[2],0)
+    testing_block_one("test_lst.txt","test_in.txt","outname.txt","outname2.txt",-1,[1],0)
 
     lst=[]
     lst_=[]
@@ -75,9 +85,10 @@ def test():
     for line in lst_:
          in_entry_mid_left.insert(END,str(line)+'\n\n')
 
-    for line in lst:
-         line=line.split('\t')
-         in_entry_mid_right.insert(END,str(line[0])+'\t'+str(line[1])+'\n\n')
+    for i in range(len(lst)):
+         lst[i]=lst[i].split('\t')
+         in_entry_mid_right.insert(END,str(i+1)+'\t'+str(lst[i][0])+'\t'+str(lst[i][1])+'\n\n')
+         
     
 
 def load_and_run():

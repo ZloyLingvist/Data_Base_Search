@@ -60,35 +60,12 @@ class Ranger:
         best_score=self.jaccard_coeff(tmp1,tmp2)
         return best_score
 
-    def algorithm_two(self,a,b):
-        ##взято на данном этапе отсюда. https://stackoverflow.com/questions/14533420/can-you-suggest-a-good-minhash-implementation
-        tmp1=self.simplifier(a)
-        tmp2=self.simplifier(b)
-        coeff_1=0
-        coeff_2=0
-        for i in range(len(tmp1)):
-            vec1 = minhash(set(tmp1[i]))
-            coeff_1=coeff_1+np.array(vec1) / max(vec1)
-
-        for i in range(len(tmp2)):
-            vec2 = minhash(set(tmp2[i]))
-            coeff_2=coeff_2+np.array(vec2) / max(vec2)
-
-        a=coeff_1
-        b=coeff_2
-        
-        best_score = 1 - (a @ b.T) / (np.linalg.norm(a)*np.linalg.norm(b)) 
-        return best_score
-
 
     def main(self,a,b,mode):
         if mode==0:
             best_score=self.algorithm_one(a,b)
 
         if mode==1:
-            best_score=self.algorithm_two(a,b)
-
-        if mode==2:
             a1=algorithm_three_func(a,a)
             b1=algorithm_three_func(b,b)
             a2=algorithm_three_func(a,b)

@@ -1,0 +1,3 @@
+Если {\displaystyle f(x)} непрерывна на промежутке {\displaystyle [a,b]}, то имеет место такая оценка определенного интеграла: {\displaystyle m(b-a)\leq \int _{a}^{b}f(x)\,dx\leq M(b-a)}, где {\displaystyle m} - наименьшее, а {\displaystyle M} - наибольшее значения функции {\displaystyle f(x)} на промежутке {\displaystyle [a,b]} .
+
+Если {\displaystyle m} есть наименьшее, а {\displaystyle M} - наибольшее значение функции {\displaystyle f(x)} в промежутке {\displaystyle (a,b)}, то значение интеграла {\displaystyle \int \limits _{a}^{b} f(x) \, dx} заключено между {\displaystyle m(b-a)} и {\displaystyle M(b-a)} .

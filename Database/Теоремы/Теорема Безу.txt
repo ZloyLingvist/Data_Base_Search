@@ -1,0 +1,3 @@
+Если {\displaystyle P(z)} - полином степени {\displaystyle n \geq 1} и для любого комплексного числа {\displaystyle с} существует полином {\displaystyle Q(z)} степени {\displaystyle n-1} такой, что справедливо равенство {\displaystyle P(z)=(z-c)\cdot Q(z)+P(c)} .
+
+Остаток при делении многочлена {\displaystyle P(z)} на многочлен {\displaystyle z-a} равен значению этого многочлена при {\displaystyle z=a} , то есть равен {\displaystyle P(a)} .

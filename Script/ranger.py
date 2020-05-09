@@ -67,14 +67,11 @@ class Ranger:
 
         if mode==1:
             a1=algorithm_three_func(a,a)
-            b1=algorithm_three_func(b,b)
             a2=algorithm_three_func(a,b)
+            b1=algorithm_three_func(b,b)
             b2=algorithm_three_func(b,a)
-            if a2==0 or b2==0:
-                best_score=0
-                return 0
             
-            best_score=min(a2/a1,b2/b1)
+            best_score=0.5*(a2/a1+b2/b1)
             
 
         return best_score

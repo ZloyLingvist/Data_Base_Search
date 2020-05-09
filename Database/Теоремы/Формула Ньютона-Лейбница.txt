@@ -2,3 +2,4 @@
 
 Если  {\displaystyle F (x)} – любая первообразная функции {\displaystyle f (x)},  то справедливо равенство {\displaystyle \int \limits _a^x f(t)\,dt=F(x)-F(a)} .
 
+Пусть {\displaystyle f} - функция, интегрируема по Риману на отрезке {\displaystyle [a,b]} и функция {\displaystyle F} непрерывна на отрезке [a,b] и дифференцируема в каждой внутренней точке этого отрезка, причем {\displaystyle F^{\prime}=f(x)} , {\displaystyle a<x<b}, тогда справедлива формула {\displaystyle \int \limits _{a}^{b} f(x) \, dx=F(b)-F(a)} .

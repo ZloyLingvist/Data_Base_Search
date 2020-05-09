@@ -1,0 +1,3 @@
+Ограниченная функция {\displaystyle f} интегрируема по Риману на отрезке {\displaystyle [a,b]} тогда и только тогда, когда для любого {\displaystyle \varepsilon>0} можно найти такое разбиение {\displaystyle P} указанного отрезка, что выполняется неравенство: {\displaystyle \sum \limits {k=1}^{n} (M_k-m_k)\Delta x_k<\varepsilon}, где {\displaystyle m_k=inf \{f(t):t\in[x_{k-1},x_k]\}} и {\displaystyle M_k=sup \{f(t):t\in[x_{k-1},x_k]\}} .
+
+Ограниченная функция {\displaystyle f}  интегрируема по Риману на отрезке {\displaystyle [a,b]} тогда и только тогда, когда для любого положительного числа {\displaystyle \varepsilon} существует такое разбиение {\displaystyle P\in \sigma[a,b]}, что выполняется неравенство {\displaystyle U(P,f) − L(P,f) < \varepsilon} .

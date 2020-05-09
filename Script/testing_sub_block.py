@@ -47,6 +47,8 @@ def return_index_in_indexlist(i,index_list):
         for k in range(1,len(index_list[m])):
             if index_list[m][k]==str(i+1):
                 return index_list[m][1:]
+
+    return -1
                 
 
 def reading_data(filein,type_):
@@ -90,7 +92,7 @@ def razbor_theorem(theorem,nlp):
             a=[]
             for sent in doc.sentences:
                 for wrd in sent.dependencies:
-                    a.append([str(i+1),wrd[2].text,wrd[2].lemma,str(wrd[2].governor),wrd[2].dependency_relation,wrd[2].upos])
+                    a.append([str(i+1),wrd[2].text,wrd[2].lemma,str(wrd[2].head),wrd[2].deprel,wrd[2].upos])
                     i=i+1
     else:
         a=theorem
@@ -114,27 +116,6 @@ def make_formula(a):
         c=c_copy
     return c
 
-
-def make_database(filein,nlp):
-     rd=reading_data(filein,"text")
-
-     ## запись в виде массива
-     f=open(filein.split('.txt')[0]+"_arr.txt","w",encoding="utf-8")
-     for i in range(len(rd)):
-         rd[i]=razbor_theorem(rd[i],nlp)
-         f.write(str(rd[i])+'\n')
-
-     f.close()
-
-     ##запись в виде формулы
-     f=open(filein.split('.txt')[0]+"_arr_razbor.txt","w",encoding="utf-8")
-     for i in range(len(rd)):
-         rd[i]=make_formula(rd[i])
-         f.write(str(rd[i])+'\n')
-
-     f.close()
-     
-     
 
 def swapper(ll,dl,k):
     for i in range(k):
@@ -163,15 +144,14 @@ def generate_label_list():
     file_list=[]
     label_list=[]
     db_list=[]
-    f=open(path_db+"file_list.txt","r",encoding="utf-8")
-    for line in f:
-        line=line.strip()
-        file_list.append(line)
-    f.close()
+    db_tmp_list=[]
 
+    f=[]
+    (_,_,file_list)=next(os.walk(path_db+"Теоремы/"))
 
+    index=0
     for i in range(len(file_list)):
-        f=open(path_db+"Теоремы/"+file_list[i]+".txt","r",encoding="utf-8")
+        f=open(path_db+"Теоремы/"+file_list[i],"r",encoding="utf-8")
         tmp=[]
         for line in f:
             line=line.split('\n')
@@ -185,15 +165,24 @@ def generate_label_list():
         str1=file_list[i]+","
         for j in range(len(tmp)):
            if j<len(tmp)-1:
-               str1=str1+str(len(db_list)+1)+','
+               str1=str1+str(index+1)+','
            else:
-               str1=str1+str(len(db_list)+1)
+               str1=str1+str(index+1)
 
-           db_list.append(tmp[j])
+           db_tmp_list.append(tmp[j])
+           index=index+1
 
+        db_list.append(db_tmp_list)
+        db_tmp_list=[]
         label_list.append(str1.split(','))
 
-    #label_list,db_list=swapper(label_list,db_list,5)    
+    f=open(path_db+"label_list.yml","w",encoding="utf-8")
+    for i in range(len(file_list)):
+        for k in range(len(db_list[i])):
+                f.write('- '+file_list[i].split('.txt')[0]+': > \n')
+                f.write('   '+db_list[i][k]+'\n')
+       
+    f.close()
        
     f=open(path_db+"label_list.txt","w",encoding="utf-8")
     for x in label_list:
@@ -201,49 +190,10 @@ def generate_label_list():
     f.close()
 
     f=open(path_db+"theorem_list.txt","w",encoding="utf-8")
-    for x in db_list:
-        f.write(x)
-        f.write('\n')
-    f.close()
-
-
-'''
-модуль чтения данных 
-    
-    входные параметры:
-
-        num - (в виде строки) порядковый номер теоремы для тестирования
-        type: "text" - будет взято математическое утверждение в виде текста и для него по новой будет произведен синт. разбор
-              "arr"  - будет взят уже имеющуюся таблицу с синтаксическим разбором
-              
-        выходные даннык:
+    for i in range(len(db_list)):
+        for j in range(len(db_list[i])):
+            f.write(str(db_list[i][j])+'\n')
         
-        массив, состоящий из трех элементов:
-            1. - преобразованный текст утверждения (при параметре "text")
-                 преобразованная таблица с синтаксическим разбором (при параметре "arr")
-            2. строка таблицы, содержащей какие номера каким теоремам соответствую ищем строку с num
-            3. num  в виде числа. Значение уменьшено на 1.
-  
-    tmp=[]
-    tmp2=[]
-    c=[]
-    num_num=int(num)-1
-    
- f=open(path_db+"label_list.txt","r",encoding="utf-8")
-    for x in f:
-        tmp2.append(eval(x.strip()));
     f.close()
 
-    for i in range(len(tmp2)):
-            if c!=[]:
-                break
-            for j in range(1,len(tmp2[i])):
-                if tmp2[i][j]==num:
-                    c=tmp2[i][1:]
-                    d=tmp2[i][1:]
-                    break
-
-    text=razbor_theorem(text)
-    tmp=[text,c,num_num,d]
-'''
-
+#generate_label_list()

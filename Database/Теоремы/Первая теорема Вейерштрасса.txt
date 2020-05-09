@@ -1,0 +1,3 @@
+Если функция непрерывна на отрезке  {\displaystyle [a,b]}, то на этом отрезке она и ограничена .
+
+Если {\displaystyle f} непрерывна на {\displaystyle [a,b]}, то она ограничена на нем, т.е. существует такое число {\displaystyle M}, что {\displaystyle |f(x)| \leq M}, при всех {\displaystyle x \in [a,b]} .

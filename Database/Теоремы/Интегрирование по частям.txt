@@ -1,0 +1,3 @@
+Если в промежутке  {\displaystyle [a,b]} функции {\displaystyle u(x)} и  {\displaystyle v(x)} непрерывны и имеют непрерывные производные, то {\displaystyle \int _{a}^{b} u(x)dv(x)=(u(x)\cdot v(x)){\vert}^{b}_{a}=\int \limits _{a}^{b} v(x)du(x)} .
+
+Пусть функции {\displaystyle u} и {\displaystyle v} дифференцируемы на некотором интервале и пусть функция {\displaystyle u^{\prime}(x)v(x)} имеет первообразную на этом интервале, тогда функция {\displaystyle u(x)v^{\prime}(x)} также имеет первообразную на этом интервале, причем справедливо равенство {\displaystyle \int \limits u(x)v^{\prime}(x) \, dx=u(x)v(x)-\int \limits v(x)u^{\prime}(x)\, dx} .

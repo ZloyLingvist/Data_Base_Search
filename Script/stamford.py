@@ -1,13 +1,14 @@
 from text_predicator import *
 from text_tree import *
 from utilities import *
+from processing import *
 
 import os
 path = os.path.dirname(os.path.abspath(__file__))
 
 import warnings
 warnings.simplefilter("ignore", UserWarning)
-import stanfordnlp
+import stanza
 
 parent_directory=os.path.dirname(os.path.dirname(__file__))
 dict_path=parent_directory+"\\Files\\"
@@ -45,6 +46,7 @@ class Stamford:
             if '#' in line:
                 continue
             line=line.split('\t')
+            
             line[1]=line[1].strip()
             self.words_replace.append(line)
         f.close()
@@ -226,13 +228,14 @@ class Stamford:
 
     def main(self,a,mode):
         if type(a)==str:
-            nlp = stanfordnlp.Pipeline(processors='tokenize,mwt,lemma,pos,depparse', models_dir=parent_directory, lang="ru",treebank='ru_syntagrus', use_gpu=True, pos_batch_size=3000)
+            #stanza.download('ru',processors='tokenize,lemma,pos,depparse',package='syntagrus',)
+            nlp = stanza.Pipeline('ru',processors='tokenize,lemma,pos,depparse', dir=parent_directory+'/stanza_resources',package='syntagrus', use_gpu=True, pos_batch_size=3000)
             doc = nlp(a)
             i=0
             a=[]
             for sent in doc.sentences:
                 for wrd in sent.dependencies:
-                    a.append([str(i+1),wrd[2].text,wrd[2].lemma,str(wrd[2].governor),wrd[2].dependency_relation,wrd[2].upos])
+                    a.append([str(i+1),wrd[2].text,wrd[2].lemma,str(wrd[2].head),wrd[2].deprel,wrd[2].upos])
                     i=i+1
 
         a=arr_etap_one(a)
@@ -279,14 +282,4 @@ class Stamford:
         p2=A.main(res)
         return p2
 
-#text='Пусть функция {\displaystyle f} непрерывна на отрезке {\displaystyle [a,b]} , причем {\displaystyle f(a) \neq f(b)} , тогда для любого числа {\displaystyle С}, заключенного между {\displaystyle f(a)} и {\displaystyle f(b)} , найдется точка {\displaystyle \gamma \in (a,b)}, что {\displaystyle f(\gamma)=C} .'
 
-'''
-#text="Если  formula_31 – любая первообразная функции formula_9,  то справедливо равенство formula_33 ."
-text="Если непрерывная функция, определённая на вещественном интервале, принимает два значения, то она принимает любое значение между ними ."
-'''
-#text="Пусть функция formula_1 непрерывна на отрезке formula_2 , причем formula_3 , тогда для любого числа formula_4, заключенного между formula_5 и formula_6 , найдется точка formula_7, что formula_8 ."
-#text="Пусть функция  дифференцируема в открытом промежутке , на концах этого промежутка сохраняет непрерывность и принимает одинаковые значения: formula_1 , тогда существует точка  , в которой производная функции  равна нулю : formula_3  ."
-
-#A=Stamford()
-#A.main(text,1)

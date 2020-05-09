@@ -1,0 +1,3 @@
+Если функция {\displaystyle y=f(x)} непрерывна на отрезке {\displaystyle [a,b]} и дифференцируема на интервале {\displaystyle (a,b)}, то внутри отрезка {\displaystyle [a,b]} найдется хотя бы одна точка {\displaystyle с} {(\displaystyle a<c<b)} такая, что будет иметь равенство {\displaystyle f(b)-f(a)=f^{\prime}(c)(b-a)} .
+
+Если функция {\displaystyle f(x)} определена и непрерывна на сегменте {\displaystyle [a,b]} и {\displaystyle f(x)} имеет конечную производную {\displaystyle f^{\prime}(x)} на интервале {\displaystyle (a,b)}, то {\displaystyle f(b)-f(a)=(b-a)\cdot f^{\prime}(c)}, где {\displaystyle a<c<b} .

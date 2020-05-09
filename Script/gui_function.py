@@ -2,6 +2,7 @@ from processing import *
 from formula_tree import *
 from ranger import *
 from text_tree import *
+from simple_ranger import *
 from draw_graph import *
 from utilities import *
 from stamford import *
@@ -11,6 +12,13 @@ import sys
 
 path = os.path.dirname(os.path.dirname(__file__))
 path_old=path
+
+def avg(arr):
+    summ=0
+    for i in range(len(arr)):
+        summ=summ+float(arr[i])
+
+    return summ/len(arr)
 
 def make_load_and_run():
     error_list=[]
@@ -32,7 +40,8 @@ def make_load_and_run():
       
     f.close()
 
-    nlp = stanfordnlp.Pipeline(processors='tokenize,mwt,lemma,pos,depparse', models_dir=path_old, lang="ru",treebank='ru_syntagrus', use_gpu=True, pos_batch_size=3000)
+    #stanza.download('ru',processors='tokenize,lemma,pos,depparse',package='syntagrus')
+    nlp = stanza.Pipeline('ru',processors='tokenize,lemma,pos,depparse', dir=path_old+'\stanza_resources',package='syntagrus', use_gpu=True, pos_batch_size=3000)
     for i in range(len(lst)):
         try:
             b=eval(lst[i])
@@ -44,7 +53,7 @@ def make_load_and_run():
                 doc = nlp(theorem)
                 for sent in doc.sentences:
                     for wrd in sent.dependencies:
-                        a.append([str(m+1),wrd[2].text,wrd[2].lemma,str(wrd[2].governor),wrd[2].dependency_relation,wrd[2].upos])
+                        a.append([str(m+1),wrd[2].text,wrd[2].lemma,str(wrd[2].head),wrd[2].deprel,wrd[2].upos])
                         m=m+1
             else:
                 a=arr_etap_one(b)
@@ -76,11 +85,15 @@ def make_ranking(a):
     ans=a
     
     for i in range(len(db)):
-        c=A.main(a,db[i],1)
-        ranking.append([str(i+1),c,db[i]])
-
+        try:
+            c=A.main(ans,db[i],1)
+            ranking.append([str(i+1),c,db[i]])
+        except:
+            ranking.append([str(i+1),-1,db[i]])
+    
     ranking.sort(key = lambda x: x[1],reverse=True)
     return ans,ranking
+
 
 def make_razbor(theorem):
     '''
@@ -94,7 +107,8 @@ def make_razbor(theorem):
         lst=[]
         lst.append(theorem)
 
-        nlp = stanfordnlp.Pipeline(processors='tokenize,mwt,lemma,pos,depparse', models_dir=path_old, lang="ru",treebank='ru_syntagrus', use_gpu=True, pos_batch_size=3000)
+        #stanza.download('ru',processors='tokenize,lemma,pos,depparse',package='syntagrus')
+        nlp = stanza.Pipeline('ru',processors='tokenize,lemma,pos,depparse',dir=path_old+'\stanza_resources', package='syntagrus', use_gpu=True, pos_batch_size=3000)
         a=[]
         i=0
         for line in lst:
@@ -103,7 +117,7 @@ def make_razbor(theorem):
             a=[]
             for sent in doc.sentences:
                 for wrd in sent.dependencies:
-                    a.append([str(i+1),wrd[2].text,wrd[2].lemma,str(wrd[2].governor),wrd[2].dependency_relation,wrd[2].upos])
+                    a.append([str(i+1),wrd[2].text,wrd[2].lemma,str(wrd[2].head),wrd[2].deprel,wrd[2].upos])
                     i=i+1
     else:
         a=theorem
@@ -122,4 +136,28 @@ def make_tree(a,name,text):
     except:
         return "-1"
 
+
+def make_database():
+     filein=path+"/Database/theorem_list.txt"
+
+     #stanza.download('ru',processors='tokenize,lemma,pos,depparse',package='syntagrus')
+     nlp = stanza.Pipeline('ru',processors='tokenize,lemma,pos,depparse', dir=path_old+'\stanza_resources', package='syntagrus', use_gpu=True, pos_batch_size=3000)
+        
+     rd=reading_data(filein,"text")
+
+     ## запись в виде массива
+     f=open(filein.split('.txt')[0]+"_arr.txt","w",encoding="utf-8")
+     for i in range(len(rd)):
+         rd[i]=razbor_theorem(rd[i],nlp)
+         f.write(str(rd[i])+'\n')
+
+     f.close()
+
+     ##запись в виде формулы
+     f=open(filein.split('.txt')[0]+"_arr_razbor.txt","w",encoding="utf-8")
+     for i in range(len(rd)):
+         rd[i]=make_formula(rd[i])
+         f.write(str(rd[i])+'\n')
+
+     f.close()
 

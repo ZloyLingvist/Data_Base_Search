@@ -1,0 +1,3 @@
+Если функция {\displaystyle f(x)} дифференцируема в некоторой точке  {\displaystyle x_0}, принадлежащей интервалу {\displaystyle (x_0-\delta,x_0+\delta)} и имеет в этой точке экстремум, то {\displaystyle f^{\prime}(x_0)=0} .
+ 
+Если функция {\displaystyle y=f(x)} имеет экстремум в точке {\displaystyle x_0}, то ее производная {\displaystyle f^{\prime}(x_0)} либо равна нулю, либо не существует.

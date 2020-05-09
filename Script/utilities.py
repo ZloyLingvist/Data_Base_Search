@@ -1,6 +1,7 @@
 import os
 path = os.path.dirname(os.path.dirname(__file__))
 
+
 def arr_etap_one(a):
     f=open(path+"\\Files\\dicts\words_trash.txt","r",encoding="utf-8")
     words_trash=[]

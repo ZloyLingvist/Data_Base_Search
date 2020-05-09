@@ -4,14 +4,15 @@
 
 ## Установка необходимых программ
 1. Установить => Python 3.8 (обязательно версии x64)
-2. Запустить install.bat
-3. Для визуализации деревьев используется пакет GraphViz. https://graphviz.gitlab.io/download/ 
-   Папку bin необходимо положить в корневую директорию проекта.
-4. На данном этапе встроенный синтаксический анализатор. https://stanfordnlp.github.io/stanza/
+2. Запустить install.bat (установка NumPy, TatSu, pymorphy2, pyyaml, pydotplus, torch, stanza, модели для stanza)
+3. Для визуализации деревьев используется пакет GraphViz ( https://graphviz.gitlab.io/download/ )
+   Папку bin необходимо положить в корневую директорию проекта. Также нужна библиотека pydotplus)
+4. На данном этапе встроенный синтаксический анализатор stanza ( https://stanfordnlp.github.io/stanza/)
    При запуске install.bat будет проверена существует ли модель по адресу: директория проекта/stanza_resources в случае отсутствия каких-либо файлов будет производено докачивание.
 5. Библиотека Numpy https://numpy.org/
 6. Морфологический анализатор pymorphy2 https://pymorphy2.readthedocs.io/en/latest/
 7. https://pypi.org/project/PyYAML/
+8. Библиотека TatSu https://tatsu.readthedocs.io/en/stable/
 
 -- Как запустить ?
 1. Запустить bat-файл start.bat

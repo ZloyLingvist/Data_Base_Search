@@ -52,7 +52,7 @@ class Text_predicator:
                             str1=str1+" "+elem
                             if checking(str1)==True:
                                     self.tmp.append(str1)
-
+                                    
                 return l
 
 
@@ -118,7 +118,7 @@ class Text_predicator:
                                                 flag=1
                                                 break
                                                 
-                                        
+                           
                 '''если 2 элемента разбора начинаются с одинаковой вершины и не входят в список объектов, то объединяем'''
                 for i in range(len(self.tmp)-1,-1,-1):
                         if i<len(self.tmp)-1 and self.tmp[i][0]==self.tmp[i+1][0] and not self.tmp[i][0].split("::")[0] in self.obj_list:
@@ -131,13 +131,13 @@ class Text_predicator:
                 '''если без специального слова (if,then) строка уже встречалась в разборе, то оставляем только спец.слово. Иначе, разделяем на спец.слово и остальную часть'''
                 for i in range(len(self.tmp)-1,-1,-1):
                         for j in range(len(self.tmp[i])-1,-1,-1):
-                                if "then" in self.tmp[i][j] or "if" in self.tmp[i][j]:
-                                        temp=self.tmp[i]
-                                        x=self.tmp[i][j]
-                                        del temp[j]
-
-                                        self.tmp[i]=temp
-                                        self.tmp.insert(0,[x])
+                                if type(self.tmp[i][j])==list:
+                                        if "then" in self.tmp[i][j] or "if" in self.tmp[i][j] or "<=>" in self.tmp[i][j]:
+                                                temp=self.tmp[i]
+                                                x=self.tmp[i][j]
+                                                del self.tmp[i][j]
+                                                self.tmp[i]=temp
+                                                self.tmp.insert(0,[x])
                                 
 
                 for i in range(len(self.tmp)-1,-1,-1):
@@ -178,13 +178,13 @@ class Text_predicator:
         def make_predicate(self):
                 '''удаляем дупликаты'''
                 self.del_duplicates(self.tmp,0)
-
+                        
                 for i in range(len(self.tmp)-1,-1,-1):
                         if type(self.tmp[i])==list:
                                 if type(self.tmp[i][0])==list:
                                         self.tmp[i]=self.tmp[i][0]
-                                        
-                       
+
+              
                 for i in range(len(self.tmp)-1,-1,-1):
                         '''все, что содержит второй аргумент exists (forall) - в одну группу'''
                         if "exists" in self.tmp[i][0] or "forall" in self.tmp[i][0]:
@@ -435,8 +435,7 @@ class Text_predicator:
                         for y in self.tmp:
                                 tmp_res.append(y)
                         self.tmp=[]
-
-                #print('!!!',tmp_res)
+                        
                 self.tmp=tmp_res
                 #'''этап 2 '''
                 self.correction()

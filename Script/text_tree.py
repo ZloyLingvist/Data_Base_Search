@@ -77,7 +77,6 @@ class Text_analyzer:
                             else:
                                 visited[j][1][k]=visited[i]
                     
-       
         visited=visited[0]
         visited=self.recreate(visited)
 

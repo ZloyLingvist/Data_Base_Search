@@ -88,13 +88,20 @@ class Stamford:
 
         if tst_!=[]:
             tst.append(tst_)
-            
+
         ids=0
         for k in range(len(tst)):
             '''последний элемент меняем на .'''
             
-            if tst[k][0][5]=="VERB":
-                tst[k][0][3]="0"
+            #if tst[k][0][5]=="VERB":
+                #flag=1
+                #for x in range(len(tst)):
+                    #if tst[x][0][3]=="0":
+                        #flag=0
+                        #break
+                    
+                #if flag==1:
+                    #tst[k][0][3]="0"
                         
             for m in range(len(tst[k])):
                 tst[k][m][0]=str(int(tst[k][m][0])-ids)
@@ -168,7 +175,7 @@ class Stamford:
 
                                  ids=int(self.words_construction[k][4])-1
                                  self.a[i][j+ids][2],self.a[i][j+ids][1]=str1,str1
-                             
+                                 
                      
                 for k in range(len(self.words_obj)):
                     if self.words_obj[k][0]==self.a[i][j][1]:
@@ -239,6 +246,7 @@ class Stamford:
                     i=i+1
 
         a=arr_etap_one(a)
+
         if mode==0:
             roots=0
             for i in range(len(a)):
@@ -263,7 +271,6 @@ class Stamford:
             if flag==0:
                     roots.append(self.a[i][0][0])
 
-        
         for i in range(len(self.a)):
             if self.a[i][0][1]=="причем" or self.a[i][0][1]=="что":
                 if len(self.a[i])==3:
@@ -277,9 +284,9 @@ class Stamford:
             r=A.make_tree()
             res.append(r)
 
-
         A=Text_predicator()
         p2=A.main(res)
         return p2
+
 
 

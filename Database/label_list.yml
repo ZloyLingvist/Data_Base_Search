@@ -23,7 +23,7 @@
 - Вторая теорема о среднем: > 
    Если функция {\displaystyle f(x)} монотонна (нестрого) на отрезке {\displaystyle [a;b]} , а функция {\displaystyle g(x)} интегрируема на {\displaystyle [a;b]} , то существует точка  {\displaystyle \xi \in [a;b]} такая , что {\displaystyle \int \limits _{a}^{b} f(x)\cdot g(x)\, dx=f(a)\cdot \int \limits _{a}^{\xi} g(x)\, dx+f(b)\cdot \int \limits _{\xi}^{b} g(x)\, dx } .
 - Вторая теорема о среднем: > 
-   Если {\displaystyle f,g \in R_{[a,b]}} и функция {\displaystyle f(x)} монотонна на {\displaystyle [a,b]}, то найдется такая точка {\displaystyle \xi \in [a;b]} , такие что \displaystyle \xi \in [a;b]} такая , что {\displaystyle \int \limits _{a}^{b} f(x)\cdot g(x)\, dx=f(a)\cdot \int \limits _{a}^{\xi} g(x)\, dx+f(b)\cdot \int \limits _{\xi}^{b} g(x)\, dx } .
+   Если {\displaystyle f,g \in R_{[a,b]}} и функция {\displaystyle f(x)} монотонна на {\displaystyle [a,b]}, то найдется такая точка {\displaystyle \xi \in [a;b]} , такие что {\displaystyle \xi \in [a;b]} такая , что {\displaystyle \int \limits _{a}^{b} f(x)\cdot g(x)\, dx=f(a)\cdot \int \limits _{a}^{\xi} g(x)\, dx+f(b)\cdot \int \limits _{\xi}^{b} g(x)\, dx } .
 - Интегрирование по частям: > 
    Если в промежутке  {\displaystyle [a,b]} функции {\displaystyle u(x)} и  {\displaystyle v(x)} непрерывны и имеют непрерывные производные, то {\displaystyle \int _{a}^{b} u(x)dv(x)=(u(x)\cdot v(x)){\vert}^{b}_{a}=\int \limits _{a}^{b} v(x)du(x)} .
 - Интегрирование по частям: > 
@@ -87,7 +87,7 @@
 - Теорема Лопиталя: > 
    Если функция {\displaystyle f(x)} и {\displaystyle g(x)} дифференцируемы в окрестности точки {\displaystyle x_0} и, кроме того, {\displaystyle \lim _{x \to x_0} f(x)=0} и {\displaystyle \lim _{x \to x_0} g(x)=0} причем {\displaystyle g^{\prime}\neq 0} в окрестности точки {\displaystyle x_0}, то тогда {\displaystyle \lim _{x \to x_0} \dfrac{f(x)}{g(x)}=\lim _{x \to x_0} \dfrac{f^{\prime}(x)}{g^{\prime}(x)}} при условии, что второй предел существует .
 - Теорема Лопиталя: > 
-   Пусть функции {\displaystyle f(x)} и {\displaystyle g(x)} определены и дифференцируемы в промежутке {\displaystyle (a,b)}, {\displaystyle g^{\prime}(x) \neq 0} для всех {\displaystyle x\in (a,b)}, {\displaystyle \lim \limits _{x \to a} f(x)=0} и {\displaystyle \lim \limits _{x \to a} g(x)=0}  существует конечный или бесконечный предел {\displaystyle \lim \limits _{x \to a} \dfrac{f^{\prime}(x)}{g^{\prime}(x)}}, тогда {\displaystyle \lim \limits _{x \to a}\dfrac{f(x)}{g(x)}=\lim \limits _{x \to a} \dfrac{f^{\prime}(x)}{g^{\prime}(x)} .
+   Пусть функции {\displaystyle f(x)} и {\displaystyle g(x)} определены и дифференцируемы в промежутке {\displaystyle (a,b)}, {\displaystyle g^{\prime}(x) \neq 0} для всех {\displaystyle x\in (a,b)}, {\displaystyle \lim \limits _{x \to a} f(x)=0} и {\displaystyle \lim \limits _{x \to a} g(x)=0}  существует конечный или бесконечный предел {\displaystyle \lim \limits _{x \to a} \dfrac{f^{\prime}(x)}{g^{\prime}(x)}}, тогда {\displaystyle \lim \limits _{x \to a}\dfrac{f(x)}{g(x)}=\lim \limits _{x \to a} \dfrac{f^{\prime}(x)}{g^{\prime}(x)}} .
 - Теорема о среднем: > 
    Если {\displaystyle f(x)} непрерывна на промежутке {\displaystyle [a,b]}, то между точками {\displaystyle a} и {\displaystyle b} найдется хотя бы одна точка  {\displaystyle \xi} такая, что будет иметь место равенство {\displaystyle \int \limits _{a}^{b} f(x) dx=f(\xi)\cdot (b-a)} .
 - Теорема о среднем: > 

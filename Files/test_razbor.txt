@@ -163,3 +163,4 @@
 ('n',)
 ['{k!}']
 ['{f^{(k)}}(x_0)}']
+['{\\displaystyle \\lim \\limits _{x \\to a}}\\dfrac{f(x)}}{g(x)}}=\\lim \\limits _{x \\to a}} \\dfrac{f^{\\prime}}(x)}}{g^{\\prime}}(x)}}}']

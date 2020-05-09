@@ -2,7 +2,7 @@ from tkinter import *
 from gui_function import *
 from draw_graph import *
 import os
-import time
+from datetime import datetime
 
 path = os.path.dirname(os.path.dirname(__file__))
 
@@ -17,6 +17,21 @@ def _onKeyRelease(event):
 
     if event.keycode==67 and  ctrl and event.keysym.lower() != "c":
         event.widget.event_generate("<<Copy>>")
+
+def write_to_file():
+    now = datetime.now()
+    current_time = now.strftime("%H:%M:%S")
+    t=in_entry_mid_right.get(1.0,END)
+    name="outfile_"+str(current_time)+".txt"
+    name=name.replace(":","_")
+
+    f=open(path+"\\"+name,"w",encoding="utf-8")
+    f.write(t)
+    f.close()
+    
+    clean()
+    in_entry_mid_right.insert(END,'See data in '+name+'\n\n')
+    
 
 def extract():
     f=open(path+'\\Database\\theorem_list.txt',"r",encoding="utf-8")
@@ -303,6 +318,9 @@ button_ext.pack(side=LEFT,padx=10,pady=5)
 
 input_ext = Entry(frame_for_down, text='Extract by id', width=5)
 input_ext.pack(side=LEFT,padx=10,pady=5)
+
+button_wf = Button(frame_for_down, text='Write to file', width=10,command=write_to_file)
+button_wf.pack(side=LEFT,padx=10,pady=5)
 
 button_pic = Button(frame_for_button, text='Picture', width=10,command=picture)
 button_pic.pack(padx=10,pady=5)

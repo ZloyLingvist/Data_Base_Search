@@ -17,19 +17,19 @@
 - Вторая теорема Вейерштрасса: > 
    Если функция непрерывна на отрезке  {\displaystyle [a,b]}, то среди ее значений на этом отрезке имеется наименьшее и наибольшее значение .
 - Вторая теорема Вейерштрасса: > 
-   Если функция {\displaystyle f} непрерывна на отрезке {\displaystyle [a,b]}, то она ограничена на нём и притом достигает своих минимального и максимального значений, т.е. существуют {\displaystyle x_{m},\;x_{M}\in [a,\;b]} такие, что {\displaystyle f(x_{m})\leq f(x)\leq f(x_{M})} для всех {\displaystyle x\in [a,b]}.
+   Если функция {\displaystyle f} непрерывна на отрезке {\displaystyle [a,b]}, то она ограничена на нём и притом достигает своих минимального и максимального значений, т.е. существуют {\displaystyle x_{m},\;x_{M}\in [a,b]} такие, что {\displaystyle f(x_{m})\leq f(x)\leq f(x_{M})} для всех {\displaystyle x\in [a,b]}.
 - Вторая теорема Вейерштрасса: > 
    Если {\displaystyle f} непрерывна на {\displaystyle [a,b]}, то она достигает на нем своей верхней и нижней грани.
 - Вторая теорема о среднем: > 
-   Если функция {\displaystyle f(x)} монотонна (нестрого) на отрезке {\displaystyle [a;b]} , а функция {\displaystyle g(x)} интегрируема на {\displaystyle [a;b]} , то существует точка  {\displaystyle \xi \in [a;b]} такая , что {\displaystyle \int \limits _{a}^{b} f(x)\cdot g(x)\, dx=f(a)\cdot \int \limits _{a}^{\xi} g(x)\, dx+f(b)\cdot \int \limits _{\xi}^{b} g(x)\, dx } .
+   Если функция {\displaystyle f(x)} монотонна (нестрого) на отрезке {\displaystyle [a,b]} , а функция {\displaystyle g(x)} интегрируема на {\displaystyle [a,b]} , то существует точка  {\displaystyle \xi \in [a;b]} такая , что {\displaystyle \int \limits _{a}^{b} f(x)\cdot g(x)\, dx=f(a)\cdot \int \limits _{a}^{\xi} g(x)\, dx+f(b)\cdot \int \limits _{\xi}^{b} g(x)\, dx } .
 - Вторая теорема о среднем: > 
-   Если {\displaystyle f,g \in R_{[a,b]}} и функция {\displaystyle f(x)} монотонна на {\displaystyle [a,b]}, то найдется такая точка {\displaystyle \xi \in [a;b]} , такие что {\displaystyle \xi \in [a;b]} такая , что {\displaystyle \int \limits _{a}^{b} f(x)\cdot g(x)\, dx=f(a)\cdot \int \limits _{a}^{\xi} g(x)\, dx+f(b)\cdot \int \limits _{\xi}^{b} g(x)\, dx } .
+   Если {\displaystyle f,g \in R_{[a,b]}} и функция {\displaystyle f(x)} монотонна на {\displaystyle [a,b]}, то найдется такая точка {\displaystyle \xi \in [a;b]} , такие что {\displaystyle \xi \in [a,b]} такая , что {\displaystyle \int \limits _{a}^{b} f(x)\cdot g(x)\, dx=f(a)\cdot \int \limits _{a}^{\xi} g(x)\, dx+f(b)\cdot \int \limits _{\xi}^{b} g(x)\, dx } .
 - Интегрирование по частям: > 
-   Если в промежутке  {\displaystyle [a,b]} функции {\displaystyle u(x)} и  {\displaystyle v(x)} непрерывны и имеют непрерывные производные, то {\displaystyle \int _{a}^{b} u(x)dv(x)=(u(x)\cdot v(x)){\vert}^{b}_{a}=\int \limits _{a}^{b} v(x)du(x)} .
+   Если в промежутке  {\displaystyle [a,b]} функции {\displaystyle u(x)} и  {\displaystyle v(x)} непрерывны и имеют непрерывные производные, то {\displaystyle \int _{a}^{b} u(x)dv(x)=(u(x)\cdot v(x)){\vert}^{b}_{a}=\int \limits _{a}^{b} v(x)\, du(x)} .
 - Интегрирование по частям: > 
-   Пусть функции {\displaystyle u} и {\displaystyle v} дифференцируемы на некотором интервале и пусть функция {\displaystyle u^{\prime}(x)v(x)} имеет первообразную на этом интервале, тогда функция {\displaystyle u(x)v^{\prime}(x)} также имеет первообразную на этом интервале, причем справедливо равенство {\displaystyle \int \limits u(x)v^{\prime}(x) \, dx=u(x)v(x)-\int \limits v(x)u^{\prime}(x)\, dx} .
+   Пусть функции {\displaystyle u} и {\displaystyle v} дифференцируемы на некотором интервале и пусть функция {\displaystyle u^{\prime}(x)*v(x)} имеет первообразную на этом интервале, тогда функция {\displaystyle u(x)*v^{\prime}(x)} также имеет первообразную на этом интервале, причем справедливо равенство {\displaystyle \int \limits u(x)*v^{\prime}(x) \, dx=u(x)*v(x)-\int \limits v(x)*u^{\prime}(x)\, dx} .
 - Интегрируемость кусочно-непрерывных функций: > 
-   Если функция {\displaystyle f(x)} кусочно-непрерывна на промежутке {\displaystyle [a,b]}, то на этом промежутке она интегрируема, т.е. существует {\displaystyle \int _{a}^{b} f(x) dx} .
+   Если функция {\displaystyle f(x)} кусочно-непрерывна на промежутке {\displaystyle [a,b]}, то на этом промежутке она интегрируема, т.е. существует {\displaystyle \int _{a}^{b} f(x) \, dx} .
 - Интегрируемость кусочно-непрерывных функций: > 
    Если функция кусочно-непрерывна на некотором отрезке, то она интегрируема на этом отрезке .
 - Критерий интегрируемости в смысле Дарбу: > 
@@ -37,9 +37,9 @@
 - Критерий интегрируемости в смысле Дарбу: > 
    Пусть функция {\displaystyle f} ограничена на отрезке {\displaystyle \left[ {a,b} \right]}, тогда для того, чтобы {\displaystyle f} была интегрируемой на этом отрезке, необходимо и достаточно, чтобы  для любого положительного {\displaystyle \varepsilon} существовало такое положительное {\displaystyle \delta}, что для каждого разбиения {\displaystyle \Pi} , диаметр которого {\displaystyle d\left( \Pi \right) < \delta}, справедливо неравенство {\displaystyle {\overline S_{\Pi} } - {\underline S_{\Pi}} < \varepsilon}.
 - Критерий интегрируемости по Риману: > 
-   Ограниченная функция {\displaystyle f} интегрируема по Риману на отрезке {\displaystyle [a,b]} тогда и только тогда, когда для любого {\displaystyle \varepsilon>0} можно найти такое разбиение {\displaystyle P} указанного отрезка, что выполняется неравенство: {\displaystyle \sum \limits {k=1}^{n} (M_k-m_k)\Delta x_k<\varepsilon}, где {\displaystyle m_k=inf \{f(t):t\in[x_{k-1},x_k]\}} и {\displaystyle M_k=sup \{f(t):t\in[x_{k-1},x_k]\}} .
+   Ограниченная функция {\displaystyle f} интегрируема по Риману на отрезке {\displaystyle [a,b]} тогда и только тогда, когда для любого {\displaystyle \varepsilon>0} можно найти такое разбиение {\displaystyle P} указанного отрезка, что выполняется неравенство: {\displaystyle \sum \limits _{k=1}^{n} (M_k-m_k)\Delta x_k<\varepsilon}, где {\displaystyle m_k=inf \{f(t):t\in[x_{k-1},x_k]\}} и {\displaystyle M_k=sup \{f(t):t\in[x_{k-1},x_k]\}} .
 - Критерий интегрируемости по Риману: > 
-   Ограниченная функция {\displaystyle f}  интегрируема по Риману на отрезке {\displaystyle [a,b]} тогда и только тогда, когда для любого положительного числа {\displaystyle \varepsilon} существует такое разбиение {\displaystyle P\in \sigma[a,b]}, что выполняется неравенство {\displaystyle U(P,f) − L(P,f) < \varepsilon} .
+   Ограниченная функция {\displaystyle f}  интегрируема по Риману на отрезке {\displaystyle [a,b]} тогда и только тогда, когда для любого положительного числа {\displaystyle \varepsilon} существует такое разбиение {\displaystyle P\in \sigma[a,b]}, что выполняется неравенство {\displaystyle U(P,f) - L(P,f) < \varepsilon} .
 - Необходимые условия экстремума: > 
    Если функция {\displaystyle f(x)} дифференцируема в некоторой точке  {\displaystyle x_0}, принадлежащей интервалу {\displaystyle (x_0-\delta,x_0+\delta)} и имеет в этой точке экстремум, то {\displaystyle f^{\prime}(x_0)=0} .
 - Необходимые условия экстремума: > 
@@ -47,9 +47,9 @@
 - Неравенство_Чебышева: > 
    Пусть {\displaystyle \varphi \geq 0} - суммируемая на {\displaystyle A} функция и {\displaystyle с>0} - произвольное положительное число, тогда {\displaystyle \mu\{x \in A \vert \varphi(x) \geq c\} \leq \dfrac{1}{c}\int \limits _{A} \varphi(x) \, d\mu} .
 - Неравенство_Чебышева: > 
-   Если функция {\displaystyle f \in L_1(X)}, то для любого {\displaystyle \varpepsilon>0} верно неравенство {\displaystyle \mu\{|f| \geq \varepsilon\} \leq \dfrac{1}{\varepsilon}\int \limits _{X} |f| \, d\mu} .
+   Если функция {\displaystyle f \in L_1(X)}, то для любого {\displaystyle \varepsilon>0} верно неравенство {\displaystyle \mu\{|f| \geq \varepsilon\} \leq \dfrac{1}{\varepsilon}*\int \limits _{X} |f| \, d\mu} .
 - Оценка определенного интеграла: > 
-   Если {\displaystyle f(x)} непрерывна на промежутке {\displaystyle [a,b]}, то имеет место такая оценка определенного интеграла: {\displaystyle m(b-a)\leq \int _{a}^{b}f(x)\,dx\leq M(b-a)}, где {\displaystyle m} - наименьшее, а {\displaystyle M} - наибольшее значения функции {\displaystyle f(x)} на промежутке {\displaystyle [a,b]} .
+   Если {\displaystyle f(x)} непрерывна на промежутке {\displaystyle [a,b]}, то имеет место такая оценка определенного интеграла: {\displaystyle m(b-a)\leq \int _{a}^{b} f(x)\,dx\leq M(b-a)}, где {\displaystyle m} - наименьшее, а {\displaystyle M} - наибольшее значения функции {\displaystyle f(x)} на промежутке {\displaystyle [a,b]} .
 - Оценка определенного интеграла: > 
    Если {\displaystyle m} есть наименьшее, а {\displaystyle M} - наибольшее значение функции {\displaystyle f(x)} в промежутке {\displaystyle (a,b)}, то значение интеграла {\displaystyle \int \limits _{a}^{b} f(x) \, dx} заключено между {\displaystyle m(b-a)} и {\displaystyle M(b-a)} .
 - Первая теорема Вейерштрасса: > 
@@ -60,13 +60,13 @@
    Пусть функция {\displaystyle f(x)} непрерывна на отрезке  {\displaystyle [a,b]} и дифференцируема на интервале {\displaystyle (a,b)} , тогда для того, чтобы {\displaystyle f(x)} была постоянна на отрезке {\displaystyle [a,b]}, необходимо и достаточно, чтобы для любого {\displaystyle x \in (a,b)} выполнялось условие {\displaystyle f^{\prime}=0} .
 - Признак постоянства функции: > 
    Если во всех точках некоторого промежутка производная функции {\displaystyle f(x)} равна нулю, то функция {\displaystyle f(x)} сохраняет в этом промежутке постоянное значение .
-- Признаки возрастания и убывания функции: > 
+- Признаки возрастания  функции: > 
    Пусть функция {\displaystyle f(x)} непрерывна на отрезке  {\displaystyle [a,b]} и дифференцируема на интервале {\displaystyle (a,b)} ,  тогда чтобы {\displaystyle f(x)} не убывала на отрезке {\displaystyle [a,b]}, необходимо и достаточно, чтобы при любом {\displaystyle x \in (a,b)} выполнялось условие {\displaystyle f^{\prime} \geq 0}.
-- Признаки возрастания и убывания функции: > 
-   Пусть функция {\displaystyle f(x)} непрерывна на отрезке  {\displaystyle [a,b]} и дифференцируема на интервале {\displaystyle (a,b)} ,  тогда чтобы {\displaystyle f(x)} не возрастала на отрезке {\displaystyle [a,b]}, необходимо и достаточно, чтобы при любом {\displaystyle x \in (a,b)} выполнялось условие {\displaystyle f^{\prime} \leq 0}.
-- Признаки возрастания и убывания функции: > 
+- Признаки возрастания  функции: > 
    Если во всех точках некоторого промежутка производная функции f больше нуля, то функция f возрастает в этом промежутке .
-- Признаки возрастания и убывания функции: > 
+- Признаки убывания функции: > 
+   Пусть функция {\displaystyle f(x)} непрерывна на отрезке  {\displaystyle [a,b]} и дифференцируема на интервале {\displaystyle (a,b)} ,  тогда чтобы {\displaystyle f(x)} не возрастала на отрезке {\displaystyle [a,b]}, необходимо и достаточно, чтобы при любом {\displaystyle x \in (a,b)} выполнялось условие {\displaystyle f^{\prime} \leq 0}.
+- Признаки убывания функции: > 
    Если во всех точках некоторого промежутка производная функции g меньше нуля, то функция g убывает на этом промежутке.
 - Теорема Безу: > 
    Если {\displaystyle P(z)} - полином степени {\displaystyle n \geq 1} и для любого комплексного числа {\displaystyle с} существует полином {\displaystyle Q(z)} степени {\displaystyle n-1} такой, что справедливо равенство {\displaystyle P(z)=(z-c)\cdot Q(z)+P(c)} .
@@ -79,9 +79,9 @@
 - Теорема Коши: > 
    Если на отрезке {\displaystyle [a,b]} функции {\displaystyle f(x)} и {\displaystyle g(x)} непрерывны и дифференцируемы в каждой точке интервала {\displaystyle (a,b)}, причем  {\displaystyle g^{\prime}\neq 0} во всех точках этого интервала, то тогда между точками {\displaystyle a} и  {\displaystyle b} существует точка {\displaystyle c} {\displaystyle (a<c<b)}, что имеет место равенство {\displaystyle \dfrac{f(b)-f(a)}{g(b)-g(a)}=\dfrac{f^{\prime}(c)}{g^{\prime}(c)}} .
 - Теорема Коши: > 
-   Если функции {\displaystyle f(x)} и {\displaystyle g(x)} определены и непрерывны на сегменте {\displaystyle [a,b]} , {\displaystyle f(x)} и {\displaystyle g(x)} имеют конечные производные {\displaystyle f^{\prime}(x)}  и {\displaystyle g^{\prime}(x)} на интервале {\displaystyle (a,b)}, {\displaystyle f^{\prime}^2(x)+g^{\prime}^2(x) \neq 0} при {\displaystyle a<x<b}, {g(a)\neq g(b)}, то {\displaystyle \dfrac{f(b)-f(a)}{g(b)-g(a)}=\dfrac{f^{\prime}(c)}{g^{\prime}(c)}}, где {\displaystyle a<c<b}.
+   Если функции {\displaystyle f(x)} и {\displaystyle g(x)} определены и непрерывны на сегменте {\displaystyle [a,b]} , {\displaystyle f(x)} и {\displaystyle g(x)} имеют конечные производные {\displaystyle f^{\prime}(x)}  и {\displaystyle g^{\prime}(x)} на интервале {\displaystyle (a,b)}, {\displaystyle {f^{\prime}}^2(x)+{g^{\prime}}^2(x) \neq 0} при {\displaystyle a<x<b}, {\displaystyle g(a)\neq g(b)}, то {\displaystyle \dfrac{f(b)-f(a)}{g(b)-g(a)}=\dfrac{f^{\prime}(c)}{g^{\prime}(c)}}, где {\displaystyle a<c<b}.
 - Теорема Лагранжа: > 
-   Если функция {\displaystyle y=f(x)} непрерывна на отрезке {\displaystyle [a,b]} и дифференцируема на интервале {\displaystyle (a,b)}, то внутри отрезка {\displaystyle [a,b]} найдется хотя бы одна точка {\displaystyle с} {(\displaystyle a<c<b)} такая, что будет иметь равенство {\displaystyle f(b)-f(a)=f^{\prime}(c)(b-a)} .
+   Если функция {\displaystyle y=f(x)} непрерывна на отрезке {\displaystyle [a,b]} и дифференцируема на интервале {\displaystyle (a,b)}, то внутри отрезка {\displaystyle [a,b]} найдется хотя бы одна точка {\displaystyle с} {(\displaystyle a<c<b)} такая, что будет иметь равенство {\displaystyle f(b)-f(a)=f^{\prime}(c)*(b-a)} .
 - Теорема Лагранжа: > 
    Если функция {\displaystyle f(x)} определена и непрерывна на сегменте {\displaystyle [a,b]} и {\displaystyle f(x)} имеет конечную производную {\displaystyle f^{\prime}(x)} на интервале {\displaystyle (a,b)}, то {\displaystyle f(b)-f(a)=(b-a)\cdot f^{\prime}(c)}, где {\displaystyle a<c<b} .
 - Теорема Лопиталя: > 
@@ -115,8 +115,8 @@
 - Формула Ньютона-Лейбница: > 
    Пусть {\displaystyle f} - функция, интегрируема по Риману на отрезке {\displaystyle [a,b]} и функция {\displaystyle F} непрерывна на отрезке [a,b] и дифференцируема в каждой внутренней точке этого отрезка, причем {\displaystyle F^{\prime}=f(x)} , {\displaystyle a<x<b}, тогда справедлива формула {\displaystyle \int \limits _{a}^{b} f(x) \, dx=F(b)-F(a)} .
 - Формула Тейлора: > 
-   Если функция {\displaystyle y=f(x)} определенна на отрезке {\displaystyle [a,b]} и на этом отрезке {\displaystyle f(x)} дифференцируема {\displaystyle n} раз, тогда {\displaystyle f(x)} может быть представлена в виде {\displaystyle f(x)=f(a)+\dfrac{f^{\prime}(a)}{1!}(x-a)+\dfrac{f^{''}(a)}{2!}(x-a)^2+\ldots+\dfrac{f^{(n-1)}(a)}{(n-1)!}(x-a)^{n-1}+R_n} .
+   Если функция {\displaystyle y=f(x)} определенна на отрезке {\displaystyle [a,b]} и на этом отрезке {\displaystyle f(x)} дифференцируема {\displaystyle n} раз, тогда {\displaystyle f(x)} может быть представлена в виде {\displaystyle f(x)=f(a)+\dfrac{f^{\prime}(a)}{1!}*(x-a)+\dfrac{f^{''}(a)}{2!}*(x-a)^2+\ldots+\dfrac{f^{(n-1)}(a)}{(n-1)!}*(x-a)^{n-1}+R_n} .
 - Формула Тейлора: > 
-   Пусть {\displaystyle k \geq 1} является целым, и пусть функция {\displaystyle f : \mathbb{R} \rightarrow \mathbb{R}} является {\displaystyle k} раз дифференцируемой в точке {\displaystyle a \in \mathbb{R}}, тогда существует функция {\displaystyle h_k: \mathbb{R} \rightarrow \mathbb{R}} такая, что {\displaystyle f(x)=f(a)+\dfrac{f^{\prime}(a)}{1!}(x-a)+\dfrac{f^{''}(a)}{2!}(x-a)^2+\ldots+\dfrac{f^{(k)}(a)}{k!}(x-a)^k+h_k(x-a)^k}, {\displaystyle \lim \limits {x \to a} h_k(a)=0} .
+   Пусть {\displaystyle k \geq 1} является целым, и пусть функция {\displaystyle f : \mathbb{R} \rightarrow \mathbb{R}} является {\displaystyle k} раз дифференцируемой в точке {\displaystyle a \in \mathbb{R}}, тогда существует функция {\displaystyle h_k: \mathbb{R} \rightarrow \mathbb{R}} такая, что {\displaystyle f(x)=f(a)+\dfrac{f^{\prime}(a)}{1!}(x-a)+\dfrac{f^{''}(a)}{2!}(x-a)^2+\ldots+\dfrac{f^{(k)}(a)}{k!}*(x-a)^k+h_k*(x-a)^k}, {\displaystyle \lim \limits _{x \to a} h_k(a)=0} .
 - Формула Тейлора: > 
-   Пусть функция {\displaystyle f(x)} {\displaystyle n} раз дифференцируема в точке {\displaystyle x_0}, тогда {\displaystyle f(x)=\sum \limits _[k=0}^{n} \dfrac{f^{(k)}(x_0)}{k!}(x-x_0)^k+o((x-x_0)^n)} .   
+   Пусть функция {\displaystyle f(x)} {\displaystyle n} раз дифференцируема в точке {\displaystyle x_0}, тогда {\displaystyle f(x)=\sum \limits _{k=0}^{n} \dfrac{f^{(k)}(x_0)}{k!}*(x-x_0)^k+o((x-x_0)^n)} .   

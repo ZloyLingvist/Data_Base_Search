@@ -1,12 +1,4 @@
-def recursion_clean(l):
-    for i,elem in enumerate(l):
-            if not isinstance(elem,str):
-                for k in range(len(elem)-1,-1,-1):
-                    if elem[k]==[]:
-                        del elem[k]
-                        
-                l[i]=recursion_clean(elem)
-    return l
+from utilities import *
 
 class Text_analyzer:
     def __init__(self,a,root):
@@ -63,6 +55,16 @@ class Text_analyzer:
         
         return l
 
+    def del_attribute(self,l):
+        for i,elem in enumerate(l):
+            if not isinstance(elem,str):
+                l[i]=self.del_attribute(elem)
+            else:
+                l[i]=l[i].split("::")[0]
+             
+        return l
+
+ 
     def make_tree(self):
         visited=[]
         self.dfs(self.dict,self.root,visited)
@@ -84,4 +86,5 @@ class Text_analyzer:
         visited=recursion_clean(visited)
         
         return [visited,self.root]
+
 

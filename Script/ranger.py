@@ -1,6 +1,6 @@
 import re
 import copy
-from ranger_algo import *
+from jaccard_modified import *
 import numpy as np
 from collections import Counter
 

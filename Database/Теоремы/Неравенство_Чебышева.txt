@@ -1,3 +1,3 @@
 Пусть {\displaystyle \varphi \geq 0} - суммируемая на {\displaystyle A} функция и {\displaystyle с>0} - произвольное положительное число, тогда {\displaystyle \mu\{x \in A \vert \varphi(x) \geq c\} \leq \dfrac{1}{c}\int \limits _{A} \varphi(x) \, d\mu} .
 
-Если функция {\displaystyle f \in L_1(X)}, то для любого {\displaystyle \varpepsilon>0} верно неравенство {\displaystyle \mu\{|f| \geq \varepsilon\} \leq \dfrac{1}{\varepsilon}\int \limits _{X} |f| \, d\mu} .
+Если функция {\displaystyle f \in L_1(X)}, то для любого {\displaystyle \varepsilon>0} верно неравенство {\displaystyle \mu\{|f| \geq \varepsilon\} \leq \dfrac{1}{\varepsilon}*\int \limits _{X} |f| \, d\mu} .

@@ -1,0 +1,147 @@
+{(\displaystyle a<c<b)}
+{\displaystyle v}
+{\displaystyle \lim \limits _{x \to a} \dfrac{f^{\prime}(x)}{g^{\prime}(x)}}
+{\displaystyle c \in [a, b]}
+{\displaystyle a}
+{\displaystyle n \geq 1}
+{\displaystyle c}
+{\displaystyle f(a)=f(b)}
+{\displaystyle F (x)}
+{\displaystyle M(b-a)}
+{\displaystyle \int \limits _{a}^{b} f(x) \, dx=F(b)-F(a)}
+{\displaystyle \gamma \in (a,b)}
+{\displaystyle x \in [a,b]}
+{\displaystyle U(P,f) − L(P,f) < \varepsilon}
+{\displaystyle \sum \limits {k=1}^{n} (M_k-m_k)\Delta x_k<\varepsilon}
+{\displaystyle m_k=inf \{f(t):t\in[x_{k-1},x_k]\}}
+{\displaystyle [a;b]}
+{\displaystyle f(a)<A<f(b)}
+{\displaystyle \mu\{|f| \geq \varepsilon\} \leq \dfrac{1}{\varepsilon}\int \limits _{X} |f| \, d\mu}
+{\displaystyle P(z)=(z-c)\cdot Q(z)+P(c)}
+{\displaystyle g^{\prime}(x) \neq 0}
+{\displaystyle Q(z)}
+{\displaystyle a<c<b}
+{\displaystyle f^{\prime} \geq 0}
+{\displaystyle f^{\prime}^2(x)+g^{\prime}^2(x) \neq 0}
+{\displaystyle с>0}
+{\displaystyle \lim \limits _{x \to a} g(x)=0}
+{\displaystyle \varepsilon}
+{\displaystyle \lim \limits {x \to a} h_k(a)=0}
+{\displaystyle \int \limits _{a}^{b} f(x) \, dx}
+{\displaystyle \int \limits u(x)v^{\prime}(x) \, dx=u(x)v(x)-\int \limits v(x)u^{\prime}(x)\, dx}
+{\displaystyle g^{\prime}(x)}
+{\displaystyle С}
+{\displaystyle x_{m},\;x_{M}\in [a,\;b]}
+{\displaystyle u^{\prime}(x)v(x)}
+{\displaystyle {\overline S_{\Pi} } - {\underline S_{\Pi}} < \varepsilon}
+{\displaystyle F(x)=\int \limits _{a}^{x} f(t)\,dt}
+{\displaystyle \int \limits _{a}^{b} f(x) dx=f(\xi)\cdot (b-a)}
+{\displaystyle f^{\prime}=0}
+{\displaystyle f(b)-f(a)=f^{\prime}(c)*(b-a)}
+{\displaystyle \lim \limits _{x \to a}\dfrac{f(x)}{g(x)}=\lim \limits _{x \to a} \dfrac{f^{\prime}(x)}{g^{\prime}(x)}}
+{\displaystyle \int \limits _{a}^{x} f(t)\,dt}
+{\displaystyle f \in L_1(X)}
+{\displaystyle \textstyle \Phi (x)}
+{\displaystyle P\in \sigma[a,b]}
+{\displaystyle x\in (a,b)}
+{\displaystyle m(b-a)}
+{\displaystyle \lim _{x \to x_0} g(x)=0}
+{\displaystyle \textstyle f(x)}
+{\displaystyle \int \limits _{a}^{b} f(x)\cdot g(x)\, dx=f(a)\cdot \int \limits _{a}^{\xi} g(x)\, dx+f(b)\cdot \int \limits _{\xi}^{b} g(x)\, dx }
+{\displaystyle \varepsilon >0}
+{\displaystyle A}
+{\displaystyle f : \mathbb{R} \rightarrow \mathbb{R}}
+{\displaystyle f(\gamma)=C}
+{\displaystyle f(b)}
+{\displaystyle g(x)}
+{\displaystyle |f(x)-p(x)|<\varepsilon }
+{\displaystyle x_0}
+{\displaystyle h_k: \mathbb{R} \rightarrow \mathbb{R}}
+{\displaystyle v(x)}
+{\displaystyle P(z)}
+{\displaystyle (x_0-\delta,x_0+\delta)}
+{\displaystyle f(a)}
+{\displaystyle S(f, P_{\varepsilon})-s(f, P_{\varepsilon})<\varepsilon}
+{\displaystyle x}
+{\displaystyle \lim _{x \to x_0} \dfrac{f(x)}{g(x)}=\lim _{x \to x_0} \dfrac{f^{\prime}(x)}{g^{\prime}(x)}}
+{\displaystyle p}
+{\displaystyle с}
+{\displaystyle \int _{a}^{b} f(x) dx}
+{\displaystyle f(с)=С}
+{\displaystyle \lim \limits _{x \to a} f(x)=0}
+{\displaystyle f}
+{\displaystyle f^{\prime}(c)=0}
+{\displaystyle F^{\prime}(x_0)=f(x_0)}
+{\displaystyle b}
+{\displaystyle g^{\prime}\neq 0}
+{\displaystyle \int _{a}^{b} u(x)dv(x)=(u(x)\cdot v(x)){\vert}^{b}_{a}=\int \limits _{a}^{b} v(x)du(x)}
+{\displaystyle f(a)<f(b)}
+{\displaystyle c\in (a,b)}
+{\displaystyle \varphi \geq 0}
+{\displaystyle f(x_{m})\leq f(x)\leq f(x_{M})}
+{\displaystyle \left(\int \limits _{a}^{x} f(t)\,dt\right)^{\prime}=f(x)}
+{\displaystyle P_{\varepsilon}}
+{\displaystyle F^{\prime}(c)=f(c)}
+{\displaystyle M}
+{\displaystyle [a,b]}
+{\displaystyle z=a}
+{\displaystyle f(x)=\sum \limits _{k=0}^{n} \dfrac{f^{(k)}(x_0)}{k!}(x-x_0)^k+o((x-x_0)^n)}
+{\displaystyle f^{\prime}(x)}
+{\displaystyle k \geq 1}
+{\displaystyle n}
+{\displaystyle f'(c)=0}
+{\displaystyle \xi}
+{\displaystyle \xi \in [a;b]}
+{\displaystyle y=f(x)}
+{\displaystyle (a<c<b)}
+{\displaystyle \varpepsilon>0}
+{\displaystyle f (x)}
+{\displaystyle (a,b)}
+{\displaystyle f(b)-f(a)=(b-a)\cdot f^{\prime}(c)}
+{\displaystyle m}
+{\displaystyle z-a}
+{\displaystyle P_n(x)}
+{\displaystyle \int \limits _a^x f(t)\,dt=F(x)-F(a)}
+{\displaystyle \dfrac{f(b)-f(a)}{g(b)-g(a)}=\dfrac{f^{\prime}(c)}{g^{\prime}(c)}}
+{\displaystyle \delta}
+{\displaystyle \left[ {a,b} \right]}
+{\displaystyle f(x)=f(a)+\dfrac{f^{\prime}(a)}{1!}(x-a)+\dfrac{f^{''}(a)}{2!}(x-a)^2+\ldots+\dfrac{f^{(n-1)}(a)}{(n-1)!}(x-a)^{n-1}+R_n}
+{\displaystyle \left[a,b\right]}
+{\displaystyle u}
+{\displaystyle \varepsilon>0}
+{\displaystyle M_k=sup \{f(t):t\in[x_{k-1},x_k]\}}
+{\displaystyle f(c)=0}
+{\displaystyle u(x)}
+{\displaystyle d\left( \Pi \right) < \delta}
+{\displaystyle a<x<b}
+{\displaystyle f(x)=f(a)+\dfrac{f^{\prime}(a)}{1!}(x-a)+\dfrac{f^{''}(a)}{2!}(x-a)^2+\ldots+\dfrac{f^{(k)}(a)}{k!}(x-a)^k+h_k(x-a)^k}
+{\displaystyle [a,\;b]}
+{\displaystyle f(a) \\neq f(b)}
+{\displaystyle F(x)=\int \limits _{a}^{x} f(t)\, dt}
+{\displaystyle k}
+{\displaystyle x_0 \in [a,b]}
+{\displaystyle \xi \in [a,b]}
+{\displaystyle u(x)v^{\prime}(x)}
+{\displaystyle x\in [a,b]}
+{\displaystyle m(b-a)\leq \int _{a}^{b}f(x)\,dx\leq M(b-a)}
+{\displaystyle \Pi}
+{\displaystyle \int \limits _a^b f(x)\,dx=\Phi (b)-\Phi (a)={\Bigg .}\Phi (x){\Bigg |}_{a}^{b}}
+{\displaystyle a \in \mathbb{R}}
+{\displaystyle f^{\prime} \leq 0}
+{\displaystyle \mu\{x \in A \vert \varphi(x) \geq c\} \leq \dfrac{1}{c}\int \limits _{A} \varphi(x) \, d\mu}
+{\displaystyle P(a)}
+{\displaystyle n-1}
+{\displaystyle с \in [a,b]}
+{\displaystyle x \in (a,b)}
+{\displaystyle P}
+{\displaystyle g(a)\neq g(b)}
+{\displaystyle f(x)}
+{\displaystyle f^{\prime}(x_0)=0}
+{\displaystyle f(c)=A}
+{\displaystyle |f(x)| \leq M}
+{\displaystyle F}
+{\displaystyle F^{\prime}=f(x)}
+{\displaystyle \lim _{x \to x_0} f(x)=0}
+{\displaystyle |P_n(x)-f(x)|<\varepsilon}
+{\displaystyle f^{\prime}(x_0)}
+{\displaystyle f,g \in R_{[a,b]}}

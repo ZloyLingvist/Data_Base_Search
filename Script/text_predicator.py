@@ -1,17 +1,8 @@
+from utilities import *
 import os
 
 parent_directory=os.path.dirname(os.path.dirname(__file__))
 dict_path=parent_directory+"\\Files\\"
-
-def checking(str1):
-        str1=str1.split()
-        a=['del']
-        
-        if len(str1)==1:
-                if str1!='if' and str1!="then":
-                        return False
-
-        return True
 
 class Text_predicator:
         def __init__(self):

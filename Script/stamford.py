@@ -1,7 +1,6 @@
 from text_predicator import *
 from text_tree import *
 from utilities import *
-from processing import *
 
 import os
 path = os.path.dirname(os.path.abspath(__file__))
@@ -235,7 +234,6 @@ class Stamford:
 
     def main(self,a,mode):
         if type(a)==str:
-            #stanza.download('ru',processors='tokenize,lemma,pos,depparse',package='syntagrus',)
             nlp = stanza.Pipeline('ru',processors='tokenize,lemma,pos,depparse', dir=parent_directory+'/stanza_resources',package='syntagrus', use_gpu=True, pos_batch_size=3000)
             doc = nlp(a)
             i=0
@@ -245,8 +243,6 @@ class Stamford:
                     a.append([str(i+1),wrd[2].text,wrd[2].lemma,str(wrd[2].head),wrd[2].deprel,wrd[2].upos])
                     i=i+1
 
-        a=arr_etap_one(a)
-
         if mode==0:
             roots=0
             for i in range(len(a)):
@@ -254,9 +250,11 @@ class Stamford:
                         roots=a[i][0]
 
             A=Text_analyzer(a,roots)
-            p2=A.make_tree()
-            return p2
+            p0=A.make_tree()
+            p1=A.del_attribute(p0)[0]
+            return p1
 
+        a=arr_etap_one(a)
         self.split(a)
         self.correction()
         roots=[]

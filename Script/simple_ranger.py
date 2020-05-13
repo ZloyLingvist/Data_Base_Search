@@ -151,13 +151,6 @@ def keyword_search():
     file = path+'/Database/label_list.yml'
     t = Tester(file)
     res = t.test()
-
-    '''
-    f=open(path+'/Database/keyword_result.txt','w',encoding="utf-8")
-    for line in res:
-        f.write(str(line)+'\n')
-
-    f.close()
-    '''
     return res
 
+keyword_search()

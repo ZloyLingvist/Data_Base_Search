@@ -122,11 +122,4 @@ class plot_tree:
                 graph.add_edge(edge)
 
         graph.write_png(parent_directory+"\\Tree\\"+self.name+".png")
-'''
-a=[['if', ['&', ['function', 'f'], ['Real', 'f'], ['C', ['closed_interval', ['a'], ['b']]], ['closed_interval', ['a'], ['b']], ['d', ['a', 'b']],
-           ['open_interval', ['a', 'b']], ['values', ['f'], ['1'], ['конец'], ['отрезка'], [['closed_interval', ['a'], ['b']]]]]],
-   ['then', ['&', ['exists', ['a', 'b'], 'a', ['point', 'a'], ['open_interval', ['a'], ['b']]]], ['point', 'a'], ['equal', ['a'], ['0'], ['der']]]]
 
-A=plot_tree(a,"1.png","")
-A.main("formula")
-'''

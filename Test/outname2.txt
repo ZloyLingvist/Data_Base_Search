@@ -1,30 +1,30 @@
-[['C', ['if'], [['f', ['x']]], [['closed_interval', ['a'], ['b']]]], ['closed_interval', ['a'], ['b']], ['function', ['f', ['x']]], ['d', ['a', 'b']], ['open_interval', ['a', 'b']], [['=', ['f', ['a']], ['f', ['b']]]], ['then', 'exists', ['\\in', ['c'], ['\\closedinterval', ['a', 'b']]], ['&', ['point', ['\\in', ['c'], ['\\closedinterval', ['a', 'b']]]], [['=', ["f'", ['c']], ['0']]]]]]
+[]
 
-[['if', 'function', 'f', ['&', ['function', 'f'], ['Real', 'f'], ['C', ['closed_interval', ['a'], ['b']]], ['closed_interval', ['a'], ['b']], ['d', ['f'], ['1'], [['a', 'b']], ['values'], ['конец'], ['отрезка'], [['closed_interval', ['a'], ['b']]]], ['open_interval', ['a', 'b']], ['exists', 'then', ['a', 'b'], 'equal', 'точказв', 'der', '0', ['open_interval', ['a', 'b']]]]]]
+[]
 
-[['d', ['if'], ['f'], ['open_interval']], ['function', 'f'], ['C', ['конец'], ['это'], ['промежутка']], ['values', ['f'], ['1'], [['=', ['f', ['a']], ['f', ['b']]]]], ['exists', 'then', 'point', 'equal', 'a', 'der', '0', ['=', ["f'", ['c']], ['0']], ['point', 'a']]]
+[]
 
-[['if', 'C', 'f', ['closed_interval', ['a'], ['b']], ['&', ['function', 'f'], ['d', ['f'], ['point'], ['весь'], [['closed_interval', ['a'], ['b']]], ['и'], [['=', ['f', ['a']], ['f', ['b']]]]], ['point', ['=', ['f', ['a']], ['f', ['b']]]], ['point', ['closed_interval', ['a'], ['b']]], ['внутренний', ['=', ['f', ['a']], ['f', ['b']]]]]], ['then', 'exists', ['\\in', ['c'], ['a', 'b']], ['&', ['point', ['\\in', ['c'], ['a', 'b']]], ['point', ['{\\displaystyle f^{\\prime}}(c)=0}']]]]]
+[]
 
-[['if', 'R', 'f', 'A', ['&', ['set', 'A'], ['function', 'f'], ['forall', 'A′', ['&', ['L0', 'A′'], ['subset', 'A′'], ['R', ['then'], ['f'], ['A′']]]]]]]
+[]
 
-[['if', 'R', 'f', 'риман', 'по', ['closed_interval', ['a'], ['b']], ['&', ['closed_interval', ['a'], ['b']], ['function', 'f'], ['B', ['then'], ['f'], [['closed_interval', ['a'], ['b']]]]]]]
+[]
 
-[['if', 'R', 'f', 'риман', 'по', ['closed_interval', ['a'], ['b']], ['&', ['closed_interval', ['a'], ['b']], ['function', 'f'], ['R', ['then'], ['f'], ['лебег'], ['по'], [['closed_interval', ['a'], ['b']]]]]]]
+[]
 
-['forall', ['x'], ['=>', ['Real', ['x']], ['equal', ['e', '^', ['*', 'i', 'x']], ['+', ['\\cos', 'x'], ['*', ['i'], ['\\sin', 'x']]]]]]
+[]
 
-[['function', 'if'], ['function', ['f']], ['function'], ['C', 'function'], ['dom', ['closed_interval', ['a'], ['b']]], ['closed_interval', ['a'], ['b']], ['forall', ['p'], ['then', 'exists', ['{\\displaystyle \\varepsilon >0}'], ['p'], 'polynom', 'коэффициент', 'с', 'Real', ['&', ['polynom', ['p']], ['=>', ['что', [['x']], ['весь'], ['из']], [['closed_interval', ['a'], ['b']], ['<', ['\\abs', ['-', ['f', ['x']], ['p', ['x']]]], ['\\varepsilon']]]]]]]]
+[]
 
-[['if', 'C', ['f', ['x']], ['closed_interval', ['a'], ['b']], ['&', ['segment', ['closed_interval', ['a'], ['b']]], ['function', ['f', ['x']]], ['forall', ['P', '_', ['n'], ['x']], ['then', 'exists', ['{\\displaystyle \\varepsilon >0}'], ['P', '_', ['n'], ['x']], 'polynom', 'номер', 'с', ['n'], ['&', ['polynom', ['P', '_', ['n'], ['x']]], ['зависеть', ['от'], [['\\varepsilon']]], [['<', ['\\abs', ['-', ['P', '_', ['n'], ['x']], ['f', ['x']]]], ['\\varepsilon']], 'что']]]]]]]
+[]
 
-[['uniform_continuity', 'function', 'compact', 'f', ['&', ['function', 'f'], ['dom', 'f'], ['C', 'f']]]]
+[]
 
-[['compact', 'if'], ['compact', [['\\in', ['E'], ['\\mathbb', ['^', 'R', 'n']]]], ['-']], ['C', ['и'], [['f']], [['E']]], ['function', ['f']], ['uniform_continuity', 'then', ['f'], ['E'], ['&']]]
+[]
 
-[['if', 'd', 'f', 'A', ['&', ['point', 'A'], ['function', 'f'], ['C', ['then'], ['она'], ['point']]]]]
+[]
 
-[['if', 'C', ['f', ['x']], ['closed_interval', ['a'], ['b']], 'closed_interval', 'и', 'phi', 'она', ['&', ['phi'], ['closed_interval', 'phi'], ['@function', ['\\Phi', ['x']]], ['antiderivative', 'phi'], ['closed_interval', ['a'], ['b']]]], ['then', ['equal', ['\\int', ['_', 'a'], ['^', 'b'], ['f', 'x'], ['dx']], ['=', ['-', ['\\Phi', 'b'], ['\\Phi', 'a']], ['\\Phi', ['x', ['a'], ['b']]]]], ['&']]]
+[]
 
-[['if', 'C', ['f', ['x']], ['interval', ['a'], ['b']], ['&', ['interval', ['a'], ['b']], ['function', ['f', ['x']]]]], ['then', ['equal', ['\\int', ['_', 'a'], ['^', 'b'], ['f', 't'], ['dt']], ['-', ['F', 'b'], ['F', 'a']]], ['&', ['antiderivative', 'где'], ['antiderivative', [['F', ['x']]], ['-']], ['phi'], ['@function', ['f', ['x']]], ['antiderivative', 'phi']]]]
+[]
 

@@ -8,11 +8,9 @@ from utilities import *
 from edit_distance import *
 from cos_similarity import *
 from simple_ranger import *
-from testing_sub_block import *
-
-import stanza
 
 path = os.path.dirname(os.path.dirname(__file__))
+test_dir_path=path+"\\Test\\"
 
 def testing_general_rank(ranking,index_list):    
     mark=0
@@ -47,8 +45,13 @@ def test_general_sub_main(filein,mode):
 
     f.close()
 
-    if mode==0 or mode==1: ##алгоритм ранжирования
-        db=reading_data(filein.split('.txt')[0]+"_arr_razbor.txt","predicate")
+    if mode==0 or mode==1 or mode==2: ##алгоритм ранжирования
+        if mode!=2:
+            db=reading_data(filein.split('.txt')[0]+"_arr_razbor.txt","predicate")
+        else:
+            db=reading_data(filein.split('.txt')[0]+"_arr_syntax.txt","predicate")
+            mode=0
+            
         res=[]
         for i in range(len(db)):
             tmp=return_index_in_indexlist(i,index_list)
@@ -70,15 +73,23 @@ def test_general_sub_main(filein,mode):
         
         return res
 
-    if mode==2: ##по ключевым словам
+    if mode==3: ##по ключевым словам
         ranking=keyword_search()
         return ranking
 
-    if mode==3 or mode==4 or mode==5:
+    if mode==4 or mode==5 or mode==6:
         text_list=[]
         ranking=[]
         tmp=[]
         res=[]
+
+        if mode==4:
+            levenshtein_ranking=[]
+            f=open(path+"\\Database\\result_list_levenshtein.txt","r",encoding="utf-8")
+            for line in f:
+                line=line.strip().split(" ")
+                levenshtein_ranking.append(line)
+            f.close()
         
         f=open(filein,"r",encoding="utf-8")
         for line in f:
@@ -91,16 +102,15 @@ def test_general_sub_main(filein,mode):
                 res.append('-1')
                 continue
 
-            if mode==3:
-                for j in range(len(text_list)):
-                    #ranking.append([str(j+1),levenshtein(text_list[i],text_list[j])])
-                    ranking.append([str(j+1),-1])
-
             if mode==4:
+                for j in range(len(levenshtein_ranking[i])):
+                    ranking.append([str(j+1),levenshtein_ranking[i]])
+                    
+            if mode==5:
                 for j in range(len(text_list)):
                     ranking.append([str(j+1),get_result(text_list[i],text_list[j],1)])
 
-            if mode==5:
+            if mode==6:
                 for j in range(len(text_list)):
                     ranking.append([str(j+1),get_result(text_list[i],text_list[j],2)])
                     
@@ -110,13 +120,11 @@ def test_general_sub_main(filein,mode):
 
         return res
 
-
-
 '''Блок тестирования модуля преобразования на язык логики предикатов'''
     
-def testing_block_one(f1,f2,outname,outname2,index,algo,graph_mode):
+def testing_block_one(arr,test_example,outname):
     '''f1-файл со ответами'''
-    f=open(test_dir_path+f1,"r",encoding="utf-8")
+    f=open(test_dir_path+test_example,"r",encoding="utf-8")
     a=[]
     b=[]
     for line in f:
@@ -124,26 +132,17 @@ def testing_block_one(f1,f2,outname,outname2,index,algo,graph_mode):
             a.append(eval(line.strip()))   
     f.close()
 
-    '''f2-файл с разборами'''
-    f=open(test_dir_path+f2,"r",encoding="utf-8")
-    b=[]
-    for line in f:
-         if line!='\n':
-             b.append(eval(line.strip()))
-    f.close()
-
     '''f3-файл с предыдущими результатом'''
     f=open(test_dir_path+outname,"r",encoding="utf-8")
     res=[]
     for line in f:
          line=line.strip().split('\t');
-         if len(line)!=(len(algo)*4):
-             for i in range(len(algo)*4):
-                 line.append('0')
-            
          res.append(line)
     f.close()
 
+    
+
+    ''''
     f=open(test_dir_path+"test_text.txt","r",encoding="utf-8")
     text=[]
     for line in f:
@@ -162,47 +161,23 @@ def testing_block_one(f1,f2,outname,outname2,index,algo,graph_mode):
 
     razbor=[]
 
-    for i in range(len(a)):
+    for i in range(len(arr)):
             if index!=-1:
                 if i!=index:
                     continue
             try:
-                A=Stamford()
                 B=Ranger()
-                c=A.main(arr_etap_one(b[i]),1)
-
-                for k in range(len(algo)):
-                        r1=B.main(a[i],c,algo[k])
-                        p1=float(r1)-float(res[i][0+4*k])
+                for k in range(len(arr[i])):
+                        r2=B.main(arr[i],b[i],algo[k])
+                        p2=float(r2)-float(res[i][0+4*k])
                     
-                        if p1>0.0:
-                            res[i][2+4*k]="+"+str(p1)
-                        if p1<0.0 or p1==0.0:
-                            res[i][2+4*k]=str(p1)
-
-                        res[i][0+4*k]=float("{:.2f}".format(r1))
-
-                if graph_mode==1:
-                    C=plot_tree(a[i],"test_pic_"+str(i+1)+"0",text[i])
-                    C.main("formula")
-
-                b[i]=combine_formula_and_text(c,path)      
-                razbor.append(b[i])
-
-                if graph_mode==1:
-                    C=plot_tree(b[i],"test_pic_"+str(i+1)+"1",text[i])
-                    C.main("formula")
-
-                for k in range(len(algo)):
-                        r2=B.main(a[i],b[i],algo[k])
-                        p2=float(r2)-float(res[i][1+4*k])
-                    
-                        if  p2>0.0:
+                        if p2>0.0:
                             res[i][3+4*k]="+"+str(p2)
                         if p2<0.0 or p2==0.0:
                             res[i][3+4*k]=str(p2)
         
-                        res[i][1+4*k]=float("{:.2f}".format(r2))
+                        res[i][0+4*k]=float("{:.2f}".format(r2))
+                        #razbor.append(res
                   
             except:
                 for k in range(len(algo)*4):
@@ -210,8 +185,7 @@ def testing_block_one(f1,f2,outname,outname2,index,algo,graph_mode):
                 
                 razbor.append([])
         
-     
-          
+    
     f=open(test_dir_path+outname,"w",encoding="utf-8")
     for i in range(len(res)):
         str1=""
@@ -225,8 +199,9 @@ def testing_block_one(f1,f2,outname,outname2,index,algo,graph_mode):
     f=open(test_dir_path+outname2,"w",encoding="utf-8")
     for i in range(len(razbor)):
         f.write(str(razbor[i])+'\n\n')
+    '''
+    #f.close()
 
-    f.close()
 
 
 #a=test_general_sub_main("C:\\Users\\Butuzov\\Desktop\\Version\\Database\\theorem_list.txt",2)

@@ -1,0 +1,3 @@
+Если {\displaystyle f_n \in R[a,b], n \in \mathbb{N}}, и последовательность {\displaystyle \{f_n\}} сходится к функции {\displaystyle f} равномерно на {\displaystyle [a,b]}, то {\displaystyle f \in R[a,b]} и верно равенство {\displaystyle \lim \limits _{n \to \infty} \int \limits _{a}^{b} f_n(x) \, dx=\int \limits _{a}^{b} f(x) \, dx} .
+
+Пусть функции {\displaystyle f_n} интегрируемы по Риману на отрезке {\displaystyle [a,b]} и последовательность {\displaystyle \{f_n\}} сходится к функции {\displaystyle f} равномерно на этом отрезке, то функция {\displaystyle f}  интегрируема на отрезке {\displaystyle [a,b]} и выполняется равенство {\displaystyle \lim \limits _{n \to \infty} \int \limits _{a}^{b} f_n(x) \, dx=\int \limits _{a}^{b} f(x) \, dx} .

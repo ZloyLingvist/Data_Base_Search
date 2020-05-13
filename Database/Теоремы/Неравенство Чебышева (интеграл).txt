@@ -1,0 +1,3 @@
+Если функции {\displaystyle f(x)} и {\displaystyle g(x)} на отрезке {\displaystyle [a,b]} ограничены и возрастают, то справедливо неравенство {\displaystyle \int \limits _{a}^{b} f(x) \, dx \cdot \int \limits _{a}^{b} g(x) \, dx \leq (b-a)\cdot \int \limits _{a}^{b} f(x)\cdot g(x) \, dx} .
+
+Пусть {\displaystyle f} и {\displaystyle g} заданы на {\displaystyle [a,b]}, причем {\displaystyle f} возрастает, а {\displaystyle g} убывает на {\displaystyle [a,b]} , тогда {\displaystyle \int \limits _{a}^{b} f(x) \cdot g(x) \, dx \leq \dfrac{1}{b-a}\cdot \int \limits _{a}^{b} f(x)\cdot \int \limits _{a}^{b} g(x) \, dx} .

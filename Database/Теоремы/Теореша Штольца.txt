@@ -1,0 +1,3 @@
+Пусть {\displaystyle a_{n}} и {\displaystyle b_{n}}  — две последовательности вещественных чисел, причём {\displaystyle b_{n}} положительна, неограничена и строго возрастает, тогда, если существует предел {\displaystyle \lim \limits _{n\to \infty }{\frac {a_{n}-a_{n-1}}{b_{n}-b_{n-1}}}}, то существует и предел {\displaystyle \lim \limits _{n\to \infty }{\frac {a_{n}}{b_{n}}}}, причём эти пределы равны . 
+
+Если {\displaystyle a_{n}} и {\displaystyle b_{n}} последовательности действительных чисел, {\displaystyle b_{n}} строго монотонна, неограничена и строго возрастает и существует предел {\displaystyle \lim \limits _{n\to \infty }{\frac {a_{n}-a_{n-1}}{b_{n}-b_{n-1}}}=l}, тогда {\displaystyle \lim \limits _{n\to \infty } \frac {a_{n}}{b_{n}}=l} .

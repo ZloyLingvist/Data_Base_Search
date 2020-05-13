@@ -1,0 +1,3 @@
+Если {\displaystyle f(x)} непрерывна на промежутке {\displaystyle [a,b]}, то между точками {\displaystyle a} и {\displaystyle b} найдется хотя бы одна точка  {\displaystyle \xi} такая, что будет иметь место равенство {\displaystyle \int \limits _{a}^{b} f(x) dx=f(\xi)\cdot (b-a)} .
+
+Пусть функция {\displaystyle f(x)} непрерывна на отрезке {\displaystyle [a,b]}, тогда существует точка {\displaystyle \xi \in [a,b]} такая, что {\displaystyle \int \limits _{a}^{b} f(x) dx=f(\xi)\cdot (b-a)} .

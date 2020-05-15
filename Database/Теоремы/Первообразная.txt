@@ -1,0 +1,3 @@
+Если функция {\displaystyle f(x)} имеет на интервале {\displaystyle (a, b)} первообразную {\displaystyle F(x)}, то {\displaystyle f(x) dx = F(x) + C }, где C — произвольная постоянная функция . 
+
+Если {\displaystyle F(x)} есть первообразная для {\displaystyle f(x)} на промежутке, тогда {\displaystyle f(x) dx = F(x) + C }, где {\displaystyle C} – произвольная постоянная.

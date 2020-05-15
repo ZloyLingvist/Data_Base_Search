@@ -1,0 +1,3 @@
+Если непрерывная функция {\displaystyle f} на открытом интервале {\displaystyle (a,b)} удовлетворяет равенству {\displaystyle \int \limits _{a}^{b}f(x)\cdot h(x)\cdot dx=0} для всех финитных гладких функций {\displaystyle h} на {\displaystyle (a,b)}, тогда {\displaystyle f} является тождественным нулем .
+
+Если функция  {\displaystyle f(x)},  {\displaystyle a \leq x \leq b}, непрерывна и для любой непрерывной функции  {\displaystyle h(x)}, {\displaystyle a \leq x \leq b}, то  {\displaystyle f(x) \equiv 0} . 

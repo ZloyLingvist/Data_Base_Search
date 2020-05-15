@@ -1,0 +1,3 @@
+Если ряд {\displaystyle \sum \limits _{n=1}^{\infty} a_n} сходится, то его {\displaystyle n}-й член стремится к нулю при {\displaystyle n \to \infty} .
+
+Если ряд {\displaystyle \sum \limits _{k=1}^{\infty} a_k} сходится, то ряд {\displaystyle \lim \limits _{n \to \infty} a_n=0} сходится .

@@ -1,3 +1,3 @@
-Если функция {\displaystyle f(x)} имеет конечную производную в промежутке {\displaystyle [a.b]}, то функция {\displaystyle f^{\prime}(x)} принимает, в качестве значения, каждое промежуточное число между {\displaystyle f^{\prime}(a) и \displaystyle f^{\prime}(b)} . 
+Если функция {\displaystyle f(x)} имеет конечную производную в промежутке {\displaystyle [a.b]}, то функция {\displaystyle f^{\prime}(x)} принимает, в качестве значения, каждое промежуточное число между {\displaystyle f^{\prime}(a)} и {\displaystyle f^{\prime}(b)} . 
 
 Пусть функция {\displaystyle f(x)} имеет производную на сегменте {\displaystyle [a,b]}, тогда для любого числа {\displaystyle С}, заключенного между {\displaystyle A=f^{\prime}(a+0)} и {\displaystyle B=f^{\prime}(b-0)}, на этом сегменте найдется точка {\displaystyle \xi} такая, что {\displaystyle f^{\prime}(\xi)=C} .

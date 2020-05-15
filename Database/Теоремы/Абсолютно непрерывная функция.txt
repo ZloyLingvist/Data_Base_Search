@@ -1,0 +1,3 @@
+Пусть {\displaystyle F} абсолютно непрерывная функция на {\displaystyle [a,b]}, тогда она почти всюду дифференцируема, обобщенная производная {\displaystyle F^{\prime}} интегрируема по Лебегу и для всех {\displaystyle x \in [a,b]} выполняется равенство : {\displaystyle \int \limits _{a}^{x} F^{\prime}(t) \, dt=F(x)-F(a)} .
+
+Если  {\displaystyle f} абсолютно непрерывна на {\displaystyle [a,b]}, то ее производная существует почти всюду, интегрируема по Лебегу и удовлетворяет равенству: {\displaystyle f(x)=f(a)+\int \limits _{a}^{x} f^{\prime}(t) \, t} для всех {\displaystyle x \in [a,b]} .

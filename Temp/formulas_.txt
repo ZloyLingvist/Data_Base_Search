@@ -1,0 +1,278 @@
+{(\displaystyle a<c<b)}
+{\alpha(x) \geq 0}
+{\displaystyle  x=\sum \limits _{i=1}^{d+1} \lambda_i\cdot x_i}
+{\displaystyle (a, b)}
+{\displaystyle (a,b)}
+{\displaystyle (a<c<b)}
+{\displaystyle (x_0-\delta,x_0+\delta)}
+{\displaystyle A=f^{\prime}(a+0)}
+{\displaystyle A\subset R^{m}}
+{\displaystyle A\subset \Omega }
+{\displaystyle A}
+{\displaystyle B=f^{\prime}(b-0)}
+{\displaystyle C}
+{\displaystyle E \subset \mathbb{R}^d}
+{\displaystyle E}
+{\displaystyle F (x)}
+{\displaystyle F(t)=f(\varphi(t))}
+{\displaystyle F(x)=\int \limits _{a}^{x} f(t)\, dt}
+{\displaystyle F(x)=\int \limits _{a}^{x} f(t)\,dt}
+{\displaystyle F(x)}
+{\displaystyle F^{\prime}(c)=f(c)}
+{\displaystyle F^{\prime}(x_0)=f(x_0)}
+{\displaystyle F^{\prime}=f(x)}
+{\displaystyle F^{\prime}}
+{\displaystyle F}
+{\displaystyle M(b-a)}
+{\displaystyle M_k=sup \{f(t):t\in[x_{k-1},x_k]\}}
+{\displaystyle M}
+{\displaystyle P(a)}
+{\displaystyle P(z)=(z-c)\cdot Q(z)+P(c)}
+{\displaystyle P(z)}
+{\displaystyle P\in \sigma[a,b]}
+{\displaystyle P_n(x)}
+{\displaystyle P_{\varepsilon}}
+{\displaystyle P}
+{\displaystyle Q(z)}
+{\displaystyle S(f, P_{\varepsilon})-s(f, P_{\varepsilon})<\varepsilon}
+{\displaystyle U(P,f) - L(P,f) < \varepsilon}
+{\displaystyle U_1-U_2+U_3-\ldots}
+{\displaystyle U_1>U_2>U_3>\ldots>0}
+{\displaystyle X}
+{\displaystyle [a, b]}
+{\displaystyle [a,\;b]}
+{\displaystyle [a,b]}
+{\displaystyle [a.b]}
+{\displaystyle [c,d]}
+{\displaystyle [m,M]}
+{\displaystyle \Omega }
+{\displaystyle \Pi}
+{\displaystyle \alpha(x)}
+{\displaystyle \delta}
+{\displaystyle \dfrac{1}{p}+\dfrac{1}{q}=1}
+{\displaystyle \dfrac{f(b)-f(a)}{g(b)-g(a)}=\dfrac{f^{\prime}(c)}{g^{\prime}(c)}}
+{\displaystyle \dfrac{f(x)}{g(x)}}
+{\displaystyle \forall x\in co\ A}
+{\displaystyle \gamma \in (a,b)}
+{\displaystyle \int \limits _a^b f(x)\,dx=\Phi (b)-\Phi (a)={\Bigg .}\Phi (x){\Bigg |}_{a}^{b}}
+{\displaystyle \int \limits _a^x f(t)\,dt=F(x)-F(a)}
+{\displaystyle \int \limits _{[a,b]} f \, d\mu=\int \limits _{a}^{b} f(x) \, dx}
+{\displaystyle \int \limits _{[a,b]} f(x) \, d\mu}
+{\displaystyle \int \limits _{a}^{b} \alpha(x) dx=1}
+{\displaystyle \int \limits _{a}^{b} f(x) \, d\mu}
+{\displaystyle \int \limits _{a}^{b} f(x) \, dx \cdot \int \limits _{a}^{b} g(x) \, dx \leq (b-a)\cdot \int \limits _{a}^{b} f(x)\cdot g(x) \, dx}
+{\displaystyle \int \limits _{a}^{b} f(x) \, dx=F(b)-F(a)}
+{\displaystyle \int \limits _{a}^{b} f(x) \, dx=\int \limits _{\alpha}^{\beta} f(g(t))\cdot g^{\prime}(t) \, dt}
+{\displaystyle \int \limits _{a}^{b} f(x) \, dx}
+{\displaystyle \int \limits _{a}^{b} f(x) \cdot g(x) \, dx \leq \dfrac{1}{b-a}\cdot \int \limits _{a}^{b} f(x)\cdot \int \limits _{a}^{b} g(x) \, dx}
+{\displaystyle \int \limits _{a}^{b} f(x) dx=f(\xi)\cdot (b-a)}
+{\displaystyle \int \limits _{a}^{b} f(x)\cdot g(x)\, dx=f(a)\cdot \int \limits _{a}^{\xi} g(x)\, dx+f(b)\cdot \int \limits _{\xi}^{b} g(x)\, dx }
+{\displaystyle \int \limits _{a}^{b}f(x)\cdot h(x)\cdot dx=0}
+{\displaystyle \int \limits _{a}^{x} F^{\prime}(t) \, dt=F(x)-F(a)}
+{\displaystyle \int \limits _{a}^{x} f(t)\,dt}
+{\displaystyle \int \limits _{c}^{d} f(x) \, dx=\int \limits _{a}^{b} f(g(t))\cdot g^{\prime}(t) \, dt}
+{\displaystyle \int \limits u(x)*v^{\prime}(x) \, dx=u(x)*v(x)-\int \limits v(x)*u^{\prime}(x)\, dx}
+{\displaystyle \int _{a}^{b} f(x) \, dx}
+{\displaystyle \int _{a}^{b} u(x)dv(x)=(u(x)\cdot v(x)){\vert}^{b}_{a}=\int \limits _{a}^{b} v(x)\, du(x)}
+{\displaystyle \lambda \geq 0}
+{\displaystyle \left [ a,b \right]}
+{\displaystyle \left(\int \limits _{a}^{x} f(t)\,dt\right)^{\prime}=f(x)}
+{\displaystyle \left[ {a,b} \right]}
+{\displaystyle \left[a,b\right]}
+{\displaystyle \left\{ x_{n} \right\}}
+{\displaystyle \lim \limits _{\omega \to \infty} \int \limits _{a}^{b} f(x)\cdot \sin (\omega\cdot x) \, dx=0}
+{\displaystyle \lim \limits _{n \to \infty} U_n=0}
+{\displaystyle \lim \limits _{n \to \infty} \int \limits _{a}^{b} f_n(x) \, dx=\int \limits _{a}^{b} f(x) \, dx}
+{\displaystyle \lim \limits _{n \to \infty} a_n=0}
+{\displaystyle \lim \limits _{n \to \infty} u_n=0}
+{\displaystyle \lim \limits _{n \to \infty} y_n=\lim \limits _{n \to \infty} z_n=A}
+{\displaystyle \lim \limits _{n\to \infty } \frac {a_{n}}{b_{n}}=l}
+{\displaystyle \lim \limits _{n\to \infty }{\frac {a_{n}-a_{n-1}}{b_{n}-b_{n-1}}}=l}
+{\displaystyle \lim \limits _{n\to \infty }{\frac {a_{n}-a_{n-1}}{b_{n}-b_{n-1}}}}
+{\displaystyle \lim \limits _{n\to \infty }{\frac {a_{n}}{b_{n}}}}
+{\displaystyle \lim \limits _{p \to +\infty} \int \limits _{a}^{b} f(x)\cdot \sin (p\cdot x) \, dx=0}
+{\displaystyle \lim \limits _{x \to a} \dfrac{f^{\prime}(x)}{g^{\prime}(x)}}
+{\displaystyle \lim \limits _{x \to a} f(x)=0}
+{\displaystyle \lim \limits _{x \to a} g(x)=0}
+{\displaystyle \lim \limits _{x \to a} h_k(a)=0}
+{\displaystyle \lim \limits _{x \to a}\dfrac{f(x)}{g(x)}=\lim \limits _{x \to a} \dfrac{f^{\prime}(x)}{g^{\prime}(x)}}
+{\displaystyle \lim _{n\to \infty }b_{n}=\lim _{n\to \infty }c_{n}=A\Rightarrow \lim _{n\to \infty }a_{n}=A }
+{\displaystyle \lim _{x \to x_0} \dfrac{f(x)}{g(x)}=\lim _{x \to x_0} \dfrac{f^{\prime}(x)}{g^{\prime}(x)}}
+{\displaystyle \lim _{x \to x_0} f(x)=0}
+{\displaystyle \lim _{x \to x_0} g(x)=0}
+{\displaystyle \mathbb {R} ^{n}}
+{\displaystyle \mu\{x \in A \vert \varphi(x) \geq c\} \leq \dfrac{1}{c}\int \limits _{A} \varphi(x) \, d\mu}
+{\displaystyle \mu\{|f| \geq \varepsilon\} \leq \dfrac{1}{\varepsilon}*\int \limits _{X} |f| \, d\mu}
+{\displaystyle \sum \limits _{k=1}^{\infty} a_k}
+{\displaystyle \sum \limits _{k=1}^{n} (M_k-m_k)\Delta x_k<\varepsilon}
+{\displaystyle \sum \limits _{n=1}^{\infty} a_n}
+{\displaystyle \sum _{n=1}^{\infty } u_{n}(x)}
+{\displaystyle \sum _{n=1}^{\infty }a_{n}}
+{\displaystyle \textstyle \Phi (x)}
+{\displaystyle \textstyle f(x)}
+{\displaystyle \varepsilon >0}
+{\displaystyle \varepsilon>0}
+{\displaystyle \varepsilon}
+{\displaystyle \varlimsup _{x\to a}{\frac {|f(x)-f(a)|}{|x-a|}}<\infty }
+{\displaystyle \varlimsup _{y\to a}{\frac {|g(y)-g(a)|}{|y-a|}}<\infty }
+{\displaystyle \varphi \cdot (\int \limits _{a}^{b} f(x)\cdot \alpha(x)\, dx) \leq \int \limits _{a}^{b} \varphi(f(x))\cdot \alpha(x)\, dx}
+{\displaystyle \varphi \geq 0}
+{\displaystyle \varphi(x)\colon M \to E}
+{\displaystyle \varphi(x)}
+{\displaystyle \varphi\cdot (\int \limits _{a}^{b} f(x) \,dx) \leq \dfrac{1}{b-a}\cdot \int \limits _{a}^{b} \varphi((b-a)\cdot f(x)) \, dx}
+{\displaystyle \varphi}
+{\displaystyle \xi \in [a,b]}
+{\displaystyle \xi \in [a;b]}
+{\displaystyle \xi}
+{\displaystyle \{f_n\}}
+{\displaystyle \{x_n\}}
+{\displaystyle a < C< b}
+{\displaystyle a \in M}
+{\displaystyle a \in \mathbb{R}}
+{\displaystyle a \leq x \leq b}
+{\displaystyle a<c<b}
+{\displaystyle a<x<b}
+{\displaystyle a\in A}
+{\displaystyle a_{n}}
+{\displaystyle a}
+{\displaystyle b=\varphi(a) \in E}
+{\displaystyle b_{n}\leqslant a_{n}\leqslant c_{n}}
+{\displaystyle b_{n}}
+{\displaystyle b}
+{\displaystyle c \in [a, b]}
+{\displaystyle c\in (a,b)}
+{\displaystyle c_{n}}
+{\displaystyle co\ A=\left\{x:x=\sum _{i=1}^{m+1}\lambda _{i}x_{i}(x),\quad x_{i}(x)\in A,\quad \lambda _{i}\geqslant 0,\quad \sum _{i=1}^{m+1}\lambda _{i}=1,\quad i=1,\ 2,\ \dots ,\ m+1\right\}}
+{\displaystyle c}
+{\displaystyle d+1}
+{\displaystyle d\left( \Pi \right) < \delta}
+{\displaystyle f : \mathbb{R} \rightarrow \mathbb{R}}
+{\displaystyle f \colon E \to \mathbb{R}}
+{\displaystyle f \in L_1(X)}
+{\displaystyle f \in R[a,b]}
+{\displaystyle f }
+{\displaystyle f'(c)=0}
+{\displaystyle f(C) = 0}
+{\displaystyle f(\gamma)=C}
+{\displaystyle f(a) \\neq f(b)}
+{\displaystyle f(a)<A<f(b)}
+{\displaystyle f(a)<f(b)}
+{\displaystyle f(a)=f(b)}
+{\displaystyle f(a)}
+{\displaystyle f(b)-f(a)=(b-a)\cdot f^{\prime}(c)}
+{\displaystyle f(b)-f(a)=f^{\prime}(c)*(b-a)}
+{\displaystyle f(b)}
+{\displaystyle f(c)=0}
+{\displaystyle f(c)=A}
+{\displaystyle f(g(x))}
+{\displaystyle f(t)}
+{\displaystyle f(x) \cdot g(x)}
+{\displaystyle f(x) \equiv 0}
+{\displaystyle f(x) \pm g(x)}
+{\displaystyle f(x) dx = F(x) + C }
+{\displaystyle f(x)/g(x)}
+{\displaystyle f(x)=\sum \limits _{k=0}^{n} \dfrac{f^{(k)}(x_0)}{k!}*(x-x_0)^k+o((x-x_0)^n)}
+{\displaystyle f(x)=f(a)+\dfrac{f^{\prime}(a)}{1!}(x-a)+\dfrac{f^{''}(a)}{2!}(x-a)^2+\ldots+\dfrac{f^{(k)}(a)}{k!}*(x-a)^k+h_k*(x-a)^k}
+{\displaystyle f(x)=f(a)+\dfrac{f^{\prime}(a)}{1!}*(x-a)+\dfrac{f^{''}(a)}{2!}*(x-a)^2+\ldots+\dfrac{f^{(n-1)}(a)}{(n-1)!}*(x-a)^{n-1}+R_n}
+{\displaystyle f(x)=f(a)+\int \limits _{a}^{x} f^{\prime}(t) \, t}
+{\displaystyle f(x)}
+{\displaystyle f(x_{m})\leq f(x)\leq f(x_{M})}
+{\displaystyle f(с)=С}
+{\displaystyle f,g \in R_{[a,b]}}
+{\displaystyle f^{\prime} \geq 0}
+{\displaystyle f^{\prime} \leq 0}
+{\displaystyle f^{\prime}(\xi)=C}
+{\displaystyle f^{\prime}(a)}
+{\displaystyle f^{\prime}(b)}
+{\displaystyle f^{\prime}(c)=0}
+{\displaystyle f^{\prime}(x)}
+{\displaystyle f^{\prime}(x_0)=0}
+{\displaystyle f^{\prime}(x_0)}
+{\displaystyle f^{\prime}=0}
+{\displaystyle f_n \in R[a,b], n \in \mathbb{N}}
+{\displaystyle f_n}
+{\displaystyle f_{n_k}}
+{\displaystyle f}
+{\displaystyle g(a) = a}
+{\displaystyle g(a)=c}
+{\displaystyle g(a)\neq g(b)}
+{\displaystyle g(b) = b}
+{\displaystyle g(b)=d}
+{\displaystyle g(x)}
+{\displaystyle g(x_0) \neq 0}
+{\displaystyle g(x_0)\neq 0}
+{\displaystyle g^{\prime}(t)}
+{\displaystyle g^{\prime}(x) \neq 0}
+{\displaystyle g^{\prime}(x)}
+{\displaystyle g^{\prime}\neq 0}
+{\displaystyle g}
+{\displaystyle h(x)}
+{\displaystyle h_k: \mathbb{R} \rightarrow \mathbb{R}}
+{\displaystyle h}
+{\displaystyle inf \{x_n\}}
+{\displaystyle k \geq 1}
+{\displaystyle k}
+{\displaystyle m + 1}
+{\displaystyle m \leq f(x) \leq M}
+{\displaystyle m(b-a)\leq \int _{a}^{b} f(x)\,dx\leq M(b-a)}
+{\displaystyle m(b-a)}
+{\displaystyle m_k=inf \{f(t):t\in[x_{k-1},x_k]\}}
+{\displaystyle m}
+{\displaystyle n \geq 1}
+{\displaystyle n \to \infty}
+{\displaystyle n-1}
+{\displaystyle n\to \infty }
+{\displaystyle n}
+{\displaystyle p,q \in (1,\infty)}
+{\displaystyle p>1}
+{\displaystyle p}
+{\displaystyle sup \{x_n\}}
+{\displaystyle t \in [\alpha,beta]}
+{\displaystyle t0 = g(x_0)}
+{\displaystyle t=a}
+{\displaystyle u(x)*v^{\prime}(x)}
+{\displaystyle u(x)}
+{\displaystyle u^{\prime}(x)*v(x)}
+{\displaystyle u_1-u_2+u_3+\ldots+(-1)^{n-1}\cdot u_n+\ldots}
+{\displaystyle u_1>u_2\ldots>u_n>ldots}
+{\displaystyle u}
+{\displaystyle v(x)}
+{\displaystyle v}
+{\displaystyle x = C}
+{\displaystyle x = g(t)}
+{\displaystyle x \in (a,b)}
+{\displaystyle x \in [a,b]}
+{\displaystyle x \in conv}
+{\displaystyle x\in (a,b)}
+{\displaystyle x\in X}
+{\displaystyle x\in [a,b]}
+{\displaystyle x_0 \in [a,b]}
+{\displaystyle x_0}
+{\displaystyle x_1,\ldots,x_{d+1} \in E}
+{\displaystyle x_{m},\;x_{M}\in [a,b]}
+{\displaystyle x}
+{\displaystyle y = f(x)}
+{\displaystyle y=f(x)}
+{\displaystyle y_{n} \leq x_{n} \leq z_{n}}
+{\displaystyle z-a}
+{\displaystyle z=a}
+{\displaystyle {\overline S_{\Pi} } - {\underline S_{\Pi}} < \varepsilon}
+{\displaystyle {f^{\prime}}^2(x)+{g^{\prime}}^2(x) \neq 0}
+{\displaystyle |P_n(x)-f(x)|<\varepsilon}
+{\displaystyle |\int \limits _{a}^{b} f(x)\cdot g(x)\, dx| \leq \int \limits _{a}^{b} |f(x)\cdot g(x)| \, dx \leq (\int \limits _{a}^{b} |f(x)|^{p} \, dx)^{\dfrac{1}{p}}\cdot (\int \limits _{a}^{b} |g(x)|^{q} \, dx)^{\dfrac{1}{q}} .П
+{\displaystyle |\int \limits _{a}^{b} f(x)\cdot g(x)\, dx| \leq \int \limits _{a}^{b} |f(x)\cdot g(x)| \, dx \leq (\int \limits _{a}^{b} |f(x)|^{p} \, dx)^{\dfrac{1}{p}}\cdot (\int \limits _{a}^{b} |g(x)|^{q} \, dx)^{\dfrac{1}{q}}}
+{\displaystyle |f(x)-p(x)|<\varepsilon }
+{\displaystyle |f(x)| \leq M}
+{\displaystyle |u_{n}(x)|<a_{n}}
+{\displaystyle С}
+{\displaystyle с \in [a,b]}
+{\displaystyle с>0}
+{\displaystyle с}
+{\lim \limits _{n \to \infty} x_n=A}
+{\sum \limits _{i=1}^{d+1} \lambda_i=1}
+{\sum _{k=1}^{\infty} a_k}
+{\sum _{k=1}^{\infty} u_k}
+{\sum _{{n=1}}^{{\infty }} u_{n}(x)}
+{k \geq n_0}
+{x \in X}
+{|u_k(x)| \leq a_k}

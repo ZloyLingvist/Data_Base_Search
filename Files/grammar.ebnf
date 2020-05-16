@@ -10,9 +10,10 @@ expression
     =
 	| operation_three
 	| operation_one
+	| operation_two
+	| punc
     | addition
     | subtraction
-	| factorial
     | term
     ;
 	
@@ -21,12 +22,14 @@ operation_one
 	expression /(^|\s)\\\w+/ term
 	;
 
+operation_two
+	=
+	expression /<|=|>/ expression
+	;
+
 operation_three
 	=
 	| expression '\\leq' expression
-	| expression '<' expression
-	| expression '=' expression
-	| expression '>' expression
 	| expression '\\geq' expression
 	| '\\geq' expression
 	| expression '\\neq' expression
@@ -101,11 +104,6 @@ division
     =
     term '/' factor
     ;
-	
-factorial
-	=
-	term '!'
-	;
 
 power
 	=
@@ -117,7 +115,6 @@ power
 
 brackets
 	=
-	| '(' expression ',' expression ')'
 	| '{' expression '}' 
 	| '(' expression ')'
 	| '[' expression ']'
@@ -186,5 +183,7 @@ factor
 	| text
     ;
 	
-text = /[a-zA-Z\\'\/]+/ ;
+text = 
+	/[a-zA-Z\\'\/]+/ ;
+	
 number=/\d+/;

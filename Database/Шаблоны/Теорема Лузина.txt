@@ -1,0 +1,3 @@
+Для того, чтобы функция {\displaystyle f(x)}, заданная на отрезке {\displaystyle \left[a,b\right]}, была измерима, необходимо и достаточно, чтобы для любого {\displaystyle \varepsilon >0} существовала такая функция {\displaystyle \varphi (x)}, непрерывная на отрезке {\displaystyle \left[a,b\right]}, что мера множества {\displaystyle \{x\in [a,b]:f(x)\neq \varphi (x)\}} меньше {\displaystyle \varepsilon } .
+
+ 

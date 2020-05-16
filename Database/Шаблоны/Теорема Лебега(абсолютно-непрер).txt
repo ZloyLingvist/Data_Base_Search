@@ -1,0 +1,2 @@
+{\displaystyle f(x)} абсолютно непрерывна на отрезке {\displaystyle [a,b]} тогда и только тогда, когда существует интегрируемая на {\displaystyle [a,b]} функция {\displaystyle g} такая, что {\displaystyle f(x)=f(a)+\int \limits _{a}^{x} g(t) \, dt} для всех {\displaystyle x \in [a,b]} .
+

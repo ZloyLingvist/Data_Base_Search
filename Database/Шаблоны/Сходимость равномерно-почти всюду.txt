@@ -1,0 +1,1 @@
+Если последовательность функций {\displaystyle \{f_n\}_{n=1}^{\infty}} сходится к функции {\displaystyle f} почти равномерно на множестве множеств {\displaystyle X}, то {\displaystyle f_n \to f} почти всюду .

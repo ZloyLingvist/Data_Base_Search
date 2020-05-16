@@ -1,14 +1,12 @@
 import re
-import copy
-from jaccard_modified import *
-import numpy as np
-from collections import Counter
+import os
 
 '''Класс ранжировщик
 Входные параметры:
 - массивы a,b
-- номер алгоритма (0,1,2)
 '''
+
+path=os.path.dirname(os.path.dirname(__file__))
 
 class Ranger:
     def __init__(self):
@@ -61,18 +59,10 @@ class Ranger:
         return best_score
 
 
-    def main(self,a,b,mode):
-        if mode==0:
-            best_score=self.algorithm_one(a,b)
-
-        if mode==1:
-            a1=algorithm_three_func(a,a)
-            a2=algorithm_three_func(a,b)
-            b1=algorithm_three_func(b,b)
-            b2=algorithm_three_func(b,a)
-            
-            best_score=0.5*(a2/a1+b2/b1)
-            
-
+    def main(self,a,b):
+        best_score=self.algorithm_one(a,b)
         return best_score
+
+
+
 

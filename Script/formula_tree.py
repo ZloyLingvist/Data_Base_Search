@@ -18,7 +18,9 @@ grammar_path=parent_directory+'\\Files\\grammar.ebnf'
 
 class CalcSemantics(object):
     def punc(self,ast):
-        ast=list(ast)
+        if type(ast)!=str:
+            ast=list(ast)
+
         for i in range(len(ast)-1,-1,-1):
             if ast[i]==",":
                 del ast[i]
@@ -26,7 +28,9 @@ class CalcSemantics(object):
         return ast
     
     def function(self,ast):
-        ast=list(ast)
+        if type(ast)!=str:
+            ast=list(ast)
+
         for i in range(len(ast)):
             if ast[i]=="^":
                 ast[i]=[ast[i],ast[i+1]]
@@ -36,24 +40,32 @@ class CalcSemantics(object):
         return ast
     
     def limit(self,ast):
-        ast=list(ast)
+        if type(ast)!=str:
+            ast=list(ast)
+
         ast[1]=[ast[1],ast[2]]
         ast[2]=[]
         ast=clean_from_empty(ast)
         return ast
     
     def integral(self,ast):
-        ast=list(ast)
+        if type(ast)!=str:
+            ast=list(ast)
+
         ast=modifier_integral_summ(ast)
         return ast
     
     def sum(self,ast):
-        ast=list(ast)
+        if type(ast)!=str:
+            ast=list(ast)
+
         ast=modifier_integral_summ(ast)
         return ast
 
     def expression(self,ast):
-        ast=list(ast)
+        if type(ast)!=str:
+            ast=list(ast)
+
         op=["=","\\leq",">"]
         if type(ast)==list:
             for i in range(len(ast)):
@@ -79,34 +91,45 @@ class CalcSemantics(object):
                 for k in range(len(ast)):
                     if type(ast[k])==str and re.search(r'^d',ast[k]):
                         ast[k]=[ast[k]]
+
         return ast
 
     def addition(self,ast):
-        ast=list(ast)
+        if type(ast)!=str:
+            ast=list(ast)
+
         ast=swap_to_first(ast,"+")
         ast=equalizer(ast,1)
         return ast
     
     def subtraction(self,ast):
-        ast=list(ast)
+        if type(ast)!=str:
+            ast=list(ast)
+
         ast=swap_to_first(ast,"-")
         ast=equalizer(ast,1)
         return ast
 
     def multiplication(self,ast):
-        ast=list(ast)
+        if type(ast)!=str:
+            ast=list(ast)
+
         ast=swap_to_first(ast,"*")
         ast=equalizer(ast,1)
         return ast
 
     def division(self,ast):
-        ast=list(ast)
+        if type(ast)!=str:
+            ast=list(ast)
+
         ast=swap_to_first(ast,"/")
         ast=equalizer(ast,1)
         return ast
 
     def brackets(self,ast):
-        ast=list(ast)
+        if type(ast)!=str:
+            ast=list(ast)
+
         if len(ast)==3:
             if ast[0]=="(" and ast[2]==")":
                 if type(ast[1])==str:
@@ -123,7 +146,9 @@ class CalcSemantics(object):
         return ast
                 
     def operation_three(self,ast):
-        ast=list(ast)
+        if type(ast)!=str:
+            ast=list(ast)
+
         arr=["\\leq","\\geq"]
         ast=swap_(arr,ast)
         ast[1]=[ast[1],ast[2]]
@@ -134,20 +159,20 @@ class CalcSemantics(object):
     
 
     def operation_one(self,ast):
-        ast=list(ast)
+        if type(ast)!=str:
+            ast=list(ast)
+
         arr=["\\cap","\\cup","\\subset","\\subseteq","\\to","\\in"]
         ast=swap_(arr,ast)
-        if type(ast[1])==str:
-            ast[1]=[ast[1]]
-        if type(ast[2])==str:
-            ast[2]=[ast[2]]
             
         ast=clean_from_empty(ast)
         return ast
 
 
     def operation_two(self,ast):
-        ast=list(ast)
+        if type(ast)!=str:
+            ast=list(ast)
+
         arr=["<","=",">"]
         ast=swap_(arr,ast)
         ast=equalizer(ast,1)
@@ -178,14 +203,22 @@ class Formula_Tree:
                 return []
 
     def main(self,str1):
+        ls={' >':'>','\\,':' ',' <':'<',' =':'=',' dx':'dx'}
+        for x in ls:
+            if x in str1:
+                str1=str1.replace(x,ls[x])
+                
         A=formula_simplifier(str1)
         str1=A.main()
         grammar = open(self.grammar_path).read()
         parser = tatsu.compile(grammar,asmodel=True)
         a=parser.parse(str1,semantics=CalcSemantics())
+       
         a=str(a)
         a=a.replace("(","[")
         a=a.replace(")","]")
         a=eval(a)
         return a
+
+
 

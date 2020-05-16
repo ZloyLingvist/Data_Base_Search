@@ -125,10 +125,10 @@ class Graphic_interface():
             e_type, e_val, e_tb = sys.exc_info()
             self.in_entry_down.insert(END,str(e_type)+"\n"+str(e_val)+"\n")
 
-    def update_levenshtein(self):
-        rv=self.subprocess_cmd("Levenshtein_sim.exe")
-        if rv==0:
-            self.in_entry_mid_right.insert(END,'Levenshtein database is created\n')
+    #def update_levenshtein(self):
+        #rv=self.subprocess_cmd("Levenshtein_sim.exe")
+        #if rv==0:
+            #self.in_entry_mid_right.insert(END,'Levenshtein database is created\n')
 
     def show_option(self):
         self.frame_for_down_temp.pack()
@@ -136,8 +136,8 @@ class Graphic_interface():
         self.button_fp = Button(self.frame_for_down_temp, text='Parse formula', width=12,command=self.parse_formula)
         self.button_fp.pack(side=LEFT,padx=5,pady=5)
 
-        self.button_ul = Button(self.frame_for_down_temp, text='Update LDB', width=12,command=self.update_levenshtein)
-        self.button_ul.pack(side=LEFT,padx=5,pady=5)
+        #self.button_ul = Button(self.frame_for_down_temp, text='Update LDB', width=12,command=self.update_levenshtein)
+        #self.button_ul.pack(side=LEFT,padx=5,pady=5)
 
         self.button_fdb = Button(self.frame_for_down_temp, text='Full DB', width=10,command=self.database)
         self.button_fdb.pack(side=LEFT,padx=5,pady=5)
@@ -151,14 +151,20 @@ class Graphic_interface():
         self.button_ext = Button(self.frame_for_down_temp, text='Extract by id', width=10,command=self.extract)
         self.button_ext.pack(side=LEFT,padx=5,pady=5)
 
-        self.input_ext = Entry(self.frame_for_down_temp, text='Extract by id', width=5)
+        self.input_ext = Entry(self.frame_for_down_temp, text='Extract from DB by id', width=10)
         self.input_ext.pack(side=LEFT,padx=5,pady=5)
 
         label_combo=Label(self.frame_for_down_temp,text="Amount algo \n for Test")
         label_combo.pack(side=LEFT,padx=5,pady=5)
         
-        self.entry = ttk.Entry(self.frame_for_down_temp,width=5)
+        self.entry = Entry(self.frame_for_down_temp,width=5)
         self.entry.pack(side=LEFT,padx=5,pady=5)
+
+        label_combo_=Label(self.frame_for_down_temp,text="№ of algo \n for Rank")
+        label_combo_.pack(side=LEFT,padx=5,pady=5)
+        
+        self.entry_ = Entry(self.frame_for_down_temp,width=5)
+        self.entry_.pack(side=LEFT,padx=5,pady=5)
         
         self.button_hop.pack(padx=10,pady=5)
         self.button_sop.pack_forget()
@@ -205,7 +211,7 @@ class Graphic_interface():
         self.in_entry_mid_right.insert(END,'See data in '+name+'\n\n')
     
     def extract(self):
-      f=open(path+'\\Database\\theorem_list.txt',"r",encoding="utf-8")
+      f=open(path+'\\Temp\\theorem_list.txt',"r",encoding="utf-8")
       i=0
       text=""
 
@@ -234,14 +240,14 @@ class Graphic_interface():
     def database(self):
         self.clean()
         make_database()
-        self.in_entry_mid_right.insert(END,'See database files in '+path+"\Database\n\n")
+        self.in_entry_mid_right.insert(END,'See database files in '+path+"\Files\n\n")
 
     def formula_database(self):
         formulas_list=[]
         self.clean()
         extract_formula_razbor()
 
-        f=open(path+"\\Files\\formulas_.txt","r",encoding="utf-8")
+        f=open(path+"\\Temp\\formulas_.txt","r",encoding="utf-8")
 
         for line in f:
             formulas_list.append(line.strip())
@@ -249,35 +255,36 @@ class Graphic_interface():
 
         res=make_formula_razbor(formulas_list)
 
-        f=open(path+"\\Files\\test_razbor.txt","w",encoding="utf-8")
+        f=open(path+"\\Temp\\test_razbor.txt","w",encoding="utf-8")
         for x in res:
             f.write(str(x)+'\n')
        
         f.close()
 
-        self.in_entry_mid_right.insert(END,'See database files in '+path+"\Files\n\n")
+        self.in_entry_mid_right.insert(END,'See database files in '+path+"\Temp\n\n")
 
     def test(self):
         self.clean()
         self.in_entry_mid_right.insert(END,'--- Test for ranking function ---\n\n')
         self.in_entry_mid_left.insert(END,'--- Test for ranking function ---\n\n')
 
-        if self.open_option==1 and self.entry.get() in ["7","6","5","4","3","2","1"]:
+        if self.open_option==1 and self.entry.get() in ["5","4","3","2","1"]:
             amount_of_algo=int(self.entry.get())
         else:
-            amount_of_algo=7
+            amount_of_algo=5
 
-        text_list=['Algo #1: Treepath+Jaccard  (tree,standart): ','Algo #2: Treepath+Jaccard  (tree,modify): ',
-                   'Algo #3: Treepath+Jaccard  (pure syntax tree,standart): ',
-                   'Algo #4: Keyword Search  (text): ','Algo #5: Edit Distance  (text): ',
-                   'Algo #6: Cos similarity  (text): ','Algo #7: Jaccard similarity  (text): ']
+        text_list=['Algo #1: Treepath+Jaccard  (tree,standart): ',
+                   'Algo #2: Keyword Search  (text): ','Algo #3: Edit Distance  (text): ',
+                   'Algo #4: Cos similarity  (text): ','Algo #5: Jaccard similarity  (text): ']
 
         result=[]
+        count=[]
 
         for i in range(amount_of_algo):
             result.append('0')
-            result[i]=test_general_sub_main(path_db+"theorem_list.txt",i)
-            self.in_entry_mid_left.insert(END,text_list[i]+str(avg(result[i]))+'\n\n')
+            count.append('0')
+            result[i],count[i]=test_general_sub_main(path+"\\Temp\\theorem_list.txt",i)
+            self.in_entry_mid_left.insert(END,text_list[i]+'\n\n'+str(avg(result[i]))+" "+str(count_(count[i],50))+'\n\n')
 
         check_best_in_line_list=[]
         tmp=[]
@@ -298,42 +305,13 @@ class Graphic_interface():
                     break
         
             self.in_entry_mid_right.insert(END,str(i+1)+'. '+str1+'\n')
-            #self.in_entry_mid_left.insert(END,index_of_best_inline+" | "+str(check_best_in_line)+'\n')
             self.in_entry_mid_right.insert(END,'\n\n')
 
             str1=""
             tmp=[]
             check_best_in_line_list=[]
 
-
-        #self.in_entry_mid_right.insert(END,'--- Test_of_predicate_module_and_ranking ---')
-        '''
-        self.in_entry_mid_right.insert(END,'\n\n')
-        testing_block_one("test_lst.txt","test_in.txt","outname.txt","outname2.txt",-1,[1],0)
-
-        lst=[]
-        lst_=[]
-
-        f=open(path+"\\Test\\outname.txt","r",encoding="utf-8")
-        for line in f:
-            lst.append(line)
-        f.close()
-
-        f=open(path+"\\Test\\outname2.txt","r",encoding="utf-8")
-        for line in f:
-            lst_.append(line)
-        f.close()
-
-        self.in_entry_mid_left.insert(END,"Test_of_predicate_module_and_ranking\n\n")
-    
-        for line in lst_:
-             self.in_entry_mid_left.insert(END,str(line)+'\n\n')
-
-        for i in range(len(lst)):
-             lst[i]=lst[i].split('\t')
-             self.in_entry_mid_right.insert(END,str(i+1)+'\t'+str(lst[i][0])+'\t'+str(lst[i][1])+'\n\n')
-        '''
-         
+ 
     def load_and_run(self):
        self.clean()
        lst=[]
@@ -373,32 +351,11 @@ class Graphic_interface():
   
     def rank(self):
         self.clean()
-        try:
-            text=self.in_entry.get(1.0,END)
-            if text[0]=="[":
-                 text=eval(text.strip())
-            else:
-                 text=text.strip()
-
-            text=make_razbor(text)
-            query,ranking_arr=make_ranking(text)
-            self.in_entry_mid_left.insert(END,str(query))
-            self.in_entry_mid_left.insert(END,'\n\n')
-            self.in_entry_mid_left.insert(END,'----------\n\n')
-        
-            for i in range(len(ranking_arr)):
-                 self.in_entry_mid_right.insert(END,str(ranking_arr[i][0])+'\t'+str(ranking_arr[i][1]))
-                 self.in_entry_mid_right.insert(END,'\n')
-
-                 self.in_entry_mid_left.insert(END,str(ranking_arr[i][2]))
-                 self.in_entry_mid_left.insert(END,'\n\n')    
-        except:
-            e_type, e_val, e_tb = sys.exc_info()
-            self.in_entry_down.insert(END,str(e_type)+"\n"+str(e_val)+"\n")
+        self.in_entry_mid_left.insert(END,'Временно не работает\n\n')
+	
        
     
     def clean(self):
-        #in_entry.delete(1.0,END)
         self.in_entry_mid_left.delete(1.0,END)
         self.in_entry_mid_right.delete(1.0,END)
         self.in_entry_down.delete(1.0,END)
@@ -417,8 +374,7 @@ class Graphic_interface():
 
         t1,r1,e1=make_razbor(text)
         self.write_parse_result(t1,r1,e1)
-        A=plot_tree(text,"pic_1","")
-        A.main("formula")
+        
         
    
     def picture(self):

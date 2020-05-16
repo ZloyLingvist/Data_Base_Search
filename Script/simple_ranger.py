@@ -18,9 +18,7 @@ def load_synonyms(file):
     except FileNotFoundError:
         return {}
 
-
-synonyms = load_synonyms(path+'/Database/synonyms.yml')
-
+synonyms = load_synonyms(path+'\Files\synonyms.yml')
 
 def get_normal_form(word: str):
     if word[0].isascii():
@@ -132,25 +130,35 @@ class Tester:
 
     def test(self):
         n = len(self._data)
+
+        tmp=[]
+        tmp_general=[]
+        
         results = [0] * n
         for i in range(n):
             key, text = self._data[i]
             order = self._db.ranger(text)
             r = 0;
             k = 0
+
             for idx, _ in order:
+                tmp.append([str(idx+1),0])
+                if self._data[idx][0]==i:
+                    continue
                 if self._data[idx][0] != key:
                     k += 1
                 else:
                     r = k
+            
             results[i] = str(float("{:.2f}".format(1 - r / n)))
-        return results
+            tmp_general.append(tmp)
+            tmp=[]
+        return results,tmp_general
 
 
 def keyword_search():
-    file = path+'/Database/label_list.yml'
+    file = path+'\Temp\label_list.yml'
     t = Tester(file)
-    res = t.test()
-    return res
+    res,g = t.test()
+    return res,g
 
-keyword_search()

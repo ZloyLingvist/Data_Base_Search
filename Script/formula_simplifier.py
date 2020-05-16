@@ -4,7 +4,7 @@ import re
 
 class formula_simplifier:
     def __init__(self,s):
-        self.arr=['\displaystyle','\textstyle','\right','\left','\limits','\nolimits','\quad','\,','\!','\;',"\Bigg","\bigl","\bigr"]
+        self.arr=['\displaystyle','\textstyle','\right ','\left ','\limits','\nolimits','\quad','\,','\!','\;',"\Bigg","\bigl","\bigr"]
         self.arr1=[["\{","\}","\set","(",")"],["[","]","\closedinterval","(",")"],['||','||','\norm','(',')'],["\|","\|","\abs","(",")"],["|","|","\abs","(",")"]]
         self.arr2=[["\mathrm {","}","","",""],["\mathbb {","}","\mathbb","(",")"],["\mathcal {","}","","",""],
                    ["\mathbf {","}","","",""],["\widehat {","}","\widehat","(",")"],

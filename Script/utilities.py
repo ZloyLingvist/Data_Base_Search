@@ -7,12 +7,12 @@ def read_formulas():
     formula_list=[]
     razbor_list=[]
     
-    f=open(path+"\\Files\\formulas_.txt","r",encoding="utf-8")
+    f=open(path+"\\Temp\\formulas_.txt","r",encoding="utf-8")
     for line in f:
         formula_list.append(line.strip())  
     f.close()
 
-    f=open(path+"\\Files\\test_razbor.txt","r",encoding="utf-8")
+    f=open(path+"\\Temp\\formulas_razbor.txt","r",encoding="utf-8")
     for line in f:
         razbor_list.append(eval(line.strip()))  
     f.close()
@@ -20,12 +20,12 @@ def read_formulas():
     return formula_list,razbor_list
 
 def write_formulas(formula_list,razbor_list):
-    f=open(path+"\\Files\\formulas_.txt","a",encoding="utf-8")
+    f=open(path+"\\Temp\\formulas_.txt","a",encoding="utf-8")
     for line in formula_list:
         f.write(line+'\n')  
     f.close()
 
-    f=open(path+"\\Files\\test_razbor.txt","a",encoding="utf-8")
+    f=open(path+"\\Temp\\formulas_razbor.txt","a",encoding="utf-8")
     for line in razbor_list:
         f.write(str(line)+'\n')  
     f.close()
@@ -51,7 +51,7 @@ def formula_list_function(text_list):
                 formulas_list.append(str1)
                 str1=""
 
-    formulas_list=list(set(formulas_list))
+    formulas_list=sorted(list(set(formulas_list)))
     return formulas_list
 
 ## сбор теорем в один файл, создание списка соответствия теорем (txt,yml-формат)
@@ -91,7 +91,7 @@ def generate_label_list():
         db_tmp_list=[]
         label_list.append(str1.split(','))
 
-    f=open(path_db+"label_list.yml","w",encoding="utf-8")
+    f=open(path+"\\Temp\\label_list.yml","w",encoding="utf-8")
     for i in range(len(file_list)):
         for k in range(len(db_list[i])):
                 f.write('- '+file_list[i].split('.txt')[0]+': > \n')
@@ -99,18 +99,20 @@ def generate_label_list():
        
     f.close()
        
-    f=open(path_db+"label_list.txt","w",encoding="utf-8")
+    f=open(path+"\\Temp\\label_list.txt","w",encoding="utf-8")
     for x in label_list:
         f.write(str(x)+'\n')
     f.close()
 
-    f=open(path_db+"theorem_list.txt","w",encoding="utf-8")
+    f=open(path+"\\Temp\\theorem_list.txt","w",encoding="utf-8")
     for i in range(len(db_list)):
         for j in range(len(db_list[i])):
             f.write(str(db_list[i][j])+'\n')
         
     f.close()
 
+#################
+    
 def avg(arr):
     summ=0
     for i in range(len(arr)):
@@ -118,60 +120,15 @@ def avg(arr):
 
     return summ/len(arr)
 
-## модификация таблицы с синтаксической и морфологической информацией
-
-def arr_etap_one(a):
-    f=open(path+"\\Files\\dicts\words_trash.txt","r",encoding="utf-8")
-    words_trash=[]
-    for line in f:
-        line=line.strip().split()
-        for x in line:
-            words_trash.append(x)
-
-    for i in range(len(a)):
-        if a[i][2] in words_trash:
-            a[i][2]="del"
-            a[i][1]="del"
-
-        if a[i][2]=="-":
-            a[i][2]="-"
-            a[i][5]="-"
-          
-        if a[i][2]=="и":
-            if a[i][4]=="advmod":
-                a[i][2]="del"
-                a[i][1]="del"
-
-            '''
-            if a[i][4]=="cc":
-                a[i][2]=","
-                a[i][1]=","
-            '''
-
-        if a[i][4]=="flat:foreign":
-            a[i][2]=a[i][1]
-            
-        if a[i][2]=="она":
-            for k in range(i,0,-1):
-                if a[k][5]=="NOUN":
-                    if a[k][4]==a[i][4]:
-                        a[i][2]=a[k][2]
-                        a[i][1]=a[k][2]
-
-        if a[i][2]=="это":
-            if i<len(a)-1 and a[i+1][5]=="NOUN":
-                for k in range(i,0,-1):
-                    if a[k][2]==a[i+1][2]:
-                        for p in range(k,len(a)):
-                            if a[p][4]=="flat:foreign":
-                                if a[p][3]==a[k][0]:
-                                    a[i][2]=a[p][2]
-                                    a[i][1]=a[p][1]
-                                    a[i][3]=a[i+1][0]
-                                    a[i][4]=a[p][4]
-
-    return a
-
+def count_(arr,unique_type):
+    summ=0
+    for i in range(len(arr)):
+        summ=summ+int(arr[i])-1
+        
+    a=summ/len(arr)
+    r=1-a/(len(arr)-unique_type)
+    return r
+    
 ### в преобразовании в язык логики предикатов
 def checking(str1):
         str1=str1.split()
@@ -247,10 +204,14 @@ def return_index_in_indexlist(i,index_list):
     for m in range(len(index_list)):
         for k in range(1,len(index_list[m])):
             if index_list[m][k]==str(i+1):
-                return index_list[m][1:]
+                temp=index_list[m][1:]
+                for j in range(len(temp)-1,-1,-1):
+                    if temp[j]==str(i+1):
+                        break
+                return temp
 
     return -1
-                
+
 
 def reading_data(filein,type_):
     tmp=[]
@@ -275,20 +236,11 @@ def reading_data(filein,type_):
     return tmp
 
 
-def combine_formula_and_text_f(l,table):
-    for i,elem in enumerate(l):
-        if not isinstance(elem,str):
-            l[i]=combine_formula_and_text_f(elem,table)
-        else:
-            if "formula" in l[i]:
-                for k in range(len(table)):
-                    if table[k][0]==l[i]:
-                        l[i]=table[k][2]
-    return l
+def subformulas(l,res_list):
+     for i,elem in enumerate(l):
+         if not isinstance(elem,str):
+             res_list.append(elem)
+             l[i]=subformulas(elem,res_list)
 
-
-def combine_formula_and_text(formula,table):
-    r=combine_formula_and_text_f(formula,table)
-    return r
-
+     return l
 

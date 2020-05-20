@@ -45,9 +45,9 @@ def make_formula_razbor(formulas_list):
     return res
 
 
-def make_ranking(a,p):
+def make_ranking(a):
+    db_tmp=[]
     filein=path+"\\Temp\\theorem_list_arr_razbor.txt"
-  
     f=open(filein,"r",encoding="utf-8")
     db=[]
     ranking=[]
@@ -56,17 +56,22 @@ def make_ranking(a,p):
     f.close()
 
     A=Ranger()
-    ans=a
+
+    for i in range(len(db)):
+        subformulas(db[i],db_tmp)
+        db[i]=db_tmp
+        db_tmp=[]
+
+    db_tmp=[]
+    subformulas(a,db_tmp)
+    b_new=db_tmp
     
     for i in range(len(db)):
-        try:
-            c=A.main(ans,db[i],p)
-            ranking.append([str(i+1),c,db[i]])
-        except:
-            ranking.append([str(i+1),-1,db[i]])
-    
-    ranking.sort(key = lambda x: x[1],reverse=True)
-    return ans,ranking
+        c=A.main(b_new,db[i])
+        ranking.append([str(i+1),c])
+        
+    ranking.sort(key = lambda x: x[1],reverse=False)
+    return ranking
 
 
 def make_razbor(lst):
@@ -152,7 +157,7 @@ def parse_str_theorem(lst,nlp):
     tmp=[]
     for i in range(len(cf)):
         if not cf[i] in fl:
-            nlp=nlp.replace(cf[i],"formula_"+str(len(fl)+i+1))
+            lst=lst.replace(cf[i],"formula_"+str(len(fl)+i+1))
             tmp.append(cf[i])
         else:
             for m in range(len(fl)):

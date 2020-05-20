@@ -3,7 +3,6 @@ from gui_function import *
 from draw_graph import *
 from datetime import datetime
 from tkinter import ttk
-from subprocess import PIPE, run
 
 import os
 path = os.path.dirname(os.path.dirname(__file__))
@@ -160,12 +159,6 @@ class Graphic_interface():
         self.entry = Entry(self.frame_for_down_temp,width=5)
         self.entry.pack(side=LEFT,padx=5,pady=5)
 
-        label_combo_=Label(self.frame_for_down_temp,text="№ of algo \n for Rank")
-        label_combo_.pack(side=LEFT,padx=5,pady=5)
-        
-        self.entry_ = Entry(self.frame_for_down_temp,width=5)
-        self.entry_.pack(side=LEFT,padx=5,pady=5)
-        
         self.button_hop.pack(padx=10,pady=5)
         self.button_sop.pack_forget()
 
@@ -255,7 +248,7 @@ class Graphic_interface():
 
         res=make_formula_razbor(formulas_list)
 
-        f=open(path+"\\Temp\\test_razbor.txt","w",encoding="utf-8")
+        f=open(path+"\\Temp\\formulas_razbor.txt","w",encoding="utf-8")
         for x in res:
             f.write(str(x)+'\n')
        
@@ -268,14 +261,14 @@ class Graphic_interface():
         self.in_entry_mid_right.insert(END,'--- Test for ranking function ---\n\n')
         self.in_entry_mid_left.insert(END,'--- Test for ranking function ---\n\n')
 
-        if self.open_option==1 and self.entry.get() in ["5","4","3","2","1"]:
+        if self.open_option==1 and self.entry.get() in ["6","5","4","3","2","1"]:
             amount_of_algo=int(self.entry.get())
         else:
-            amount_of_algo=5
+            amount_of_algo=6
 
         text_list=['Algo #1: Treepath+Jaccard  (tree,standart): ',
-                   'Algo #2: Keyword Search  (text): ','Algo #3: Edit Distance  (text): ',
-                   'Algo #4: Cos similarity  (text): ','Algo #5: Jaccard similarity  (text): ']
+                   'Algo #2: Keyword Search  (text): ','Algo #3: Keyword Search+Treepath (tree): ','Algo #4: Edit Distance  (text): ',
+                   'Algo #5: Cos similarity  (text): ','Algo #6: Jaccard similarity  (text): ']
 
         result=[]
         count=[]
@@ -284,32 +277,19 @@ class Graphic_interface():
             result.append('0')
             count.append('0')
             result[i],count[i]=test_general_sub_main(path+"\\Temp\\theorem_list.txt",i)
-            self.in_entry_mid_left.insert(END,text_list[i]+'\n\n'+str(avg(result[i]))+" "+str(count_(count[i],50))+'\n\n')
+            self.in_entry_mid_left.insert(END,text_list[i]+'\n\n'+str(avg(result[i]))+" "+str(avg(count[i]))+'\n\n')
 
-        check_best_in_line_list=[]
-        tmp=[]
-        str1=""
-        
+        str1=""        
         for i in range(len(result[0])):
             for k in range(amount_of_algo):
-                check_best_in_line_list.append(result[k][i])
-                tmp.append(result[k][i])
                 str1=str1+'\t'+str(result[k][i])
 
-            check_best_in_line=max(check_best_in_line_list)
-            index_of_best_inline='0'
-
-            for k in range(len(tmp)):
-                if tmp[k]==check_best_in_line:
-                    index_of_best_inline=str(k+1)
-                    break
-        
             self.in_entry_mid_right.insert(END,str(i+1)+'. '+str1+'\n')
             self.in_entry_mid_right.insert(END,'\n\n')
 
             str1=""
-            tmp=[]
-            check_best_in_line_list=[]
+            
+            
 
  
     def load_and_run(self):
@@ -351,7 +331,20 @@ class Graphic_interface():
   
     def rank(self):
         self.clean()
-        self.in_entry_mid_left.insert(END,'Временно не работает\n\n')
+        text=self.in_entry.get(1.0,END)
+        if text[0]=="[":
+            text=eval(text.strip())
+            formula_text=""
+            text=create_formula_arr(text)
+        else:
+            text=[text.strip()]
+            formula_text=text
+            _,text,_=make_razbor(text)
+            
+            
+        res=make_ranking(text)
+        for i in range(len(res)):
+            self.in_entry_mid_right.insert(1.0,str(res[i][0])+' '+str(res[i][1])+'\n\n')
 	
        
     

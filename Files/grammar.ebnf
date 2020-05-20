@@ -31,6 +31,7 @@ operation_three
 	=
 	| expression '\\leq' expression
 	| expression '\\geq' expression
+	| expression '\\neq' expression
 	| '\\geq' expression
 	| expression '\\neq' expression
 	| expression ':' expression
@@ -63,7 +64,7 @@ function
 	| '{' '\\pmod' brackets '}'
 	| '\\binom' brackets brackets
 	| frac brackets
-	| text '^' "{'}" brackets 
+	| text '^' "{'}" brackets
 	| text '^' "{''}" brackets 
 	| text '_' brackets
 	| text brackets
@@ -92,6 +93,7 @@ term
     | multiplication
     | division
 	| power
+	| factorial
 	| factor
     ;
 	
@@ -113,6 +115,11 @@ power
 	| term '_' factor
 	;
 
+factorial
+	=
+	term '!'
+	;
+
 brackets
 	=
 	| '{' expression '}' 
@@ -129,6 +136,7 @@ integral
 	| '\\int' '_' brackets '^' brackets
 	| '\\int' '_' brackets
 	| '\\oint' '_' brackets
+	| '\\int'
 	;
 	
 sum
@@ -169,7 +177,7 @@ another_equation
 factor
 	=
 	| const
-	| integral expression expression
+	| integral expression
 	| sum expression
 	| limit expression
 	| another_equation

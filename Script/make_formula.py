@@ -120,6 +120,13 @@ def tokenize_correction(a,wc,em,ts):
             a[i+1]=candidate_for_delete(a,i+1)
             a[i+2]=candidate_for_delete(a,i+2)
 
+
+        if "-" in a[i][2][0]:
+            if len(a[i][2].strip())>0:
+                a[i-1][1]=a[i-1][1]+a[i][1]
+                a[i-1][2]=a[i-1][2]+a[i][1]
+                a[i]=candidate_for_delete(a,i)
+
         if "formula_" in a[i][1]:
             if a[i][1]!=a[i][2]:
                 a[i][2]=a[i][1]
@@ -145,7 +152,7 @@ def tokenize_correction(a,wc,em,ts):
 
                     if wc[k][3]=="join":
                         for n in range(int(wc[k][2])):
-                            a[i+n][2],a[i+n][1]="del","del"
+                            a[i+n]=candidate_for_delete(a,i+n)
                             ids=int(wc[k][4])-1
                             a[i+ids][2],a[i+ids][1]=str1,str1
            
@@ -164,7 +171,7 @@ def tokenize_correction(a,wc,em,ts):
                     a[i][2]=a[k][2]
                     a[i][1]=a[k][1]
 
-    if "formula" in a[i][1]:
+        if "formula" in a[i][1]:
             if "formulaz" in a[i][2]:
                 a[i][2]=a[i][2].replace("formulaz","formula_")
             if "formulam" in a[i][2]:
@@ -175,8 +182,15 @@ def tokenize_correction(a,wc,em,ts):
                     a[i][3]=a[i-1][0]
                 if i<len(a)-1 and "formula" in a[i-1][1]:
                     a[i][3]=a[i+1][0]
+
+        if a[i][1]=="т.е" or a[i][1]=="т.е.":
+            for k in range(i,len(a)):
+                if a[k][3]==a[i][0]:
+                    a[k][3]=a[i][3]
+
+            a[i]=candidate_for_delete(a,i)
                 
-    if a[i][4]=="punct":
+        if a[i][4]=="punct":
             a[i][3]=a[i-1][0]
                    
     for i in range(len(a)-1,-1,-1):
@@ -185,45 +199,34 @@ def tokenize_correction(a,wc,em,ts):
             del a[i]
 
     return a
-    
-def syntax_correction(a):
-    for i in range(len(a)):
-        if (a[i][2]=="определить" or a[i][2]=="дифференцировать") and a[i][3]!="0":
-            for t in range(i-1,0,-1):
-                if a[t][5]=="NOUN":
-                    a[i][3]=a[t][0]
-                     
-        if i<len(a)-1 and a[i][2]=="этот":
-            for k in range(i-1,0,-1):
-                if a[k][2]==a[i+1][2]:
-                    flag=1
-                    for m in range(k,len(a)):
-                        if a[m][3]==a[k][0]:
-                            if "formula" in a[m][2]:
-                                a[i][2]=a[m][2]
-                                a[i][1]=a[m][2]
-                                flag=0
-                                break
-                            
-                    if flag==0:
-                        break
-                            
-        
-
-    return a
-
-
 
 def word_with_synonyms(a,synonyms):
+    sp_words=[]
+
+    f=open(path+"\\Files\\dicts\\special.txt","r",encoding="utf-8")
+    for line in f:
+        line=line.split('\t')
+        for x in line:
+            sp_words.append(x)
+    f.close()
+   
     for i in range(len(a)):
         if a[i][2] in synonyms:
             a[i][2]=synonyms[a[i][2]]
             a[i][1]=a[i][2]
+
+    for i in range(len(a)):
+        if a[i][2] in sp_words:
+            a[i][2]="del"
+            a[i][1]="del"
+
+    for i in range(len(a)-1,-1,-1):
+        if a[i][1]=="del":
+            a=recount_number(i,a,0)
+            del a[i]
+
             
     return a
-
-
-path = os.path.dirname(os.path.dirname(__file__))
 
 def read_formulas_():
     formula_list=[]
@@ -255,27 +258,10 @@ def recreate(l,a):
             l[i]=recreate(elem,a)
         else:
             try:
-                l[i]=str(a[int(elem)-1][2])
+                l[i]=str(a[int(elem)-1][2])+"::"+a[int(elem)-1][4]
             except:
                 0
        
-    return l
-
-def insert_formula(l,rl):
-    for i,elem in enumerate(l):
-        if not isinstance(elem,str):
-            l[i]=insert_formula(elem,rl)
-        else:
-            if "formula" in elem:
-                if not '-' in elem:
-                    idx=int(elem.split("_")[1])-1
-                    l[i]=rl[idx]
-                else:
-                    st=elem.split("-")
-                    idx=int(st[0].strip().split("_")[1])-1
-                    l[i]=rl[idx]
-                
-               
     return l
 
 
@@ -312,32 +298,57 @@ def dict_(a,rl):
                 
     temp=temp[0]
     temp=recreate(temp,a)
+    temp=antirecreate(temp)
     insert_formula(temp,rl)
     return temp
+
+def syntax_correction(a):
+    for i in range(len(a)):
+        if i<len(a)-1 and a[i][2]=="этот":
+            for k in range(i-1,0,-1):
+                if a[k][2]==a[i+1][2]:
+                    flag=1
+                    for m in range(k,len(a)):
+                        if a[m][3]==a[k][0]:
+                            if "formula" in a[m][2]:
+                                a[i][2]=a[m][2]
+                                a[i][1]=a[m][2]
+                                flag=0
+                                break
+                            
+                    if flag==0:
+                        break
+                        
+    return a
+
 
 
 def create_formula_str():
     infile=path+"\\Temp\\theorem_list_arr.txt"
     outfile=path+"\\Temp\\theorem_list_arr_razbor.txt"
-    
+   
     synonyms = load_synonyms(path+'\\Files\\synonyms.yml')
     wc,em,ts=read_dict()
     fl,rl=read_formulas_()
     res=[]
+    lst=[]
 
     f=open(infile,"r",encoding="utf-8")
     for line in f:
         a=eval(line.strip())
-        a=tokenize_correction(a,wc,em,ts)
+        lst.append(a)
+    f.close()
+
+    for i in range(len(lst)):
+        a=tokenize_correction(lst[i],wc,em,ts)
         a=syntax_correction(a)
         a=word_with_synonyms(a,synonyms)
+        a=post_correction(a)
         res.append(a)
-
-    f.close()
 
     f=open(outfile,"w",encoding="utf-8")
     for i in range(len(res)):
-        a=str(dict_(res[i],rl))
+        a=str(antirecreate(dict_(res[i],rl)))
         f.write(str(a)+'\n')
        
     f.close()
@@ -347,9 +358,110 @@ def create_formula_arr(a):
     synonyms = load_synonyms(path+'\\Files\\synonyms.yml')
     wc,em,ts=read_dict()
     fl,rl=read_formulas_()
-
     a=tokenize_correction(a,wc,em,ts)
     a=syntax_correction(a)
     a=word_with_synonyms(a,synonyms)
+    
+    a=post_correction(a)
     a=dict_(a,rl)
+
     return a
+
+def post_correction(a):
+    tmp_ind=[]
+    tmp=[]
+    flag=0
+
+    for m in range(len(a)):
+        if a[m][2]=="<=>":
+            flag=a[m][0]
+            a[m][3]="0"
+            a[m][4]="root"
+            
+    if flag!=0:
+        for i in range(len(a)):
+            if (a[i][4]=="root" or a[i][4]=="advcl") and int(a[i][0])<int(flag):
+                a[i][3]=flag
+
+            if flag!=0 and (a[i][2]=="if" or a[i][2]=="then" or a[i][2]=="forall" or a[i][2]=="exists"):
+                 a[i][3]=flag
+                 flag=a[i][0]
+
+            if a[int(flag)-1][2]=="forall" and (a[i][5]=="NOUN" or "formula" in a[i][2]):
+                a[i][3]=flag
+
+        flag=0
+
+    for i in range(len(a)):
+         if a[i][2]=="if" and i==0:
+             a[i][3]='0'
+             a[i][4]="root"
+             flag=a[i][0]
+             continue
+            
+         if flag!=0 and (a[i][2]=="if" or a[i][2]=="then" or a[i][2]=="forall" or a[i][2]=="exists"):
+            if a[int(flag)-2][2]=="и":
+                a[i][3]=a[int(flag)-1][3]
+            if a[int(flag)-2][2]!="и":
+                a[i][3]=flag
+
+            flag=a[i][0]
+             
+         if flag!=0 and (a[i][4]=="advcl" or a[i][4]=="root" or (a[i][4]=="conj" and a[i][5]=="VERB")):
+             a[i][3]=flag
+
+    for i in range(len(a)):
+        if a[i][0]==a[i][3]:
+            for t in range(i-1,0,-1):
+                if a[t][2]=="forall" or a[t][2]=="exists" or a[t][2]=="then" or a[t][2]=="if" or a[t][2]=="<=>":
+                    a[i][3]=a[t][0]
+                    break
+
+            if a[i][0]==a[i][3]:
+                a[i][3]="1"
+            
+        if a[i][2]=="equal":
+            for t in range(i-1,0,-1):
+                if a[t][2]=="forall" or a[t][2]=="exists" or a[t][2]=="then" or a[t][2]=="if" or a[t][2]=="<=>":
+                    a[i][3]=a[t][0]
+                    break
+                
+            if i<len(a)-1:
+                a[i+1][3]=a[i][0]
+   
+    return a
+            
+
+def antirecreate(l):
+     for i,elem in enumerate(l):
+        if not isinstance(elem,str):
+            l[i]=antirecreate(elem)
+        else:
+            l[i]=elem.split("::")[0]
+            
+     return l
+
+def insert_formula(l,rl):
+    for i,elem in enumerate(l):
+        if not isinstance(elem,str):
+            l[i]=insert_formula(elem,rl)
+        else:
+            if "formula" in elem:
+                if "." in elem:
+                    elem=elem.replace(".","")
+                    
+                if not '-' in elem:
+                    idx=int(elem.split("_")[1])-1
+                    try:
+                        l[i]=rl[idx]
+                    except:
+                        0
+                else:
+                    st=elem.split("-")
+                    idx=int(st[0].strip().split("_")[1])-1
+                    l[i]=rl[idx]
+                 
+    return l
+
+
+

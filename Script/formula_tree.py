@@ -23,6 +23,8 @@ class CalcSemantics(object):
 
         for i in range(len(ast)-1,-1,-1):
             if ast[i]==",":
+                ast[i-1]=[ast[i-1]]
+                ast[i+1]=[ast[i+1]]
                 del ast[i]
                 
         return ast
@@ -82,7 +84,8 @@ class CalcSemantics(object):
                             
                         tmp.append(ast[i][1])
                         ast=ast[count:]
-                        ast[0]=ast[0][2:][0]
+                        if len(ast[0])>2:
+                            ast[0]=ast[0][2:][0]
                         ast.insert(0,oper)
                         ast.insert(1,tmp)
                                                 
@@ -149,7 +152,7 @@ class CalcSemantics(object):
         if type(ast)!=str:
             ast=list(ast)
 
-        arr=["\\leq","\\geq"]
+        arr=["\\leq","\\geq","\\neq"]
         ast=swap_(arr,ast)
         ast[1]=[ast[1],ast[2]]
         ast[2]=[]
@@ -203,7 +206,7 @@ class Formula_Tree:
                 return []
 
     def main(self,str1):
-        ls={' >':'>','\\,':' ',' <':'<',' =':'=',' dx':'dx'}
+        ls={' >':'>','\\,':' ',' <':'<',' =':'=',' dx':'dx','\\leqslant':'\\leq','\\\\neq':'\\neq','\\,':"",' \\, d':'*d'}
         for x in ls:
             if x in str1:
                 str1=str1.replace(x,ls[x])
@@ -219,6 +222,4 @@ class Formula_Tree:
         a=a.replace(")","]")
         a=eval(a)
         return a
-
-
 

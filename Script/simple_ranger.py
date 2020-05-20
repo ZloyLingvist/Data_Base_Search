@@ -96,6 +96,7 @@ class SimpleDB:
         self._texts = texts
         self._toks = [convert_text(s, **convert_opts) for s in texts]
         self._stats = [stats_func(x, **stats_opts) for x in self._toks]
+        
         s = defaultdict(lambda: 0)
         for st in self._stats:
             for x, y in st.items():
@@ -114,8 +115,10 @@ class SimpleDB:
 
     def _diff_stats(self, st1, st2):
         keys = set(st1) | set(st2)
+        
         mx = sum(self._wt[k] * max(st1[k], st2[k]) for k in keys)
         mn = sum(self._wt[k] * min(st1[k], st2[k]) for k in keys)
+
         return mn / mx
 
 
@@ -130,35 +133,33 @@ class Tester:
 
     def test(self):
         n = len(self._data)
-
-        tmp=[]
-        tmp_general=[]
-        
+    
         results = [0] * n
+        order_list=[0]*n
+        
         for i in range(n):
             key, text = self._data[i]
             order = self._db.ranger(text)
             r = 0;
             k = 0
-
+            
             for idx, _ in order:
-                tmp.append([str(idx+1),0])
                 if self._data[idx][0]==i:
                     continue
                 if self._data[idx][0] != key:
                     k += 1
                 else:
                     r = k
-            
+
+            order_list[i]=order
             results[i] = str(float("{:.2f}".format(1 - r / n)))
-            tmp_general.append(tmp)
-            tmp=[]
-        return results,tmp_general
+            
+        return results,order_list
 
 
 def keyword_search():
     file = path+'\Temp\label_list.yml'
     t = Tester(file)
-    res,g = t.test()
-    return res,g
+    res,order = t.test()
+    return res,order
 

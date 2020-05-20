@@ -5,12 +5,13 @@ import re
 class formula_simplifier:
     def __init__(self,s):
         self.arr=['\displaystyle','\textstyle','\right ','\left ','\limits','\nolimits','\quad','\,','\!','\;',"\Bigg","\bigl","\bigr"]
-        self.arr1=[["\{","\}","\set","(",")"],["[","]","\closedinterval","(",")"],['||','||','\norm','(',')'],["\|","\|","\abs","(",")"],["|","|","\abs","(",")"]]
+        self.arr1=[["\{","\}","\set","(",")"],["[","]","","(",")"],['||','||','\norm','(',')'],["\|","\|","\abs","(",")"],["|","|","\abs","(",")"],
+                   ["\\overline {","}","\\overline","(",")"],["\\underline {","}","\\underline","(",")"]]
         self.arr2=[["\mathrm {","}","","",""],["\mathbb {","}","\mathbb","(",")"],["\mathcal {","}","","",""],
                    ["\mathbf {","}","","",""],["\widehat {","}","\widehat","(",")"],
                    ["\sqrt {","}","\sqrt","(",")"]]
         
-        self.arr3={"\\lbrace":"{","\\rbrace":"}","\langle":"{","\\rangle":"}","\\mid":"\\vert","\\cdot":"*","\\over":"/","\\ast":"*"}
+        self.arr3={"\\lbrace":"{","\\rbrace":"}","\langle":"{","\\rangle":"}","\\mid":"\\vert","\\cdot":"*","\\over ":"/","\\ast":"*"}
         self.arr4={".}":"}",",}":"}","{ }":""," |":"|","{ (}":"(","{ )}":")"}
         
         self.str=self.str_to_raw(s)

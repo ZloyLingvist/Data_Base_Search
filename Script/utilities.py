@@ -120,15 +120,6 @@ def avg(arr):
 
     return summ/len(arr)
 
-def count_(arr,unique_type):
-    summ=0
-    for i in range(len(arr)):
-        summ=summ+int(arr[i])-1
-        
-    a=summ/len(arr)
-    r=1-a/(len(arr)-unique_type)
-    return r
-    
 ### в преобразовании в язык логики предикатов
 def checking(str1):
         str1=str1.split()
@@ -243,4 +234,33 @@ def subformulas(l,res_list):
              l[i]=subformulas(elem,res_list)
 
      return l
+
+def simplif(l):
+     for i,elem in enumerate(l):
+         if not isinstance(elem,str):
+             if len(elem)==1:
+                 elem=elem[0]
+             l[i]=simplif(elem)
+
+     return l
+
+def pretty_write(a):
+    lst=[]
+    simplif(a)
+    a=str(a)
+    a=a.replace("[","(").replace("]",")").replace("'","")
+    f=open(path+"\\Files\\dicts\\predicate_node.txt","r",encoding="utf-8")
+
+    for line in f:
+        line=line.strip()
+        lst.append(line)
+
+    f.close()
+    
+    for i in range(len(lst)):
+        a=a.replace(lst[i]+","," "+lst[i]+" ")
+
+    a=a[1:-1]
+    return a
+
 

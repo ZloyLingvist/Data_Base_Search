@@ -1,6 +1,6 @@
 Если функция {\displaystyle y=f(x)} определенна на отрезке {\displaystyle [a,b]} и на этом отрезке {\displaystyle f(x)} дифференцируема {\displaystyle n} раз, тогда {\displaystyle f(x)} может быть представлена в виде {\displaystyle f(x)=f(a)+\dfrac{f^{\prime}(a)}{1!}*(x-a)+\dfrac{f^{''}(a)}{2!}*(x-a)^2+\ldots+\dfrac{f^{(n-1)}(a)}{(n-1)!}*(x-a)^{n-1}+R_n} .
 
-Пусть {\displaystyle k \geq 1} является целым, и пусть функция {\displaystyle f : \mathbb{R} \rightarrow \mathbb{R}} является {\displaystyle k} раз дифференцируемой в точке {\displaystyle a \in \mathbb{R}}, тогда существует функция {\displaystyle h_k: \mathbb{R} \rightarrow \mathbb{R}} такая, что {\displaystyle f(x)=f(a)+\dfrac{f^{\prime}(a)}{1!}(x-a)+\dfrac{f^{''}(a)}{2!}(x-a)^2+\ldots+\dfrac{f^{(k)}(a)}{k!}*(x-a)^k+h_k*(x-a)^k}, {\displaystyle \lim \limits _{x \to a} h_k(a)=0} .
+Пусть {\displaystyle k \geq 1} является целым, и пусть функция {\displaystyle f : \mathbb{R} \rightarrow \mathbb{R}} является {\displaystyle k} раз дифференцируемой в точке {\displaystyle a \in \mathbb{R}}, тогда существует функция {\displaystyle h_k: \mathbb{R} \rightarrow \mathbb{R}} такая, что {\displaystyle f(x)=f(a)+\dfrac{f^{\prime}(a)}{1!}*(x-a)+\dfrac{f^{''}(a)}{2!}*(x-a)^2+\ldots+\dfrac{f^{(k)}(a)}{k!}*(x-a)^k+h_k*(x-a)^k}, {\displaystyle \lim \limits _{x \to a} h_k(a)=0} .
 
 Пусть функция {\displaystyle f(x)} {\displaystyle n} раз дифференцируема в точке {\displaystyle x_0}, тогда {\displaystyle f(x)=\sum \limits _{k=0}^{n} \dfrac{f^{(k)}(x_0)}{k!}*(x-x_0)^k+o((x-x_0)^n)} .   
 

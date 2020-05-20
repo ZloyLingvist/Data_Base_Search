@@ -1,5 +1,5 @@
-Если {\displaystyle \textstyle f(x)} непрерывна на отрезке {\displaystyle \left[a,b\right]}  и {\displaystyle \textstyle \Phi (x)} — любая её первообразная на этом отрезке, то имеет место равенство {\displaystyle \int \limits _a^b f(x)\,dx=\Phi (b)-\Phi (a)={\Bigg .}\Phi (x){\Bigg |}_{a}^{b}} .
+Если {\displaystyle \textstyle f(x)} непрерывна на отрезке {\displaystyle \left [a,b\right ]}  и {\displaystyle \textstyle \Phi (x)} — любая её первообразная на этом отрезке, то имеет место равенство {\displaystyle \int \limits _a^b f(x)\,dx=\Phi (b)-\Phi (a)={\Bigg .}\Phi (x){\Bigg |}_{a}^{b}} .
 
 Если  {\displaystyle F (x)} – любая первообразная функции {\displaystyle f(x)},  то справедливо равенство {\displaystyle \int \limits _a^x f(t)\,dt=F(x)-F(a)} .
 
-Пусть {\displaystyle f} - функция, интегрируема по Риману на отрезке {\displaystyle [a,b]} и функция {\displaystyle F} непрерывна на отрезке {\displaystyle [a,b]} и дифференцируема в каждой внутренней точке этого отрезка, причем {\displaystyle F^{\prime}=f(x)} , {\displaystyle a<x<b}, тогда справедлива формула {\displaystyle \int \limits _{a}^{b} f(x) \, dx=F(b)-F(a)} .
+Пусть {\displaystyle f} - функция, интегрируема по Риману на отрезке {\displaystyle [a,b]} и функция {\displaystyle F} непрерывна на отрезке {\displaystyle [a,b]} и дифференцируема в каждой внутренней точке этого отрезка, причем {\displaystyle F^{\prime}=f(x)} , {\displaystyle a<x<b}, тогда справедлива формула {\displaystyle \int \limits _{a}^{b} f(x)\,dx=F(b)-F(a)} .

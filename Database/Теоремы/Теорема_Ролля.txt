@@ -6,4 +6,4 @@
 
 Если функция f непрерывна на {\displaystyle [a,b]}, функция f дифференцируема во всех внутренних точках {\displaystyle [a,b]} и {\displaystyle f(a)=f(b)}, тогда существует точка {\displaystyle c\in (a,b)}, в которой {\displaystyle f^{\prime}(c)=0} .
 
-Если функция {\displaystyle f(x)}  непрерывна на отрезке {\displaystyle [a,b]}, в каждой точке интервала {\displaystyle (a,b)} существует конечная производная {\displaystyle f^{\prime}(x)} и, кроме того,{\displaystyle f(a)=f(b)}, то тогда между точками {\displaystyle a} и {\displaystyle b} найдется хотя бы одна точка {\displaystyle с} {\displaystyle a<c<b} такая, что {\displaystyle f^{\prime}(c)=0} .
+Если функция {\displaystyle f(x)}  непрерывна на отрезке {\displaystyle [a,b]}, в каждой точке интервала {\displaystyle (a,b)} существует конечная производная {\displaystyle f^{\prime}(x)} и, кроме того,{\displaystyle f(a)=f(b)}, то тогда между точками {\displaystyle a} и {\displaystyle b} найдется хотя бы одна точка {\displaystyle с},{\displaystyle a<c<b} такая, что {\displaystyle f^{\prime}(c)=0} .

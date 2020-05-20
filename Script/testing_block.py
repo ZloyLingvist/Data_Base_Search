@@ -29,12 +29,12 @@ def testing_general_rank(ranking,ind,index_list):
 
     summ=0
     for i in range(1,len(index_list)):
-        summ=summ+i+1
+        count=count-i-1
 
     if count==0:
         count=0
     else:
-        count=summ/count
+        count=1-(count/len(index_list))/len(ranking)
 
     mark= str(float("{:.2f}".format(1 - r / len(ranking))))
     return str(mark),str(count)

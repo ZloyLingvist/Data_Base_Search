@@ -1,6 +1,7 @@
-0:
+zero:
     - '0'
     - нуль
+    - ноль
 1:
     - '1'
     - единица
@@ -25,6 +26,20 @@ convergent_series:
     - сходиться ряд
 uniform_convergence:
     - сходиться равномерно
+less:
+    - "<"
+    - "\\lt"
+    - маленький
+    - "\\leq"
+    - "\\le"
+    - мало
+greater:
+    - ">"
+    - "\\gt"
+    - большой
+    - "\\geq"
+    - "\\ge"
+    - больше
 forall:
     - "\\forall"
     - любой
@@ -96,6 +111,9 @@ segment:
 derivative:
     - производная
     - производная функция
+    - производный
+    - "'"
+    - "\\prime"
 antiderivative:
     - первообразная
 complex_function:
@@ -245,8 +263,31 @@ positive:
     - положительный
 summable:
     - суммируемый
-'>':
-    - больше
-'<':
-    - мало
-
+var:
+    - x
+    - y
+    - z
+    - s
+    - t
+uv:
+    - u
+    - v
+par:
+    - a
+    - b
+    - c
+    - d
+idx:
+    - i
+    - j
+    - k
+    - l
+zz:
+    - m
+    - n
+    - p
+    - q
+fun:
+    - f
+    - g
+    - h

@@ -4,7 +4,7 @@ import yaml
 import pymorphy2
 import os
 
-path = os.path.dirname(os.path.dirname(__file__))
+path = os.path.dirname(os.path.dirname(__file__)) or '.'
 morph = pymorphy2.MorphAnalyzer()
 
 
@@ -16,18 +16,31 @@ def load_synonyms(file):
             for x in v: d[x] = k
         return d
     except FileNotFoundError:
+        print(f'cannot open synonym dictionary {file}')
         return {}
+		
+def load_set(file):
+    try:
+        data = yaml.load(open(file, 'rt', encoding='utf8'), Loader=yaml.FullLoader)
+        #print(data)
+        return set(data)
+    except FileNotFoundError:
+        print(f'error: cannot open file {file}')
+        return set()
 
 synonyms = load_synonyms(path+'\Files\synonyms.yml')
 
 def get_normal_form(word: str):
     if word[0].isascii():
-        return word
+        return synonyms.get(word, word)
     p = morph.parse(word)[0]
-    if p.normal_form in synonyms:
-        return synonyms[p.normal_form]
-    return p.normal_form
+    return synonyms.get(p.normal_form, p.normal_form)
 
+def in_skip(word: str):
+    if word[0].isascii():
+        return word in skip_words
+    p = morph.parse(word)[0]
+    return p.normal_form in skip_words
 
 def is_prep(word: str):
     if word[0].isascii():
@@ -59,11 +72,9 @@ def simple_tokenize(text: str):
 
 
 def canonical_form(x: str, normal_form=get_normal_form, skip=is_prep):
-    separators = {',', '.', '{', '}', }
-    if skip(x): return None
+    separators = {',', '.', '\\displaystyle' } # '{', '}', }
     if x in separators: return '.'
-    if not x[0].isalpha():
-        return x
+    if skip(x): return None
 
     return normal_form(x)
 
@@ -83,8 +94,8 @@ def get_text_stats(words, sep='.', use_pairs=True):
             if x == sep: continue
             for j, y in enumerate(words[i + 1:]):
                 if y == sep: break
-                st[(x, y)] = 1 / (j + 1)
-                st[(y, x)] += 0.5 / (j + 1)
+                st[(x, y)] += 1 / 1.2 ** j
+                st[(y, x)] += 0.5 / 1.2 ** j
     return st
 
 

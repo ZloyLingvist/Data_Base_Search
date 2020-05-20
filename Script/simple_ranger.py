@@ -29,6 +29,7 @@ def load_set(file):
         return set()
 
 synonyms = load_synonyms(path+'\Files\synonyms.yml')
+skip_words = load_set(path+'/Files/skip.yml')
 
 def get_normal_form(word: str):
     if word[0].isascii():

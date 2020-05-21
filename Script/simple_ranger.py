@@ -1,4 +1,3 @@
-import sys
 from collections import defaultdict
 import yaml
 import pymorphy2
@@ -18,18 +17,21 @@ def load_synonyms(file):
     except FileNotFoundError:
         print(f'cannot open synonym dictionary {file}')
         return {}
-		
+
+
 def load_set(file):
     try:
         data = yaml.load(open(file, 'rt', encoding='utf8'), Loader=yaml.FullLoader)
-        #print(data)
+        # print(data)
         return set(data)
     except FileNotFoundError:
         print(f'error: cannot open file {file}')
         return set()
 
-synonyms = load_synonyms(path+'\Files\synonyms.yml')
-skip_words = load_set(path+'/Files/skip.yml')
+
+synonyms = load_synonyms(path + '/Files/synonyms-kw.yml')
+skip_words = load_set(path + '/Files/skip.yml')
+
 
 def get_normal_form(word: str):
     if word[0].isascii():
@@ -37,11 +39,13 @@ def get_normal_form(word: str):
     p = morph.parse(word)[0]
     return synonyms.get(p.normal_form, p.normal_form)
 
+
 def in_skip(word: str):
     if word[0].isascii():
         return word in skip_words
     p = morph.parse(word)[0]
     return p.normal_form in skip_words
+
 
 def is_prep(word: str):
     if word[0].isascii():
@@ -72,8 +76,8 @@ def simple_tokenize(text: str):
     yield from add()
 
 
-def canonical_form(x: str, normal_form=get_normal_form, skip=is_prep):
-    separators = {',', '.', '\\displaystyle' } # '{', '}', }
+def canonical_form(x: str, normal_form=get_normal_form, skip=in_skip):
+    separators = {',', '.', '\\displaystyle'}
     if x in separators: return '.'
     if skip(x): return None
 
@@ -108,7 +112,7 @@ class SimpleDB:
         self._texts = texts
         self._toks = [convert_text(s, **convert_opts) for s in texts]
         self._stats = [stats_func(x, **stats_opts) for x in self._toks]
-        
+
         s = defaultdict(lambda: 0)
         for st in self._stats:
             for x, y in st.items():
@@ -118,16 +122,16 @@ class SimpleDB:
 
     def ranger(self, text):
         toks = convert_text(text, **self._convert_opts)
-        #print(f'toks = {toks}')
+        # print(f'toks = {toks}')
         stats = self._stats_func(toks, **self._stats_params)
         rks = [self._diff_stats(stats, st) for st in self._stats]
-        #print(f'ranks = {rks}')
+        # print(f'ranks = {rks}')
         idx = sorted(range(len(rks)), key=lambda i: rks[i], reverse=True)
         return [(i, rks[i]) for i in idx]
 
     def _diff_stats(self, st1, st2):
         keys = set(st1) | set(st2)
-        
+
         mx = sum(self._wt[k] * max(st1[k], st2[k]) for k in keys)
         mn = sum(self._wt[k] * min(st1[k], st2[k]) for k in keys)
 
@@ -145,33 +149,32 @@ class Tester:
 
     def test(self):
         n = len(self._data)
-    
-        results = [0] * n
-        order_list=[0]*n
-        
+
+        results = []
+        order_list = []
+
         for i in range(n):
             key, text = self._data[i]
             order = self._db.ranger(text)
-            r = 0;
+            r = 0
             k = 0
-            
+
             for idx, _ in order:
-                if self._data[idx][0]==i:
+                if self._data[idx][0] == i:
                     continue
                 if self._data[idx][0] != key:
                     k += 1
                 else:
                     r = k
 
-            order_list[i]=order
-            results[i] = str(float("{:.2f}".format(1 - r / n)))
-            
-        return results,order_list
+            order_list.append(order)
+            results.append(f"{1 - r / n:.3f}")
+
+        return results, order_list
 
 
 def keyword_search():
-    file = path+'\Temp\label_list.yml'
+    file = path + '/Temp/label_list.yml'
     t = Tester(file)
-    res,order = t.test()
-    return res,order
-
+    res, order = t.test()
+    return res, order

@@ -202,7 +202,9 @@ def tokenize_correction(a,wc,em,ts):
 
 def word_with_synonyms(a,synonyms):
     sp_words=[]
-
+    eq_words={}
+    flag=1
+   
     f=open(path+"\\Files\\dicts\\special.txt","r",encoding="utf-8")
     for line in f:
         line=line.split('\t')
@@ -217,8 +219,19 @@ def word_with_synonyms(a,synonyms):
 
     for i in range(len(a)):
         if a[i][2] in sp_words:
+            for k in range(len(a)):
+                if a[k][3]==a[i][0]:
+                    if a[i][4]=="flat:foreign":
+                        a[i][2]=a[k][2]
+                        a[k][2]="del"
+                        a[k][1]="del"
+                        
+                    break
+                
             a[i][2]="del"
             a[i][1]="del"
+
+        
 
     for i in range(len(a)-1,-1,-1):
         if a[i][1]=="del":
@@ -463,5 +476,25 @@ def insert_formula(l,rl):
                  
     return l
 
+a=[['1', 'Если', 'если', '3', 'mark', 'SCONJ'], ['2', 'formula_107', 'formula_107', '3', 'nsubj', 'PROPN'], ['3', 'непрерывна', 'непрерывный', '19', 'advcl', 'ADJ'], ['4', 'на', 'на', '5', 'case', 'ADP'], ['5', 'отрезке', 'отрезок', '3', 'obl', 'NOUN'], ['6', 'formula_76', 'formula_76', '5', 'flat:foreign', 'PROPN'], ['7', 'и', 'и', '5', 'cc', 'CCONJ'], ['8', 'formula_', 'formula_', '5', 'flat:foreign', 'PROPN'], ['9', '106', '106', '5', 'nummod', 'NUM'], ['10', '—', '—', '13', 'punct', 'PUNCT'], ['11', 'любая', 'любой', '13', 'det', 'DET'], ['12', 'её', 'ее', '13', 'det', 'DET'], ['13', 'первообразная', 'первообразный', '3', 'conj', 'ADJ'], ['14', 'на', 'на', '16', 'case', 'ADP'], ['15', 'этом', 'этот', '16', 'det', 'DET'], ['16', 'отрезке', 'отрезок', '13', 'nmod', 'NOUN'], ['17', ',', ',', '3', 'punct', 'PUNCT'], ['18', 'то', 'то', '19', 'mark', 'SCONJ'], ['19', 'имеет', 'иметь', '0', 'root', 'VERB'], ['20', 'место', 'место', '19', 'obj', 'NOUN'], ['21', 'равенство', 'равенство', '19', 'nsubj', 'NOUN'], ['22', 'formula_52', 'formula_52', '21', 'flat:foreign', 'PROPN'], ['23', '.', '.', '19', 'punct', 'PUNCT']]
+b=[['1', 'Если', 'если', '6', 'mark', 'SCONJ'], ['2', 'formula_15', 'formula_15', '10', 'advcl', 'PROPN'], ['3', '–', '–', '6', 'punct', 'PUNCT'], ['4', 'любая', 'любой', '6', 'det', 'DET'], ['5', 'первообразная', 'первообразный', '6', 'amod', 'ADJ'], ['6', 'функции', 'функция', '10', 'advcl', 'NOUN'], ['7', 'formula_171', 'formula_171', '6', 'flat:foreign', 'PROPN'], ['8', ',', ',', '3', 'punct', 'PUNCT'], ['9', 'то', 'то', '10', 'mark', 'SCONJ'], ['10', 'справедливо', 'справедливый', '0', 'root', 'ADJ'], ['11', 'равенство', 'равенство', '10', 'nsubj', 'NOUN'], ['12', 'formula_53', 'formula_53', '11', 'flat:foreign', 'PROPN'], ['13', '.', '.', '10', 'punct', 'PUNCT']]
+c=[['1', 'Пусть', 'пусть', '4', 'advmod', 'PART'], ['2', 'formula_188', 'formula_188', '4', 'nsubj', 'PROPN'], ['3', '-', '-', '2', 'punct', 'PUNCT'], ['4', 'функция', 'функция', '0', 'root', 'NOUN'], ['5', ',', ',', '6', 'punct', 'PUNCT'], ['6', 'интегрируема', 'интегрировать', '4', 'conj', 'VERB'], ['7', 'по', 'по', '8', 'case', 'ADP'], ['8', 'Риману', 'Риман', '6', 'obl', 'PROPN'], ['9', 'на', 'на', '10', 'case', 'ADP'], ['10', 'отрезке', 'отрезок', '6', 'obl', 'NOUN'], ['11', 'formula_40', 'formula_40', '10', 'flat:foreign', 'PROPN'], ['12', 'и', 'и', '15', 'cc', 'CCONJ'], ['13', 'функция', 'функция', '15', 'nsubj', 'NOUN'], ['14', 'formula_23', 'formula_23', '13', 'flat:foreign', 'PROPN'], ['15', 'непрерывна', 'непрерывный', '4', 'conj', 'ADJ'], ['16', 'на', 'на', '17', 'case', 'ADP'], ['17', 'отрезке', 'отрезок', '15', 'obl', 'NOUN'], ['18', 'formula_40', 'formula_40', '17', 'flat:foreign', 'PROPN'], ['19', 'и', 'и', '20', 'cc', 'CCONJ'], ['20', 'дифференцируема', 'дифференцируемый', '4', 'conj', 'ADJ'], ['21', 'в', 'в', '24', 'case', 'ADP'], ['22', 'каждой', 'каждый', '24', 'det', 'DET'], ['23', 'внутренней', 'внутренний', '24', 'amod', 'ADJ'], ['24', 'точке', 'точка', '20', 'obl', 'NOUN'], ['25', 'этого', 'этот', '26', 'det', 'DET'], ['26', 'отрезка', 'отрезок', '24', 'nmod', 'NOUN'], ['27', ',', ',', '34', 'punct', 'PUNCT'], ['28', 'причем', 'причем', '34', 'cc', 'CCONJ'], ['29', 'formula_21', 'formula_21', '34', 'nsubj', 'PROPN'], ['30', ',', ',', '31', 'punct', 'PUNCT'], ['31', 'formula_128', 'formula_128', '29', 'flat:foreign', 'PROPN'], ['32', ',', ',', '34', 'punct', 'PUNCT'], ['33', 'тогда', 'тогда', '34', 'advmod', 'ADV'], ['34', 'справедлива', 'справедливый', '4', 'conj', 'ADJ'], ['35', 'формула', 'формула', '34', 'nsubj', 'NOUN'], ['36', 'formula_60', 'formula_60', '35', 'flat:foreign', 'PROPN'], ['37', '.', '.', '4', 'punct', 'PUNCT']]
 
 
+#for x in a:
+    #print(x)
+
+#r1=create_formula_arr(a)
+#r2=create_formula_arr(b)
+#r3=create_formula_arr(c)
+
+#print(r1)
+#print()
+#print(r2)
+#print()
+#print(r3)
+
+#print(r)
+#print()
+#print(r2)
+#create_formula_str()

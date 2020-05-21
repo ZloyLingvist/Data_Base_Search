@@ -223,3 +223,6 @@ class Formula_Tree:
         a=eval(a)
         return a
 
+#text="{\\displaystyle |\\int \\limits _{a}^{b} f(x)\\cdot g(x)\\, dx| \\leq \\int \\limits _{a}^{b} |f(x)\\cdot g(x)| \cdot dx \\leq (\\int \\limits _{a}^{b} |f(x)|^{p}\cdot dx)^{\\dfrac{1}{p}}\\cdot (\\int \\limits _{a}^{b} |g(x)|^{q} \cdot dx)^{\\dfrac{1}{q}}}"
+#A=Formula_Tree()
+#A.main(text)

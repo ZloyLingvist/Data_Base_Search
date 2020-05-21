@@ -101,7 +101,7 @@ def test_general_sub_main(filein,mode):
         for i in range(len(tmp_ranking)):
             tmp=return_index_in_indexlist(i,index_list)
             for j in range(len(tmp_ranking[i])):
-                ranking.append([str(int(tmp_ranking[i][j][0])),tmp_ranking[i][j][1]])
+                ranking.append([str(int(tmp_ranking[i][j][0])+1),tmp_ranking[i][j][1]])
 
             _,v2=testing_general_rank(ranking,i,tmp)
             res2.append(v2)

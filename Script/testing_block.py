@@ -27,16 +27,12 @@ def testing_general_rank(ranking,ind,index_list):
         else:
             k=k+1
 
-    summ=0
     for i in range(1,len(index_list)):
         count=count-i-1
 
-    if count==0:
-        count=0
-    else:
-        count=1-(count/len(index_list))/len(ranking)
+    count=1-(count/len(index_list))/len(ranking)
 
-    mark= str(float("{:.2f}".format(1 - r / len(ranking))))
+    mark= str(float("{:.3f}".format(1 - r / len(ranking))))
     return str(mark),str(count)
 
 
@@ -105,9 +101,8 @@ def test_general_sub_main(filein,mode):
         for i in range(len(tmp_ranking)):
             tmp=return_index_in_indexlist(i,index_list)
             for j in range(len(tmp_ranking[i])):
-                ranking.append([str(j+1),tmp_ranking[i][j][1]])
+                ranking.append([str(int(tmp_ranking[i][j][0])),tmp_ranking[i][j][1]])
 
-            ranking.sort(key = lambda x: x[1],reverse=True)
             _,v2=testing_general_rank(ranking,i,tmp)
             res2.append(v2)
             ranking=[]

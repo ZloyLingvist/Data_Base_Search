@@ -29,7 +29,7 @@ def load_set(file):
         return set()
 
 
-synonyms = load_synonyms(path + '/Files/synonyms-kw.yml')
+synonyms = load_synonyms(path + '/Files/synonyms.yml')
 skip_words = load_set(path + '/Files/skip.yml')
 
 

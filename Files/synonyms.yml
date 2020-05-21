@@ -19,7 +19,9 @@ convergent:
 convergent_measure:
     - сходиться по мера
 convergent_almost_everywhere:
-    - сходиться почти всюду  
+    - сходиться почти всюду
+uniform:
+    - равномерно
 uniform_absolute_convergence:
     - сходиться равномерно и абсолютно
 convergent_series:
@@ -53,6 +55,9 @@ exists:
     - найтись
     - можно найти
     - можно выделить
+    - иметься
+took_values:
+    - принимать значение
 have:
     - иметь
 not_exists:
@@ -199,6 +204,7 @@ values_of_opposite_sign:
     - принимать значение разный знак
 values_same:
     - принимать одинаковый значение
+    - одинаковый значение
 infinite:
     - бесконечный
 'C_{0}^{\infty}':
@@ -231,6 +237,7 @@ Bounded_below:
     - ограничить сверху
 most_countable:
     - не более чем счетный
+    - счетный конечно
 M:
     - монотонный
 Riemann_integrable:
@@ -263,31 +270,4 @@ positive:
     - положительный
 summable:
     - суммируемый
-var:
-    - x
-    - y
-    - z
-    - s
-    - t
-uv:
-    - u
-    - v
-par:
-    - a
-    - b
-    - c
-    - d
-idx:
-    - i
-    - j
-    - k
-    - l
-zz:
-    - m
-    - n
-    - p
-    - q
-fun:
-    - f
-    - g
-    - h
+

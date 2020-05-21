@@ -12,7 +12,6 @@
 {\displaystyle C}
 {\displaystyle E \subset \mathbb{R}^d}
 {\displaystyle E}
-{\displaystyle F (x)}
 {\displaystyle F(t)=f(\varphi(t))}
 {\displaystyle F(x)=\int \limits _{a}^{x} f(t)\,dt}
 {\displaystyle F(x)}
@@ -49,7 +48,7 @@
 {\displaystyle \dfrac{f(x)}{g(x)}}
 {\displaystyle \forall x\in coA}
 {\displaystyle \gamma \in (a,b)}
-{\displaystyle \int \limits _a^b f(x)\,dx=\Phi (b)-\Phi (a)={\Bigg .}\Phi (x){\Bigg |}_{a}^{b}}
+{\displaystyle \int \limits _a^b f(x)\,dx=\Phi (b)-\Phi (a)}
 {\displaystyle \int \limits _a^x f(t)\,dt=F(x)-F(a)}
 {\displaystyle \int \limits _{[a,b]} f(x)*d\mu}
 {\displaystyle \int \limits _{[a,b]} f*d\mu=\int \limits _{a}^{b} f(x) dx}
@@ -114,7 +113,7 @@
 {\displaystyle \varphi \geq 0}
 {\displaystyle \varphi(x)\colon M \to E}
 {\displaystyle \varphi(x)}
-{\displaystyle \varphi\cdot (\int \limits _{a}^{b} f(x)\,dx) \leq \dfrac{1}{b-a}\cdot \int \limits _{a}^{b} \varphi((b-a)\cdot f(x))\,dx}
+{\displaystyle \varphi\cdot (\int \limits _{a}^{b} f(x)\,dx) \leq \dfrac{1}{b-a}\cdot \int \limits _{a}^{b} \varphi((b-a)\cdot f(x))\cdot dx}
 {\displaystyle \varphi}
 {\displaystyle \xi \in [a,b]}
 {\displaystyle \xi}
@@ -253,6 +252,7 @@
 {\displaystyle {f^{\prime}}^2(x)+{g^{\prime}}^2(x) \neq 0}
 {\displaystyle |P_n(x)-f(x)|<\varepsilon}
 {\displaystyle |\int \limits _{a}^{b} f(x)\cdot g(x)\, dx| \leq \int \limits _{a}^{b} |f(x)\cdot g(x)| \, dx \leq (\int \limits _{a}^{b} |f(x)|^{p} \, dx)^{\dfrac{1}{p}}\cdot (\int \limits _{a}^{b} |g(x)|^{q} \, dx)^{\dfrac{1}{q}}}
+{\displaystyle |\int \limits _{a}^{b} f(x)\cdot g(x)\cdot dx| \leq \int \limits _{a}^{b} |f(x)\cdot g(x)| \cdot dx \leq (\int \limits _{a}^{b} |f(x)|^{p} \cdot dx)^{\dfrac{1}{p}}\cdot (\int \limits _{a}^{b} |g(x)|^{q} \cdot dx)^{\dfrac{1}{q}}}
 {\displaystyle |f(x)-p(x)|<\varepsilon }
 {\displaystyle |f(x)| \leq M}
 {\displaystyle |u_{n}(x)|<a_{n}}

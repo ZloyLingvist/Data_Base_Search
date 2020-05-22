@@ -7,7 +7,7 @@ from utilities import *
 from cos_and_jaccard_for_text import *
 from simple_ranger import *
 from make_formula import *
-from hybrid import *
+from new_hybrid import *
 
 path = os.path.dirname(os.path.dirname(__file__))
 test_dir_path=path+"\\Test\\"
@@ -112,19 +112,18 @@ def test_general_sub_main(filein,mode):
     if mode==2:
         res=[]
         res2=[]
+
         db=reading_data(filein.split('.txt')[0]+"_arr_razbor.txt","predicate")
         global_dict={}
-       
+
         for i in range(len(db)):
-            global_dict=generate_dict(db[i],global_dict)
+            global_dict=make_dict(db[i],global_dict)
 
         for i in range(len(db)):
             tmp=return_index_in_indexlist(i,index_list)
-            A=calc_weight(db[i],global_dict)
-            
+           
             for j in range(len(db)):
-                 B=calc_weight(db[j],global_dict)
-                 ranking.append([str(j+1),calc_similarity(A,B)])
+                 ranking.append([str(j+1),hybrid_main(db[i],db[j],global_dict)])
 
             ranking.sort(key = lambda x: x[1],reverse=True)
             v1,v2=testing_general_rank(ranking,i,tmp)
